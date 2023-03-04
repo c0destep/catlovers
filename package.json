@@ -1,0 +1,32 @@
+{
+  "name": "catlovers",
+  "version": "1.0.0",
+  "description": "A website for cat lovers",
+  "keywords": [
+    "HTML",
+    "CSS",
+    "Cat",
+    "Lovers"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Lucas Alves",
+    "email": "lucas.alves.capristrano59@gmail.com"
+  },
+  "scripts": {
+    "build": "parcel build index.html",
+    "dev": "parcel index.html --open",
+    "start": "npm run build && npm run dev"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.8.3",
+    "@parcel/transformer-webmanifest": "^2.8.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "parcel": "^2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
