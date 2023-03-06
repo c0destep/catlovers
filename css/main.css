@@ -129,7 +129,7 @@ header {
   text-align: center;
 }
 
-.introduction__badge {
+.introduction .introduction__badge {
   display: block;
   color: rgba(98, 160, 234, 1);
   font-size: 1.125rem;
@@ -139,17 +139,58 @@ header {
   margin: 0 0 1.5rem 0;
 }
 
-.introduction__title {
+.introduction .introduction__title {
   font-size: 4.5rem;
   font-weight: 700;
   line-height: 1;
   margin: 0 0 2rem 0;
 }
 
-.introduction__subtitle {
+.introduction .introduction__subtitle {
   color: rgba(255, 255, 255, .5);
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: start;
+}
+
+.footer__list {
+  display: inline-flex;
+  flex-flow: column nowrap;
+  gap: 1.5rem;
+}
+
+.footer__list .footer__list--title {
+  color: rgba(255, 255, 255, .35);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+
+.footer__list .footer__list--items {
+  display: inline-flex;
+  flex-flow: column nowrap;
+  gap: .5rem;
+}
+
+.footer__list .footer__list--items .footer__list--links {
+  font-weight: 400;
+}
+
+.footer__list .footer__list--items .footer__list--links:hover {
+  text-decoration: underline;
+}
+
+.footer--copyright {
+  color: rgba(150, 150, 150, 1);
+  font-weight: 700;
+  text-align: center;
+  margin: 5rem 0 1rem 0;
 }
 
 @media (min-width: 640px) {
