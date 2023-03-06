@@ -4,7 +4,7 @@
   --cat-accent-background: rgba(53, 132, 228, 1);
   --cat-accent: rgba(120, 174, 237, 1);
 
-  --cat-headerbar-background-color: rgba(32, 32, 32, 1);
+  --cat-headerbar-background-color: rgba(32, 32, 32, .35);
   --cat-headerbar-background-hover: rgba(255, 255, 255, .05);
   --cat-headerbar-background-toggle: rgba(255, 255, 255, .075);
   --cat-headerbar-background-toggle-hover: rgba(255, 255, 255, .1);

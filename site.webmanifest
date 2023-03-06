@@ -2,11 +2,15 @@
   "short_name": "Catlovers",
   "name": "Catlovers",
   "icons": [{
-    "src": "icon.png",
+    "src": "favicon-76.png",
     "type": "image/png",
-    "sizes": "192x192"
+    "sizes": "76x76"
+  },{
+    "src": "favicon-96.png",
+    "type": "image/png",
+    "sizes": "96x96"
   }],
   "start_url": "/?utm_source=homescreen",
-  "background_color": "#fafafa",
-  "theme_color": "#fafafa"
+  "background_color": "#242424",
+  "theme_color": "#1A5FB4FF"
 }

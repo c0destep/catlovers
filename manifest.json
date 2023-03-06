@@ -1,0 +1,17 @@
+{
+  "name": "Catlovers",
+  "icons": [
+    {
+      "src": "/favicon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "density": "1.5"
+    },
+    {
+      "src": "/favicon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "density": "2.0"
+    }
+  ]
+}
