@@ -5,9 +5,10 @@
 ![GitHub forks](https://img.shields.io/github/forks/c0destep/catlovers?style=for-the-badge)
 ![Website](https://img.shields.io/website?down_color=lightgrey&down_message=offline&style=for-the-badge&up_color=blue&up_message=online&url=https%3A%2F%2Fc0destep.github.io%2Fcatlovers%2F)
 
-<img src="cat.png" alt="cat love">
+<img src="img/catlovers.jpg" alt="cat love">
 
-> Este projeto tem como objetivo principal educacional, e não se limitando há isso também incentivamos adoção de gatinhos.
+> Este projeto tem como objetivo principal educacional, e não se limitando há isso também incentivamos adoção de
+> gatinhos.
 
 ### Ajustes e melhorias
 
@@ -29,6 +30,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 Para instalar o Catlovers, siga estas etapas:
 
 Linux, macOS e Windows:
+
 ```
 npm install
 ```
@@ -38,7 +40,7 @@ npm install
 Para usar Catlovers, siga estas etapas:
 
 ```
-parcel index.html --open 
+parcel index.html --open
 ```
 
 ## 🤝 Colaboradores
@@ -57,7 +59,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
   </tr>
 </table>
-
 
 ## 😄 Seja um dos contribuidores<br>
 
