@@ -18,11 +18,15 @@
     "dev": "parcel index.html --open",
     "start": "npm run build && npm run dev"
   },
+  "dependencies": {
+    "@andreasremdt/simple-translator": "^2.0.4"
+  },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.8.3",
     "@parcel/transformer-webmanifest": "^2.8.3",
     "cz-conventional-changelog": "^3.3.0",
-    "parcel": "^2"
+    "parcel": "^2",
+    "process": "^0.11.10"
   },
   "config": {
     "commitizen": {

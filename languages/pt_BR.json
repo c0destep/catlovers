@@ -1,0 +1,27 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "Sobre",
+    "benefits": "Benefícios",
+    "adoption": "Adoção"
+  },
+  "footer": {
+    "home": "Home",
+    "about": "Sobre",
+    "benefits": "Benefícios",
+    "adoption": "Adoção",
+    "support": "Suporte",
+    "help": "Ajuda",
+    "contact": "Contato",
+    "legal": "Legal",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de uso",
+    "social": "Social",
+    "copyright": "Direitos autorais 2023 &copy; Codestep"
+  },
+  "introduction": {
+    "badge": "Amor por gatos",
+    "title": "Você deve conhecer alguém que ama gatos!",
+    "subtitle": "Você deve estar pensando como as pessoas gostam tanto desses animais. Bem, vou mostrar porque amamos essas coisas peludas."
+  }
+}

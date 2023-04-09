@@ -1,0 +1,27 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "benefits": "Benefits",
+    "adoption": "Adoption"
+  },
+  "footer": {
+    "home": "Home",
+    "about": "About",
+    "benefits": "Benefits",
+    "adoption": "Adoption",
+    "support": "Support",
+    "help": "Help",
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "social": "Social",
+    "copyright": "Copyright 2023 &copy; Codestep"
+  },
+  "introduction": {
+    "badge": "Love for cats",
+    "title": "You must know someone who loves cats!",
+    "subtitle": "You must be thinking how people like these animals so much. Well, I'll show you why we love these furry things."
+  }
+}
