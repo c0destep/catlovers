@@ -1,19 +1,19 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="pt">
 
 <head>
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <title>Welcome to the home of Cat Lovers</title>
+  <title>Bem-vindo à casa dos Cat Lovers</title>
 
-  <meta content="A website for cat lovers" name="description"/>
+  <meta content="Um site para amantes de gatos" name="description"/>
   <meta content="Lucas Alves" name="author"/>
-  <meta content="HTML, CSS, Cat, Lovers, Cute" name="keywords"/>
+  <meta content="HTML, CSS, Gatos, Amantes, Fofo" name="keywords"/>
   <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
   <meta content="noindex" name="robots"/>
 
   <meta charset="UTF-8"/>
-  <meta content="Welcome to the home of Cat Lovers" property="og:title"/>
-  <meta content="A website for cat lovers" property="og:description"/>
+  <meta content="Bem-vindo à casa dos Cat Lovers" property="og:title"/>
+  <meta content="Um site para amantes de gatos" property="og:description"/>
   <meta content="website" property="og:type"/>
   <meta content="favicon-96.png" property="og:image"/>
   <meta content="/" property="og:url"/>
@@ -41,7 +41,7 @@
 
 <header>
   <div class="container">
-    <nav>
+    <nav id="pageTop">
       <ul class="navbar">
         <li>
           <span class="navbar__title">
@@ -51,24 +51,16 @@
         <li class="navbar__nav">
           <ul class="menu">
             <li class="menu__item">
-              <a class="menu__link" href="index.html">
-                Home
-              </a>
+              <a class="menu__link" data-i18n="navbar.home" href="index.html"></a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="about.html">
-                About
-              </a>
+              <a class="menu__link" data-i18n="navbar.about" href="about.html"></a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="benefits.html">
-                Benefits
-              </a>
+              <a class="menu__link" data-i18n="navbar.benefits" href="benefits.html"></a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="adoption.html">
-                Adoption
-              </a>
+              <a class="menu__link" data-i18n="navbar.adoption" href="adoption.html"></a>
             </li>
           </ul>
         </li>
@@ -80,7 +72,7 @@
               </a>
             </li>
             <li class="menu__item menu__item--linkedin">
-              <a class="menu__link" href="https://linkedin.com/u/lucas-alves">
+              <a class="menu__link" href="https://linkedin.com/in/lucas-alves-b21985156">
                 LinkedIn
               </a>
             </li>
@@ -88,9 +80,18 @@
         </li>
         <li class="navbar__toggle">
           <button class="navbar__toggle--button" type="button">
-            <svg class="navbar__toggle--icon" fill="none" stroke="currentColor" stroke-width="1.5"
-                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg
+              class="navbar__toggle--icon"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+              />
             </svg>
           </button>
         </li>
@@ -103,16 +104,9 @@
   <section id="introduction">
     <div class="container container--grid">
       <div class="introduction">
-        <span class="introduction__badge">
-          Love for cats
-        </span>
-        <h1 class="introduction__title">
-          You must know someone who loves cats
-        </h1>
-        <small class="introduction__subtitle">
-          You must be thinking how people like these animals so much. Well, I'll show you why we love these furry
-          things.
-        </small>
+        <span class="introduction__badge" data-i18n="introduction.badge"></span>
+        <h1 class="introduction__title" data-i18n="introduction.title"></h1>
+        <small class="introduction__subtitle" data-i18n="introduction.subtitle"></small>
       </div>
     </div>
   </section>
@@ -127,63 +121,45 @@
         </li>
         <ul class="footer__list--items">
           <li>
-            <a class="footer__list--links" href="index.html">
-              Home
-            </a>
+            <a class="footer__list--links" data-i18n="footer.home" href="index.html"></a>
           </li>
           <li>
-            <a class="footer__list--links" href="about.html">
-              About
-            </a>
+            <a class="footer__list--links" data-i18n="footer.about" href="about.html"></a>
           </li>
           <li>
-            <a class="footer__list--links" href="benefits.html">
-              Benefits
-            </a>
+            <a class="footer__list--links" data-i18n="footer.benefits" href="benefits.html"></a>
           </li>
           <li>
-            <a class="footer__list--links" href="adoption.html">
-              Adoption
-            </a>
+            <a class="footer__list--links" data-i18n="footer.adoption" href="adoption.html"></a>
           </li>
         </ul>
       </ul>
       <ul class="footer__list">
-        <li class="footer__list--title">
+        <li class="footer__list--title" data-i18n="footer.support">
           Support
         </li>
         <ul class="footer__list--items">
           <li>
-            <a class="footer__list--links" href="#">
-              Help
-            </a>
+            <a class="footer__list--links" data-i18n="footer.help" href="#"></a>
           </li>
           <li>
-            <a class="footer__list--links" href="#">
-              Contact
-            </a>
+            <a class="footer__list--links" data-i18n="footer.contact" href="#"></a>
           </li>
         </ul>
       </ul>
       <ul class="footer__list">
-        <li class="footer__list--title">
-          Legal
-        </li>
+        <li class="footer__list--title" data-i18n="footer.legal"></li>
         <ul class="footer__list--items">
           <li>
-            <a class="footer__list--links" href="#">
-              Privacy Policy
-            </a>
+            <a class="footer__list--links" data-i18n="footer.privacy" href="#"></a>
           </li>
           <li>
-            <a class="footer__list--links" href="#">
-              Terms of Use
-            </a>
+            <a class="footer__list--links" data-i18n="footer.terms" href="#"></a>
           </li>
         </ul>
       </ul>
       <ul class="footer__list">
-        <li class="footer__list--title">
+        <li class="footer__list--title" data-i18n="footer.social">
           Social
         </li>
         <ul class="footer__list--items">
@@ -193,22 +169,34 @@
             </a>
           </li>
           <li>
-            <a class="footer__list--links" href="https://linkedin.com/u/lucas-alves">
+            <a class="footer__list--links" href="https://linkedin.com/in/lucas-alves-b21985156">
               LinkedIn
             </a>
           </li>
         </ul>
       </ul>
     </div>
-    <div class="footer--copyright">
-      Copyright 2023 &copy; Codestep
-    </div>
+    <div class="footer--copyright" data-i18n="footer.copyright"></div>
   </div>
 </footer>
 
-<script src="js/vendor/modernizr-3.11.2.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+<a class="page-top" href="#pageTop" id="backTop">
+  <svg
+    class="page-top__icon"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path clip-rule="evenodd"
+          d="M11.47 4.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 6.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5zm.53 7.59l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 12.31z"
+          fill-rule="evenodd"
+    />
+  </svg>
+</a>
+
+<script src="./js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="./js/plugins.js"></script>
+<script src="./js/main.js" type="module"></script>
 </body>
 
 </html>

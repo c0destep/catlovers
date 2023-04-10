@@ -193,6 +193,33 @@ header {
   margin: 5rem 0 1rem 0;
 }
 
+.page-top {
+  position: fixed;
+  top: auto;
+  bottom: 2rem;
+  right: 2rem;
+  left: auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: .5rem;
+  background-color: var(--cat-background-color);
+  border-radius: .5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all ease-in-out 10s;
+}
+
+.page-top.page-top__visible {
+  display: inline-flex;
+  transition: all ease-in-out 10s;
+}
+
+.page-top .page-top__icon {
+  color: var(--cat-accent);
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
@@ -200,6 +227,13 @@ header {
 
   .introduction {
     max-width: 48rem;
+  }
+
+  .page-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
   }
 }
 
