@@ -1,5 +1,5 @@
-const portuguese = require("../languages/pt_BR.json")
-const english = require("../languages/en_US.json")
+import portuguese from "../languages/pt_BR.json"
+import english from "../languages/en_US.json"
 
 const translator = new Translator({
   defaultLanguage: 'pt_BR',
