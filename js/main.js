@@ -1,5 +1,3 @@
-import Translator from "@andreasremdt/simple-translator"
-
 const portuguese = require("../languages/pt_BR.json")
 const english = require("../languages/en_US.json")
 
