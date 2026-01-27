@@ -14,7 +14,7 @@
     "email": "lucas.alves.capristrano59@gmail.com"
   },
   "scripts": {
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --public-url ./",
     "dev": "parcel index.html --open",
     "start": "pnpm run build && pnpm run dev"
   },
