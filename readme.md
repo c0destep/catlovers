@@ -1,9 +1,9 @@
 # Catlovers
 
-![GitHub repo size](https://img.shields.io/github/repo-size/youhuul/catlovers?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/youhuul/catlovers?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/youhuul/catlovers?style=for-the-badge)
-![Website](https://img.shields.io/website?down_color=lightgrey&down_message=offline&style=for-the-badge&up_color=blue&up_message=online&url=https%3A%2F%2Fyouhuul.github.io%2Fcatlovers%2F)
+![GitHub repo size](https://img.shields.io/github/repo-size/c0destep/catlovers?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/c0destep/catlovers?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/c0destep/catlovers?style=for-the-badge)
+![Website](https://img.shields.io/website?down_color=green&down_message=online&style=for-the-badge&up_color=blue&up_message=online&url=https%3A%2F%2Fyouhuul.github.io%2Fcatlovers%2F)
 
 <img src="img/catlovers.jpg" alt="cat love">
 
