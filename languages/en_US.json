@@ -17,11 +17,259 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
     "social": "Social",
-    "copyright": "Copyright 2023 &copy; Codestep"
+    "copyright": "Copyright 2024 &copy; Catlovers"
   },
-  "introduction": {
-    "badge": "Love for cats",
-    "title": "You must know someone who loves cats!",
-    "subtitle": "You must be thinking how people like these animals so much. Well, I'll show you why we love these furry things."
+  "accessibility": {
+    "skip": "Skip to content"
+  },
+  "hero": {
+    "badge": "Responsible adoption",
+    "title": "A safe home changes two lives",
+    "subtitle": "Cat adoption with guidance, transparency, and support to ensure a calm start for you and your new friend.",
+    "ctaPrimary": "I want to adopt",
+    "ctaSecondary": "See how it works",
+    "note": "We prioritize responsible adoptions and post-home follow-up.",
+    "card": {
+      "title": "Cats ready to love",
+      "subtitle": "Rescued, vaccinated, and full of personality."
+    }
+  },
+  "stats": {
+    "eyebrow": "Impact",
+    "title": "Real adoptions with follow-up",
+    "items": [
+      {
+        "value": "120+",
+        "label": "cats adopted in the last year"
+      },
+      {
+        "value": "92%",
+        "label": "adoptions with post-home support"
+      },
+      {
+        "value": "48h",
+        "label": "average time to meet a cat"
+      },
+      {
+        "value": "15",
+        "label": "active local partners"
+      }
+    ]
+  },
+  "reasons": {
+    "eyebrow": "Why adopt",
+    "title": "Responsible adoption from start to finish",
+    "subtitle": "Transparency, care, and ongoing support to ensure the best match between cat and family.",
+    "cards": [
+      {
+        "title": "Healthy care",
+        "text": "Every cat gets a vet check, vaccines, and care guidance."
+      },
+      {
+        "title": "Match your lifestyle",
+        "text": "We learn about your routine and suggest the right personality."
+      },
+      {
+        "title": "Follow-up",
+        "text": "You are not alone: we provide support during adaptation."
+      },
+      {
+        "title": "Support network",
+        "text": "We share trusted partners and practical tips for well-being."
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Steps",
+    "title": "How adoption works",
+    "subtitle": "A simple, human-centered process.",
+    "steps": [
+      {
+        "title": "Initial form",
+        "text": "Tell us about your routine and experience with pets."
+      },
+      {
+        "title": "Guided chat",
+        "text": "We discuss the ideal profile and answer questions."
+      },
+      {
+        "title": "Meet the cat",
+        "text": "You meet the cat and see if the bond happens."
+      },
+      {
+        "title": "Home prep",
+        "text": "Safety, food, and comfort checklist."
+      },
+      {
+        "title": "Follow-up",
+        "text": "Post-adoption support to ensure a smooth transition."
+      }
+    ]
+  },
+  "checklist": {
+    "eyebrow": "Preparation",
+    "title": "New home checklist",
+    "subtitle": "Details that make adaptation easier.",
+    "items": [
+      "Protective screens on windows and balconies.",
+      "Litter box in a quiet spot.",
+      "Food bowls away from the water.",
+      "A bed or safe resting space.",
+      "Scratchers and enrichment toys.",
+      "Consistent feeding routine.",
+      "Vaccination plan and trusted vet.",
+      "Daily time for interaction and affection."
+    ]
+  },
+  "stories": {
+    "eyebrow": "Stories",
+    "title": "Families who made room",
+    "subtitle": "Real stories from adopters.",
+    "items": [
+      {
+        "text": "The guidance helped us choose a calm cat for our small apartment. He is family now.",
+        "meta": "Marina & Bento"
+      },
+      {
+        "text": "We got support during adaptation and follow-up in the first weeks. It was essential.",
+        "meta": "Carlos & Nala"
+      },
+      {
+        "text": "Adopting was simple, human, and transparent. Now we have an inseparable duo at home.",
+        "meta": "Julia & Milo"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "Do I need experience with cats?",
+        "a": "No. We offer full guidance for first-time adopters."
+      },
+      {
+        "q": "Can I adopt if I rent?",
+        "a": "Yes, as long as pets are allowed and the home is safe."
+      },
+      {
+        "q": "How long does the process take?",
+        "a": "On average 3 to 7 days, depending on the match and availability."
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Responsible adoption",
+    "title": "Ready to meet your new friend?",
+    "subtitle": "Tell us about your routine and we will help you find the ideal cat.",
+    "button": "Start application"
+  },
+  "theme": {
+    "toggle": "Dark mode"
+  },
+  "pages": {
+    "about": {
+      "hero": {
+        "badge": "Our mission",
+        "title": "About the Catlovers network",
+        "subtitle": "We connect people to responsible adoptions and support every new home with care.",
+        "cta": "I want to adopt"
+      },
+      "sections": {
+        "mission": {
+          "eyebrow": "Mission",
+          "title": "Make adoption safe and conscious",
+          "text": "We bridge rescuers, NGOs, and families, with support before and after adoption."
+        },
+        "values": {
+          "eyebrow": "Values",
+          "title": "What guides our choices",
+          "items": [
+            {
+              "title": "Real care",
+              "text": "We prioritize well-being, health, and affection at every step."
+            },
+            {
+              "title": "Transparency",
+              "text": "Clear information so you feel confident in the decision."
+            },
+            {
+              "title": "Responsibility",
+              "text": "We follow up after adoption and offer a support network."
+            }
+          ]
+        },
+        "impact": {
+          "eyebrow": "Local impact",
+          "title": "A community that supports each other",
+          "text": "We work with rescuers and foster homes to expand the number of cats saved."
+        }
+      }
+    },
+    "benefits": {
+      "hero": {
+        "badge": "Real benefits",
+        "title": "The advantages of cat adoption",
+        "subtitle": "Adoption changes your routine, improves cat well-being, and strengthens the community."
+      },
+      "sections": {
+        "eyebrow": "Benefits",
+        "title": "Gains for everyone",
+        "items": [
+          {
+            "title": "For you",
+            "text": "Companionship, a lighter routine, and a caring presence every day."
+          },
+          {
+            "title": "For the cat",
+            "text": "A safe home, daily attention, and emotional stability."
+          },
+          {
+            "title": "For the community",
+            "text": "Less abandonment, more conscious homes, and stronger support networks."
+          }
+        ],
+        "list": {
+          "eyebrow": "Highlights",
+          "title": "What changes with adoption",
+          "items": [
+            "Reduces stress and increases companionship.",
+            "Encourages responsibility and healthier routines.",
+            "Cats help keep the home calm and welcoming.",
+            "Supports rescuers and local projects.",
+            "Opens space for more rescues.",
+            "Creates lasting emotional bonds."
+          ]
+        }
+      }
+    },
+    "adoption": {
+      "hero": {
+        "badge": "Responsible adoption",
+        "title": "Complete guide to adopt",
+        "subtitle": "Clear steps, requirements, and tips to ensure a safe and happy home.",
+        "cta": "See requirements"
+      },
+      "sections": {
+        "requirements": {
+          "eyebrow": "Requirements",
+          "title": "What we need to move forward",
+          "subtitle": "We ensure the cat has safety, time, and care in the new home.",
+          "items": [
+            "ID document and updated address.",
+            "Protected environment with screens or safe supervision.",
+            "Availability for follow-up visits.",
+            "Commitment to vaccines and veterinary care.",
+            "Daily time for interaction and enrichment.",
+            "Agreement with the responsible adoption terms."
+          ]
+        },
+        "support": {
+          "eyebrow": "Post-adoption",
+          "title": "Ongoing support",
+          "text": "We guide you on adaptation, feeding, and behavior in the first weeks."
+        }
+      }
+    }
   }
 }

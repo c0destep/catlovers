@@ -1,29 +1,40 @@
 # Catlovers
 
-![GitHub repo size](https://img.shields.io/github/repo-size/c0destep/catlovers?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/c0destep/catlovers?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/c0destep/catlovers?style=for-the-badge)
-![Website](https://img.shields.io/website?down_color=lightgrey&down_message=offline&style=for-the-badge&up_color=blue&up_message=online&url=https%3A%2F%2Fc0destep.github.io%2Fcatlovers%2F)
+![GitHub repo size](https://img.shields.io/github/repo-size/youhuul/catlovers?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/youhuul/catlovers?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/youhuul/catlovers?style=for-the-badge)
+![Website](https://img.shields.io/website?down_color=lightgrey&down_message=offline&style=for-the-badge&up_color=blue&up_message=online&url=https%3A%2F%2Fyouhuul.github.io%2Fcatlovers%2F)
 
 <img src="img/catlovers.jpg" alt="cat love">
 
-> Este projeto tem como objetivo principal educacional, e não se limitando há isso também incentivamos adoção de
-> gatinhos.
+> Este projeto tem como objetivo principal educacional, focado em tecnologias web fundamentais, e o incentivo à adoção
+> responsável de gatinhos.
+
+## 🌟 Diferenciais do Projeto
+
+- **Tecnologias Fundamentais:** Desenvolvido puramente com HTML, CSS e JavaScript.
+- **Internacionalização (i18n):** Suporte completo para Português, Inglês e Espanhol.
+- **Acessibilidade (a11y):** Segue padrões WCAG, com alto contraste e suporte a leitores de tela.
+- **Design Responsivo:** Adaptado para Mobile e Desktop (Mobile-First).
+- **Estrutura Modular:** Uso de PostHTML para componentes reutilizáveis.
 
 ### Ajustes e melhorias
 
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
+O projeto está em constante evolução. Confira o que já foi feito e o que está por vir:
 
-- [ ] Desenvolver a Landing Page
-- [ ] Melhorar a documentação (caso necessário)
+- [x] Desenvolver a Landing Page
+- [x] Implementar modo escuro/claro acessível
+- [x] Adicionar suporte multi-idiomas
+- [x] Modularizar o HTML com PostHTML
 - [ ] Blog de notícias voltadas aos cuidados e adoção de gatos
-- [ ] API de adoção (não prometo que haverá)
+- [ ] API de adoção (em estudo)
 
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-* Você instalou a versão mais recente do `nodejs` e `npm`
+* Você instalou a versão mais recente do [Node.js](https://nodejs.org/)
+* Você instalou o [pnpm](https://pnpm.io/)
 
 ## 🚀 Instalando Catlovers
 
@@ -31,16 +42,22 @@ Para instalar o Catlovers, siga estas etapas:
 
 Linux, macOS e Windows:
 
-```
-npm install
+```bash
+pnpm install
 ```
 
 ## ☕ Usando Catlovers
 
-Para usar Catlovers, siga estas etapas:
+Para rodar o projeto em ambiente de desenvolvimento:
 
+```bash
+pnpm run dev
 ```
-parcel index.html --open
+
+Para gerar a build de produção:
+
+```bash
+pnpm run build
 ```
 
 ## 🤝 Colaboradores
@@ -50,10 +67,10 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/c0destep">
-        <img src="https://avatars.githubusercontent.com/u/65411044" width="100px;" alt="Foto do Codestep no GitHub"/><br>
+      <a href="https://github.com/youhuul">
+        <img src="https://avatars.githubusercontent.com/u/65411044" width="100px;" alt="Foto do Lucas Alves no GitHub"/><br>
         <sub>
-          <b>Codestep</b>
+          <b>Lucas Alves</b>
         </sub>
       </a>
     </td>
@@ -64,8 +81,10 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.
 
+Se tiver dúvidas, abra uma [Issue](https://github.com/youhuul/catlovers/issues).
+
 ## 📝 Licença
 
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.txt) para mais detalhes.
 
-[⬆ Voltar ao topo](#Catlovers)<br>
+[⬆ Voltar ao topo](#catlovers)<br>

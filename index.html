@@ -1,201 +1,251 @@
 <!doctype html>
-<html class="no-js" lang="pt">
+<!--suppress JSUnresolvedLibraryURL -->
+<html class="no-js" lang="pt-BR">
 
 <head>
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <title>Bem-vindo à casa dos Cat Lovers</title>
-
-  <meta content="Um site para amantes de gatos" name="description"/>
-  <meta content="Lucas Alves" name="author"/>
-  <meta content="HTML, CSS, Gatos, Amantes, Fofo" name="keywords"/>
-  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-  <meta content="noindex" name="robots"/>
-
-  <meta charset="UTF-8"/>
-  <meta content="Bem-vindo à casa dos Cat Lovers" property="og:title"/>
-  <meta content="Um site para amantes de gatos" property="og:description"/>
-  <meta content="website" property="og:type"/>
-  <meta content="favicon-96.png" property="og:image"/>
-  <meta content="/catlovers/" property="og:url"/>
-
-  <meta content="@c0destep" name="twitter:site"/>
-  <meta content="summary_large_image" name="twitter:card"/>
-
-  <meta content="#242424" name="theme-color">
-
-  <link href="site.webmanifest" rel="manifest">
-  <link href="favicon-96.png" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
-  <link href="favicon-96.png" rel="apple-touch-icon">
-
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&display=swap" rel="stylesheet">
-  <!--<link href="css/normalize.css" rel="stylesheet" type="text/css">-->
-  <link href="css/preflight.css" rel="stylesheet" type="text/css">
-  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <include src="head-common.html"></include>
+  <title>Adoção de Gatos - Catlovers</title>
+  <meta content="Landing page sobre adoção responsável de gatos, com orientação e apoio para novos lares."
+        name="description"/>
+  <meta content="HTML, CSS, Gatos, Adoção, Cat Lovers" name="keywords"/>
+  <meta content="Adoção de Gatos - Catlovers" property="og:title"/>
+  <meta content="Adote com responsabilidade e apoio. Encontre o gato ideal para sua rotina." property="og:description"/>
+  <meta content="https://youhuul.github.io/catlovers/" property="og:url"/>
 </head>
 
 <body>
+<div aria-hidden="true" class="page-background"></div>
+<a class="skip-link" data-i18n="accessibility.skip" href="#main-content">Pular para o conteúdo</a>
 
-<header>
-  <div class="container">
-    <nav id="pageTop">
-      <ul class="navbar">
-        <li>
-          <span class="navbar__title">
-            Catlovers
-          </span>
-        </li>
-        <li class="navbar__nav">
-          <ul class="menu">
-            <li class="menu__item">
-              <a class="menu__link" data-i18n="navbar.home" href="index.html"></a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" data-i18n="navbar.about" href="about.html"></a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" data-i18n="navbar.benefits" href="benefits.html"></a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" data-i18n="navbar.adoption" href="adoption.html"></a>
-            </li>
-          </ul>
-        </li>
-        <li class="navbar__social">
-          <ul class="menu">
-            <li class="menu__item menu__item--twitter">
-              <a class="menu__link" href="https://twitter.com/c0destep">
-                Twitter
-              </a>
-            </li>
-            <li class="menu__item menu__item--linkedin">
-              <a class="menu__link" href="https://linkedin.com/in/lucas-alves-b21985156">
-                LinkedIn
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="navbar__toggle">
-          <button class="navbar__toggle--button" type="button">
-            <svg
-              class="navbar__toggle--icon"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<include src="header.html"></include>
 
-<main>
-  <section id="introduction">
-    <div class="container container--grid">
-      <div class="introduction">
-        <span class="introduction__badge" data-i18n="introduction.badge"></span>
-        <h1 class="introduction__title" data-i18n="introduction.title"></h1>
-        <small class="introduction__subtitle" data-i18n="introduction.subtitle"></small>
+<main id="main-content">
+  <section class="hero" id="hero">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <span class="hero__badge" data-i18n="hero.badge">Adoção responsável</span>
+        <h1 class="hero__title" data-i18n="hero.title">Um lar seguro muda duas vidas</h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">
+          Adoção de gatos com orientação, transparência e apoio para garantir um começo tranquilo para você e seu novo
+          amigo.
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" data-i18n="hero.ctaPrimary" href="adoption.html">Quero adotar</a>
+          <a class="button button--ghost" data-i18n="hero.ctaSecondary" href="#process">Ver como funciona</a>
+        </div>
+        <div class="hero__note" data-i18n="hero.note">Priorizamos adoções responsáveis e acompanhamento pós-lar.</div>
+      </div>
+      <div class="hero__media">
+        <img alt="Gato olhando para a câmera" class="hero__image" src="img/catlovers.jpg?as=webp">
+        <div class="hero__card">
+          <strong data-i18n="hero.card.title">Gatos prontos para amar</strong>
+          <span data-i18n="hero.card.subtitle">Resgatados, vacinados e cheios de personalidade.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--stats">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__eyebrow" data-i18n="stats.eyebrow">Impacto</span>
+        <h2 class="section__title" data-i18n="stats.title">Adoções reais com acompanhamento</h2>
+      </div>
+      <div class="grid grid--stats">
+        <article class="card card--stat">
+          <span class="stat__value" data-i18n="stats.items.0.value">120+</span>
+          <span class="stat__label" data-i18n="stats.items.0.label">gatos adotados no último ano</span>
+        </article>
+        <article class="card card--stat">
+          <span class="stat__value" data-i18n="stats.items.1.value">92%</span>
+          <span class="stat__label" data-i18n="stats.items.1.label">adoções com acompanhamento pós-lar</span>
+        </article>
+        <article class="card card--stat">
+          <span class="stat__value" data-i18n="stats.items.2.value">48h</span>
+          <span class="stat__label" data-i18n="stats.items.2.label">tempo médio para conhecer um gato</span>
+        </article>
+        <article class="card card--stat">
+          <span class="stat__value" data-i18n="stats.items.3.value">15</span>
+          <span class="stat__label" data-i18n="stats.items.3.label">parceiros locais ativos</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__eyebrow" data-i18n="reasons.eyebrow">Por que adotar</span>
+        <h2 class="section__title" data-i18n="reasons.title">Adoção responsável do começo ao fim</h2>
+        <p class="section__text" data-i18n="reasons.subtitle">
+          Transparência, cuidado e suporte contínuo para garantir o melhor match entre gato e família.
+        </p>
+      </div>
+      <div class="grid grid--cards">
+        <article class="card">
+          <h3 class="card__title" data-i18n="reasons.cards.0.title">Saúde em dia</h3>
+          <p class="card__text" data-i18n="reasons.cards.0.text">
+            Todos os gatos passam por avaliação veterinária, vacinação e orientação de cuidados essenciais.
+          </p>
+        </article>
+        <article class="card">
+          <h3 class="card__title" data-i18n="reasons.cards.1.title">Match com seu estilo</h3>
+          <p class="card__text" data-i18n="reasons.cards.1.text">
+            Entendemos sua rotina e indicamos o gato com personalidade ideal para você.
+          </p>
+        </article>
+        <article class="card">
+          <h3 class="card__title" data-i18n="reasons.cards.2.title">Acompanhamento</h3>
+          <p class="card__text" data-i18n="reasons.cards.2.text">
+            Você não fica sozinho: oferecemos suporte no período de adaptação do novo lar.
+          </p>
+        </article>
+        <article class="card">
+          <h3 class="card__title" data-i18n="reasons.cards.3.title">Rede de apoio</h3>
+          <p class="card__text" data-i18n="reasons.cards.3.text">
+            Indicamos profissionais, parceiros e dicas práticas para o bem-estar do seu gato.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="process">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__eyebrow" data-i18n="process.eyebrow">Etapas</span>
+        <h2 class="section__title" data-i18n="process.title">Como funciona a adoção</h2>
+        <p class="section__text" data-i18n="process.subtitle">Um passo a passo simples e humano.</p>
+      </div>
+      <ol class="steps">
+        <li class="steps__item">
+          <span class="steps__title" data-i18n="process.steps.0.title">Cadastro inicial</span>
+          <p class="steps__text" data-i18n="process.steps.0.text">Conte sobre sua rotina e experiência com animais.</p>
+        </li>
+        <li class="steps__item">
+          <span class="steps__title" data-i18n="process.steps.1.title">Conversa guiada</span>
+          <p class="steps__text" data-i18n="process.steps.1.text">Falamos sobre o perfil ideal e tiramos todas as
+            dúvidas.</p>
+        </li>
+        <li class="steps__item">
+          <span class="steps__title" data-i18n="process.steps.2.title">Encontro com o gato</span>
+          <p class="steps__text" data-i18n="process.steps.2.text">Você conhece o gato e vê se o vínculo acontece.</p>
+        </li>
+        <li class="steps__item">
+          <span class="steps__title" data-i18n="process.steps.3.title">Preparação do lar</span>
+          <p class="steps__text" data-i18n="process.steps.3.text">Checklist de segurança, alimentação e conforto.</p>
+        </li>
+        <li class="steps__item">
+          <span class="steps__title" data-i18n="process.steps.4.title">Acompanhamento</span>
+          <p class="steps__text" data-i18n="process.steps.4.text">Suporte pós-adoção para garantir adaptação
+            tranquila.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="checklist">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__eyebrow" data-i18n="checklist.eyebrow">Preparação</span>
+        <h2 class="section__title" data-i18n="checklist.title">Checklist do novo lar</h2>
+        <p class="section__text" data-i18n="checklist.subtitle">Detalhes que fazem a diferença na adaptação.</p>
+      </div>
+      <div class="grid grid--split">
+        <ul class="checklist">
+          <li data-i18n="checklist.items.0">Telas de proteção em janelas e varandas.</li>
+          <li data-i18n="checklist.items.1">Caixa de areia em local tranquilo.</li>
+          <li data-i18n="checklist.items.2">Comedouros separados da água.</li>
+          <li data-i18n="checklist.items.3">Caminha ou espaço seguro para descanso.</li>
+        </ul>
+        <ul class="checklist">
+          <li data-i18n="checklist.items.4">Arranhadores e brinquedos de enriquecimento.</li>
+          <li data-i18n="checklist.items.5">Rotina de alimentação definida.</li>
+          <li data-i18n="checklist.items.6">Plano de vacinação e veterinário de confiança.</li>
+          <li data-i18n="checklist.items.7">Tempo para interação diária e carinho.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--stories" id="stories">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__eyebrow" data-i18n="stories.eyebrow">Histórias</span>
+        <h2 class="section__title" data-i18n="stories.title">Famílias que abriram espaço</h2>
+        <p class="section__text" data-i18n="stories.subtitle">Relatos reais de quem adotou com a gente.</p>
+      </div>
+      <div class="grid grid--cards">
+        <article class="card card--story">
+          <p class="card__text" data-i18n="stories.items.0.text">
+            "A consultoria ajudou a escolher um gato calmo para nosso apartamento pequeno. Hoje ele é parte da família."
+          </p>
+          <span class="card__meta" data-i18n="stories.items.0.meta">Marina & Bento</span>
+        </article>
+        <article class="card card--story">
+          <p class="card__text" data-i18n="stories.items.1.text">
+            "Recebemos apoio na adaptação e fomos acompanhados nas primeiras semanas. Foi essencial."
+          </p>
+          <span class="card__meta" data-i18n="stories.items.1.meta">Carlos & Nala</span>
+        </article>
+        <article class="card card--story">
+          <p class="card__text" data-i18n="stories.items.2.text">
+            "Adotar foi simples, humano e transparente. Agora temos uma dupla inseparável em casa."
+          </p>
+          <span class="card__meta" data-i18n="stories.items.2.meta">Júlia & Milo</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="faq">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__eyebrow" data-i18n="faq.eyebrow">FAQ</span>
+        <h2 class="section__title" data-i18n="faq.title">Perguntas frequentes</h2>
+      </div>
+      <div class="faq">
+        <details class="faq__item">
+          <summary class="faq__question" data-i18n="faq.items.0.q">Preciso ter experiência com gatos?</summary>
+          <p class="faq__answer" data-i18n="faq.items.0.a">
+            Não. Oferecemos orientação completa para quem está adotando pela primeira vez.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question" data-i18n="faq.items.1.q">Posso adotar se moro de aluguel?</summary>
+          <p class="faq__answer" data-i18n="faq.items.1.a">
+            Sim, desde que o imóvel permita animais e seja seguro para o gato.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question" data-i18n="faq.items.2.q">Quanto tempo leva o processo?</summary>
+          <p class="faq__answer" data-i18n="faq.items.2.a">
+            Em média de 3 a 7 dias, dependendo do match e da disponibilidade do gato.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cta" id="adopt">
+    <div class="container">
+      <div class="cta">
+        <div>
+          <span class="cta__eyebrow" data-i18n="cta.eyebrow">Adoção responsável</span>
+          <h2 class="cta__title" data-i18n="cta.title">Pronto para conhecer seu novo amigo?</h2>
+          <p class="cta__text" data-i18n="cta.subtitle">
+            Conte um pouco sobre sua rotina e nós ajudamos a encontrar o gato ideal.
+          </p>
+        </div>
+        <a class="button button--light" data-i18n="cta.button" href="adoption.html">Iniciar cadastro</a>
       </div>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="container">
-    <div class="footer">
-      <ul class="footer__list">
-        <li class="footer__list--title">
-          Catlovers
-        </li>
-        <ul class="footer__list--items">
-          <li>
-            <a class="footer__list--links" data-i18n="footer.home" href="index.html"></a>
-          </li>
-          <li>
-            <a class="footer__list--links" data-i18n="footer.about" href="about.html"></a>
-          </li>
-          <li>
-            <a class="footer__list--links" data-i18n="footer.benefits" href="benefits.html"></a>
-          </li>
-          <li>
-            <a class="footer__list--links" data-i18n="footer.adoption" href="adoption.html"></a>
-          </li>
-        </ul>
-      </ul>
-      <ul class="footer__list">
-        <li class="footer__list--title" data-i18n="footer.support">
-          Support
-        </li>
-        <ul class="footer__list--items">
-          <li>
-            <a class="footer__list--links" data-i18n="footer.help" href="#"></a>
-          </li>
-          <li>
-            <a class="footer__list--links" data-i18n="footer.contact" href="#"></a>
-          </li>
-        </ul>
-      </ul>
-      <ul class="footer__list">
-        <li class="footer__list--title" data-i18n="footer.legal"></li>
-        <ul class="footer__list--items">
-          <li>
-            <a class="footer__list--links" data-i18n="footer.privacy" href="#"></a>
-          </li>
-          <li>
-            <a class="footer__list--links" data-i18n="footer.terms" href="#"></a>
-          </li>
-        </ul>
-      </ul>
-      <ul class="footer__list">
-        <li class="footer__list--title" data-i18n="footer.social">
-          Social
-        </li>
-        <ul class="footer__list--items">
-          <li>
-            <a class="footer__list--links" href="https://twitter.com/c0destep">
-              Twitter
-            </a>
-          </li>
-          <li>
-            <a class="footer__list--links" href="https://linkedin.com/in/lucas-alves-b21985156">
-              LinkedIn
-            </a>
-          </li>
-        </ul>
-      </ul>
-    </div>
-    <div class="footer--copyright" data-i18n="footer.copyright"></div>
-  </div>
-</footer>
+<include src="footer.html"></include>
+<include src="back-to-top.html"></include>
+<include src="scripts.html"></include>
 
-<a class="page-top" href="#pageTop" id="backTop">
-  <svg
-    class="page-top__icon"
-    fill="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path clip-rule="evenodd"
-          d="M11.47 4.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 6.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5zm.53 7.59l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 12.31z"
-          fill-rule="evenodd"
-    />
-  </svg>
-</a>
-
-<script src="https://unpkg.com/@andreasremdt/simple-translator@latest/dist/umd/translator.min.js" defer></script>
-<script src="js/vendor/modernizr-3.11.2.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js" type="module"></script>
 </body>
-
 </html>

@@ -1,0 +1,7 @@
+onlyBuiltDependencies:
+  - '@firebase/util'
+  - '@parcel/watcher'
+  - '@swc/core'
+  - lmdb
+  - msgpackr-extract
+  - protobufjs

@@ -8,8 +8,7 @@ assignees: c0destep
 ---
 
 **Descreva o bug**
-
-<!-- Uma descrição concisa e clara do que o bug é. -->
+Uma descrição concisa e clara do que o bug é.
 
 **Reprodução do bug**
 Passos para reproduzir o comportamento indesejado:
@@ -19,14 +18,17 @@ Passos para reproduzir o comportamento indesejado:
 3. Role até '....'
 4. Veja o erro
 
-**Comportamento desejado**
+**Comportamento esperado**
+Uma descrição clara sobre o comportamento esperado.
 
-<!-- Uma descrição clara sobre o comportamento esperado. -->
+**Ambiente**
+
+- **Sistema Operacional:** (ex: Windows 11, macOS, Android 13)
+- **Navegador:** (ex: Chrome, Firefox, Safari)
+- **Resolução da tela:** (ex: 1920x1080, Mobile)
 
 **Capturas de tela**
-
-<!-- Se aplicável, adicione capturas de tela para ajudar na descrição do problema -->
+Se aplicável, adicione capturas de tela para ajudar na descrição do problema.
 
 **Contexto adicional**
-
-<!-- Adicione qualquer outro contexto ao problema reportado aqui -->
+Adicione qualquer outro contexto ao problema reportado aqui.

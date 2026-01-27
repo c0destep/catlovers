@@ -1,0 +1,275 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Sobre",
+    "benefits": "Beneficios",
+    "adoption": "Adopcion"
+  },
+  "footer": {
+    "home": "Inicio",
+    "about": "Sobre",
+    "benefits": "Beneficios",
+    "adoption": "Adopcion",
+    "support": "Soporte",
+    "help": "Ayuda",
+    "contact": "Contacto",
+    "legal": "Legal",
+    "privacy": "Politica de Privacidad",
+    "terms": "Terminos de uso",
+    "social": "Social",
+    "copyright": "Derechos de autor 2024 &copy; Catlovers"
+  },
+  "accessibility": {
+    "skip": "Saltar al contenido"
+  },
+  "hero": {
+    "badge": "Adopcion responsable",
+    "title": "Un hogar seguro cambia dos vidas",
+    "subtitle": "Adopcion de gatos con orientacion, transparencia y apoyo para garantizar un inicio tranquilo para ti y tu nuevo amigo.",
+    "ctaPrimary": "Quiero adoptar",
+    "ctaSecondary": "Ver como funciona",
+    "note": "Priorizamos adopciones responsables y seguimiento despues del hogar.",
+    "card": {
+      "title": "Gatos listos para amar",
+      "subtitle": "Rescatados, vacunados y llenos de personalidad."
+    }
+  },
+  "stats": {
+    "eyebrow": "Impacto",
+    "title": "Adopciones reales con seguimiento",
+    "items": [
+      {
+        "value": "120+",
+        "label": "gatos adoptados en el ultimo ano"
+      },
+      {
+        "value": "92%",
+        "label": "adopciones con apoyo despues del hogar"
+      },
+      {
+        "value": "48h",
+        "label": "tiempo promedio para conocer un gato"
+      },
+      {
+        "value": "15",
+        "label": "socios locales activos"
+      }
+    ]
+  },
+  "reasons": {
+    "eyebrow": "Por que adoptar",
+    "title": "Adopcion responsable de principio a fin",
+    "subtitle": "Transparencia, cuidado y soporte continuo para garantizar el mejor match entre gato y familia.",
+    "cards": [
+      {
+        "title": "Salud al dia",
+        "text": "Todos los gatos pasan por evaluacion veterinaria, vacunacion y orientacion de cuidados esenciales."
+      },
+      {
+        "title": "Match con tu estilo",
+        "text": "Entendemos tu rutina e indicamos el gato con la personalidad ideal para ti."
+      },
+      {
+        "title": "Acompanamiento",
+        "text": "No estas solo: ofrecemos soporte en el periodo de adaptacion del nuevo hogar."
+      },
+      {
+        "title": "Red de apoyo",
+        "text": "Indicamos profesionales, socios y consejos practicos para el bienestar de tu gato."
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Etapas",
+    "title": "Como funciona la adopcion",
+    "subtitle": "Un paso a paso simple y humano.",
+    "steps": [
+      {
+        "title": "Registro inicial",
+        "text": "Cuenta sobre tu rutina y experiencia con animales."
+      },
+      {
+        "title": "Conversacion guiada",
+        "text": "Hablamos sobre el perfil ideal y aclaramos dudas."
+      },
+      {
+        "title": "Encuentro con el gato",
+        "text": "Conoces al gato y ves si el vinculo sucede."
+      },
+      {
+        "title": "Preparacion del hogar",
+        "text": "Checklist de seguridad, alimentacion y comodidad."
+      },
+      {
+        "title": "Seguimiento",
+        "text": "Soporte post-adopcion para garantizar una adaptacion tranquila."
+      }
+    ]
+  },
+  "checklist": {
+    "eyebrow": "Preparacion",
+    "title": "Checklist del nuevo hogar",
+    "subtitle": "Detalles que hacen la diferencia en la adaptacion.",
+    "items": [
+      "Mallas de proteccion en ventanas y balcones.",
+      "Caja de arena en un lugar tranquilo.",
+      "Comederos separados del agua.",
+      "Cama o espacio seguro para descansar.",
+      "Rascadores y juguetes de enriquecimiento.",
+      "Rutina de alimentacion definida.",
+      "Plan de vacunacion y veterinario de confianza.",
+      "Tiempo para interaccion diaria y carino."
+    ]
+  },
+  "stories": {
+    "eyebrow": "Historias",
+    "title": "Familias que abrieron espacio",
+    "subtitle": "Relatos reales de quienes adoptaron con nosotros.",
+    "items": [
+      {
+        "text": "La orientacion ayudo a elegir un gato tranquilo para nuestro apartamento pequeno. Hoy es parte de la familia.",
+        "meta": "Marina & Bento"
+      },
+      {
+        "text": "Recibimos apoyo en la adaptacion y acompanamiento en las primeras semanas. Fue esencial.",
+        "meta": "Carlos & Nala"
+      },
+      {
+        "text": "Adoptar fue simple, humano y transparente. Ahora tenemos una dupla inseparable en casa.",
+        "meta": "Julia & Milo"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "q": "Necesito experiencia con gatos?",
+        "a": "No. Ofrecemos orientacion completa para quien adopta por primera vez."
+      },
+      {
+        "q": "Puedo adoptar si vivo de alquiler?",
+        "a": "Si, siempre que el inmueble permita animales y sea seguro para el gato."
+      },
+      {
+        "q": "Cuanto tiempo toma el proceso?",
+        "a": "En promedio de 3 a 7 dias, dependiendo del match y la disponibilidad del gato."
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Adopcion responsable",
+    "title": "Listo para conocer a tu nuevo amigo?",
+    "subtitle": "Cuenta un poco sobre tu rutina y te ayudamos a encontrar el gato ideal.",
+    "button": "Iniciar registro"
+  },
+  "theme": {
+    "toggle": "Modo oscuro"
+  },
+  "pages": {
+    "about": {
+      "hero": {
+        "badge": "Nuestra mision",
+        "title": "Sobre la red Catlovers",
+        "subtitle": "Conectamos personas con adopciones responsables y apoyamos cada nuevo hogar con cuidado.",
+        "cta": "Quiero adoptar"
+      },
+      "sections": {
+        "mission": {
+          "eyebrow": "Mision",
+          "title": "Hacer la adopcion segura y consciente",
+          "text": "Actuamos como puente entre protectores, ONGs y familias, con apoyo antes y despues de la adopcion."
+        },
+        "values": {
+          "eyebrow": "Valores",
+          "title": "Lo que guia nuestras decisiones",
+          "items": [
+            {
+              "title": "Cuidado real",
+              "text": "Priorizamos bienestar, salud y afecto en cada etapa."
+            },
+            {
+              "title": "Transparencia",
+              "text": "Informacion clara para que te sientas seguro en la decision."
+            },
+            {
+              "title": "Responsabilidad",
+              "text": "Acompanamos el post-adopcion y ofrecemos red de apoyo."
+            }
+          ]
+        },
+        "impact": {
+          "eyebrow": "Impacto local",
+          "title": "Una comunidad que se apoya",
+          "text": "Trabajamos con protectores y hogares temporales para ampliar el numero de gatos rescatados."
+        }
+      }
+    },
+    "benefits": {
+      "hero": {
+        "badge": "Beneficios reales",
+        "title": "Ventajas de la adopcion de gatos",
+        "subtitle": "La adopcion transforma tu rutina, mejora el bienestar de los gatos y fortalece la comunidad."
+      },
+      "sections": {
+        "eyebrow": "Beneficios",
+        "title": "Ganancias para todos",
+        "items": [
+          {
+            "title": "Para ti",
+            "text": "Compania, rutina mas ligera y una presencia carinosa en el dia a dia."
+          },
+          {
+            "title": "Para el gato",
+            "text": "Un hogar seguro, atencion diaria y estabilidad emocional."
+          },
+          {
+            "title": "Para la comunidad",
+            "text": "Menos abandono, mas hogares conscientes y redes de apoyo."
+          }
+        ],
+        "list": {
+          "eyebrow": "Destacados",
+          "title": "Lo que cambia con la adopcion",
+          "items": [
+            "Reduce el estres e incrementa la sensacion de compania.",
+            "Fomenta responsabilidad y rutina saludable.",
+            "Los gatos ayudan a mantener el hogar tranquilo y acogedor.",
+            "Apoya protectores y proyectos locales.",
+            "Abre espacio para nuevos rescates.",
+            "Crea conexiones afectivas duraderas."
+          ]
+        }
+      }
+    },
+    "adoption": {
+      "hero": {
+        "badge": "Adopcion responsable",
+        "title": "Guia completa para adoptar",
+        "subtitle": "Etapas claras, requisitos y consejos para garantizar un hogar seguro y feliz.",
+        "cta": "Ver requisitos"
+      },
+      "sections": {
+        "requirements": {
+          "eyebrow": "Requisitos",
+          "title": "Lo que necesitamos para avanzar",
+          "subtitle": "Aseguramos que el gato tenga seguridad, tiempo y cuidado en el nuevo hogar.",
+          "items": [
+            "Documento de identificacion y direccion actualizada.",
+            "Ambiente protegido con mallas o supervision segura.",
+            "Disponibilidad para visitas de seguimiento.",
+            "Compromiso con vacunas y cuidados veterinarios.",
+            "Tiempo diario para interaccion y enriquecimiento.",
+            "Conformidad con el termino de adopcion responsable."
+          ]
+        },
+        "support": {
+          "eyebrow": "Post-adopcion",
+          "title": "Apoyo continuo",
+          "text": "Orientamos sobre adaptacion, alimentacion y comportamiento en las primeras semanas."
+        }
+      }
+    }
+  }
+}

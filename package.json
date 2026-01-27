@@ -16,17 +16,20 @@
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",
-    "start": "npm run build && npm run dev"
+    "start": "pnpm run build && pnpm run dev"
   },
   "dependencies": {
     "@andreasremdt/simple-translator": "^2.0.4"
   },
   "devDependencies": {
-    "@parcel/packager-raw-url": "^2.8.3",
-    "@parcel/transformer-webmanifest": "^2.8.3",
+    "@parcel/packager-raw-url": "^2.16.3",
+    "@parcel/transformer-webmanifest": "^2.16.3",
     "cz-conventional-changelog": "^3.3.0",
-    "parcel": "^2",
-    "process": "^0.11.10"
+    "parcel": "^2.16.3",
+    "posthtml": "^0.16.7",
+    "posthtml-include": "^1.7.4",
+    "process": "^0.11.10",
+    "sharp": "^0.33.5"
   },
   "config": {
     "commitizen": {

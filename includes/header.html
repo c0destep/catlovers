@@ -1,0 +1,103 @@
+<header>
+  <div class="container">
+    <nav id="pageTop">
+      <ul class="navbar">
+        <li>
+          <span class="navbar__title">Catlovers</span>
+        </li>
+        <li class="navbar__nav">
+          <ul class="menu" id="primaryNav">
+            <li class="menu__item">
+              <a class="menu__link" data-i18n="navbar.home" href="index.html">Home</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" data-i18n="navbar.about" href="about.html">Sobre</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" data-i18n="navbar.benefits" href="benefits.html">Benefícios</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" data-i18n="navbar.adoption" href="adoption.html">Adoção</a>
+            </li>
+          </ul>
+        </li>
+        <li class="navbar__lang">
+          <div aria-label="Idioma" class="language-switch" role="group">
+            <button aria-pressed="false" class="language-switch__button" data-language="pt_BR" type="button">PT</button>
+            <button aria-pressed="false" class="language-switch__button" data-language="en_US" type="button">EN</button>
+            <button aria-pressed="false" class="language-switch__button" data-language="es_ES" type="button">ES</button>
+          </div>
+          <div class="language-dropdown">
+            <button
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-label="Selecionar idioma"
+              class="language-dropdown__trigger"
+              type="button"
+            >
+              <svg aria-hidden="true" class="language-dropdown__icon" fill="none" viewBox="0 0 24 24"
+                   xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"></circle>
+                <path d="M3 12h18M12 3c2.5 3.5 2.5 14 0 18M8 5c1.2 1.6 1.2 12.4 0 14M16 5c-1.2 1.6-1.2 12.4 0 14"
+                      stroke="currentColor" stroke-linecap="round" stroke-width="1.2"></path>
+              </svg>
+            </button>
+            <ul class="language-dropdown__menu" role="listbox" tabindex="-1">
+              <li>
+                <button class="language-dropdown__option" data-language="pt_BR" role="option" type="button">Português
+                </button>
+              </li>
+              <li>
+                <button class="language-dropdown__option" data-language="en_US" role="option" type="button">English
+                </button>
+              </li>
+              <li>
+                <button class="language-dropdown__option" data-language="es_ES" role="option" type="button">Español
+                </button>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="navbar__theme">
+          <button aria-label="Alternar tema" aria-pressed="false" class="theme-toggle" type="button">
+            <svg aria-hidden="true" class="theme-toggle__icon theme-toggle__icon--sun" fill="none" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" fill="none" r="4.5" stroke="currentColor" stroke-width="1.5"></circle>
+              <path
+                d="M12 3.5v2M12 18.5v2M4.5 12h2M17.5 12h2M6.2 6.2l1.4 1.4M16.4 16.4l1.4 1.4M6.2 17.8l1.4-1.4M16.4 7.6l1.4-1.4"
+                stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+            </svg>
+            <svg aria-hidden="true" class="theme-toggle__icon theme-toggle__icon--moon" fill="currentColor"
+                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.75 4.5a6.75 6.75 0 1 0 3.75 12.25 7.25 7.25 0 1 1-3.75-12.25z"></path>
+            </svg>
+            <span class="theme-toggle__label" data-i18n="theme.toggle">Modo escuro</span>
+          </button>
+        </li>
+        <li class="navbar__toggle">
+          <button
+            aria-controls="primaryNav"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+            class="navbar__toggle--button"
+            type="button"
+          >
+            <svg
+              class="navbar__toggle--icon"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
