@@ -17,8 +17,8 @@ importers:
         version: 2.0.4
     devDependencies:
       '@parcel/packager-raw-url':
-        specifier: ^2.16.3
-        version: 2.16.3(@parcel/core@2.16.3(@swc/helpers@0.5.18))
+        specifier: ^2.16.4
+        version: 2.16.4(@parcel/core@2.16.3(@swc/helpers@0.5.18))
       '@parcel/transformer-webmanifest':
         specifier: ^2.16.4
         version: 2.16.4(@parcel/core@2.16.3(@swc/helpers@0.5.18))
@@ -385,9 +385,9 @@ packages:
     resolution: {integrity: sha512-01fufzVOs9reEDq9OTUyu5Kpasd8nGvBJEUytagM6rvNlEpmlUX5HvoAzUMSTyYeFSH+1VnX6HzK6EcQNY9Y8Q==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.3}
 
-  '@parcel/packager-raw-url@2.16.3':
-    resolution: {integrity: sha512-9JCLO7N13eQDtSDDimx1xdDyRKvycA/bcGeSoLn9F1vH1pMGMMMCLwU1YUky7Sw5bO4FF9fT1AQKaReopWvQmA==}
-    engines: {node: '>= 16.0.0', parcel: ^2.16.3}
+  '@parcel/packager-raw-url@2.16.4':
+    resolution: {integrity: sha512-qrpsz/wTlPvYM5qnz3N+3pW0a9MRivrN7TiduoS1W1U/UBhsPoOYNG+S6F67KDCmq47mmBKTgEFN9tEazSV+Qw==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.4}
 
   '@parcel/packager-raw@2.16.3':
     resolution: {integrity: sha512-GCehb36D2xe8P8gftyZcjNr3XcUzBgRzWcasM4I0oPaLRZw4nuIu60cwTsGk6/HhUYDq8uPze+gr1L4pApRrjw==}
@@ -1104,7 +1104,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   global-directory@4.0.1:
     resolution: {integrity: sha512-wHTUcDUoZ1H5/0iVqEudYW4/kAlN5cZ3j/bXn0Dpbizl9iaUVeWSHqiOjsgk6OW2bkLclbBjzewBz6weQ1zA2Q==}
@@ -2105,10 +2105,10 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
-  '@parcel/packager-raw-url@2.16.3(@parcel/core@2.16.3(@swc/helpers@0.5.18))':
+  '@parcel/packager-raw-url@2.16.4(@parcel/core@2.16.3(@swc/helpers@0.5.18))':
     dependencies:
-      '@parcel/plugin': 2.16.3(@parcel/core@2.16.3(@swc/helpers@0.5.18))
-      '@parcel/utils': 2.16.3
+      '@parcel/plugin': 2.16.4(@parcel/core@2.16.3(@swc/helpers@0.5.18))
+      '@parcel/utils': 2.16.4
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm

@@ -22,7 +22,7 @@
     "@andreasremdt/simple-translator": "^2.0.4"
   },
   "devDependencies": {
-    "@parcel/packager-raw-url": "^2.16.3",
+    "@parcel/packager-raw-url": "^2.16.4",
     "@parcel/transformer-webmanifest": "^2.16.4",
     "cz-conventional-changelog": "^3.3.0",
     "parcel": "^2.16.3",
