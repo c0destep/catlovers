@@ -25,7 +25,7 @@
     "@parcel/packager-raw-url": "^2.16.4",
     "@parcel/transformer-webmanifest": "^2.16.4",
     "cz-conventional-changelog": "^3.3.0",
-    "parcel": "^2.16.3",
+    "parcel": "^2.16.4",
     "posthtml": "^0.16.7",
     "posthtml-include": "^2.0.1",
     "process": "^0.11.10",
