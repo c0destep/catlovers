@@ -30,7 +30,7 @@
     "posthtml-include": "^2.0.1",
     "process": "^0.11.10",
     "sharp": "^0.33.5",
-    "minimatch": "^3.1.5",
+    "minimatch": "^10.2.4",
     "ajv": "^8.18.0"
   },
   "config": {
