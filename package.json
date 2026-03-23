@@ -29,7 +29,9 @@
     "posthtml": "^0.16.7",
     "posthtml-include": "^2.0.1",
     "process": "^0.11.10",
-    "sharp": "^0.33.5"
+    "sharp": "^0.33.5",
+    "minimatch": "^3.1.5",
+    "ajv": "^8.18.0"
   },
   "config": {
     "commitizen": {
@@ -40,6 +42,15 @@
     "overrides": {
       "lodash": ">=4.17.23",
       "tmp": ">=0.2.4"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@firebase/util",
+      "@parcel/watcher",
+      "@swc/core",
+      "lmdb",
+      "msgpackr-extract",
+      "protobufjs",
+      "sharp"
+    ]
   }
 }
