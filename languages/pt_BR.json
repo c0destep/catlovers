@@ -3,7 +3,10 @@
     "home": "Home",
     "about": "Sobre",
     "benefits": "Benefícios",
-    "adoption": "Adoção"
+    "adoption": "Adoção",
+    "quiz": "Quiz",
+    "gallery": "Galeria",
+    "blog": "Blog"
   },
   "footer": {
     "home": "Home",
@@ -32,6 +35,10 @@
     "card": {
       "title": "Gatos prontos para amar",
       "subtitle": "Resgatados, vacinados e cheios de personalidade."
+    },
+    "card2": {
+      "title": "92% satisfação",
+      "subtitle": "com acompanhamento"
     }
   },
   "stats": {
@@ -40,19 +47,23 @@
     "items": [
       {
         "value": "120+",
-        "label": "gatos adotados no último ano"
+        "label": "gatos adotados no último ano",
+        "detail": "e contando"
       },
       {
         "value": "92%",
-        "label": "adoções com acompanhamento pós-lar"
+        "label": "adoções com acompanhamento pós-lar",
+        "detail": "com acompanhamento"
       },
       {
         "value": "48h",
-        "label": "tempo médio para conhecer um gato"
+        "label": "tempo médio para conhecer um gato",
+        "detail": "processo ágil"
       },
       {
         "value": "15",
-        "label": "parceiros locais ativos"
+        "label": "parceiros locais ativos",
+        "detail": "em toda a região"
       }
     ]
   },
@@ -63,7 +74,12 @@
     "cards": [
       {
         "title": "Saúde em dia",
-        "text": "Todos os gatos passam por avaliação veterinária, vacinação e orientação de cuidados essenciais."
+        "text": "Todos os gatos passam por avaliação veterinária, vacinação e orientação de cuidados essenciais.",
+        "tags": [
+          "Vacinado",
+          "Castrado",
+          "Vermifugado"
+        ]
       },
       {
         "title": "Match com seu estilo",
@@ -143,18 +159,23 @@
   "faq": {
     "eyebrow": "FAQ",
     "title": "Perguntas frequentes",
+    "subtitle": "Tudo que você precisa saber antes de dar esse passo incrível.",
     "items": [
       {
         "q": "Preciso ter experiência com gatos?",
-        "a": "Não. Oferecemos orientação completa para quem está adotando pela primeira vez."
+        "a": "Não! Oferecemos orientação completa para quem está adotando pela primeira vez. Você terá todo o suporte necessário."
       },
       {
         "q": "Posso adotar se moro de aluguel?",
-        "a": "Sim, desde que o imóvel permita animais e seja seguro para o gato."
+        "a": "Sim, desde que o imóvel permita animais e seja seguro para o gato. Ajudamos a verificar as condições."
       },
       {
         "q": "Quanto tempo leva o processo?",
-        "a": "Em média de 3 a 7 dias, dependendo do match e da disponibilidade do gato."
+        "a": "Em média de 3 a 7 dias, dependendo do match e da disponibilidade. Nosso processo é ágil e humanizado."
+      },
+      {
+        "q": "Os gatos são vacinados e castrados?",
+        "a": "Sim! Todos passam por avaliação veterinária completa, incluindo vacinação, castração e vermifugação antes da adoção."
       }
     ]
   },
@@ -167,109 +188,366 @@
   "theme": {
     "toggle": "Modo escuro"
   },
-  "pages": {
-    "about": {
-      "hero": {
-        "badge": "Nossa missão",
-        "title": "Sobre a rede Catlovers",
-        "subtitle": "Conectamos pessoas a adoções responsáveis e apoiamos cada novo lar com orientação e carinho.",
-        "cta": "Quero adotar"
-      },
-      "sections": {
-        "mission": {
-          "eyebrow": "Missão",
-          "title": "Fazer a adoção ser segura e consciente",
-          "text": "Atuamos como ponte entre protetores, ONGs e famílias, garantindo suporte antes e depois da adoção."
-        },
-        "values": {
-          "eyebrow": "Valores",
-          "title": "O que guia nossas escolhas",
-          "items": [
-            {
-              "title": "Cuidado real",
-              "text": "Priorizamos bem-estar, saúde e afeto em cada etapa."
-            },
-            {
-              "title": "Transparência",
-              "text": "Informações claras para que você se sinta seguro na decisão."
-            },
-            {
-              "title": "Responsabilidade",
-              "text": "Acompanhamos o pós-adoção e oferecemos rede de apoio."
-            }
-          ]
-        },
-        "impact": {
-          "eyebrow": "Impacto local",
-          "title": "Uma comunidade que se apoia",
-          "text": "Trabalhamos com protetores e lares temporários para ampliar o número de gatos resgatados."
-        }
-      }
+  "about": {
+    "hero": {
+      "badge": "Nossa missão",
+      "title": "Sobre a rede Catlovers",
+      "subtitle": "Conectamos pessoas a adoções responsáveis e apoiamos cada novo lar com orientação e carinho.",
+      "cta": "Quero adotar"
     },
-    "benefits": {
-      "hero": {
-        "badge": "Benefícios reais",
-        "title": "Vantagens da adoção de gatos",
-        "subtitle": "A adoção transforma sua rotina, melhora o bem-estar dos gatos e fortalece a comunidade."
+    "sections": {
+      "mission": {
+        "eyebrow": "Missão",
+        "title": "Fazer a adoção ser segura e consciente",
+        "text": "Atuamos como ponte entre protetores, ONGs e famílias, garantindo suporte antes e depois da adoção."
       },
-      "sections": {
-        "eyebrow": "Benefícios",
-        "title": "Ganhos para todos os lados",
+      "values": {
+        "eyebrow": "Valores",
+        "title": "O que guia nossas escolhas",
         "items": [
           {
-            "title": "Para você",
-            "text": "Companhia, rotina mais leve e uma presença carinhosa no dia a dia."
+            "title": "Cuidado real",
+            "text": "Priorizamos bem-estar, saúde e afeto em cada etapa."
           },
           {
-            "title": "Para o gato",
-            "text": "Um lar seguro, atenção diária e estabilidade emocional."
+            "title": "Transparência",
+            "text": "Informações claras para que você se sinta seguro na decisão."
           },
           {
-            "title": "Para a comunidade",
-            "text": "Menos abandono, mais lares conscientes e redes de apoio."
+            "title": "Responsabilidade",
+            "text": "Acompanhamos o pós-adoção e oferecemos rede de apoio."
           }
-        ],
-        "list": {
-          "eyebrow": "Destaques",
-          "title": "O que muda com a adoção",
-          "items": [
-            "Reduz o estresse e aumenta a sensação de companhia.",
-            "Estimula responsabilidade e rotina saudável.",
-            "Gatos ajudam a manter a casa mais tranquila e acolhedora.",
-            "Apoia protetores e projetos locais.",
-            "Abre espaço para novos resgates.",
-            "Cria conexões afetivas duradouras."
-          ]
-        }
+        ]
+      },
+      "impact": {
+        "eyebrow": "Impacto local",
+        "title": "Uma comunidade que se apoia",
+        "text": "Trabalhamos com protetores e lares temporários para ampliar o número de gatos resgatados."
+      },
+      "help": {
+        "eyebrow": "Como ajudar",
+        "title": "Faça parte da nossa rede",
+        "subtitle": "Mesmo sem adotar, você pode transformar a vida de muitos gatos.",
+        "items": [
+          {
+            "title": "Lar temporário",
+            "text": "Acolha um gato resgatado por alguns dias ou semanas até que ele encontre uma família definitiva."
+          },
+          {
+            "title": "Doações e apadrinhamento",
+            "text": "Ajude com ração, areia, medicamentos ou custos veterinários dos nossos parceiros e protetores locais."
+          },
+          {
+            "title": "Compartilhe",
+            "text": "Dar visibilidade aos gatos nas redes sociais aumenta muito as chances de eles encontrarem um bom lar."
+          }
+        ]
       }
+    }
+  },
+  "benefits": {
+    "hero": {
+      "badge": "Benefícios reais",
+      "title": "Vantagens da adoção de gatos",
+      "subtitle": "A adoção transforma sua rotina, melhora o bem-estar dos gatos e fortalece a comunidade."
+    },
+    "sections": {
+      "eyebrow": "Benefícios",
+      "title": "Ganhos para todos os lados",
+      "items": [
+        {
+          "title": "Para você",
+          "text": "Companhia, rotina mais leve e uma presença carinhosa no dia a dia."
+        },
+        {
+          "title": "Para o gato",
+          "text": "Um lar seguro, atenção diária e estabilidade emocional."
+        },
+        {
+          "title": "Para a comunidade",
+          "text": "Menos abandono, mais lares conscientes e redes de apoio."
+        }
+      ],
+      "list": {
+        "eyebrow": "Destaques",
+        "title": "O que muda com a adoção",
+        "items": [
+          "Reduz o estresse e aumenta a sensação de companhia.",
+          "Estimula responsabilidade e rotina saudável.",
+          "Gatos ajudam a manter a casa mais tranquila e acolhedora.",
+          "Apoia protetores e projetos locais.",
+          "Abre espaço para novos resgates.",
+          "Cria conexões afetivas duradouras."
+        ]
+      },
+      "facts": {
+        "eyebrow": "Curiosidades",
+        "title": "Você sabia?",
+        "subtitle": "Informações fascinantes sobre nossos amigos felinos.",
+        "items": [
+          {
+            "title": "Ronronar curativo",
+            "text": "O ronronar dos gatos ocorre em uma frequência (entre 25 e 150 Hertz) que demonstrou melhorar a densidade óssea e promover a cicatrização."
+          },
+          {
+            "title": "Comunicação exclusiva",
+            "text": "Gatos adultos raramente miarão uns para os outros. O miado é uma ferramenta de comunicação desenvolvida quase exclusivamente para interagir com os humanos."
+          },
+          {
+            "title": "Dorminhocos profissionais",
+            "text": "Os gatos passam cerca de 70% de suas vidas dormindo, o equivalente a cerca de 13 a 16 horas por dia. Isso preserva sua energia de caçadores."
+          }
+        ]
+      }
+    }
+  },
+  "adoption": {
+    "hero": {
+      "badge": "Adoção responsável",
+      "title": "Guia completo para adotar",
+      "subtitle": "Etapas claras, requisitos e dicas para garantir um lar seguro e feliz.",
+      "cta": "Ver requisitos"
+    },
+    "sections": {
+      "requirements": {
+        "eyebrow": "Requisitos",
+        "title": "O que precisamos para seguir",
+        "subtitle": "Garantimos que o gato tenha segurança, tempo e carinho no novo lar.",
+        "items": [
+          "Documento de identificação e endereço atualizado.",
+          "Ambiente protegido com telas ou supervisão segura.",
+          "Disponibilidade para visitas de acompanhamento.",
+          "Compromisso com vacinas e cuidados veterinários.",
+          "Tempo diário para interação e enriquecimento.",
+          "Concordância com o termo de adoção responsável."
+        ]
+      },
+      "support": {
+        "eyebrow": "Pós-adoção",
+        "title": "Apoio contínuo",
+        "text": "Orientamos sobre adaptação, alimentação e comportamento nas primeiras semanas."
+      },
+      "tips": {
+        "eyebrow": "Dicas de Cuidados",
+        "title": "Primeiros dias em casa",
+        "subtitle": "Dicas para ajudar seu novo amigo a se sentir seguro e acolhido.",
+        "items": [
+          {
+            "title": "Espaço restrito no início",
+            "text": "Mantenha o gato em um cômodo tranquilo por alguns dias, com comida, água e caixa de areia, para que ele se acostume com os novos cheiros."
+          },
+          {
+            "title": "Esconderijos são importantes",
+            "text": "Os gatos se sentem mais seguros quando têm onde se esconder. Caixas de papelão ou caminhas tipo 'toca' são excelentes para as primeiras semanas."
+          },
+          {
+            "title": "Paciência e espaço",
+            "text": "Deixe o gato vir até você. Forçar carinho ou pegá-lo no colo nos primeiros dias pode gerar estresse. Sente-se no chão e espere que ele sinta curiosidade."
+          }
+        ]
+      }
+    }
+  },
+  "privacy": {
+    "hero": {
+      "badge": "Transparência",
+      "title": "Política de Privacidade",
+      "subtitle": "Saiba como protegemos seus dados e respeitamos sua privacidade."
+    },
+    "sections": {
+      "content": {
+        "title": "Nossos Princípios",
+        "text": "A sua privacidade é importante para nós. É política do Catlovers respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site. Retemos informações coletadas apenas pelo tempo necessário para fornecer o serviço."
+      }
+    }
+  },
+  "terms": {
+    "hero": {
+      "badge": "Regras de Uso",
+      "title": "Termos de Uso",
+      "subtitle": "Conheça as regras e diretrizes para utilizar a plataforma Catlovers."
+    },
+    "sections": {
+      "content": {
+        "title": "Responsabilidades",
+        "text": "Ao acessar ao site Catlovers, concorda em cumprir estes termos de serviço e todas as leis locais aplicáveis. O conteúdo da plataforma não pode ser modificado ou copiado para fins comerciais."
+      }
+    }
+  },
+  "gallery": {
+    "eyebrow": "Adoção",
+    "title": "Conheça nossos gatinhos",
+    "subtitle": "Use os filtros para encontrar o gato que mais combina com você.",
+    "filterAge": "Filtrar por idade",
+    "filterSex": "Filtrar por sexo",
+    "filterTemp": "Filtrar por temperamento",
+    "ageAll": "Todas as idades",
+    "ageKitten": "Filhote",
+    "ageAdult": "Adulto",
+    "sexAll": "Ambos os sexos",
+    "sexMale": "Macho",
+    "sexFemale": "Fêmea",
+    "tempAll": "Qualquer temperamento",
+    "tempCalm": "Calmo",
+    "tempPlayful": "Brincalhão",
+    "tempAffectionate": "Carinhoso",
+    "empty": "Nenhum gatinho encontrado com esses filtros.",
+    "colors": {
+      "Laranja": "Laranja",
+      "Frajola": "Frajola",
+      "Escaminha": "Escaminha",
+      "Tigrado": "Tigrado",
+      "Branco": "Branco",
+      "Preto": "Preto",
+      "Siamês": "Siamês",
+      "Tricolor": "Tricolor"
+    }
+  },
+  "quiz": {
+    "eyebrow": "Match",
+    "title": "Encontre seu Par Perfeito",
+    "subtitle": "Responda a essas três perguntas rápidas para encontrarmos o gatinho ideal para você.",
+    "step1": "1. Como é o seu lar?",
+    "homeCalm": "Casa ou apartamento pequeno e tranquilo",
+    "homePlayful": "Casa com quintal ou espaço grande com muito movimento",
+    "homeAffectionate": "Um ambiente familiar acolhedor, sempre tem alguém",
+    "step2": "2. Quanto tempo livre você tem para brincar?",
+    "timeCalm": "Pouco tempo, busco uma companhia tranquila",
+    "timePlayful": "Bastante tempo, adoro interagir e brincar",
+    "timeAffectionate": "Tempo moderado, mas gosto de carinho no sofá",
+    "submit": "Descobrir meu Match",
+    "resultTitle": "O perfil ideal para você é:",
+    "resultSubtitle": "Baseado nas suas respostas, recomendamos gatinhos com esse perfil.",
+    "resultBtn": "Ver gatinhos"
+  },
+  "support": {
+    "eyebrow": "Apoio",
+    "title": "Outras formas de ajudar",
+    "subtitle": "Se você não pode adotar agora, ainda há muitas formas de transformar a vida de um gatinho.",
+    "sponsor": "Apadrinhamento",
+    "sponsorText": "Escolha um gatinho e ajude com os custos mensais de alimentação e cuidados veterinários até que ele encontre um lar.",
+    "sponsorBtn": "Apadrinhar",
+    "donate": "Doação de Insumos",
+    "donateText": "Aceitamos doações de ração (seca e úmida), areia sanitária, caminhas, brinquedos e medicamentos dentro da validade.",
+    "donateBtn": "Ver locais de coleta",
+    "volunteer": "Voluntariado",
+    "volunteerText": "Doe seu tempo! Precisamos de ajuda para socializar os gatos, limpar os recintos, ou ajudar no transporte para o veterinário.",
+    "volunteerBtn": "Ser voluntário"
+  },
+  "blog": {
+    "eyebrow": "Educação",
+    "title": "Blog Catlovers",
+    "subtitle": "Tudo o que você precisa saber para garantir o bem-estar do seu amigo felino.",
+    "readMore": "Ler artigo completo",
+    "cards": [
+      {
+        "tag": "Comportamento",
+        "title": "Como adaptar um novo gato com outros pets",
+        "text": "Dicas essenciais para uma introdução segura e sem estresse entre os animais da casa."
+      },
+      {
+        "tag": "Gatificação",
+        "title": "Guia prático de gatificação",
+        "text": "Aprenda a criar um ambiente enriquecido que estimula os instintos do seu gato."
+      },
+      {
+        "tag": "Segurança",
+        "title": "A importância das telas de proteção",
+        "text": "Por que telar janelas e varandas não é exagero, mas sim uma necessidade absoluta."
+      }
+    ]
+  },
+  "post": {
+    "back": "← Voltar para o Blog",
+    "footerTitle": "Gostou deste artigo?",
+    "footerSubtitle": "Saber como cuidar é o primeiro passo da adoção responsável.",
+    "footerBtn": "Ver gatinhos para adoção",
+    "article": {
+      "tag": "Comportamento",
+      "title": "Como adaptar um novo gato com outros pets",
+      "meta": "Publicado em 20 de Abril de 2026 • Leitura de 5 minutos",
+      "p1": "A chegada de um novo felino na casa é sempre um momento de alegria, mas exige muita paciência e planejamento, especialmente se você já tem outros gatos ou cães.",
+      "h1": "1. Separação Inicial (O Quarto Seguro)",
+      "p2": "Nunca coloque os animais frente a frente logo no primeiro dia. Reserve um cômodo da casa apenas para o recém-chegado. Ele precisará de sua própria caixa de areia, potes de água, comida e locais para se esconder.",
+      "h2": "2. Troca de Cheiros",
+      "p3": "Antes de se verem, eles devem se cheirar. Passe uma toalha limpa no gato novo e coloque-a perto do comedouro dos animais veteranos, e vice-versa. Assim eles associarão o cheiro do outro a algo positivo (comida).",
+      "h3": "3. Contato Visual Seguro",
+      "p4": "Após alguns dias de tranquilidade, permita que se vejam através de uma fresta na porta ou de uma tela/portão de bebê. Se houver bufadas ou rosnados, feche a porta e tente novamente no dia seguinte.",
+      "quote": "O maior erro dos tutores é apressar a introdução. O tempo dos felinos é muito diferente do nosso.",
+      "h4": "4. Encontro Supervisionado",
+      "p5": "Quando não houver mais reações agressivas pela fresta da porta, deixe-os no mesmo ambiente, sempre com supervisão. Ofereça petiscos para que associem a presença um do outro a momentos bons."
+    }
+  },
+  "happyEndings": {
+    "eyebrow": "Histórias reais",
+    "title": "Finais Felizes",
+    "subtitle": "Conheça as histórias completas de gatos que ganharam uma segunda chance e transformaram seus lares.",
+    "rescue": "O Resgate",
+    "today": "Hoje",
+    "future": "Sua história pode estar aqui no futuro.",
+    "adoptBtn": "Quero Adotar",
+    "stories": [
+      {
+        "meta": "Adotado em 2025",
+        "rescueDesc": "Encontrado em uma caixa de papelão sob forte chuva. Estava assustado, desnutrido e tremendo de frio.",
+        "todayDesc": "Dorme esparramado no meio da cama, é o dono do apartamento e adora ganhar sachê de frango no café da manhã.",
+        "quote": "\"A consultoria da Catlovers ajudou a escolher um gato calmo para nosso apartamento pequeno. Hoje ele é a alegria da casa e não imaginamos a vida sem ele.\""
+      },
+      {
+        "meta": "Adotada em 2024",
+        "quote": "\"A Nala era a gata mais tímida do abrigo, ficava sempre escondida. Recebemos muito apoio na adaptação e fomos acompanhados nas primeiras semanas. O suporte fez toda a diferença — com paciência, ela perdeu o medo e hoje ela é a primeira a receber as visitas na porta, pedindo carinho.\""
+      }
+    ]
+  },
+  "form": {
+    "title": "Formulário de Interesse",
+    "subtitle": "Preencha com atenção. Entraremos em contato em breve.",
+    "labelName": "Nome Completo *",
+    "labelEmail": "E-mail *",
+    "placeholderName": "Seu nome completo",
+    "placeholderEmail": "seu@email.com",
+    "submit": "Enviar Formulário",
+    "sending": "Enviando...",
+    "success": "Formulário enviado com sucesso!",
+    "errorRequired": "Este campo é obrigatório.",
+    "errorEmail": "Por favor, insira um e-mail válido."
+  },
+  "head": {
+    "home": {
+      "title": "Catlovers - Seu guia completo sobre gatos",
+      "description": "Aprenda tudo sobre comportamento, cuidados e adoção responsável de felinos."
+    },
+    "about": {
+      "title": "Sobre Nós - Catlovers",
+      "description": "Conheça a missão da Catlovers e como ajudamos gatinhos a encontrarem lares felizes."
     },
     "adoption": {
-      "hero": {
-        "badge": "Adoção responsável",
-        "title": "Guia completo para adotar",
-        "subtitle": "Etapas claras, requisitos e dicas para garantir um lar seguro e feliz.",
-        "cta": "Ver requisitos"
-      },
-      "sections": {
-        "requirements": {
-          "eyebrow": "Requisitos",
-          "title": "O que precisamos para seguir",
-          "subtitle": "Garantimos que o gato tenha segurança, tempo e carinho no novo lar.",
-          "items": [
-            "Documento de identificação e endereço atualizado.",
-            "Ambiente protegido com telas ou supervisão segura.",
-            "Disponibilidade para visitas de acompanhamento.",
-            "Compromisso com vacinas e cuidados veterinários.",
-            "Tempo diário para interação e enriquecimento.",
-            "Concordância com o termo de adoção responsável."
-          ]
-        },
-        "support": {
-          "eyebrow": "Pós-adoção",
-          "title": "Apoio contínuo",
-          "text": "Orientamos sobre adaptação, alimentação e comportamento nas primeiras semanas."
-        }
-      }
+      "title": "Adoção - Catlovers",
+      "description": "Guia completo para adoção responsável de gatos, com etapas e checklist."
+    },
+    "benefits": {
+      "title": "Benefícios - Catlovers",
+      "description": "Descubra por que ter um gato faz bem para sua saúde e felicidade."
+    },
+    "blog": {
+      "title": "Blog - Catlovers",
+      "description": "Dicas, curiosidades e guias sobre o mundo dos gatos."
+    },
+    "cats": {
+      "title": "Galeria - Catlovers",
+      "description": "Encontre o gatinho que mais combina com você em nossa galeria."
+    },
+    "happyEndings": {
+      "title": "Finais Felizes - Catlovers",
+      "description": "Histórias emocionantes de adoções que deram certo."
+    },
+    "quiz": {
+      "title": "Quiz Match - Catlovers",
+      "description": "Faça o nosso teste e descubra qual perfil de gato é o ideal para você."
+    },
+    "post": {
+      "title": "Como adaptar um novo gato - Catlovers",
+      "description": "Dicas essenciais para introduzir um novo felino na sua casa."
     }
   }
 }

@@ -3,7 +3,10 @@
     "home": "Home",
     "about": "About",
     "benefits": "Benefits",
-    "adoption": "Adoption"
+    "adoption": "Adoption",
+    "quiz": "Quiz",
+    "gallery": "Gallery",
+    "blog": "Blog"
   },
   "footer": {
     "home": "Home",
@@ -32,6 +35,10 @@
     "card": {
       "title": "Cats ready to love",
       "subtitle": "Rescued, vaccinated, and full of personality."
+    },
+    "card2": {
+      "title": "92% satisfaction",
+      "subtitle": "with follow-up"
     }
   },
   "stats": {
@@ -40,19 +47,23 @@
     "items": [
       {
         "value": "120+",
-        "label": "cats adopted in the last year"
+        "label": "cats adopted in the last year",
+        "detail": "and counting"
       },
       {
         "value": "92%",
-        "label": "adoptions with post-home support"
+        "label": "adoptions with post-home support",
+        "detail": "with follow-up"
       },
       {
         "value": "48h",
-        "label": "average time to meet a cat"
+        "label": "average time to meet a cat",
+        "detail": "agile process"
       },
       {
         "value": "15",
-        "label": "active local partners"
+        "label": "active local partners",
+        "detail": "across the region"
       }
     ]
   },
@@ -63,7 +74,12 @@
     "cards": [
       {
         "title": "Healthy care",
-        "text": "Every cat gets a vet check, vaccines, and care guidance."
+        "text": "Every cat gets a vet check, vaccines, and care guidance.",
+        "tags": [
+          "Vaccinated",
+          "Neutered",
+          "Dewormed"
+        ]
       },
       {
         "title": "Match your lifestyle",
@@ -143,18 +159,23 @@
   "faq": {
     "eyebrow": "FAQ",
     "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know before taking this amazing step.",
     "items": [
       {
         "q": "Do I need experience with cats?",
-        "a": "No. We offer full guidance for first-time adopters."
+        "a": "No! We offer full guidance for first-time adopters. You will have all the support you need."
       },
       {
         "q": "Can I adopt if I rent?",
-        "a": "Yes, as long as pets are allowed and the home is safe."
+        "a": "Yes, as long as pets are allowed and the home is safe for the cat. We help verify the conditions."
       },
       {
         "q": "How long does the process take?",
-        "a": "On average 3 to 7 days, depending on the match and availability."
+        "a": "On average 3 to 7 days, depending on the match and availability. Our process is agile and humanized."
+      },
+      {
+        "q": "Are the cats vaccinated and neutered?",
+        "a": "Yes! All of them undergo a complete vet check, including vaccination, neutering, and deworming prior to adoption."
       }
     ]
   },
@@ -167,109 +188,366 @@
   "theme": {
     "toggle": "Dark mode"
   },
-  "pages": {
-    "about": {
-      "hero": {
-        "badge": "Our mission",
-        "title": "About the Catlovers network",
-        "subtitle": "We connect people to responsible adoptions and support every new home with care.",
-        "cta": "I want to adopt"
-      },
-      "sections": {
-        "mission": {
-          "eyebrow": "Mission",
-          "title": "Make adoption safe and conscious",
-          "text": "We bridge rescuers, NGOs, and families, with support before and after adoption."
-        },
-        "values": {
-          "eyebrow": "Values",
-          "title": "What guides our choices",
-          "items": [
-            {
-              "title": "Real care",
-              "text": "We prioritize well-being, health, and affection at every step."
-            },
-            {
-              "title": "Transparency",
-              "text": "Clear information so you feel confident in the decision."
-            },
-            {
-              "title": "Responsibility",
-              "text": "We follow up after adoption and offer a support network."
-            }
-          ]
-        },
-        "impact": {
-          "eyebrow": "Local impact",
-          "title": "A community that supports each other",
-          "text": "We work with rescuers and foster homes to expand the number of cats saved."
-        }
-      }
+  "about": {
+    "hero": {
+      "badge": "Our mission",
+      "title": "About the Catlovers network",
+      "subtitle": "We connect people to responsible adoptions and support every new home with care.",
+      "cta": "I want to adopt"
     },
-    "benefits": {
-      "hero": {
-        "badge": "Real benefits",
-        "title": "The advantages of cat adoption",
-        "subtitle": "Adoption changes your routine, improves cat well-being, and strengthens the community."
+    "sections": {
+      "mission": {
+        "eyebrow": "Mission",
+        "title": "Make adoption safe and conscious",
+        "text": "We bridge rescuers, NGOs, and families, with support before and after adoption."
       },
-      "sections": {
-        "eyebrow": "Benefits",
-        "title": "Gains for everyone",
+      "values": {
+        "eyebrow": "Values",
+        "title": "What guides our choices",
         "items": [
           {
-            "title": "For you",
-            "text": "Companionship, a lighter routine, and a caring presence every day."
+            "title": "Real care",
+            "text": "We prioritize well-being, health, and affection at every step."
           },
           {
-            "title": "For the cat",
-            "text": "A safe home, daily attention, and emotional stability."
+            "title": "Transparency",
+            "text": "Clear information so you feel confident in the decision."
           },
           {
-            "title": "For the community",
-            "text": "Less abandonment, more conscious homes, and stronger support networks."
+            "title": "Responsibility",
+            "text": "We follow up after adoption and offer a support network."
           }
-        ],
-        "list": {
-          "eyebrow": "Highlights",
-          "title": "What changes with adoption",
-          "items": [
-            "Reduces stress and increases companionship.",
-            "Encourages responsibility and healthier routines.",
-            "Cats help keep the home calm and welcoming.",
-            "Supports rescuers and local projects.",
-            "Opens space for more rescues.",
-            "Creates lasting emotional bonds."
-          ]
-        }
+        ]
+      },
+      "impact": {
+        "eyebrow": "Local impact",
+        "title": "A community that supports each other",
+        "text": "We work with rescuers and foster homes to expand the number of cats saved."
+      },
+      "help": {
+        "eyebrow": "How to help",
+        "title": "Join our network",
+        "subtitle": "Even without adopting, you can transform the lives of many cats.",
+        "items": [
+          {
+            "title": "Foster home",
+            "text": "Welcome a rescued cat for a few days or weeks until they find a forever family."
+          },
+          {
+            "title": "Donations and sponsorship",
+            "text": "Help with food, litter, medications, or vet costs for our local partners and rescuers."
+          },
+          {
+            "title": "Share",
+            "text": "Giving visibility to cats on social media greatly increases their chances of finding a good home."
+          }
+        ]
       }
+    }
+  },
+  "benefits": {
+    "hero": {
+      "badge": "Real benefits",
+      "title": "The advantages of cat adoption",
+      "subtitle": "Adoption changes your routine, improves cat well-being, and strengthens the community."
+    },
+    "sections": {
+      "eyebrow": "Benefits",
+      "title": "Gains for everyone",
+      "items": [
+        {
+          "title": "For you",
+          "text": "Companionship, a lighter routine, and a caring presence every day."
+        },
+        {
+          "title": "For the cat",
+          "text": "A safe home, daily attention, and emotional stability."
+        },
+        {
+          "title": "For the community",
+          "text": "Less abandonment, more conscious homes, and stronger support networks."
+        }
+      ],
+      "list": {
+        "eyebrow": "Highlights",
+        "title": "What changes with adoption",
+        "items": [
+          "Reduces stress and increases companionship.",
+          "Encourages responsibility and healthier routines.",
+          "Cats help keep the home calm and welcoming.",
+          "Supports rescuers and local projects.",
+          "Opens space for more rescues.",
+          "Creates lasting emotional bonds."
+        ]
+      },
+      "facts": {
+        "eyebrow": "Fun Facts",
+        "title": "Did you know?",
+        "subtitle": "Fascinating information about our feline friends.",
+        "items": [
+          {
+            "title": "Healing purr",
+            "text": "A cat's purr happens at a frequency (between 25 and 150 Hertz) that has been shown to improve bone density and promote healing."
+          },
+          {
+            "title": "Exclusive communication",
+            "text": "Adult cats rarely meow at each other. Meowing is a communication tool developed almost exclusively to interact with humans."
+          },
+          {
+            "title": "Professional sleepers",
+            "text": "Cats spend about 70% of their lives sleeping, which equates to about 13 to 16 hours a day. This preserves their hunting energy."
+          }
+        ]
+      }
+    }
+  },
+  "adoption": {
+    "hero": {
+      "badge": "Responsible adoption",
+      "title": "Complete guide to adopt",
+      "subtitle": "Clear steps, requirements, and tips to ensure a safe and happy home.",
+      "cta": "See requirements"
+    },
+    "sections": {
+      "requirements": {
+        "eyebrow": "Requirements",
+        "title": "What we need to move forward",
+        "subtitle": "We ensure the cat has safety, time, and care in the new home.",
+        "items": [
+          "ID document and updated address.",
+          "Protected environment with screens or safe supervision.",
+          "Availability for follow-up visits.",
+          "Commitment to vaccines and veterinary care.",
+          "Daily time for interaction and enrichment.",
+          "Agreement with the responsible adoption terms."
+        ]
+      },
+      "support": {
+        "eyebrow": "Post-adoption",
+        "title": "Ongoing support",
+        "text": "We guide you on adaptation, feeding, and behavior in the first weeks."
+      },
+      "tips": {
+        "eyebrow": "Care Tips",
+        "title": "First days at home",
+        "subtitle": "Tips to help your new friend feel safe and welcomed.",
+        "items": [
+          {
+            "title": "Restricted space at first",
+            "text": "Keep the cat in a quiet room for a few days, with food, water, and a litter box, so they get used to the new smells."
+          },
+          {
+            "title": "Hiding spots are important",
+            "text": "Cats feel safer when they have somewhere to hide. Cardboard boxes or 'cave' type beds are excellent for the first weeks."
+          },
+          {
+            "title": "Patience and space",
+            "text": "Let the cat come to you. Forcing affection or picking them up in the first days can cause stress. Sit on the floor and wait for their curiosity."
+          }
+        ]
+      }
+    }
+  },
+  "privacy": {
+    "hero": {
+      "badge": "Transparency",
+      "title": "Privacy Policy",
+      "subtitle": "Learn how we protect your data and respect your privacy."
+    },
+    "sections": {
+      "content": {
+        "title": "Our Principles",
+        "text": "Your privacy is important to us. It is Catlovers' policy to respect your privacy regarding any information we may collect from you on our website. We only retain collected information for as long as necessary to provide the service."
+      }
+    }
+  },
+  "terms": {
+    "hero": {
+      "badge": "Usage Rules",
+      "title": "Terms of Use",
+      "subtitle": "Get to know the rules and guidelines for using the Catlovers platform."
+    },
+    "sections": {
+      "content": {
+        "title": "Responsibilities",
+        "text": "By accessing the Catlovers website, you agree to be bound by these terms of service and all applicable local laws. Platform content may not be modified or copied for commercial purposes."
+      }
+    }
+  },
+  "gallery": {
+    "eyebrow": "Adoption",
+    "title": "Meet our kittens",
+    "subtitle": "Use the filters to find the cat that best suits you.",
+    "filterAge": "Filter by age",
+    "filterSex": "Filter by sex",
+    "filterTemp": "Filter by temperament",
+    "ageAll": "All ages",
+    "ageKitten": "Kitten",
+    "ageAdult": "Adult",
+    "sexAll": "Both sexes",
+    "sexMale": "Male",
+    "sexFemale": "Female",
+    "tempAll": "Any temperament",
+    "tempCalm": "Calm",
+    "tempPlayful": "Playful",
+    "tempAffectionate": "Affectionate",
+    "empty": "No kittens found with these filters.",
+    "colors": {
+      "Laranja": "Orange",
+      "Frajola": "Tuxedo",
+      "Escaminha": "Tortoiseshell",
+      "Tigrado": "Tabby",
+      "Branco": "White",
+      "Preto": "Black",
+      "Siamês": "Siamese",
+      "Tricolor": "Calico"
+    }
+  },
+  "quiz": {
+    "eyebrow": "Match",
+    "title": "Find your Perfect Match",
+    "subtitle": "Answer these three quick questions to find your ideal kitten.",
+    "step1": "1. What is your home like?",
+    "homeCalm": "Small, quiet house or apartment",
+    "homePlayful": "House with a yard or large space with a lot of movement",
+    "homeAffectionate": "A welcoming family environment, there is always someone",
+    "step2": "2. How much free time do you have to play?",
+    "timeCalm": "Little time, looking for a quiet company",
+    "timePlayful": "Plenty of time, I love to interact and play",
+    "timeAffectionate": "Moderate time, but I like cuddling on the couch",
+    "submit": "Discover my Match",
+    "resultTitle": "The ideal profile for you is:",
+    "resultSubtitle": "Based on your answers, we recommend kittens with this profile.",
+    "resultBtn": "See kittens"
+  },
+  "support": {
+    "eyebrow": "Support",
+    "title": "Other ways to help",
+    "subtitle": "If you cannot adopt right now, there are still many ways to transform a kitten's life.",
+    "sponsor": "Sponsorship",
+    "sponsorText": "Choose a kitten and help with monthly food and veterinary costs until it finds a home.",
+    "sponsorBtn": "Sponsor",
+    "donate": "Donation of Supplies",
+    "donateText": "We accept donations of food (dry and wet), litter, beds, toys, and medications within the expiration date.",
+    "donateBtn": "See collection points",
+    "volunteer": "Volunteering",
+    "volunteerText": "Donate your time! We need help socializing cats, cleaning enclosures, or helping with transport to the vet.",
+    "volunteerBtn": "Be a volunteer"
+  },
+  "blog": {
+    "eyebrow": "Education",
+    "title": "Catlovers Blog",
+    "subtitle": "Everything you need to know to ensure the well-being of your feline friend.",
+    "readMore": "Read full article",
+    "cards": [
+      {
+        "tag": "Behavior",
+        "title": "How to introduce a new cat to other pets",
+        "text": "Essential tips for a safe and stress-free introduction among household animals."
+      },
+      {
+        "tag": "Catification",
+        "title": "Practical guide to catification",
+        "text": "Learn how to create an enriched environment that stimulates your cat's instincts."
+      },
+      {
+        "tag": "Safety",
+        "title": "The importance of protective screens",
+        "text": "Why screening windows and balconies is not an exaggeration, but an absolute necessity."
+      }
+    ]
+  },
+  "post": {
+    "back": "← Back to Blog",
+    "footerTitle": "Did you like this article?",
+    "footerSubtitle": "Knowing how to care is the first step of responsible adoption.",
+    "footerBtn": "See kittens for adoption",
+    "article": {
+      "tag": "Behavior",
+      "title": "How to introduce a new cat to other pets",
+      "meta": "Published on April 20, 2026 • 5 min read",
+      "p1": "The arrival of a new feline in the house is always a moment of joy, but it requires a lot of patience and planning, especially if you already have other cats or dogs.",
+      "h1": "1. Initial Separation (The Safe Room)",
+      "p2": "Never put the animals face to face on the first day. Reserve a room in the house just for the newcomer. They will need their own litter box, water bowls, food, and places to hide.",
+      "h2": "2. Scent Swapping",
+      "p3": "Before seeing each other, they should smell each other. Rub a clean towel on the new cat and place it near the food bowls of the resident animals, and vice versa. This way they will associate the other's smell with something positive (food).",
+      "h3": "3. Safe Visual Contact",
+      "p4": "After a few days of peace, allow them to see each other through a crack in the door or a baby gate. If there are hisses or growls, close the door and try again the next day.",
+      "quote": "The biggest mistake owners make is rushing the introduction. Feline time is very different from ours.",
+      "h4": "4. Supervised Meeting",
+      "p5": "When there are no longer aggressive reactions through the crack in the door, let them be in the same environment, always with supervision. Offer treats so they associate each other's presence with good times."
+    }
+  },
+  "happyEndings": {
+    "eyebrow": "Real stories",
+    "title": "Happy Endings",
+    "subtitle": "Get to know the full stories of cats who got a second chance and transformed their homes.",
+    "rescue": "The Rescue",
+    "today": "Today",
+    "future": "Your story could be here in the future.",
+    "adoptBtn": "I want to adopt",
+    "stories": [
+      {
+        "meta": "Adopted in 2025",
+        "rescueDesc": "Found in a cardboard box under heavy rain. He was scared, malnourished, and shivering from the cold.",
+        "todayDesc": "Sleeps spread out in the middle of the bed, is the owner of the apartment, and loves getting chicken sachets for breakfast.",
+        "quote": "\"Catlovers' consultancy helped choose a calm cat for our small apartment. Today he is the joy of the house and we can't imagine life without him.\""
+      },
+      {
+        "meta": "Adopted in 2024",
+        "quote": "\"Nala was the shyest cat in the shelter, always hiding. We received a lot of support in adaptation and were followed in the first few weeks. The support made all the difference — with patience, she lost her fear and today she is the first to greet visitors at the door, asking for affection.\""
+      }
+    ]
+  },
+  "form": {
+    "title": "Interest Form",
+    "subtitle": "Fill out carefully. We will contact you soon.",
+    "labelName": "Full Name *",
+    "labelEmail": "E-mail *",
+    "placeholderName": "Your full name",
+    "placeholderEmail": "your@email.com",
+    "submit": "Send Form",
+    "sending": "Sending...",
+    "success": "Form sent successfully!",
+    "errorRequired": "This field is required.",
+    "errorEmail": "Please enter a valid e-mail."
+  },
+  "head": {
+    "home": {
+      "title": "Catlovers - Your complete guide to cats",
+      "description": "Learn everything about cat behavior, care, and responsible adoption."
+    },
+    "about": {
+      "title": "About Us - Catlovers",
+      "description": "Learn about Catlovers mission and how we help kittens find happy homes."
     },
     "adoption": {
-      "hero": {
-        "badge": "Responsible adoption",
-        "title": "Complete guide to adopt",
-        "subtitle": "Clear steps, requirements, and tips to ensure a safe and happy home.",
-        "cta": "See requirements"
-      },
-      "sections": {
-        "requirements": {
-          "eyebrow": "Requirements",
-          "title": "What we need to move forward",
-          "subtitle": "We ensure the cat has safety, time, and care in the new home.",
-          "items": [
-            "ID document and updated address.",
-            "Protected environment with screens or safe supervision.",
-            "Availability for follow-up visits.",
-            "Commitment to vaccines and veterinary care.",
-            "Daily time for interaction and enrichment.",
-            "Agreement with the responsible adoption terms."
-          ]
-        },
-        "support": {
-          "eyebrow": "Post-adoption",
-          "title": "Ongoing support",
-          "text": "We guide you on adaptation, feeding, and behavior in the first weeks."
-        }
-      }
+      "title": "Adoption - Catlovers",
+      "description": "Complete guide to responsible cat adoption, with steps and checklist."
+    },
+    "benefits": {
+      "title": "Benefits - Catlovers",
+      "description": "Discover why having a cat is good for your health and happiness."
+    },
+    "blog": {
+      "title": "Blog - Catlovers",
+      "description": "Tips, curiosities and guides about the world of cats."
+    },
+    "cats": {
+      "title": "Gallery - Catlovers",
+      "description": "Find the kitten that best matches you in our gallery."
+    },
+    "happyEndings": {
+      "title": "Happy Endings - Catlovers",
+      "description": "Emotional stories of adoptions that worked out."
+    },
+    "quiz": {
+      "title": "Match Quiz - Catlovers",
+      "description": "Take our test and discover which cat profile is ideal for you."
+    },
+    "post": {
+      "title": "How to adapt a new cat - Catlovers",
+      "description": "Essential tips for introducing a new feline into your home."
     }
   }
 }

@@ -40,3 +40,4 @@ Desktop.ini
 # Locks (O projeto utiliza pnpm)
 package-lock.json
 yarn.lock
+tarefas.md

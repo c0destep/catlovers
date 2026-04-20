@@ -1,0 +1,64 @@
+<!doctype html>
+<!--suppress JSUnresolvedLibraryURL -->
+<html class="no-js" lang="pt-BR">
+<head>
+  <include src="head-common.html"></include>
+  <title data-i18n="head.cats.title">Galeria - Catlovers</title>
+  <meta data-i18n="[content]head.cats.description" content="Encontre o gatinho que mais combina com você em nossa galeria." name="description"/>
+</head>
+<body>
+<div aria-hidden="true" class="page-background"></div>
+<a class="skip-link" data-i18n="accessibility.skip" href="#main-content">Pular para o conteúdo</a>
+
+<include src="header.html"></include>
+
+<main id="main-content">
+  <section class="section">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <span class="section__eyebrow" data-i18n="gallery.eyebrow">Adoção</span>
+        <h1 class="section__title" data-i18n="gallery.title">Conheça nossos gatinhos</h1>
+        <p class="section__text" data-i18n="gallery.subtitle">Use os filtros para encontrar o gato que mais combina com você.</p>
+      </div>
+
+      <div class="filters-bar">
+        <div class="filter-group">
+          <label class="filter-group__label" for="filter-age" data-i18n="gallery.filterAge">Filtrar por idade</label>
+          <select class="filter-group__select" id="filter-age">
+            <option value="all" data-i18n="gallery.ageAll">Todas as idades</option>
+            <option value="kitten" data-i18n="gallery.ageKitten">Filhote</option>
+            <option value="adult" data-i18n="gallery.ageAdult">Adulto</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-group__label" for="filter-sex" data-i18n="gallery.filterSex">Filtrar por sexo</label>
+          <select class="filter-group__select" id="filter-sex">
+            <option value="all" data-i18n="gallery.sexAll">Ambos os sexos</option>
+            <option value="male" data-i18n="gallery.sexMale">Macho</option>
+            <option value="female" data-i18n="gallery.sexFemale">Fêmea</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-group__label" for="filter-temperament" data-i18n="gallery.filterTemp">Filtrar por temperamento</label>
+          <select class="filter-group__select" id="filter-temperament">
+            <option value="all" data-i18n="gallery.tempAll">Qualquer temperamento</option>
+            <option value="calm" data-i18n="gallery.tempCalm">Calmo</option>
+            <option value="playful" data-i18n="gallery.tempPlayful">Brincalhão</option>
+            <option value="affectionate" data-i18n="gallery.tempAffectionate">Carinhoso</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="cats-gallery" class="features-grid">
+        <!-- Os cards dos gatos serão renderizados aqui pelo JS -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<include src="footer.html"></include>
+<include src="back-to-top.html"></include>
+<include src="scripts.html"></include>
+<script type="module" src="js/cats.js"></script>
+</body>
+</html>

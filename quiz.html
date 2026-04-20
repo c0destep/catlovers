@@ -1,0 +1,58 @@
+<!doctype html>
+<!--suppress JSUnresolvedLibraryURL -->
+<html class="no-js" lang="pt-BR">
+<head>
+  <include src="head-common.html"></include>
+  <title data-i18n="head.quiz.title">Quiz Match - Catlovers</title>
+  <meta data-i18n="[content]head.quiz.description" content="Faça o nosso teste e descubra qual perfil de gato é o ideal para você." name="description"/>
+</head>
+<body>
+<div aria-hidden="true" class="page-background"></div>
+<a class="skip-link" data-i18n="accessibility.skip" href="#main-content">Pular para o conteúdo</a>
+
+<include src="header.html"></include>
+
+<main id="main-content">
+  <section class="section">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <span class="section__eyebrow" data-i18n="quiz.eyebrow">Match</span>
+        <h1 class="section__title" data-i18n="quiz.title">Encontre seu Par Perfeito</h1>
+        <p class="section__text" data-i18n="quiz.subtitle">Responda a essas três perguntas rápidas para encontrarmos o gatinho ideal para você.</p>
+      </div>
+
+      <div class="quiz-result quiz-container">
+        <form id="quiz-form">
+          <div class="quiz-step" id="step-1">
+            <h3 class="quiz-step__title" data-i18n="quiz.step1">1. Como é o seu lar?</h3>
+            <label class="quiz-label"><input type="radio" name="home" value="calm" required> <span data-i18n="quiz.homeCalm">Casa ou apartamento pequeno e tranquilo</span></label>
+            <label class="quiz-label"><input type="radio" name="home" value="playful"> <span data-i18n="quiz.homePlayful">Casa com quintal ou espaço grande com muito movimento</span></label>
+            <label class="quiz-label"><input type="radio" name="home" value="affectionate"> <span data-i18n="quiz.homeAffectionate">Um ambiente familiar acolhedor, sempre tem alguém</span></label>
+          </div>
+
+          <div class="quiz-step" id="step-2">
+            <h3 class="quiz-step__title" data-i18n="quiz.step2">2. Quanto tempo livre você tem para brincar?</h3>
+            <label class="quiz-label"><input type="radio" name="time" value="calm" required> <span data-i18n="quiz.timeCalm">Pouco tempo, busco uma companhia tranquila</span></label>
+            <label class="quiz-label"><input type="radio" name="time" value="playful"> <span data-i18n="quiz.timePlayful">Bastante tempo, adoro interagir e brincar</span></label>
+            <label class="quiz-label"><input type="radio" name="time" value="affectionate"> <span data-i18n="quiz.timeAffectionate">Tempo moderado, mas gosto de carinho no sofá</span></label>
+          </div>
+
+          <button type="submit" class="button button--primary button--full-width" data-i18n="quiz.submit">Descobrir meu Match</button>
+        </form>
+
+        <div id="quiz-result" class="quiz-result-box" style="display: none;">
+          <h3 class="quiz-step__title"><span data-i18n="quiz.resultTitle">O perfil ideal para você é:</span> <span id="result-profile" class="quiz-result-highlight"></span></h3>
+          <p class="quiz-result-text" data-i18n="quiz.resultSubtitle">Baseado nas suas respostas, recomendamos gatinhos com esse perfil.</p>
+          <a href="cats.html" class="button button--primary" id="result-link" data-i18n="quiz.resultBtn">Ver gatinhos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<include src="footer.html"></include>
+<include src="back-to-top.html"></include>
+<include src="scripts.html"></include>
+<script type="module" src="js/quiz.js"></script>
+</body>
+</html>

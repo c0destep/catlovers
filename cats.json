@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Bento",
+    "age": "adult",
+    "ageLabel": "2 anos",
+    "sex": "male",
+    "temperament": "calm",
+    "color": "Frajola",
+    "image": "https://images.unsplash.com/photo-1513245543132-31f507417b26?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Nala",
+    "age": "kitten",
+    "ageLabel": "3 meses",
+    "sex": "female",
+    "temperament": "playful",
+    "color": "Tricolor",
+    "image": "https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Milo",
+    "age": "adult",
+    "ageLabel": "5 anos",
+    "sex": "male",
+    "temperament": "affectionate",
+    "color": "Laranja",
+    "image": "https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 4,
+    "name": "Luna",
+    "age": "kitten",
+    "ageLabel": "5 meses",
+    "sex": "female",
+    "temperament": "playful",
+    "color": "Rajada",
+    "image": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 5,
+    "name": "Simba",
+    "age": "adult",
+    "ageLabel": "3 anos",
+    "sex": "male",
+    "temperament": "calm",
+    "color": "Amarelo",
+    "image": "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 6,
+    "name": "Mia",
+    "age": "adult",
+    "ageLabel": "4 anos",
+    "sex": "female",
+    "temperament": "affectionate",
+    "color": "Branca",
+    "image": "https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?auto=format&fit=crop&w=400&q=80"
+  }
+]
