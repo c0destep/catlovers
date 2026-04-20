@@ -1,4 +1,4 @@
-const CACHE_NAME = 'catlovers-v2';
+const CACHE_NAME = 'catlovers-v3';
 
 // Cacheamos apenas as páginas principais que mantêm o nome fixo
 const PRE_CACHE = [
