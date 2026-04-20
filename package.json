@@ -16,7 +16,8 @@
   "scripts": {
     "build": "parcel build index.html --public-url ./",
     "dev": "parcel index.html --open",
-    "start": "pnpm run build && pnpm run dev"
+    "start": "pnpm run build && pnpm run dev",
+    "test:e2e": "cypress open"
   },
   "dependencies": {
     "@andreasremdt/simple-translator": "^2.0.4"
@@ -25,6 +26,7 @@
     "@parcel/packager-raw-url": "^2.16.4",
     "@parcel/transformer-webmanifest": "^2.16.4",
     "ajv": "^8.18.0",
+    "cypress": "^15.14.0",
     "minimatch": "^10.2.5",
     "parcel": "^2.16.4",
     "posthtml": "^0.16.7",

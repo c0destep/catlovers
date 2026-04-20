@@ -4,13 +4,13 @@
 
 <head>
   <include src="head-common.html"></include>
-  <title>Adoção de Gatos - Catlovers</title>
-  <meta content="Landing page sobre adoção responsável de gatos, com orientação e apoio para novos lares."
+  <title data-i18n="head.home.title">Catlovers - Seu guia completo sobre gatos</title>
+  <meta data-i18n="[content]head.home.description" content="Aprenda tudo sobre comportamento, cuidados e adoção responsável de felinos."
         name="description"/>
   <meta content="HTML, CSS, Gatos, Adoção, Cat Lovers" name="keywords"/>
-  <meta content="Adoção de Gatos - Catlovers" property="og:title"/>
-  <meta content="Adote com responsabilidade e apoio. Encontre o gato ideal para sua rotina." property="og:description"/>
-  <meta content="https://c0destep.github.io/catlovers/" property="og:url"/>
+  <meta data-i18n="[content]head.home.title" content="Catlovers - Seu guia completo sobre gatos" property="og:title"/>
+  <meta data-i18n="[content]head.home.description" content="Aprenda tudo sobre comportamento, cuidados e adoção responsável de felinos." property="og:description"/>
+  <meta content="https://youhuul.github.io/catlovers/" property="og:url"/>
 </head>
 
 <body>
@@ -20,227 +20,453 @@
 <include src="header.html"></include>
 
 <main id="main-content">
+
+  <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="container hero__grid">
-      <div class="hero__content">
-        <span class="hero__badge" data-i18n="hero.badge">Adoção responsável</span>
-        <h1 class="hero__title" data-i18n="hero.title">Um lar seguro muda duas vidas</h1>
-        <p class="hero__subtitle" data-i18n="hero.subtitle">
-          Adoção de gatos com orientação, transparência e apoio para garantir um começo tranquilo para você e seu novo
-          amigo.
-        </p>
-        <div class="hero__actions">
-          <a class="button button--primary" data-i18n="hero.ctaPrimary" href="adoption.html">Quero adotar</a>
-          <a class="button button--ghost" data-i18n="hero.ctaSecondary" href="#process">Ver como funciona</a>
-        </div>
-        <div class="hero__note" data-i18n="hero.note">Priorizamos adoções responsáveis e acompanhamento pós-lar.</div>
-      </div>
-      <div class="hero__media">
-        <img alt="Gato olhando para a câmera" class="hero__image" src="img/catlovers.jpg?as=webp">
-        <div class="hero__card">
-          <strong data-i18n="hero.card.title">Gatos prontos para amar</strong>
-          <span data-i18n="hero.card.subtitle">Resgatados, vacinados e cheios de personalidade.</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--stats">
     <div class="container">
-      <div class="section__head">
-        <span class="section__eyebrow" data-i18n="stats.eyebrow">Impacto</span>
-        <h2 class="section__title" data-i18n="stats.title">Adoções reais com acompanhamento</h2>
-      </div>
-      <div class="grid grid--stats">
-        <article class="card card--stat">
-          <span class="stat__value" data-i18n="stats.items.0.value">120+</span>
-          <span class="stat__label" data-i18n="stats.items.0.label">gatos adotados no último ano</span>
-        </article>
-        <article class="card card--stat">
-          <span class="stat__value" data-i18n="stats.items.1.value">92%</span>
-          <span class="stat__label" data-i18n="stats.items.1.label">adoções com acompanhamento pós-lar</span>
-        </article>
-        <article class="card card--stat">
-          <span class="stat__value" data-i18n="stats.items.2.value">48h</span>
-          <span class="stat__label" data-i18n="stats.items.2.label">tempo médio para conhecer um gato</span>
-        </article>
-        <article class="card card--stat">
-          <span class="stat__value" data-i18n="stats.items.3.value">15</span>
-          <span class="stat__label" data-i18n="stats.items.3.label">parceiros locais ativos</span>
-        </article>
+      <div class="hero__inner">
+        <div class="hero__content">
+          <div class="hero__badge-group">
+            <span class="hero__badge">
+              <svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                   stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+              <span data-i18n="hero.badge">Adoção responsável</span>
+            </span>
+          </div>
+          <h1 class="hero__title" data-i18n="hero.title">
+            Transforme uma vida.<br><span class="text-gradient">Adote um gato.</span>
+          </h1>
+          <p class="hero__subtitle" data-i18n="hero.subtitle">
+            Milhares de gatos esperam por um lar cheio de amor. Aqui você encontra o companheiro perfeito para sua vida
+            — com orientação, carinho e acompanhamento em cada passo.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary button--lg" href="adoption.html">
+              <svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                   stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+              <span data-i18n="hero.ctaPrimary">Encontrar meu gato</span>
+            </a>
+            <a class="button button--ghost button--lg" href="#process">
+              <span data-i18n="hero.ctaSecondary">Como funciona</span>
+              <svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                   stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                <path d="M7 17l9.2-9.2M17 17V7.8H7.8"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__image-wrapper">
+            <img alt="Gato olhando para a câmera" class="hero__image" src="img/catlovers.jpg?as=webp">
+            <div class="hero__floating-card hero__floating-card--top">
+              <span class="hero__floating-icon">🐱</span>
+              <div>
+                <strong data-i18n="hero.card.title">120+ adotados</strong>
+                <span data-i18n="hero.card.subtitle">no último ano</span>
+              </div>
+            </div>
+            <div class="hero__floating-card hero__floating-card--bottom">
+              <span class="hero__floating-icon">💚</span>
+              <div>
+                <strong data-i18n="hero.card2.title">92% satisfação</strong>
+                <span data-i18n="hero.card2.subtitle">com acompanhamento</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- IMPACTO EM NÚMEROS -->
+  <section class="section section--impact" id="impact">
+    <div class="container">
+      <div class="impact-grid">
+        <div class="impact-card">
+          <span class="impact-card__number">120+</span>
+          <span class="impact-card__label" data-i18n="stats.items.0.label">Gatos adotados</span>
+          <span class="impact-card__detail" data-i18n="stats.items.0.detail">e contando</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-card__number">92%</span>
+          <span class="impact-card__label" data-i18n="stats.items.1.label">Famílias satisfeitas</span>
+          <span class="impact-card__detail" data-i18n="stats.items.1.detail">com acompanhamento</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-card__number">48h</span>
+          <span class="impact-card__label" data-i18n="stats.items.2.label">Para conhecer seu gato</span>
+          <span class="impact-card__detail" data-i18n="stats.items.2.detail">processo ágil</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-card__number">15</span>
+          <span class="impact-card__label" data-i18n="stats.items.3.label">Parceiros locais</span>
+          <span class="impact-card__detail" data-i18n="stats.items.3.detail">em toda a região</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUE ADOTAR - FEATURE SHOWCASE -->
   <section class="section" id="why">
     <div class="container">
-      <div class="section__head">
+      <div class="section__head section__head--center">
         <span class="section__eyebrow" data-i18n="reasons.eyebrow">Por que adotar</span>
-        <h2 class="section__title" data-i18n="reasons.title">Adoção responsável do começo ao fim</h2>
+        <h2 class="section__title" data-i18n="reasons.title">Cuidado completo,<br>do resgate ao lar</h2>
         <p class="section__text" data-i18n="reasons.subtitle">
-          Transparência, cuidado e suporte contínuo para garantir o melhor match entre gato e família.
+          Cada gato recebe atenção veterinária, socialização e carinho antes de encontrar sua nova família.
         </p>
       </div>
-      <div class="grid grid--cards">
-        <article class="card">
-          <h3 class="card__title" data-i18n="reasons.cards.0.title">Saúde em dia</h3>
-          <p class="card__text" data-i18n="reasons.cards.0.text">
-            Todos os gatos passam por avaliação veterinária, vacinação e orientação de cuidados essenciais.
+      <div class="features-grid">
+        <article class="feature-card feature-card--highlight">
+          <div class="feature-card__icon">
+            <svg aria-hidden="true" fill="none" height="32" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="32">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title" data-i18n="reasons.cards.0.title">Saúde garantida</h3>
+          <p class="feature-card__text" data-i18n="reasons.cards.0.text">
+            Vacinação completa, castração e check-up veterinário. Seu novo amigo chega saudável e pronto para ser feliz.
+          </p>
+          <div class="feature-card__tags">
+            <span class="feature-tag" data-i18n="reasons.cards.0.tags.0">Vacinado</span>
+            <span class="feature-tag" data-i18n="reasons.cards.0.tags.1">Castrado</span>
+            <span class="feature-tag" data-i18n="reasons.cards.0.tags.2">Vermifugado</span>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__icon">
+            <svg aria-hidden="true" fill="none" height="32" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="32">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+              <line x1="9" x2="9.01" y1="9" y2="9"/>
+              <line x1="15" x2="15.01" y1="9" y2="9"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title" data-i18n="reasons.cards.1.title">Match perfeito</h3>
+          <p class="feature-card__text" data-i18n="reasons.cards.1.text">
+            Analisamos sua rotina e estilo de vida para indicar o gato com a personalidade ideal para você.
           </p>
         </article>
-        <article class="card">
-          <h3 class="card__title" data-i18n="reasons.cards.1.title">Match com seu estilo</h3>
-          <p class="card__text" data-i18n="reasons.cards.1.text">
-            Entendemos sua rotina e indicamos o gato com personalidade ideal para você.
+        <article class="feature-card">
+          <div class="feature-card__icon">
+            <svg aria-hidden="true" fill="none" height="32" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="32">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title" data-i18n="reasons.cards.2.title">Suporte contínuo</h3>
+          <p class="feature-card__text" data-i18n="reasons.cards.2.text">
+            Acompanhamento pós-adoção para garantir uma adaptação tranquila e feliz para toda a família.
           </p>
         </article>
-        <article class="card">
-          <h3 class="card__title" data-i18n="reasons.cards.2.title">Acompanhamento</h3>
-          <p class="card__text" data-i18n="reasons.cards.2.text">
-            Você não fica sozinho: oferecemos suporte no período de adaptação do novo lar.
-          </p>
-        </article>
-        <article class="card">
-          <h3 class="card__title" data-i18n="reasons.cards.3.title">Rede de apoio</h3>
-          <p class="card__text" data-i18n="reasons.cards.3.text">
-            Indicamos profissionais, parceiros e dicas práticas para o bem-estar do seu gato.
+        <article class="feature-card">
+          <div class="feature-card__icon">
+            <svg aria-hidden="true" fill="none" height="32" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="32">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title" data-i18n="reasons.cards.3.title">Comunidade de apoio</h3>
+          <p class="feature-card__text" data-i18n="reasons.cards.3.text">
+            Rede de veterinários, parceiros e adotantes que compartilham dicas e experiências.
           </p>
         </article>
       </div>
     </div>
   </section>
 
+  <!-- PROCESSO DE ADOÇÃO -->
   <section class="section section--alt" id="process">
     <div class="container">
-      <div class="section__head">
-        <span class="section__eyebrow" data-i18n="process.eyebrow">Etapas</span>
-        <h2 class="section__title" data-i18n="process.title">Como funciona a adoção</h2>
-        <p class="section__text" data-i18n="process.subtitle">Um passo a passo simples e humano.</p>
+      <div class="section__head section__head--center">
+        <span class="section__eyebrow" data-i18n="process.eyebrow">Jornada</span>
+        <h2 class="section__title" data-i18n="process.title">5 passos para<br>mudar uma vida</h2>
+        <p class="section__text" data-i18n="process.subtitle">Processo simples, humano e transparente do início ao
+          fim.</p>
       </div>
-      <ol class="steps">
-        <li class="steps__item">
-          <span class="steps__title" data-i18n="process.steps.0.title">Cadastro inicial</span>
-          <p class="steps__text" data-i18n="process.steps.0.text">Conte sobre sua rotina e experiência com animais.</p>
-        </li>
-        <li class="steps__item">
-          <span class="steps__title" data-i18n="process.steps.1.title">Conversa guiada</span>
-          <p class="steps__text" data-i18n="process.steps.1.text">Falamos sobre o perfil ideal e tiramos todas as
-            dúvidas.</p>
-        </li>
-        <li class="steps__item">
-          <span class="steps__title" data-i18n="process.steps.2.title">Encontro com o gato</span>
-          <p class="steps__text" data-i18n="process.steps.2.text">Você conhece o gato e vê se o vínculo acontece.</p>
-        </li>
-        <li class="steps__item">
-          <span class="steps__title" data-i18n="process.steps.3.title">Preparação do lar</span>
-          <p class="steps__text" data-i18n="process.steps.3.text">Checklist de segurança, alimentação e conforto.</p>
-        </li>
-        <li class="steps__item">
-          <span class="steps__title" data-i18n="process.steps.4.title">Acompanhamento</span>
-          <p class="steps__text" data-i18n="process.steps.4.text">Suporte pós-adoção para garantir adaptação
-            tranquila.</p>
-        </li>
-      </ol>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-card__number">01</div>
+          <div aria-hidden="true" class="step-card__connector"></div>
+          <h3 class="step-card__title" data-i18n="process.steps.0.title">Cadastro</h3>
+          <p class="step-card__text" data-i18n="process.steps.0.text">Preencha um breve formulário sobre sua rotina e
+            experiência com animais.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-card__number">02</div>
+          <div aria-hidden="true" class="step-card__connector"></div>
+          <h3 class="step-card__title" data-i18n="process.steps.1.title">Conversa</h3>
+          <p class="step-card__text" data-i18n="process.steps.1.text">Bate-papo para alinhar expectativas e encontrar o
+            perfil ideal.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-card__number">03</div>
+          <div aria-hidden="true" class="step-card__connector"></div>
+          <h3 class="step-card__title" data-i18n="process.steps.2.title">Encontro</h3>
+          <p class="step-card__text" data-i18n="process.steps.2.text">Conheça o gato pessoalmente e sinta se o vínculo
+            acontece.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-card__number">04</div>
+          <div aria-hidden="true" class="step-card__connector"></div>
+          <h3 class="step-card__title" data-i18n="process.steps.3.title">Preparação</h3>
+          <p class="step-card__text" data-i18n="process.steps.3.text">Checklist completo de segurança, alimentação e
+            conforto para o lar.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-card__number">05</div>
+          <h3 class="step-card__title" data-i18n="process.steps.4.title">Novo lar</h3>
+          <p class="step-card__text" data-i18n="process.steps.4.text">Acompanhamento pós-adoção para uma adaptação
+            tranquila e feliz.</p>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- CHECKLIST INTERATIVO -->
   <section class="section" id="checklist">
     <div class="container">
-      <div class="section__head">
-        <span class="section__eyebrow" data-i18n="checklist.eyebrow">Preparação</span>
-        <h2 class="section__title" data-i18n="checklist.title">Checklist do novo lar</h2>
-        <p class="section__text" data-i18n="checklist.subtitle">Detalhes que fazem a diferença na adaptação.</p>
-      </div>
-      <div class="grid grid--split">
-        <ul class="checklist">
-          <li data-i18n="checklist.items.0">Telas de proteção em janelas e varandas.</li>
-          <li data-i18n="checklist.items.1">Caixa de areia em local tranquilo.</li>
-          <li data-i18n="checklist.items.2">Comedouros separados da água.</li>
-          <li data-i18n="checklist.items.3">Caminha ou espaço seguro para descanso.</li>
-        </ul>
-        <ul class="checklist">
-          <li data-i18n="checklist.items.4">Arranhadores e brinquedos de enriquecimento.</li>
-          <li data-i18n="checklist.items.5">Rotina de alimentação definida.</li>
-          <li data-i18n="checklist.items.6">Plano de vacinação e veterinário de confiança.</li>
-          <li data-i18n="checklist.items.7">Tempo para interação diária e carinho.</li>
-        </ul>
+      <div class="checklist-duo">
+        <div class="checklist-duo__info">
+          <span class="section__eyebrow" data-i18n="checklist.eyebrow">Preparação</span>
+          <h2 class="section__title" data-i18n="checklist.title">Tudo pronto para<br>receber seu gato?</h2>
+          <p class="section__text" data-i18n="checklist.subtitle">
+            Pequenos detalhes fazem toda a diferença na adaptação. Confira o essencial antes da chegada do novo membro
+            da família.
+          </p>
+          <a class="button button--primary" data-i18n="cta.button" href="adoption.html">Iniciar cadastro</a>
+        </div>
+        <div class="checklist-duo__cards">
+          <div class="check-item">
+            <div class="check-item__icon">
+              <svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                   stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="20">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span data-i18n="checklist.items.0">Telas de proteção em janelas e varandas</span>
+          </div>
+          <div class="check-item">
+            <div class="check-item__icon">
+              <svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                   stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="20">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span data-i18n="checklist.items.1">Caixa de areia em local tranquilo</span>
+          </div>
+          <div class="check-item">
+            <div class="check-item__icon">
+              <svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                   stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="20">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span data-i18n="checklist.items.2">Comedouros e água fresca separados</span>
+          </div>
+          <div class="check-item">
+            <div class="check-item__icon">
+              <svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                   stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="20">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span data-i18n="checklist.items.3">Cantinho seguro para descanso</span>
+          </div>
+          <div class="check-item">
+            <div class="check-item__icon">
+              <svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                   stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="20">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span data-i18n="checklist.items.4">Arranhadores e brinquedos</span>
+          </div>
+          <div class="check-item">
+            <div class="check-item__icon">
+              <svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                   stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="20">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span data-i18n="checklist.items.5">Rotina de alimentação definida</span>
+          </div>
+          <div class="check-item">
+            <div class="check-item__icon">
+              <svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                   stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="20">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span data-i18n="checklist.items.6">Veterinário de confiança</span>
+          </div>
+          <div class="check-item">
+            <div class="check-item__icon">
+              <svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                   stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="20">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span data-i18n="checklist.items.7">Tempo diário para carinho e interação</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--stories" id="stories">
+  <!-- DEPOIMENTOS -->
+  <section class="section section--alt" id="stories">
     <div class="container">
-      <div class="section__head">
-        <span class="section__eyebrow" data-i18n="stories.eyebrow">Histórias</span>
-        <h2 class="section__title" data-i18n="stories.title">Famílias que abriram espaço</h2>
-        <p class="section__text" data-i18n="stories.subtitle">Relatos reais de quem adotou com a gente.</p>
+      <div class="section__head section__head--center">
+        <span class="section__eyebrow" data-i18n="stories.eyebrow">Histórias reais</span>
+        <h2 class="section__title" data-i18n="stories.title">Quem adotou,<br>recomenda</h2>
+        <p class="section__text" data-i18n="stories.subtitle">Famílias que encontraram seu melhor amigo com a gente.</p>
       </div>
-      <div class="grid grid--cards">
-        <article class="card card--story">
-          <p class="card__text" data-i18n="stories.items.0.text">
-            "A consultoria ajudou a escolher um gato calmo para nosso apartamento pequeno. Hoje ele é parte da família."
-          </p>
-          <span class="card__meta" data-i18n="stories.items.0.meta">Marina & Bento</span>
+      <div class="stories-grid">
+        <article class="story-card">
+          <div class="story-card__header">
+            <div class="story-card__avatar">M</div>
+            <div class="story-card__meta">
+              <strong class="story-card__name" data-i18n="stories.items.0.meta">Marina & Bento</strong>
+              <span aria-label="5 estrelas" class="story-card__stars">★★★★★</span>
+            </div>
+          </div>
+          <blockquote class="story-card__quote" data-i18n="stories.items.0.text">
+            "A consultoria ajudou a escolher um gato calmo para nosso apartamento pequeno. Hoje ele é parte da família e
+            não imaginamos a vida sem ele."
+          </blockquote>
         </article>
-        <article class="card card--story">
-          <p class="card__text" data-i18n="stories.items.1.text">
-            "Recebemos apoio na adaptação e fomos acompanhados nas primeiras semanas. Foi essencial."
-          </p>
-          <span class="card__meta" data-i18n="stories.items.1.meta">Carlos & Nala</span>
+        <article class="story-card story-card--featured">
+          <div class="story-card__header">
+            <div class="story-card__avatar">C</div>
+            <div class="story-card__meta">
+              <strong class="story-card__name" data-i18n="stories.items.1.meta">Carlos & Nala</strong>
+              <span aria-label="5 estrelas" class="story-card__stars">★★★★★</span>
+            </div>
+          </div>
+          <blockquote class="story-card__quote" data-i18n="stories.items.1.text">
+            "Recebemos apoio na adaptação e fomos acompanhados nas primeiras semanas. O suporte fez toda a diferença — a
+            Nala se sentiu em casa rapidinho."
+          </blockquote>
         </article>
-        <article class="card card--story">
-          <p class="card__text" data-i18n="stories.items.2.text">
-            "Adotar foi simples, humano e transparente. Agora temos uma dupla inseparável em casa."
-          </p>
-          <span class="card__meta" data-i18n="stories.items.2.meta">Júlia & Milo</span>
+        <article class="story-card">
+          <div class="story-card__header">
+            <div class="story-card__avatar">J</div>
+            <div class="story-card__meta">
+              <strong class="story-card__name" data-i18n="stories.items.2.meta">Júlia & Milo</strong>
+              <span aria-label="5 estrelas" class="story-card__stars">★★★★★</span>
+            </div>
+          </div>
+          <blockquote class="story-card__quote" data-i18n="stories.items.2.text">
+            "Adotar foi simples, humano e transparente. Agora temos uma dupla inseparável em casa e uma alegria que
+            renova todo dia."
+          </blockquote>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section section--alt" id="faq">
+  <!-- FAQ -->
+  <section class="section" id="faq">
     <div class="container">
-      <div class="section__head">
-        <span class="section__eyebrow" data-i18n="faq.eyebrow">FAQ</span>
-        <h2 class="section__title" data-i18n="faq.title">Perguntas frequentes</h2>
-      </div>
-      <div class="faq">
-        <details class="faq__item">
-          <summary class="faq__question" data-i18n="faq.items.0.q">Preciso ter experiência com gatos?</summary>
-          <p class="faq__answer" data-i18n="faq.items.0.a">
-            Não. Oferecemos orientação completa para quem está adotando pela primeira vez.
-          </p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__question" data-i18n="faq.items.1.q">Posso adotar se moro de aluguel?</summary>
-          <p class="faq__answer" data-i18n="faq.items.1.a">
-            Sim, desde que o imóvel permita animais e seja seguro para o gato.
-          </p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__question" data-i18n="faq.items.2.q">Quanto tempo leva o processo?</summary>
-          <p class="faq__answer" data-i18n="faq.items.2.a">
-            Em média de 3 a 7 dias, dependendo do match e da disponibilidade do gato.
-          </p>
-        </details>
+      <div class="faq-split">
+        <div class="faq-split__info">
+          <span class="section__eyebrow" data-i18n="faq.eyebrow">Dúvidas</span>
+          <h2 class="section__title" data-i18n="faq.title">Perguntas<br>frequentes</h2>
+          <p class="section__text" data-i18n="faq.subtitle">Tudo que você precisa saber antes de dar esse passo incrível.</p>
+        </div>
+        <div class="faq-split__items">
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              <span data-i18n="faq.items.0.q">Preciso ter experiência com gatos?</span>
+              <svg aria-hidden="true" class="faq-item__chevron" fill="none" height="20" stroke="currentColor"
+                   stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </summary>
+            <p class="faq-item__answer" data-i18n="faq.items.0.a">
+              Não! Oferecemos orientação completa para quem está adotando pela primeira vez. Você terá todo o suporte
+              necessário.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              <span data-i18n="faq.items.1.q">Posso adotar se moro de aluguel?</span>
+              <svg aria-hidden="true" class="faq-item__chevron" fill="none" height="20" stroke="currentColor"
+                   stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </summary>
+            <p class="faq-item__answer" data-i18n="faq.items.1.a">
+              Sim, desde que o imóvel permita animais e seja seguro para o gato. Ajudamos a verificar as condições.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              <span data-i18n="faq.items.2.q">Quanto tempo leva o processo?</span>
+              <svg aria-hidden="true" class="faq-item__chevron" fill="none" height="20" stroke="currentColor"
+                   stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </summary>
+            <p class="faq-item__answer" data-i18n="faq.items.2.a">
+              Em média de 3 a 7 dias, dependendo do match e da disponibilidade. Nosso processo é ágil e humanizado.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              <span data-i18n="faq.items.3.q">Os gatos são vacinados e castrados?</span>
+              <svg aria-hidden="true" class="faq-item__chevron" fill="none" height="20" stroke="currentColor"
+                   stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </summary>
+            <p class="faq-item__answer" data-i18n="faq.items.3.a">
+              Sim! Todos passam por avaliação veterinária completa, incluindo vacinação, castração e vermifugação antes
+              da adoção.
+            </p>
+          </details>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- CTA FINAL -->
   <section class="section section--cta" id="adopt">
     <div class="container">
-      <div class="cta">
-        <div>
-          <span class="cta__eyebrow" data-i18n="cta.eyebrow">Adoção responsável</span>
-          <h2 class="cta__title" data-i18n="cta.title">Pronto para conhecer seu novo amigo?</h2>
-          <p class="cta__text" data-i18n="cta.subtitle">
-            Conte um pouco sobre sua rotina e nós ajudamos a encontrar o gato ideal.
-          </p>
+      <div class="cta-block">
+        <div aria-hidden="true" class="cta-block__glow"></div>
+        <span aria-hidden="true" class="cta-block__emoji">🐾</span>
+        <h2 class="cta-block__title" data-i18n="cta.title">Pronto para mudar uma vida?</h2>
+        <p class="cta-block__text" data-i18n="cta.subtitle">
+          Conte um pouco sobre você e nós ajudamos a encontrar o gato perfeito para sua rotina e seu coração.
+        </p>
+        <div class="cta-block__actions">
+          <a class="button button--light button--lg" href="adoption.html">
+            <span data-i18n="cta.button">Quero adotar agora</span>
+            <svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18">
+              <line x1="5" x2="19" y1="12" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
         </div>
-        <a class="button button--light" data-i18n="cta.button" href="adoption.html">Iniciar cadastro</a>
       </div>
     </div>
   </section>
+
 </main>
 
 <include src="footer.html"></include>

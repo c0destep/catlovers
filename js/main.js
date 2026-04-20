@@ -139,6 +139,8 @@ const initialLanguage = resolveLanguage()
 translator.translatePageTo(initialLanguage)
 setActiveLanguageButton(initialLanguage)
 
+window.catloversTranslator = translator;
+
 // --- Event Listeners ---
 
 languageButtons.forEach((button) => {
@@ -200,4 +202,13 @@ if (toggleButton && nav) {
     nav.classList.toggle("navbar--open")
     toggleButton.setAttribute("aria-expanded", nav.classList.contains("navbar--open"))
   })
+}
+
+// --- Service Worker Registration ---
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register(new URL('../sw.js', import.meta.url)).catch((error) => {
+      console.log('ServiceWorker registration failed: ', error);
+    });
+  });
 }
