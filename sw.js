@@ -12,6 +12,8 @@ const PRE_CACHE = [
   './quiz.html',
   './post.html',
   './happy-endings.html',
+  './icon-192.png',
+  './icon-512.png',
   './site.webmanifest'
 ];
 

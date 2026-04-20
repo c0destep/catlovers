@@ -1,17 +1,29 @@
 {
   "short_name": "Catlovers",
   "name": "Catlovers",
-  "icons": [{
-    "src": "favicon-76.png",
-    "type": "image/png",
-    "sizes": "76x76"
-  },{
-    "src": "favicon-96.png",
-    "type": "image/png",
-    "sizes": "96x96"
-  }],
-  "start_url": "/?utm_source=homescreen",
+  "description": "Seu guia completo sobre o mundo dos gatos.",
+  "icons": [
+    {
+      "src": "favicon-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./index.html",
   "background_color": "#ffffff",
   "theme_color": "#c2410c",
-  "display": "standalone"
+  "display": "standalone",
+  "orientation": "portrait"
 }
