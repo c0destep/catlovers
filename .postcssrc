@@ -1,0 +1,29 @@
+{
+  "plugins": {
+    "@fullhuman/postcss-purgecss": {
+      "content": [
+        "./*.html",
+        "./**/*.html",
+        "./js/**/*.js",
+        "./includes/**/*.html"
+      ],
+      "safelist": [
+        "animate-on-scroll",
+        "is-visible",
+        "stagger-children",
+        "skip-link",
+        "sr-only",
+        "page-background",
+        "text-gradient",
+        "no-js",
+        "is-invalid",
+        "cat-fact",
+        "error-page",
+        "menu__link--active",
+        "html",
+        "body",
+        "dark"
+      ]
+    }
+  }
+}

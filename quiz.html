@@ -37,10 +37,20 @@
             <label class="quiz-label"><input type="radio" name="time" value="affectionate"> <span data-i18n="quiz.timeAffectionate">Tempo moderado, mas gosto de carinho no sofá</span></label>
           </div>
 
+          <div class="quiz-step" id="step-3">
+            <h3 class="quiz-step__title" data-i18n="quiz.step3">3. O que você mais valoriza no comportamento de um gato?</h3>
+            <label class="quiz-label"><input type="radio" name="activity" value="calm" required> <span data-i18n="quiz.activityCalm">Independência e tranquilidade, que goste de sossego</span></label>
+            <label class="quiz-label"><input type="radio" name="activity" value="playful"> <span data-i18n="quiz.activityPlayful">Energia e curiosidade, sempre pronto para brincar</span></label>
+            <label class="quiz-label"><input type="radio" name="activity" value="affectionate"> <span data-i18n="quiz.activityAffectionate">Dengo e proximidade, que me siga pela casa</span></label>
+          </div>
+
           <button type="submit" class="button button--primary button--full-width" data-i18n="quiz.submit">Descobrir meu Match</button>
         </form>
 
-        <div id="quiz-result" class="quiz-result-box" style="display: none;">
+        <!-- ARIA Live Region for dynamic result announcements -->
+        <div aria-live="polite" aria-atomic="true" class="sr-only" id="quiz-announcer"></div>
+
+        <div id="quiz-result" class="quiz-result-box hidden">
           <h3 class="quiz-step__title"><span data-i18n="quiz.resultTitle">O perfil ideal para você é:</span> <span id="result-profile" class="quiz-result-highlight"></span></h3>
           <p class="quiz-result-text" data-i18n="quiz.resultSubtitle">Baseado nas suas respostas, recomendamos gatinhos com esse perfil.</p>
           <a href="cats.html" class="button button--primary" id="result-link" data-i18n="quiz.resultBtn">Ver gatinhos</a>

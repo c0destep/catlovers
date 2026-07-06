@@ -49,7 +49,10 @@
         </div>
       </div>
 
-      <div id="cats-gallery" class="features-grid">
+      <!-- ARIA Live Region for filter results announcement -->
+      <div aria-live="polite" aria-atomic="true" class="sr-only" id="gallery-announcer"></div>
+
+      <div id="cats-gallery" class="features-grid" role="list" aria-label="Galeria de gatos disponíveis para adoção">
         <!-- Os cards dos gatos serão renderizados aqui pelo JS -->
       </div>
     </div>

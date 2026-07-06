@@ -1,30 +1,54 @@
-#### Tipo de mudança
+## 📝 Descrição
 
-- [ ] Bug fix (correção de um erro)
-- [ ] Nova funcionalidade (adição de algo novo)
-- [ ] Refatoração (melhoria de código sem alteração de funcionalidade)
-- [ ] Documentação (alteração no README, comentários, etc.)
+Descreva as mudanças deste Pull Request de forma clara e concisa.
 
-#### Issue relacionada
+## 🔗 Issues Relacionadas
 
-Fixes #<numero_da_issue> (ou descreva a motivação se não houver issue)
+Fixe issues com `Closes #123`, `Fixes #123` ou `Relates to #123`.
 
-#### O que foi feito?
+## 🛠️ Tipo de Mudança
 
-Descreva detalhadamente as alterações realizadas.
+- [ ] 🐛 Correção de bug
+- [ ] ✨ Nova funcionalidade
+- [ ] ♻️ Refatoração
+- [ ] 💄 Mudança de estilo (CSS)
+- [ ] 🔧 Mudança de configuração
+- [ ] 📚 Documentação
+- [ ] 🧪 Testes
+- [ ] ⚡ Performance
 
-#### Checklist de conformidade
+## 🧪 Como Testar
 
-- [ ] O código segue a **metodologia BEM** para CSS.
-- [ ] O projeto utiliza apenas **HTML, CSS e JS puros** (sem frameworks como React/Vue).
-- [ ] As alterações foram testadas em dispositivos móveis e desktop.
-- [ ] Foram adicionadas traduções nos arquivos JSON se necessário (i18n).
-- [ ] A acessibilidade foi mantida (contraste WCAG, atributos ARIA).
+1. Descreva os passos para testar as mudanças
+2. Comandos no terminal (se aplicável)
+3. O que deve ser observado
 
-#### Como testar?
+**Resultado esperado:**
 
-Passos para validar as mudanças manualmente.
+## ✅ Checklist
 
-#### Capturas de tela (se aplicável)
+- [ ] Meu código segue as diretrizes de estilo do projeto (ESLint, Stylelint, Prettier)
+- [ ] Fiz uma auto-revisão do meu código
+- [ ] Comentei o código, especialmente em áreas complexas
+- [ ] Adicionei/atualizei testes (se aplicável)
+- [ ] As novas dependências foram adicionadas ao package.json (se aplicável)
+- [ ] A documentação foi atualizada (README, comentários, etc.)
+- [ ] Minhas mudanças não geram novos warnings ou erros
+- [ ] Testei em diferentes navegadores (Chrome, Firefox, Safari)
+- [ ] Testei a responsividade (mobile, tablet, desktop)
+- [ ] Verifiquei a acessibilidade (navegação por teclado, leitores de tela)
 
-Cole aqui imagens que demonstrem as alterações visuais.
+## 📸 Screenshots / Vídeos
+
+Se houver mudanças visuais, adicione screenshots ou GIFs.
+
+## 🎯 Impacto
+
+Descreva o impacto das mudanças:
+- Performance: [Melhoria / Sem mudança / Possível regressão]
+- Acessibilidade: [Melhoria / Sem mudança / Possível regressão]
+- SEO: [Melhoria / Sem mudança / Possível regressão]
+
+## 📋 Notas para o Revisor
+
+Qualquer informação adicional que possa ajudar na revisão.

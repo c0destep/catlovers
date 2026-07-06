@@ -402,7 +402,10 @@
       "Preto": "Black",
       "Siamês": "Siamese",
       "Tricolor": "Calico"
-    }
+    },
+    "announcerFoundSingle": "1 cat found.",
+    "announcerFoundPlural": "cats found.",
+    "announcerEmpty": "No cats found."
   },
   "quiz": {
     "eyebrow": "Match",
@@ -416,10 +419,15 @@
     "timeCalm": "Little time, looking for a quiet company",
     "timePlayful": "Plenty of time, I love to interact and play",
     "timeAffectionate": "Moderate time, but I like cuddling on the couch",
+    "step3": "3. What do you value most in a cat's behavior?",
+    "activityCalm": "Independence and quietness, liking peace and quiet",
+    "activityPlayful": "Energy and curiosity, always ready to play",
+    "activityAffectionate": "Cuddles and proximity, following me around the house",
     "submit": "Discover my Match",
     "resultTitle": "The ideal profile for you is:",
-    "resultSubtitle": "Based on your answers, we recommend kittens with this profile.",
-    "resultBtn": "See kittens"
+    "resultSubtitle": "Based on your answers, we recommend cats with this profile.",
+    "resultBtn": "View cats",
+    "announcerResult": "Result: Your ideal profile is"
   },
   "support": {
     "eyebrow": "Support",
@@ -549,6 +557,18 @@
     "post": {
       "title": "How to adapt a new cat - Catlovers",
       "description": "Essential tips for introducing a new feline into your home."
+    },
+    "support": {
+      "title": "How to Help - Catlovers",
+      "description": "Discover how you can help our cause through donations, volunteering, or sponsorship."
+    },
+    "error": {
+      "title": "Page not found - Catlovers",
+      "description": "The page you are looking for was not found."
     }
+  },
+  "error": {
+    "subtitle": "Page not found.",
+    "backHome": "Back to Home"
   }
 }

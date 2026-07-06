@@ -402,7 +402,10 @@
       "Preto": "Preto",
       "Siamês": "Siamês",
       "Tricolor": "Tricolor"
-    }
+    },
+    "announcerFoundSingle": "1 gatinho encontrado.",
+    "announcerFoundPlural": "gatinhos encontrados.",
+    "announcerEmpty": "Nenhum gatinho encontrado."
   },
   "quiz": {
     "eyebrow": "Match",
@@ -416,10 +419,15 @@
     "timeCalm": "Pouco tempo, busco uma companhia tranquila",
     "timePlayful": "Bastante tempo, adoro interagir e brincar",
     "timeAffectionate": "Tempo moderado, mas gosto de carinho no sofá",
+    "step3": "3. O que você mais valoriza no comportamento de um gato?",
+    "activityCalm": "Independência e tranquilidade, que goste de sossego",
+    "activityPlayful": "Energia e curiosidade, sempre pronto para brincar",
+    "activityAffectionate": "Dengo e proximidade, que me siga pela casa",
     "submit": "Descobrir meu Match",
     "resultTitle": "O perfil ideal para você é:",
     "resultSubtitle": "Baseado nas suas respostas, recomendamos gatinhos com esse perfil.",
-    "resultBtn": "Ver gatinhos"
+    "resultBtn": "Ver gatinhos",
+    "announcerResult": "Resultado: O perfil ideal para você é"
   },
   "support": {
     "eyebrow": "Apoio",
@@ -549,6 +557,18 @@
     "post": {
       "title": "Como adaptar um novo gato - Catlovers",
       "description": "Dicas essenciais para introduzir um novo felino na sua casa."
+    },
+    "support": {
+      "title": "Como Ajudar - Catlovers",
+      "description": "Descubra como você pode ajudar nossa causa através de doações, voluntariado ou apadrinhamento."
+    },
+    "error": {
+      "title": "Página não encontrada - Catlovers",
+      "description": "A página que você procura não foi encontrada."
     }
+  },
+  "error": {
+    "subtitle": "Página não encontrada.",
+    "backHome": "Voltar para a Home"
   }
 }

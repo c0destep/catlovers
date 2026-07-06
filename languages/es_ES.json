@@ -402,7 +402,10 @@
       "Preto": "Negro",
       "Siamês": "Siamés",
       "Tricolor": "Tricolor"
-    }
+    },
+    "announcerFoundSingle": "1 gato encontrado.",
+    "announcerFoundPlural": "gatos encontrados.",
+    "announcerEmpty": "No se encontraron gatos."
   },
   "quiz": {
     "eyebrow": "Match",
@@ -412,14 +415,19 @@
     "homeCalm": "Casa o apartamento pequeño y tranquilo",
     "homePlayful": "Casa con patio o espacio grande con mucho movimiento",
     "homeAffectionate": "Un ambiente familiar acogedor, siempre hay alguien",
-    "step2": "2. ¿Cuánto tiempo libre tienes para jugar?",
+    "step2": "2. ¿Cuánto tempo libre tienes para jugar?",
     "timeCalm": "Poco tiempo, busco una compañía tranquila",
     "timePlayful": "Mucho tiempo, me encanta interactuar y jugar",
     "timeAffectionate": "Tiempo moderado, pero me gusta acurrucarme en el sofá",
+    "step3": "3. ¿Qué es lo que más valora en el comportamiento de un gato?",
+    "activityCalm": "Independencia y tranquilidad, que le guste el sosiego",
+    "activityPlayful": "Energía y curiosidad, siempre listo para jugar",
+    "activityAffectionate": "Cariño y proximidad, que me siga por la casa",
     "submit": "Descubrir mi Match",
     "resultTitle": "El perfil ideal para ti es:",
-    "resultSubtitle": "Basado en tus respuestas, recomendamos gatitos con este perfil.",
-    "resultBtn": "Ver gatitos"
+    "resultSubtitle": "Basado en tus respuestas, recomendamos gatos con este perfil.",
+    "resultBtn": "Ver gatos",
+    "announcerResult": "Resultado: El perfil ideal para usted es"
   },
   "support": {
     "eyebrow": "Apoyo",
@@ -549,6 +557,18 @@
     "post": {
       "title": "Cómo adaptar un gato nuevo - Catlovers",
       "description": "Consejos esenciales para introducir un nuevo felino en tu casa."
+    },
+    "support": {
+      "title": "Cómo Ayudar - Catlovers",
+      "description": "Descubre cómo puedes ayudar a nuestra causa a través de donaciones, voluntariado o apadrinamiento."
+    },
+    "error": {
+      "title": "Página no encontrada - Catlovers",
+      "description": "La página que buscas no fue encontrada."
     }
+  },
+  "error": {
+    "subtitle": "Página no encontrada.",
+    "backHome": "Volver al Inicio"
   }
 }

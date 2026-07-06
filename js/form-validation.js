@@ -34,7 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
     return isValid;
   };
 
-  form.addEventListener("submit", (e) => {
+  const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     
     let isFormValid = true;
@@ -48,26 +50,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (isFormValid) {
       // Simulate form submission
-      const btn = form.querySelector("button[type='submit']");
+      const btn = form.querySelector("button");
       const originalI18n = btn.getAttribute("data-i18n") || "form.submit";
       
       btn.setAttribute("data-i18n", "form.sending");
       if (window.catloversTranslator) window.catloversTranslator.translatePageTo(window.catloversTranslator.currentLanguage);
       btn.disabled = true;
 
-      setTimeout(() => {
-        btn.setAttribute("data-i18n", "form.success");
-        btn.classList.add("button--success");
-        if (window.catloversTranslator) window.catloversTranslator.translatePageTo(window.catloversTranslator.currentLanguage);
-        form.reset();
-        
-        setTimeout(() => {
-          btn.setAttribute("data-i18n", originalI18n);
-          btn.classList.remove("button--success");
-          if (window.catloversTranslator) window.catloversTranslator.translatePageTo(window.catloversTranslator.currentLanguage);
-          btn.disabled = false;
-        }, 3000);
-      }, 1500);
+      await delay(1500);
+      
+      btn.setAttribute("data-i18n", "form.success");
+      btn.classList.add("button--success");
+      if (window.catloversTranslator) window.catloversTranslator.translatePageTo(window.catloversTranslator.currentLanguage);
+      form.reset();
+      
+      await delay(3000);
+      
+      btn.setAttribute("data-i18n", originalI18n);
+      btn.classList.remove("button--success");
+      if (window.catloversTranslator) window.catloversTranslator.translatePageTo(window.catloversTranslator.currentLanguage);
+      btn.disabled = false;
     } else {
       // Focus on first invalid field for accessibility
       const firstInvalid = form.querySelector("[aria-invalid='true']");

@@ -1,28 +1,28 @@
 <!doctype html>
+<!--suppress JSUnresolvedLibraryURL -->
 <html class="no-js" lang="pt-BR">
-
 <head>
   <include src="head-common.html"></include>
-  <title>Página não encontrada - Catlovers</title>
+  <title data-i18n="head.error.title">Página não encontrada - Catlovers</title>
+  <meta data-i18n="[content]head.error.description" content="A página que você procura não foi encontrada." name="description"/>
 </head>
-
 <body>
 <div aria-hidden="true" class="page-background"></div>
+<a class="skip-link" data-i18n="accessibility.skip" href="#main-content">Pular para o conteúdo</a>
 
 <include src="header.html"></include>
 
 <main id="main-content">
   <section class="section">
-    <div class="container" style="text-align: center; padding: 10rem 0;">
+    <div class="container error-page">
       <h1 class="hero__title">404</h1>
-      <p class="hero__subtitle">Página não encontrada.</p>
-      <a class="button button--primary" href="index.html">Voltar para a Home</a>
+      <p class="hero__subtitle" data-i18n="error.subtitle">Página não encontrada.</p>
+      <a class="button button--primary" href="index.html" data-i18n="error.backHome">Voltar para a Home</a>
     </div>
   </section>
 </main>
 
 <include src="footer.html"></include>
 <include src="scripts.html"></include>
-
 </body>
 </html>

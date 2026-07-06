@@ -66,3 +66,4 @@ pnpm run build
   `commitizen`.
 - **Acessibilidade:** Mantenha os atributos ARIA e garanta contraste WCAG.
 - **Responsividade:** O design deve ser Mobile-First.
+- **Event Listeners:** Como este projeto não é um Single Page Application (SPA) e todas as navegações recarregam a página, não exigimos o "cleanup" (remoção) de Event Listeners ao longo dos scripts JS. O vazamento de memória não é um risco por design.

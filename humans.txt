@@ -3,13 +3,61 @@
 
 # TEAM
 
-    Lucas Alves -- Developer -- @riotnate
+  Lucas Alves -- Developer & Designer -- https://github.com/youhuul
+  Email: lucas.alves.capristrano59@gmail.com
+  Location: Brazil
+  GitHub: @youhuul
 
 # THANKS
 
-    Lucas Alves
+  Catlovers Community -- for inspiration and feedback
+  Open source contributors -- for amazing tools and libraries
+
+# PROJECT DETAILS
+
+  Project start date: 2024
+  Last update: 2025
+  Purpose: Educational project promoting responsible cat adoption
+  License: MIT
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
-    PostHTML, Parcel, simple-translator, Modernizr, Normalize.css
+  ## FRONTEND
+    HTML5, CSS3, JavaScript (ES6+)
+    PostHTML -- HTML preprocessing
+    Parcel -- Bundler and build tool
+    simple-translator -- Internationalization (i18n)
+    Modernizr -- Feature detection
+    Normalize.css -- CSS reset
+
+  ## TESTING
+    Cypress -- End-to-end testing
+    ESLint -- JavaScript linting
+    Stylelint -- CSS linting
+    Prettier -- Code formatting
+
+  ## DESIGN
+    Fonts: Manrope (body), Fraunces (display) -- Google Fonts
+    Color scheme: Custom purple/rose palette with CSS custom properties
+    Methodology: BEM (Block Element Modifier)
+    Responsive: Mobile-first approach
+
+  ## SERVER & DEPLOYMENT
+    Apache HTTP Server
+    .htaccess configuration for compression and caching
+    Service Worker for offline support and caching
+    GitHub Pages for hosting
+
+  ## DEVELOPMENT TOOLS
+    Node.js -- JavaScript runtime
+    pnpm -- Package manager
+    Git -- Version control
+    VS Code -- IDE
+
+  ## VERSION
+    Current version: 1.0.0
+    Service Worker cache version: v5
+
+# LAST BUT NOT LEAST
+
+  Built with ❤️ and 🐱 for cat lovers everywhere!

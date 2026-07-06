@@ -1,24 +1,369 @@
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<meta content="Lucas Alves" name="author"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="index,follow" name="robots"/>
-<meta charset="UTF-8"/>
-<meta content="website" property="og:type"/>
-<meta content="favicon-96.png" property="og:image"/>
-<meta content="@c0destep" name="twitter:site"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="#c2410c" name="theme-color">
+  <meta content="Lucas Alves" name="author"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="index,follow" name="robots"/>
+  <meta charset="UTF-8"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://c0destep.github.io/catlovers/img/catlovers.jpg" property="og:image"/>
+  <meta content="@c0destep" name="twitter:site"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="#c67a5f" name="theme-color">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a1816">
 
-<link href="site.webmanifest" rel="manifest">
-<link href="favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
-<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="favicon-96.png" rel="icon" sizes="96x96" type="image/png"/>
-<link href="favicon-96.png" rel="apple-touch-icon">
+  <script>(function(){var l=localStorage.getItem('preferred_language');var map={en_US:'en-US',es_ES:'es-ES',pt_BR:'pt-BR'};if(l&&map[l])document.documentElement.lang=map[l];})();</script>
 
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-<link
-  href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap"
-  rel="stylesheet">
-<link href="css/preflight.css" rel="stylesheet" type="text/css">
-<link href="css/main.css" rel="stylesheet" type="text/css">
+  <link href="site.webmanifest" rel="manifest">
+  <link href="favicon-16.webp" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="favicon-32.webp" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="favicon-96.png" rel="icon" sizes="96x96" type="image/png"/>
+  <link href="favicon-96.png" rel="apple-touch-icon">
+
+  <link href="css/preflight.css" rel="stylesheet" type="text/css">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+
+  <!-- Critical CSS inlined for fastest initial render -->
+  <style>
+    /* Critical CSS - Above-the-fold content only */
+    /* This is inlined in the <head> for fastest initial render */
+
+    :root {
+      /* Paleta Natural/Orgânica - tema gatos */
+      --cat-accent: #c67a5f;
+      --cat-accent-strong: #a85f42;
+      --cat-secondary: #8fa678;
+      --cat-secondary-dark: #6e7f52;
+      --cat-ink: #3d3836;
+      --cat-muted: #6b6560;
+      --cat-bg: #f5f0e8;
+      --cat-bg-alt: #e8e2d9;
+      --cat-card: #ffffff;
+      --cat-header: rgba(245, 240, 232, 0.92);
+      --cat-border: rgba(61, 56, 54, 0.12);
+      --cat-hover: rgba(61, 56, 54, 0.06);
+      --cat-on-accent: #ffffff;
+      --cat-blob-1: rgba(198, 122, 95, 0.08);
+      --cat-blob-2: rgba(143, 166, 120, 0.08);
+      --cat-blob-3: rgba(198, 122, 95, 0.15);
+      --cat-font-body: 'Lora', serif;
+      --cat-font-display: 'Cormorant Garamond', serif;
+      --cat-shadow: 0 12px 30px -10px rgba(61, 56, 54, 0.12);
+      --cat-shadow-sm: 0 4px 12px -4px rgba(61, 56, 54, 0.08);
+      --cat-radius: 20px;
+      --cat-radius-sm: 12px;
+      --cat-danger: #e11d48;
+      --cat-danger-soft: rgba(225, 29, 72, 0.1);
+      --cat-success: #059669;
+    }
+
+    [data-theme="dark"] {
+      --cat-accent: #d4a574;
+      --cat-accent-strong: #c67a5f;
+      --cat-secondary: #a3b889;
+      --cat-secondary-dark: #8fa678;
+      --cat-ink: #f5f0e8;
+      --cat-muted: #a39e94;
+      --cat-bg: #1a1816;
+      --cat-bg-alt: #252220;
+      --cat-card: #2d2926;
+      --cat-header: rgba(26, 24, 22, 0.9);
+      --cat-border: rgba(245, 240, 232, 0.12);
+      --cat-hover: rgba(245, 240, 232, 0.06);
+      --cat-on-accent: #1a1816;
+      --cat-blob-1: rgba(212, 165, 116, 0.1);
+      --cat-blob-2: rgba(163, 184, 137, 0.1);
+      --cat-blob-3: rgba(198, 122, 95, 0.15);
+      --cat-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
+      --cat-shadow-sm: 0 4px 16px -6px rgba(0, 0, 0, 0.4);
+      --cat-danger: #f43f5e;
+      --cat-danger-soft: rgba(244, 63, 94, 0.15);
+      --cat-success: #10b981;
+    }
+
+    /* Selection */
+    ::selection {
+      background-color: var(--cat-accent);
+      color: var(--cat-on-accent);
+    }
+
+    /* Focus Styles for Accessibility */
+    :focus-visible {
+      outline: 3px solid var(--cat-accent);
+      outline-offset: 4px;
+      border-radius: var(--cat-radius-sm);
+    }
+
+    /* Base */
+    html {
+      text-rendering: optimizeLegibility;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: var(--cat-bg);
+      color: var(--cat-ink);
+      font-family: var(--cat-font-body);
+      font-size: 1rem;
+      line-height: 1.65rem;
+      margin: 0;
+    }
+
+    /* Skip link - accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--cat-accent);
+      color: var(--cat-on-accent);
+      padding: 8px 16px;
+      z-index: 100;
+      transition: top 0.3s;
+      border-radius: 0 0 var(--cat-radius-sm) 0;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Screen reader only content */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Page background */
+    .page-background {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background-image: radial-gradient(circle at 15% 15%, var(--cat-blob-1), transparent 55%),
+        radial-gradient(circle at 85% 10%, var(--cat-blob-2), transparent 55%),
+        radial-gradient(circle at 70% 80%, var(--cat-blob-3), transparent 55%),
+        url("./img/background-broken-noise.webp");
+      background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+      background-size: cover, cover, cover, 420px;
+      opacity: 0.04;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+
+    [data-theme="dark"] .page-background {
+      opacity: 0.5;
+      mix-blend-mode: soft-light;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(12px);
+      background-color: var(--cat-header);
+      border-bottom: 1px solid var(--cat-border);
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Hero section - above the fold */
+    .hero {
+      padding: 4rem 0 6rem;
+    }
+
+    .hero__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero__badge-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--cat-bg);
+      border: 1px solid var(--cat-border);
+      border-radius: 100px;
+      font-size: 0.875rem;
+      color: var(--cat-accent);
+      font-weight: 500;
+    }
+
+    .hero__title {
+      font-family: var(--cat-font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin: 0 0 1.5rem;
+      color: var(--cat-ink);
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, var(--cat-accent), var(--cat-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero__subtitle {
+      font-size: 1.125rem;
+      color: var(--cat-muted);
+      margin: 0 0 2rem;
+      max-width: 500px;
+    }
+
+    /* Buttons */
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.5rem;
+      font-family: var(--cat-font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: var(--cat-radius-sm);
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .button--primary {
+      background: var(--cat-accent);
+      color: var(--cat-on-accent);
+      border-color: var(--cat-accent);
+    }
+
+    .button--primary:hover {
+      background: var(--cat-accent-strong);
+      border-color: var(--cat-accent-strong);
+      transform: translateY(-2px);
+      box-shadow: var(--cat-shadow-sm);
+    }
+
+    .button--ghost {
+      background: transparent;
+      color: var(--cat-ink);
+      border-color: var(--cat-border);
+    }
+
+    .button--ghost:hover {
+      background: var(--cat-hover);
+      border-color: var(--cat-accent);
+    }
+
+    .button--lg {
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+    }
+
+    .button--full-width {
+      width: 100%;
+    }
+
+    /* Hero actions */
+    .hero__actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Hero image */
+    .hero__image-wrapper {
+      position: relative;
+    }
+
+    .hero__image {
+      width: 100%;
+      height: auto;
+      border-radius: var(--cat-radius);
+      box-shadow: var(--cat-shadow);
+    }
+
+    .hero__floating-card {
+      position: absolute;
+      background: var(--cat-card);
+      padding: 1rem;
+      border-radius: var(--cat-radius-sm);
+      box-shadow: var(--cat-shadow);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border: 1px solid var(--cat-border);
+    }
+
+    .hero__floating-card--top {
+      top: -20px;
+      right: -20px;
+    }
+
+    .hero__floating-card--bottom {
+      bottom: 40px;
+      left: -30px;
+    }
+
+    .hero__floating-icon {
+      font-size: 1.5rem;
+    }
+
+    .hero__floating-card strong {
+      display: block;
+      font-weight: 600;
+      color: var(--cat-ink);
+    }
+
+    .hero__floating-card span {
+      display: block;
+      font-size: 0.875rem;
+      color: var(--cat-muted);
+    }
+
+    /* Responsive for mobile */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 2rem 0 4rem;
+      }
+
+      .hero__inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .hero__actions {
+        flex-direction: column;
+      }
+
+      .button--lg {
+        width: 100%;
+      }
+
+      .hero__floating-card--top {
+        right: 10px;
+        top: 10px;
+      }
+
+      .hero__floating-card--bottom {
+        left: 10px;
+        bottom: 10px;
+      }
+    }
+  </style>

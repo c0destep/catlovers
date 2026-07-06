@@ -1,29 +1,89 @@
 {
   "short_name": "Catlovers",
-  "name": "Catlovers",
-  "description": "Seu guia completo sobre o mundo dos gatos.",
+  "name": "Catlovers - Seu guia completo sobre gatos",
+  "description": "Encontre informações sobre comportamento, cuidados e adoção responsável de felinos. Seu guia completo para ter um gato feliz e saudável.",
+  "categories": ["education", "lifestyle", "social"],
+  "lang": "pt-BR",
+  "dir": "ltr",
   "icons": [
+    {
+      "src": "favicon-16.webp",
+      "type": "image/webp",
+      "sizes": "16x16",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon-32.webp",
+      "type": "image/webp",
+      "sizes": "32x32",
+      "purpose": "any"
+    },
     {
       "src": "favicon-96.png",
       "type": "image/png",
-      "sizes": "96x96"
+      "sizes": "96x96",
+      "purpose": "any"
     },
     {
-      "src": "icon-192.png",
-      "type": "image/png",
+      "src": "icon-192.webp",
+      "type": "image/webp",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "icon-512.png",
-      "type": "image/png",
+      "src": "icon-512.webp",
+      "type": "image/webp",
       "sizes": "512x512",
       "purpose": "any maskable"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "./",
+  "scope": "./",
   "background_color": "#ffffff",
-  "theme_color": "#c2410c",
+  "theme_color": "#c67a5f",
   "display": "standalone",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "screenshots": [
+    {
+      "src": "img/catlovers.jpg",
+      "sizes": "1200x800",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Página inicial do Catlovers mostrando herói com gato"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Galeria de Gatos",
+      "short_name": "Galeria",
+      "description": "Ver gatos disponíveis para adoção",
+      "url": "./cats.html",
+      "icons": [{ "src": "icon-192.webp", "sizes": "192x192", "type": "image/webp" }]
+    },
+    {
+      "name": "Quiz de Match",
+      "short_name": "Quiz",
+      "description": "Descubra qual gato combina com você",
+      "url": "./quiz.html",
+      "icons": [{ "src": "icon-192.webp", "sizes": "192x192", "type": "image/webp" }]
+    },
+    {
+      "name": "Adoção",
+      "short_name": "Adotar",
+      "description": "Saiba mais sobre o processo de adoção",
+      "url": "./adoption.html",
+      "icons": [{ "src": "icon-192.webp", "sizes": "192x192", "type": "image/webp" }]
+    }
+  ],
+  "share_target": {
+    "action": "./index.html",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
 }

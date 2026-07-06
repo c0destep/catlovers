@@ -3,6 +3,10 @@ import portuguese from "../languages/pt_BR.json"
 import english from "../languages/en_US.json"
 import spanish from "../languages/es_ES.json"
 
+// Import helpers
+import { translationHelper } from "./translation-helper.js"
+import { throttleHelper } from "./throttle-helper.js"
+
 // --- State and Config ---
 const THEME_KEY = "preferred_theme"
 const LANG_KEY = "preferred_language"
@@ -22,14 +26,14 @@ const toggleButton = document.querySelector(".navbar__toggle--button")
 // --- Functions ---
 
 /**
- * Applies the selected theme (light/dark)
+ * Applies the selected theme (light/dark) to the document
+ * @param { 'dark' | 'light' } theme - The theme to apply
+ * @param { boolean } [persist=true] - Whether to save the preference to localStorage
  */
 const applyTheme = (theme, persist = true) => {
   const resolvedTheme = theme === "dark" ? "dark" : "light"
   document.documentElement.dataset.theme = resolvedTheme
-  if (themeToggle) {
-    themeToggle.setAttribute("aria-pressed", resolvedTheme === "dark")
-  }
+  themeToggle?.setAttribute("aria-pressed", resolvedTheme === "dark")
   if (persist) {
     localStorage.setItem(THEME_KEY, resolvedTheme)
   } else {
@@ -38,7 +42,8 @@ const applyTheme = (theme, persist = true) => {
 }
 
 /**
- * Determines the user's theme preference
+ * Determines the user's theme preference from localStorage or system settings
+ * @returns { 'dark' | 'light' } The resolved theme preference
  */
 const resolveThemePreference = () => {
   const savedTheme = localStorage.getItem(THEME_KEY)
@@ -50,6 +55,8 @@ const resolveThemePreference = () => {
 
 /**
  * Maps language code to HTML lang attribute
+ * @param { string } language - The language code (e.g., 'pt_BR')
+ * @returns { string } The BCP 47 language tag
  */
 const toHtmlLang = (language) => {
   const mapping = {
@@ -57,30 +64,33 @@ const toHtmlLang = (language) => {
     "es_ES": "es-ES",
     "pt_BR": "pt-BR"
   }
-  return mapping[language] || "pt-BR"
+  return mapping[language] ?? "pt-BR"
 }
 
 /**
  * Resolves the initial language based on saved preference or browser settings
+ * @returns { string } The resolved language code
  */
 const resolveLanguage = () => {
   const preferredLanguage = localStorage.getItem(LANG_KEY)
   if (preferredLanguage && supportedLanguages.includes(preferredLanguage)) {
     return preferredLanguage
   }
-  const browserLanguage = (navigator.language || "").toLowerCase()
+  const browserLanguage = (navigator.language ?? "").toLowerCase()
   if (browserLanguage.startsWith("es")) return "es_ES"
   if (browserLanguage.startsWith("en")) return "en_US"
   return "pt_BR"
 }
 
 /**
- * Updates UI state for active language
+ * Updates UI state for active language button and dropdown
+ * @param { string } language - The language code to set as active
  */
 const setActiveLanguageButton = (language) => {
   languageButtons.forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.language === language)
-    button.setAttribute("aria-pressed", button.dataset.language === language)
+    const isActive = button.dataset.language === language
+    button.classList.toggle("is-active", isActive)
+    button.setAttribute("aria-pressed", isActive)
   })
   if (languageDropdown) {
     languageDropdown.querySelectorAll(".language-dropdown__option").forEach((option) => {
@@ -90,12 +100,17 @@ const setActiveLanguageButton = (language) => {
   document.documentElement.lang = toHtmlLang(language)
 }
 
+/**
+ * Closes the language dropdown menu
+ */
 const closeLanguageDropdown = () => {
-  if (!languageDropdown || !languageDropdownTrigger) return
-  languageDropdown.classList.remove("is-open")
-  languageDropdownTrigger.setAttribute("aria-expanded", "false")
+  languageDropdown?.classList.remove("is-open")
+  languageDropdownTrigger?.setAttribute("aria-expanded", "false")
 }
 
+/**
+ * Toggles the language dropdown menu open/closed
+ */
 const toggleLanguageDropdown = () => {
   if (!languageDropdown || !languageDropdownTrigger || !languageDropdownMenu) return
   const isOpen = languageDropdown.classList.contains("is-open")
@@ -108,21 +123,21 @@ const toggleLanguageDropdown = () => {
   }
 }
 
+/**
+ * Handles scroll events to show/hide back-to-top button
+ */
 const handleScroll = () => {
-  if (!backTop) return
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    backTop.classList.add("page-top__visible")
+  const scrollTop = document.body.scrollTop || document.documentElement.scrollTop
+  if (scrollTop > 300) {
+    backTop?.classList.add("page-top__visible")
   } else {
-    backTop.classList.remove("page-top__visible")
+    backTop?.classList.remove("page-top__visible")
   }
 }
 
 // --- Initialization ---
 
-// 1. Theme
-applyTheme(resolveThemePreference(), Boolean(localStorage.getItem(THEME_KEY)))
-
-// 2. Internationalization
+// 1. Internationalization (MUST be first - translationHelper depends on it)
 const translator = new Translator({
   defaultLanguage: "pt_BR",
   detectLanguage: true,
@@ -135,11 +150,15 @@ translator
   .add("en_US", english)
   .add("es_ES", spanish)
 
+// Expose translator globally BEFORE using translationHelper
+window.catloversTranslator = translator;
+
 const initialLanguage = resolveLanguage()
-translator.translatePageTo(initialLanguage)
+translationHelper.translatePage(initialLanguage)
 setActiveLanguageButton(initialLanguage)
 
-window.catloversTranslator = translator;
+// 2. Theme
+applyTheme(resolveThemePreference(), Boolean(localStorage.getItem(THEME_KEY)))
 
 // --- Event Listeners ---
 
@@ -147,7 +166,7 @@ languageButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const targetLanguage = button.dataset.language
     if (targetLanguage) {
-      translator.translatePageTo(targetLanguage)
+      translationHelper.translatePage(targetLanguage)
       localStorage.setItem(LANG_KEY, targetLanguage)
       setActiveLanguageButton(targetLanguage)
       closeLanguageDropdown()
@@ -187,8 +206,10 @@ systemPrefersDark.addEventListener("change", (event) => {
   }
 })
 
-window.addEventListener("scroll", handleScroll)
-handleScroll()
+// Throttle scroll event to improve performance
+const throttledHandleScroll = throttleHelper.throttle(handleScroll, 100)
+window.addEventListener("scroll", throttledHandleScroll)
+throttledHandleScroll()
 
 if (backTop) {
   backTop.addEventListener("click", (event) => {
@@ -204,6 +225,70 @@ if (toggleButton && nav) {
   })
 }
 
+/**
+ * Global error handler for uncaught errors
+ * @param {ErrorEvent} errorEvent
+ */
+const globalErrorHandler = (errorEvent) => {
+  console.error('[Global Error]', errorEvent.error || errorEvent.message);
+  // Could send to error tracking service here
+  // Example: sendErrorToAnalytics(errorEvent.error);
+};
+
+/**
+ * Global unhandled rejection handler
+ * @param {PromiseRejectionEvent} rejectionEvent
+ */
+const globalRejectionHandler = (rejectionEvent) => {
+  console.error('[Unhandled Promise Rejection]', rejectionEvent.reason);
+  // Could send to error tracking service here
+};
+
+// Register global error handlers
+window.addEventListener('error', globalErrorHandler);
+window.addEventListener('unhandledrejection', globalRejectionHandler);
+
+// --- Scroll Animations with IntersectionObserver ---
+/**
+ * Initializes scroll-triggered animations using IntersectionObserver
+ */
+const initScrollAnimations = () => {
+  const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+  if (!('IntersectionObserver' in window) || animatedElements.length === 0) {
+    // Fallback: show all elements immediately if Observer not supported
+    animatedElements.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -100px 0px',
+    threshold: 0.1
+  };
+
+  const animationObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        // Optionally unobserve after animation to improve performance
+        animationObserver.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  animatedElements.forEach(el => {
+    animationObserver.observe(el);
+  });
+};
+
+// Initialize scroll animations after DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initScrollAnimations);
+} else {
+  initScrollAnimations();
+}
+
 // --- Service Worker Registration ---
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -212,3 +297,19 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
+
+// --- Active Menu Link ---
+const highlightActiveMenuLink = () => {
+  const currentPath = window.location.pathname;
+  const menuLinks = document.querySelectorAll('.menu__link');
+  
+  menuLinks.forEach(link => {
+    const linkPath = new URL(link.href).pathname;
+    if (currentPath === linkPath || (currentPath.endsWith('/') && linkPath.endsWith('index.html'))) {
+      link.classList.add('menu__link--active');
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+};
+
+document.addEventListener('DOMContentLoaded', highlightActiveMenuLink);

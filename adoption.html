@@ -5,11 +5,13 @@
 <head>
   <include src="head-common.html"></include>
   <title data-i18n="head.adoption.title">Adoção - Catlovers</title>
-  <meta data-i18n="[content]head.adoption.description" content="Guia completo para adoção responsável de gatos, com etapas e checklist." name="description"/>
+  <meta content="Guia completo para adoção responsável de gatos, com etapas e checklist."
+        data-i18n="[content]head.adoption.description" name="description"/>
   <meta content="HTML, CSS, Gatos, Adoção, Cat Lovers" name="keywords"/>
-  <meta data-i18n="[content]head.adoption.title" content="Adoção - Catlovers" property="og:title"/>
-  <meta data-i18n="[content]head.adoption.description" content="Guia completo para adoção responsável de gatos, com etapas e checklist." property="og:description"/>
-  <meta content="https://youhuul.github.io/catlovers/adoption.html" property="og:url"/>
+  <meta content="Adoção - Catlovers" data-i18n="[content]head.adoption.title" property="og:title"/>
+  <meta content="Guia completo para adoção responsável de gatos, com etapas e checklist."
+        data-i18n="[content]head.adoption.description" property="og:description"/>
+  <meta content="https://c0destep.github.io/catlovers/adoption.html" property="og:url"/>
 </head>
 
 <body>
@@ -32,7 +34,7 @@
         </div>
       </div>
       <div class="hero__media">
-        <img alt="Gato olhando pela janela" class="hero__image" src="img/catlovers.jpg?as=webp">
+        <img fetchpriority="high" alt="Gato olhando pela janela" class="hero__image" src="img/cat_window.jpg?as=webp" width="600" height="400">
       </div>
     </div>
   </section>
@@ -146,25 +148,29 @@
       <div class="section__head">
         <span class="section__eyebrow" data-i18n="adoption.sections.tips.eyebrow">Dicas de Cuidados</span>
         <h2 class="section__title" data-i18n="adoption.sections.tips.title">Primeiros dias em casa</h2>
-        <p class="section__text" data-i18n="adoption.sections.tips.subtitle">Dicas para ajudar seu novo amigo a se sentir seguro e acolhido.</p>
+        <p class="section__text" data-i18n="adoption.sections.tips.subtitle">Dicas para ajudar seu novo amigo a se
+          sentir seguro e acolhido.</p>
       </div>
       <div class="grid grid--cards">
         <article class="card">
           <h3 class="card__title" data-i18n="adoption.sections.tips.items.0.title">Espaço restrito no início</h3>
           <p class="card__text" data-i18n="adoption.sections.tips.items.0.text">
-            Mantenha o gato em um cômodo tranquilo por alguns dias, com comida, água e caixa de areia, para que ele se acostume com os novos cheiros.
+            Mantenha o gato em um cômodo tranquilo por alguns dias, com comida, água e caixa de areia, para que ele se
+            acostume com os novos cheiros.
           </p>
         </article>
         <article class="card">
           <h3 class="card__title" data-i18n="adoption.sections.tips.items.1.title">Esconderijos são importantes</h3>
           <p class="card__text" data-i18n="adoption.sections.tips.items.1.text">
-            Os gatos se sentem mais seguros quando têm onde se esconder. Caixas de papelão ou caminhas tipo 'toca' são excelentes para as primeiras semanas.
+            Os gatos se sentem mais seguros quando têm onde se esconder. Caixas de papelão ou caminhas tipo 'toca' são
+            excelentes para as primeiras semanas.
           </p>
         </article>
         <article class="card">
           <h3 class="card__title" data-i18n="adoption.sections.tips.items.2.title">Paciência e espaço</h3>
           <p class="card__text" data-i18n="adoption.sections.tips.items.2.text">
-            Deixe o gato vir até você. Forçar carinho ou pegá-lo no colo nos primeiros dias pode gerar estresse. Sente-se no chão e espere que ele sinta curiosidade.
+            Deixe o gato vir até você. Forçar carinho ou pegá-lo no colo nos primeiros dias pode gerar estresse.
+            Sente-se no chão e espere que ele sinta curiosidade.
           </p>
         </article>
       </div>
@@ -173,24 +179,28 @@
 
   <section class="section section--cta">
     <div class="container">
-      <div class="cta article-footer-box" style="flex-direction: column; text-align: left;">
+      <div class="cta article-footer-box cta--vertical">
         <h2 class="cta__title" data-i18n="form.title">Formulário de Interesse</h2>
         <p class="cta__text" data-i18n="form.subtitle">Preencha com atenção. Entraremos em contato em breve.</p>
-        
-        <form id="adoption-form" novalidate class="adoption-form-container">
+
+        <form class="adoption-form-container" id="adoption-form" novalidate>
           <div class="form-group">
-            <label for="name" class="form-label" data-i18n="form.labelName">Nome Completo *</label>
-            <input type="text" id="name" name="name" required aria-required="true" aria-describedby="name-error" class="form-input">
-            <span id="name-error" class="error-message" aria-live="polite"></span>
-          </div>
-          
-          <div class="form-group">
-            <label for="email" class="form-label" data-i18n="form.labelEmail">E-mail *</label>
-            <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error" class="form-input">
-            <span id="email-error" class="error-message" aria-live="polite"></span>
+            <label class="form-label" data-i18n="form.labelName" for="name">Nome Completo *</label>
+            <input aria-describedby="name-error" aria-required="true" class="form-input" id="name" name="name" required
+                   type="text">
+            <span aria-live="polite" class="error-message" id="name-error"></span>
           </div>
 
-          <button type="submit" class="button button--primary button--full-width" data-i18n="form.submit">Enviar Formulário</button>
+          <div class="form-group">
+            <label class="form-label" data-i18n="form.labelEmail" for="email">E-mail *</label>
+            <input aria-describedby="email-error" aria-required="true" class="form-input" id="email" name="email" required
+                   type="email">
+            <span aria-live="polite" class="error-message" id="email-error"></span>
+          </div>
+
+          <button class="button button--primary button--full-width" data-i18n="form.submit" type="submit">Enviar
+            Formulário
+          </button>
         </form>
       </div>
     </div>
@@ -200,7 +210,7 @@
 <include src="footer.html"></include>
 <include src="back-to-top.html"></include>
 <include src="scripts.html"></include>
-<script type="module" src="js/form-validation.js"></script>
+<script src="js/form-validation.js" type="module"></script>
 
 </body>
 </html>

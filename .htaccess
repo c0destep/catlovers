@@ -8,6 +8,70 @@
 # https://httpd.apache.org/docs/current/howto/htaccess.html
 
 # ######################################################################
+# # COMPRESSION                                                         #
+# ######################################################################
+
+# ----------------------------------------------------------------------
+# | Compression (gzip)                                                  |
+# ----------------------------------------------------------------------
+
+# Compress text, HTML, JavaScript, CSS, XML, fonts, and SVG
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE \
+        text/plain \
+        text/html \
+        text/xml \
+        text/css \
+        text/javascript \
+        application/javascript \
+        application/x-javascript \
+        application/xml \
+        application/xml+rss \
+        application/json \
+        application/manifest+json \
+        image/svg+xml \
+        font/ttf \
+        font/otf \
+        font/woff \
+        font/woff2
+
+    # Remove browser bugs (only needed for really old browsers)
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    Header append Vary User-Agent
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Compression (Brotli)                                                |
+# ----------------------------------------------------------------------
+
+# Brotli compression (if module is available)
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS \
+        text/plain \
+        text/html \
+        text/xml \
+        text/css \
+        text/javascript \
+        application/javascript \
+        application/x-javascript \
+        application/xml \
+        application/xml+rss \
+        application/json \
+        application/manifest+json \
+        image/svg+xml \
+        font/ttf \
+        font/otf \
+        font/woff \
+        font/woff2
+
+    # Brotli compression levels (0-11, default is 11)
+    # Lower values = faster compression, higher values = better compression
+    BrotliCompressionQuality 11
+</IfModule>
+
+# ######################################################################
 # # CROSS-ORIGIN                                                       #
 # ######################################################################
 
@@ -468,9 +532,9 @@ AddDefaultCharset utf-8
 # https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/
 # https://www.owasp.org/index.php/Clickjacking
 
-# <IfModule mod_headers.c>
-#     Header always set X-Frame-Options "DENY" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
-# </IfModule>
+ <IfModule mod_headers.c>
+     Header always set X-Frame-Options "DENY" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
+</IfModule>
 
 # ----------------------------------------------------------------------
 # | Content Security Policy (CSP)                                      |
@@ -548,9 +612,9 @@ AddDefaultCharset utf-8
 # https://www.w3.org/TR/CSP/
 
 # <IfModule mod_headers.c>
-#     #                                   (1)                 (2)              (3)                 (4)                     (5)                         (6)
-#     Header always set Content-Security-Policy "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" "expr=%{CONTENT_TYPE} =~ m#text\/(html|javascript)|application\/pdf|xml#i"
-# </IfModule>
+    #                                   (1)                 (2)              (3)                 (4)                     (5)                         (6)
+    Header always set Content-Security-Policy "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" "expr=%{CONTENT_TYPE} =~ m#text\/(html|javascript)|application\/pdf|xml#i"
+</IfModule>
 
 # ----------------------------------------------------------------------
 # | File access                                                        |

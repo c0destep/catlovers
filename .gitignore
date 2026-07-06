@@ -40,4 +40,12 @@ Desktop.ini
 # Locks (O projeto utiliza pnpm)
 package-lock.json
 yarn.lock
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Sass cache
+.sass-cache/
+
 tarefas.md

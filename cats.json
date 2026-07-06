@@ -36,7 +36,7 @@
     "ageLabel": "5 meses",
     "sex": "female",
     "temperament": "playful",
-    "color": "Rajada",
+    "color": "Tigrado",
     "image": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=400&q=80"
   },
   {
@@ -46,7 +46,7 @@
     "ageLabel": "3 anos",
     "sex": "male",
     "temperament": "calm",
-    "color": "Amarelo",
+    "color": "Laranja",
     "image": "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=400&q=80"
   },
   {
@@ -56,7 +56,7 @@
     "ageLabel": "4 anos",
     "sex": "female",
     "temperament": "affectionate",
-    "color": "Branca",
+    "color": "Branco",
     "image": "https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?auto=format&fit=crop&w=400&q=80"
   }
 ]

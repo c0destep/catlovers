@@ -10,7 +10,7 @@ describe('Adoção Page', () => {
   });
 
   it('deve exibir erros de validação ao enviar formulário vazio', () => {
-    cy.get('form#adoption-form button[type="submit"]').click();
+    cy.get('form#adoption-form button').click();
     
     // O campo deve ficar inválido
     cy.get('#name').should('have.attr', 'aria-invalid', 'true');
@@ -24,10 +24,10 @@ describe('Adoção Page', () => {
     cy.get('#name').type('Lucas Alves');
     cy.get('#email').type('lucas@example.com');
     
-    cy.get('form#adoption-form button[type="submit"]').click();
+    cy.get('form#adoption-form button').click();
     
     // Verifica se o texto do botão muda indicando sucesso
-    cy.get('form#adoption-form button[type="submit"]')
-      .should('contain.text', 'sucesso');
+    cy.get('form#adoption-form button')
+      .should('have.attr', 'data-i18n', 'form.success');
   });
 });

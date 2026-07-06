@@ -1,28 +1,42 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const footerContainer = document.querySelector(".footer__bottom");
-  if (!footerContainer) return;
+document.addEventListener("DOMContentLoaded", async () => {
+  const language = localStorage.getItem("preferred_language") || "pt_BR";
+  // The API only supports English. Hide the fact section for other languages.
+  if (language !== "en_US") return;
+
+  const footerCopyright = document.querySelector(".footer--copyright");
+  if (!footerCopyright) return;
 
   const factDiv = document.createElement("div");
-  factDiv.style.marginTop = "1rem";
-  factDiv.style.fontSize = "0.875rem";
-  factDiv.style.color = "var(--color-text-muted)";
-  factDiv.style.textAlign = "center";
-  factDiv.innerHTML = `<strong>Curiosidade Felina:</strong> <span id="cat-fact-text">Buscando...</span>`;
-  
-  // Inserir antes dos direitos autorais se possível, ou no final
-  footerContainer.insertBefore(factDiv, footerContainer.firstChild);
+  factDiv.className = "cat-fact";
+  factDiv.innerHTML = `<strong>Cat Fact:</strong> <span id="cat-fact-text">Fetching...</span>`;
+
+  // Inserir antes dos direitos autorais
+  footerCopyright.parentNode.insertBefore(factDiv, footerCopyright);
 
   const factText = document.getElementById("cat-fact-text");
+  const CACHE_KEY = "cat_fact_cached";
+  const CACHE_TIME_KEY = "cat_fact_time";
+  const ONE_HOUR = 60 * 60 * 1000;
 
-  // Usando a API pública catfact.ninja (mais confiável para curiosidades em texto do que The Cat API que foca em imagens)
-  fetch("https://catfact.ninja/fact")
-    .then(response => response.json())
-    .then(data => {
-      // Como a API retorna em inglês, vamos exibir diretamente (poderíamos usar o Simple Translator para traduzir, mas por simplicidade mantemos o original ou adicionamos um aviso)
-      factText.textContent = data.fact;
-    })
-    .catch(error => {
-      console.error("Erro ao buscar curiosidade:", error);
-      factDiv.style.display = "none";
+  const cachedFact = sessionStorage.getItem(CACHE_KEY);
+  const cachedTime = sessionStorage.getItem(CACHE_TIME_KEY);
+  const now = Date.now();
+
+  if (cachedFact && cachedTime && now - parseInt(cachedTime, 10) < ONE_HOUR) {
+    factText.textContent = cachedFact;
+    return;
+  }
+
+  try {
+    const response = await fetch("https://catfact.ninja/fact", {
+      signal: AbortSignal.timeout(8000)
     });
+    const data = await response.json();
+    factText.textContent = data.fact;
+    sessionStorage.setItem(CACHE_KEY, data.fact);
+    sessionStorage.setItem(CACHE_TIME_KEY, now.toString());
+  } catch (error) {
+    console.error("Erro ao buscar curiosidade:", error);
+    factDiv.style.display = "none";
+  }
 });
