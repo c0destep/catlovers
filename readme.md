@@ -1,9 +1,9 @@
 # Catlovers
 
-![GitHub repo size](https://img.shields.io/github/repo-size/youhuul/catlovers?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/youhuul/catlovers?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/youhuul/catlovers?style=for-the-badge)
-![Website](https://img.shields.io/website?down_color=green&down_message=online&style=for-the-badge&up_color=blue&up_message=online&url=https%3A%2F%2Fyouhuul.github.io%2Fcatlovers%2F)
+![GitHub repo size](https://img.shields.io/github/repo-size/c0destep/catlovers?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/c0destep/catlovers?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/c0destep/catlovers?style=for-the-badge)
+![Website](https://img.shields.io/website?down_color=green&down_message=online&style=for-the-badge&up_color=blue&up_message=online&url=https%3A%2F%2Fc0destep.github.io%2Fcatlovers%2F)
 
 <img src="img/catlovers.jpg" alt="cat love" width="800">
 
@@ -59,7 +59,7 @@ Linux, macOS e Windows:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/youhuul/catlovers.git
+git clone https://github.com/c0destep/catlovers.git
 cd catlovers
 
 # Instale as dependências
@@ -170,7 +170,6 @@ catlovers/
 ├── package.json          # Dependências e scripts
 ├── pnpm-lock.yaml        # Lock file
 ├── readme.md             # Este arquivo
-└── IMPROVEMENTS.md       # Melhorias implementadas e planejadas
 ```
 
 ## 🎨 Metodologia CSS
@@ -220,7 +219,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE.txt](LICENSE.txt)
 ## 🙋🏽 Autor
 
 **Lucas Alves**
-- GitHub: [@youhuul](https://github.com/youhuul)
+- GitHub: [@c0destep](https://github.com/c0destep)
 - Email: lucas.alves.capristrano59@gmail.com
 
 ## 🎯 Roadmap Futuro
