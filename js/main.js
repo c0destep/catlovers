@@ -1,27 +1,27 @@
-import Translator from "@andreasremdt/simple-translator"
-import portuguese from "../languages/pt_BR.json"
-import english from "../languages/en_US.json"
-import spanish from "../languages/es_ES.json"
+import Translator from '@andreasremdt/simple-translator';
+import portuguese from '../languages/pt_BR.json';
+import english from '../languages/en_US.json';
+import spanish from '../languages/es_ES.json';
 
 // Import helpers
-import { translationHelper } from "./translation-helper.js"
-import { throttleHelper } from "./throttle-helper.js"
+import { translationHelper } from './translation-helper.js';
+import { throttleHelper } from './throttle-helper.js';
 
 // --- State and Config ---
-const THEME_KEY = "preferred_theme"
-const LANG_KEY = "preferred_language"
-const supportedLanguages = ["pt_BR", "en_US", "es_ES"]
-const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)")
+const THEME_KEY = 'preferred_theme';
+const LANG_KEY = 'preferred_language';
+const supportedLanguages = ['pt_BR', 'en_US', 'es_ES'];
+const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
 // --- DOM Elements ---
-const themeToggle = document.querySelector(".theme-toggle")
-const languageButtons = document.querySelectorAll(".language-switch__button, .language-dropdown__option")
-const languageDropdown = document.querySelector(".language-dropdown")
-const languageDropdownTrigger = document.querySelector(".language-dropdown__trigger")
-const languageDropdownMenu = document.querySelector(".language-dropdown__menu")
-const backTop = document.getElementById("backTop")
-const nav = document.querySelector("nav")
-const toggleButton = document.querySelector(".navbar__toggle--button")
+const themeToggle = document.querySelector('.theme-toggle');
+const languageButtons = document.querySelectorAll('.language-switch__button, .language-dropdown__option');
+const languageDropdown = document.querySelector('.language-dropdown');
+const languageDropdownTrigger = document.querySelector('.language-dropdown__trigger');
+const languageDropdownMenu = document.querySelector('.language-dropdown__menu');
+const backTop = document.getElementById('backTop');
+const nav = document.querySelector('nav');
+const toggleButton = document.querySelector('.navbar__toggle--button');
 
 // --- Functions ---
 
@@ -31,27 +31,27 @@ const toggleButton = document.querySelector(".navbar__toggle--button")
  * @param { boolean } [persist=true] - Whether to save the preference to localStorage
  */
 const applyTheme = (theme, persist = true) => {
-  const resolvedTheme = theme === "dark" ? "dark" : "light"
-  document.documentElement.dataset.theme = resolvedTheme
-  themeToggle?.setAttribute("aria-pressed", resolvedTheme === "dark")
+  const resolvedTheme = theme === 'dark' ? 'dark' : 'light';
+  document.documentElement.dataset.theme = resolvedTheme;
+  themeToggle?.setAttribute('aria-pressed', resolvedTheme === 'dark');
   if (persist) {
-    localStorage.setItem(THEME_KEY, resolvedTheme)
+    localStorage.setItem(THEME_KEY, resolvedTheme);
   } else {
-    localStorage.removeItem(THEME_KEY)
+    localStorage.removeItem(THEME_KEY);
   }
-}
+};
 
 /**
  * Determines the user's theme preference from localStorage or system settings
  * @returns { 'dark' | 'light' } The resolved theme preference
  */
 const resolveThemePreference = () => {
-  const savedTheme = localStorage.getItem(THEME_KEY)
-  if (savedTheme === "dark" || savedTheme === "light") {
-    return savedTheme
+  const savedTheme = localStorage.getItem(THEME_KEY);
+  if (savedTheme === 'dark' || savedTheme === 'light') {
+    return savedTheme;
   }
-  return systemPrefersDark.matches ? "dark" : "light"
-}
+  return systemPrefersDark.matches ? 'dark' : 'light';
+};
 
 /**
  * Maps language code to HTML lang attribute
@@ -60,27 +60,27 @@ const resolveThemePreference = () => {
  */
 const toHtmlLang = (language) => {
   const mapping = {
-    "en_US": "en-US",
-    "es_ES": "es-ES",
-    "pt_BR": "pt-BR"
-  }
-  return mapping[language] ?? "pt-BR"
-}
+    'en_US': 'en-US',
+    'es_ES': 'es-ES',
+    'pt_BR': 'pt-BR'
+  };
+  return mapping[language] ?? 'pt-BR';
+};
 
 /**
  * Resolves the initial language based on saved preference or browser settings
  * @returns { string } The resolved language code
  */
 const resolveLanguage = () => {
-  const preferredLanguage = localStorage.getItem(LANG_KEY)
+  const preferredLanguage = localStorage.getItem(LANG_KEY);
   if (preferredLanguage && supportedLanguages.includes(preferredLanguage)) {
-    return preferredLanguage
+    return preferredLanguage;
   }
-  const browserLanguage = (navigator.language ?? "").toLowerCase()
-  if (browserLanguage.startsWith("es")) return "es_ES"
-  if (browserLanguage.startsWith("en")) return "en_US"
-  return "pt_BR"
-}
+  const browserLanguage = (navigator.language ?? '').toLowerCase();
+  if (browserLanguage.startsWith('es')) return 'es_ES';
+  if (browserLanguage.startsWith('en')) return 'en_US';
+  return 'pt_BR';
+};
 
 /**
  * Updates UI state for active language button and dropdown
@@ -88,141 +88,141 @@ const resolveLanguage = () => {
  */
 const setActiveLanguageButton = (language) => {
   languageButtons.forEach((button) => {
-    const isActive = button.dataset.language === language
-    button.classList.toggle("is-active", isActive)
-    button.setAttribute("aria-pressed", isActive)
-  })
+    const isActive = button.dataset.language === language;
+    button.classList.toggle('is-active', isActive);
+    button.setAttribute('aria-pressed', isActive);
+  });
   if (languageDropdown) {
-    languageDropdown.querySelectorAll(".language-dropdown__option").forEach((option) => {
-      option.setAttribute("aria-selected", option.dataset.language === language)
-    })
+    languageDropdown.querySelectorAll('.language-dropdown__option').forEach((option) => {
+      option.setAttribute('aria-selected', option.dataset.language === language);
+    });
   }
-  document.documentElement.lang = toHtmlLang(language)
-}
+  document.documentElement.lang = toHtmlLang(language);
+};
 
 /**
  * Closes the language dropdown menu
  */
 const closeLanguageDropdown = () => {
-  languageDropdown?.classList.remove("is-open")
-  languageDropdownTrigger?.setAttribute("aria-expanded", "false")
-}
+  languageDropdown?.classList.remove('is-open');
+  languageDropdownTrigger?.setAttribute('aria-expanded', 'false');
+};
 
 /**
  * Toggles the language dropdown menu open/closed
  */
 const toggleLanguageDropdown = () => {
-  if (!languageDropdown || !languageDropdownTrigger || !languageDropdownMenu) return
-  const isOpen = languageDropdown.classList.contains("is-open")
+  if (!languageDropdown || !languageDropdownTrigger || !languageDropdownMenu) return;
+  const isOpen = languageDropdown.classList.contains('is-open');
   if (isOpen) {
-    closeLanguageDropdown()
+    closeLanguageDropdown();
   } else {
-    languageDropdown.classList.add("is-open")
-    languageDropdownTrigger.setAttribute("aria-expanded", "true")
-    languageDropdownMenu.focus()
+    languageDropdown.classList.add('is-open');
+    languageDropdownTrigger.setAttribute('aria-expanded', 'true');
+    languageDropdownMenu.focus();
   }
-}
+};
 
 /**
  * Handles scroll events to show/hide back-to-top button
  */
 const handleScroll = () => {
-  const scrollTop = document.body.scrollTop || document.documentElement.scrollTop
+  const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
   if (scrollTop > 300) {
-    backTop?.classList.add("page-top__visible")
+    backTop?.classList.add('page-top__visible');
   } else {
-    backTop?.classList.remove("page-top__visible")
+    backTop?.classList.remove('page-top__visible');
   }
-}
+};
 
 // --- Initialization ---
 
 // 1. Internationalization (MUST be first - translationHelper depends on it)
 const translator = new Translator({
-  defaultLanguage: "pt_BR",
+  defaultLanguage: 'pt_BR',
   detectLanguage: true,
   persist: true,
   persistKey: LANG_KEY
-})
+});
 
 translator
-  .add("pt_BR", portuguese)
-  .add("en_US", english)
-  .add("es_ES", spanish)
+  .add('pt_BR', portuguese)
+  .add('en_US', english)
+  .add('es_ES', spanish);
 
 // Expose translator globally BEFORE using translationHelper
 window.catloversTranslator = translator;
 
-const initialLanguage = resolveLanguage()
-translationHelper.translatePage(initialLanguage)
-setActiveLanguageButton(initialLanguage)
+const initialLanguage = resolveLanguage();
+translationHelper.translatePage(initialLanguage);
+setActiveLanguageButton(initialLanguage);
 
 // 2. Theme
-applyTheme(resolveThemePreference(), Boolean(localStorage.getItem(THEME_KEY)))
+applyTheme(resolveThemePreference(), Boolean(localStorage.getItem(THEME_KEY)));
 
 // --- Event Listeners ---
 
 languageButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const targetLanguage = button.dataset.language
+  button.addEventListener('click', () => {
+    const targetLanguage = button.dataset.language;
     if (targetLanguage) {
-      translationHelper.translatePage(targetLanguage)
-      localStorage.setItem(LANG_KEY, targetLanguage)
-      setActiveLanguageButton(targetLanguage)
-      closeLanguageDropdown()
+      translationHelper.translatePage(targetLanguage);
+      localStorage.setItem(LANG_KEY, targetLanguage);
+      setActiveLanguageButton(targetLanguage);
+      closeLanguageDropdown();
     }
-  })
-})
+  });
+});
 
 if (languageDropdownTrigger) {
-  languageDropdownTrigger.addEventListener("click", (event) => {
-    event.stopPropagation()
-    toggleLanguageDropdown()
-  })
+  languageDropdownTrigger.addEventListener('click', (event) => {
+    event.stopPropagation();
+    toggleLanguageDropdown();
+  });
 }
 
-document.addEventListener("click", (event) => {
+document.addEventListener('click', (event) => {
   if (languageDropdown && !languageDropdown.contains(event.target)) {
-    closeLanguageDropdown()
+    closeLanguageDropdown();
   }
-})
+});
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    closeLanguageDropdown()
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeLanguageDropdown();
   }
-})
+});
 
 if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    const currentTheme = document.documentElement.dataset.theme
-    applyTheme(currentTheme === "dark" ? "light" : "dark", true)
-  })
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.dataset.theme;
+    applyTheme(currentTheme === 'dark' ? 'light' : 'dark', true);
+  });
 }
 
-systemPrefersDark.addEventListener("change", (event) => {
+systemPrefersDark.addEventListener('change', (event) => {
   if (!localStorage.getItem(THEME_KEY)) {
-    applyTheme(event.matches ? "dark" : "light", false)
+    applyTheme(event.matches ? 'dark' : 'light', false);
   }
-})
+});
 
 // Throttle scroll event to improve performance
-const throttledHandleScroll = throttleHelper.throttle(handleScroll, 100)
-window.addEventListener("scroll", throttledHandleScroll)
-throttledHandleScroll()
+const throttledHandleScroll = throttleHelper.throttle(handleScroll, 100);
+window.addEventListener('scroll', throttledHandleScroll);
+throttledHandleScroll();
 
 if (backTop) {
-  backTop.addEventListener("click", (event) => {
-    event.preventDefault()
-    window.scrollTo({top: 0, behavior: "smooth"})
-  })
+  backTop.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
 }
 
 if (toggleButton && nav) {
-  toggleButton.addEventListener("click", () => {
-    nav.classList.toggle("navbar--open")
-    toggleButton.setAttribute("aria-expanded", nav.classList.contains("navbar--open"))
-  })
+  toggleButton.addEventListener('click', () => {
+    nav.classList.toggle('navbar--open');
+    toggleButton.setAttribute('aria-expanded', nav.classList.contains('navbar--open'));
+  });
 }
 
 /**

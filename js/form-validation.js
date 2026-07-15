@@ -1,30 +1,27 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("adoption-form");
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('adoption-form');
   if (!form) return;
 
   const validateField = (field) => {
     const errorSpan = document.getElementById(`${field.id}-error`);
     let isValid = true;
-    let errorMessage = "";
 
     if (field.validity.valueMissing) {
       isValid = false;
-      errorMessage = "Este campo é obrigatório.";
-    } else if (field.type === "email" && field.validity.typeMismatch) {
+    } else if (field.type === 'email' && field.validity.typeMismatch) {
       isValid = false;
-      errorMessage = "Por favor, insira um e-mail válido.";
     }
 
     if (!isValid) {
-      field.setAttribute("aria-invalid", "true");
-      const errorKey = field.validity.valueMissing ? "form.errorRequired" : "form.errorEmail";
-      errorSpan.setAttribute("data-i18n", errorKey);
-      field.classList.add("is-invalid");
+      field.setAttribute('aria-invalid', 'true');
+      const errorKey = field.validity.valueMissing ? 'form.errorRequired' : 'form.errorEmail';
+      errorSpan.setAttribute('data-i18n', errorKey);
+      field.classList.add('is-invalid');
     } else {
-      field.removeAttribute("aria-invalid");
-      errorSpan.removeAttribute("data-i18n");
-      errorSpan.textContent = "";
-      field.classList.remove("is-invalid");
+      field.removeAttribute('aria-invalid');
+      errorSpan.removeAttribute('data-i18n');
+      errorSpan.textContent = '';
+      field.classList.remove('is-invalid');
     }
 
     if (window.catloversTranslator) {
@@ -36,11 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-  form.addEventListener("submit", async (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     
     let isFormValid = true;
-    const inputs = form.querySelectorAll("input[required]");
+    const inputs = form.querySelectorAll('input[required]');
 
     inputs.forEach((input) => {
       if (!validateField(input)) {
@@ -50,37 +47,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (isFormValid) {
       // Simulate form submission
-      const btn = form.querySelector("button");
-      const originalI18n = btn.getAttribute("data-i18n") || "form.submit";
+      const btn = form.querySelector('button');
+      const originalI18n = btn.getAttribute('data-i18n') || 'form.submit';
       
-      btn.setAttribute("data-i18n", "form.sending");
+      btn.setAttribute('data-i18n', 'form.sending');
       if (window.catloversTranslator) window.catloversTranslator.translatePageTo(window.catloversTranslator.currentLanguage);
       btn.disabled = true;
 
       await delay(1500);
       
-      btn.setAttribute("data-i18n", "form.success");
-      btn.classList.add("button--success");
+      btn.setAttribute('data-i18n', 'form.success');
+      btn.classList.add('button--success');
       if (window.catloversTranslator) window.catloversTranslator.translatePageTo(window.catloversTranslator.currentLanguage);
       form.reset();
       
       await delay(3000);
       
-      btn.setAttribute("data-i18n", originalI18n);
-      btn.classList.remove("button--success");
+      btn.setAttribute('data-i18n', originalI18n);
+      btn.classList.remove('button--success');
       if (window.catloversTranslator) window.catloversTranslator.translatePageTo(window.catloversTranslator.currentLanguage);
       btn.disabled = false;
     } else {
       // Focus on first invalid field for accessibility
-      const firstInvalid = form.querySelector("[aria-invalid='true']");
+      const firstInvalid = form.querySelector('[aria-invalid=\'true\']');
       if (firstInvalid) {
         firstInvalid.focus();
       }
     }
   });
 
-  form.addEventListener("blur", (e) => {
-    if (e.target.tagName === "INPUT") {
+  form.addEventListener('blur', (e) => {
+    if (e.target.tagName === 'INPUT') {
       validateField(e.target);
     }
   }, true);

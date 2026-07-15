@@ -1,19 +1,19 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("quiz-form");
-  const resultDiv = document.getElementById("quiz-result");
-  const resultProfile = document.getElementById("result-profile");
-  const resultLink = document.getElementById("result-link");
-  const announcer = document.getElementById("quiz-announcer");
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('quiz-form');
+  const resultDiv = document.getElementById('quiz-result');
+  const resultProfile = document.getElementById('result-profile');
+  const resultLink = document.getElementById('result-link');
+  const announcer = document.getElementById('quiz-announcer');
 
   if (!form) return;
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
-    const home = formData.get("home");
-    const time = formData.get("time");
-    const activity = formData.get("activity");
+    const home = formData.get('home');
+    const time = formData.get('time');
+    const activity = formData.get('activity');
 
     // Lógica de votação por maioria simples baseada nas 3 perguntas
     const votes = { calm: 0, playful: 0, affectionate: 0 };
@@ -21,18 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (time) votes[time]++;
     if (activity) votes[activity]++;
 
-    let temperament = "calm";
+    let temperament = 'calm';
     if (votes.playful >= votes.calm && votes.playful >= votes.affectionate) {
-      temperament = "playful";
+      temperament = 'playful';
     } else if (votes.affectionate >= votes.calm && votes.affectionate >= votes.playful) {
-      temperament = "affectionate";
+      temperament = 'affectionate';
     }
 
     // Mapear temperamento para perfis localizados
     const profiles = {
-      calm: { name: "Calmo", nameEn: "Calm", nameEs: "Tranquilo", i18n: "gallery.tempCalm" },
-      playful: { name: "Brincalhão", nameEn: "Playful", nameEs: "Juguetón", i18n: "gallery.tempPlayful" },
-      affectionate: { name: "Carinhoso", nameEn: "Affectionate", nameEs: "Cariñoso", i18n: "gallery.tempAffectionate" }
+      calm: { name: 'Calmo', nameEn: 'Calm', nameEs: 'Tranquilo', i18n: 'gallery.tempCalm' },
+      playful: { name: 'Brincalhão', nameEn: 'Playful', nameEs: 'Juguetón', i18n: 'gallery.tempPlayful' },
+      affectionate: { name: 'Carinhoso', nameEn: 'Affectionate', nameEs: 'Cariñoso', i18n: 'gallery.tempAffectionate' }
     };
 
     const selectedProfile = profiles[temperament];
@@ -54,9 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
     resultLink.href = `cats.html?temperament=${temperament}`;
 
     // Animação simples para mostrar o resultado
-    form.classList.add("quiz-form--submitted");
-    resultDiv.classList.remove("hidden");
-    resultDiv.classList.add("is-visible");
+    form.classList.add('quiz-form--submitted');
+    resultDiv.classList.remove('hidden');
+    resultDiv.classList.add('is-visible');
     resultDiv.scrollIntoView({ behavior: 'smooth' });
   });
 });

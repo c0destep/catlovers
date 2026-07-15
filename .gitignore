@@ -49,3 +49,15 @@ coverage/
 .sass-cache/
 
 tarefas.md
+
+# Artefatos do Cypress
+cypress/downloads/
+cypress/screenshots/
+cypress/videos/
+
+# Agentes e Ferramentas Locais
+.agents/
+.husky/
+AGENTS.md
+IMPROVEMENTS.md
+skills-lock.json
