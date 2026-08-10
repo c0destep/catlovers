@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let catsData = [];
 
-
   const renderCats = (cats) => {
     // Clear gallery efficiently
     gallery.textContent = '';
@@ -168,9 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const tempParam = urlParams.get('temperament');
   if (tempParam && ['calm', 'playful', 'affectionate'].includes(tempParam)) {
     filterTemperament.value = tempParam;
-    
+
     // Executar filtro inicial baseado no parâmetro da URL
-    let filtered = catsData.filter(cat => cat.temperament === tempParam);
+    const filtered = catsData.filter(cat => cat.temperament === tempParam);
     renderCats(filtered);
   } else {
     renderCats(catsData);

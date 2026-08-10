@@ -5,6 +5,8 @@ allowBuilds:
   lmdb: true
   msgpackr-extract: true
   sharp: true
+minimumReleaseAgeExclude:
+  - cypress@15.20.1
 onlyBuiltDependencies:
   - '@firebase/util'
   - '@parcel/watcher'

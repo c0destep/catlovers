@@ -60,9 +60,7 @@ const resolveThemePreference = () => {
  */
 const toHtmlLang = (language) => {
   const mapping = {
-    'en_US': 'en-US',
-    'es_ES': 'es-ES',
-    'pt_BR': 'pt-BR'
+    en_US: 'en-US', es_ES: 'es-ES', pt_BR: 'pt-BR'
   };
   return mapping[language] ?? 'pt-BR';
 };
@@ -139,10 +137,7 @@ const handleScroll = () => {
 
 // 1. Internationalization (MUST be first - translationHelper depends on it)
 const translator = new Translator({
-  defaultLanguage: 'pt_BR',
-  detectLanguage: true,
-  persist: true,
-  persistKey: LANG_KEY
+  defaultLanguage: 'pt_BR', detectLanguage: true, persist: true, persistKey: LANG_KEY
 });
 
 translator
@@ -214,7 +209,7 @@ throttledHandleScroll();
 if (backTop) {
   backTop.addEventListener('click', (event) => {
     event.preventDefault();
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
 
@@ -262,9 +257,7 @@ const initScrollAnimations = () => {
   }
 
   const observerOptions = {
-    root: null,
-    rootMargin: '0px 0px -100px 0px',
-    threshold: 0.1
+    root: null, rootMargin: '0px 0px -100px 0px', threshold: 0.1
   };
 
   const animationObserver = new IntersectionObserver((entries) => {
@@ -302,7 +295,7 @@ if ('serviceWorker' in navigator) {
 const highlightActiveMenuLink = () => {
   const currentPath = window.location.pathname;
   const menuLinks = document.querySelectorAll('.menu__link');
-  
+
   menuLinks.forEach(link => {
     const linkPath = new URL(link.href).pathname;
     if (currentPath === linkPath || (currentPath.endsWith('/') && linkPath.endsWith('index.html'))) {

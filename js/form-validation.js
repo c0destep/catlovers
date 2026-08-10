@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+
     let isFormValid = true;
     const inputs = form.querySelectorAll('input[required]');
 
@@ -49,20 +49,20 @@ document.addEventListener('DOMContentLoaded', () => {
       // Simulate form submission
       const btn = form.querySelector('button');
       const originalI18n = btn.getAttribute('data-i18n') || 'form.submit';
-      
+
       btn.setAttribute('data-i18n', 'form.sending');
       if (window.catloversTranslator) window.catloversTranslator.translatePageTo(window.catloversTranslator.currentLanguage);
       btn.disabled = true;
 
       await delay(1500);
-      
+
       btn.setAttribute('data-i18n', 'form.success');
       btn.classList.add('button--success');
       if (window.catloversTranslator) window.catloversTranslator.translatePageTo(window.catloversTranslator.currentLanguage);
       form.reset();
-      
+
       await delay(3000);
-      
+
       btn.setAttribute('data-i18n', originalI18n);
       btn.classList.remove('button--success');
       if (window.catloversTranslator) window.catloversTranslator.translatePageTo(window.catloversTranslator.currentLanguage);
