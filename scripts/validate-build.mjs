@@ -88,14 +88,38 @@ if (await exists(manifestPath)) {
   }
 }
 
-const isLocalReference = (reference) => (
+const isLocalLink = (reference) => (
   reference &&
-  !reference.startsWith('#') &&
   !reference.startsWith('data:') &&
   !reference.startsWith('mailto:') &&
   !reference.startsWith('tel:') &&
   !/^https?:\/\//.test(reference)
 );
+
+const isLocalReference = (reference) => isLocalLink(reference) && !reference.startsWith('#');
+
+const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+const validateFragment = async (sourcePage, reference) => {
+  const [pathname, rawFragment] = reference.split('#', 2);
+  if (!rawFragment) return;
+
+  const targetPage = pathname
+    ? path.normalize(path.join(path.dirname(sourcePage), pathname.replace(/^\.\//, '')))
+    : sourcePage;
+
+  if (!targetPage.endsWith('.html')) return;
+
+  const targetPath = path.join(distDir, targetPage);
+  if (!await exists(targetPath)) return;
+
+  const fragment = decodeURIComponent(rawFragment);
+  const targetHtml = await readFile(targetPath, 'utf8');
+  const fragmentPattern = new RegExp(`(?:id|name)=["']${escapeRegExp(fragment)}["']`);
+  if (!fragmentPattern.test(targetHtml)) {
+    errors.push(`${sourcePage}: fragmento ausente em ${reference}`);
+  }
+};
 
 for (const page of pages) {
   const pagePath = path.join(distDir, page);
@@ -110,6 +134,13 @@ for (const page of pages) {
     const cleanReference = reference.split(/[?#]/)[0].replace(/^\.\//, '');
     const relativePath = path.normalize(path.join(path.dirname(page), cleanReference));
     await requireFile(relativePath, page);
+  }
+
+  const localLinks = [...html.matchAll(/href="([^"]+)"/g)]
+    .map((match) => match[1])
+    .filter(isLocalLink);
+  for (const link of localLinks) {
+    await validateFragment(page, link);
   }
 }
 
