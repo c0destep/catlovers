@@ -31,12 +31,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     const response = await fetch('https://catfact.ninja/fact', {
       signal: AbortSignal.timeout(8000)
     });
+    if (!response.ok) throw new Error(`Cat fact request failed with status ${response.status}`);
+
     const data = await response.json();
+    if (typeof data.fact !== 'string' || data.fact.trim() === '') {
+      throw new Error('Cat fact response did not contain a fact');
+    }
+
     factText.textContent = data.fact;
     sessionStorage.setItem(CACHE_KEY, data.fact);
     sessionStorage.setItem(CACHE_TIME_KEY, now.toString());
-  } catch (error) {
-    console.error('Erro ao buscar curiosidade:', error);
-    factDiv.style.display = 'none';
+  } catch {
+    factText.textContent = 'The cat fact is unavailable. Try again when you are online.';
+    factDiv.dataset.state = 'unavailable';
   }
 });
