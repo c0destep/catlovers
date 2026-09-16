@@ -20,6 +20,7 @@
 }
 
 html {
+  overflow-x: clip;
   text-rendering: optimizelegibility;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -33,6 +34,7 @@ body {
   font-size: 1rem;
   line-height: 1.65rem;
   margin: 0;
+  overflow-x: clip;
 }
 
 .page-background {

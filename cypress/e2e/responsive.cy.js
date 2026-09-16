@@ -1,4 +1,11 @@
 describe('Design Responsivo', () => {
+  const expectNoHorizontalScroll = () => {
+    cy.window().then((win) => {
+      win.scrollTo({ left: 100, top: 0 });
+      expect(win.scrollX).to.equal(0);
+    });
+  };
+
   it('deve funcionar em mobile (375px)', () => {
     cy.viewport(375, 667);
     cy.visit('/');
@@ -8,6 +15,7 @@ describe('Design Responsivo', () => {
 
     // Botões devem ser clicáveis
     cy.get('.button--lg').first().should('be.visible');
+    expectNoHorizontalScroll();
   });
 
   it('deve funcionar em tablet (768px)', () => {
@@ -17,6 +25,7 @@ describe('Design Responsivo', () => {
     // Grid do hero pode ter 2 colunas ou ainda 1
     cy.get('.hero__inner').should('be.visible');
     cy.get('.hero__image').should('be.visible');
+    expectNoHorizontalScroll();
   });
 
   it('deve funcionar em desktop (1280px)', () => {
@@ -27,6 +36,7 @@ describe('Design Responsivo', () => {
     cy.get('.hero__inner').should('be.visible');
     cy.get('.hero__content').should('be.visible');
     cy.get('.hero__visual').should('be.visible');
+    expectNoHorizontalScroll();
   });
 
   it('deve ter menu hambúrguer em mobile', () => {
