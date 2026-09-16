@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@andreasremdt/simple-translator':
-        specifier: ^2.0.4
-        version: 2.0.4
       '@fontsource/cormorant-garamond':
         specifier: ^5.3.0
         version: 5.3.0
@@ -68,9 +65,6 @@ importers:
         version: 1.5.2(vite@8.3.0)
 
 packages:
-
-  '@andreasremdt/simple-translator@2.0.4':
-    resolution: {integrity: sha512-qbfyVTVbEbyXRwLTCXWithzpluyclIUr//GgRJHxUIKq74QUF1t8VKtsY/dLcubj9ENYswKt9bluaB4Dn+UjNA==}
 
   '@babel/code-frame@7.29.7':
     resolution: {integrity: sha512-Aup7aUOfpbAUg2ROOJN6Iw5f9DMBlzu0mIkm/malLQFN/YQgO48wCj0Kxa3sEHJvPVFg7siR+qRInwXd2qhQKw==}
@@ -2033,8 +2027,6 @@ packages:
     engines: {node: '>=12.20'}
 
 snapshots:
-
-  '@andreasremdt/simple-translator@2.0.4': {}
 
   '@babel/code-frame@7.29.7':
     dependencies:

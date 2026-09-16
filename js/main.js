@@ -1,4 +1,4 @@
-import Translator from '@andreasremdt/simple-translator';
+import Translator from './translator.js';
 import portuguese from '../languages/pt_BR.json';
 import english from '../languages/en_US.json';
 import spanish from '../languages/es_ES.json';

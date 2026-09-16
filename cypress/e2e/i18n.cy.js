@@ -21,6 +21,9 @@ describe('Internacionalização (i18n)', () => {
 
     // Verifica se o título está em inglês
     cy.get('h1').should('contain.text', 'A safe home');
+    cy.get('meta[name="description"]')
+      .should('have.attr', 'content')
+      .and('contain', 'responsible adoption');
   });
 
   it('deve alternar para espanhol ao clicar no botão ES', () => {
@@ -54,5 +57,14 @@ describe('Internacionalização (i18n)', () => {
     // Verifica se manteve inglês
     cy.get('html').should('have.attr', 'lang', 'en-US');
     cy.get('h1').should('contain.text', 'A safe home');
+  });
+
+  it('deve traduzir conteúdo criado dinamicamente', () => {
+    cy.visit('/cats.html');
+    cy.get('[data-language="en_US"]').first().click({ force: true });
+
+    cy.get('.cat-card').should('have.length.greaterThan', 0);
+    cy.get('.cat-card__info').first().should('contain.text', 'Male');
+    cy.get('.cat-card .feature-tag').first().should('contain.text', 'Tuxedo');
   });
 });
