@@ -1,6 +1,26 @@
 # Roadmap de evolução do Catlovers
 
-> Diagnóstico realizado em 16 de setembro de 2026 sobre o estado atual da árvore de trabalho. A migração de Parcel para Vite ainda não estava consolidada em um commit durante a análise.
+> Diagnóstico iniciado em 16 de setembro de 2026. O retrato original foi atualizado após a execução das primeiras prioridades para distinguir problemas resolvidos de trabalho pendente.
+
+## Andamento da execução — 16 de setembro de 2026
+
+| Frente | Estado | Evidência |
+| --- | --- | --- |
+| Posicionamento | Concluído para o estágio atual | O site se identifica como demonstração em todos os idiomas; animais, números, histórias e formulários são apresentados como fictícios. |
+| Formulário | Concluído para demonstração | O fluxo valida e limpa os campos, informa que nenhum dado foi enviado e não simula contato futuro. |
+| Vite | Concluído | A migração multipágina foi consolidada, resíduos do Parcel foram removidos e ambiente, documentação e Cypress usam a porta 1234. |
+| PWA | Parcialmente concluído | Manifesto, ícones, screenshot, escopo, service worker e pré-cache são validados na build; ainda falta um teste de navegação offline no navegador. |
+| CI | Concluído | Instalação congelada, lint, i18n, build e Cypress bloqueiam a publicação no GitHub Pages. |
+| Internacionalização | Parcialmente concluído | O tradutor incompatível foi substituído e o conteúdo dinâmico possui cobertura; idades e alguns metadados do catálogo ainda estão em português. |
+| Testes | Em evolução | A suíte completa passou com 42 testes em nove especificações; a galeria agora exige resultados concretos após o filtro. |
+| Documentação | Concluído para a fundação atual | README, guia de contribuição e `humans.txt` descrevem Vite, pnpm, PWA, E2E e as limitações reais. |
+
+### Próximas prioridades altas
+
+1. Remover ou substituir números, depoimentos e histórias sem origem verificável, mesmo que já estejam identificados como demonstração.
+2. Cobrir o contrato offline sobre a build publicada e testar links locais em navegação real.
+3. Cobrir menu por teclado e estados de falha dos fluxos que dependem de rede.
+4. Registrar a decisão sobre uma eventual operação real, responsáveis, regiões e prazo de atendimento antes de habilitar qualquer coleta.
 
 ## 1. Direção do produto
 
@@ -37,16 +57,16 @@ A métrica central deve ser o número de **adoções responsáveis confirmadas p
 | Área | Implementação atual | Avaliação |
 | --- | --- | --- |
 | Interface | HTML multipágina, CSS e JavaScript sem framework | Coerente com o objetivo educacional e suficiente para o próximo ciclo |
-| Componentes HTML | Includes em `includes/`, processados por `vite-plugin-html-include` | Reduz duplicação, embora exija testes do HTML compilado |
-| Build | Vite 8.3.0 em migração; configuração multipágina em `vite.config.mjs` | A build passa, mas a migração ainda deixou contratos do Parcel |
-| Dependências | pnpm; `@andreasremdt/simple-translator`; Fontsource | Conjunto pequeno, com um alerta de compatibilidade do tradutor no build |
+| Componentes HTML | Includes em `includes/`, processados por um plugin local do Vite | Reduz duplicação; os recursos resultantes são verificados na build |
+| Build | Vite 8.3.0 com configuração multipágina em `vite.config.mjs` | Migração consolidada e resíduos do Parcel removidos |
+| Dependências | pnpm e Fontsource; tradutor local sem dependência de runtime | Conjunto pequeno e compatível com o navegador |
 | Estilos | BEM, propriedades customizadas, abordagem mobile-first e `prefers-reduced-motion` | Base consistente; `main.css` concentra mais de duas mil linhas |
 | Dados | Seis gatos em `cats.json` | Bom protótipo, insuficiente como inventário operacional |
 | Estado no cliente | `localStorage` para idioma e tema; `sessionStorage` para curiosidades | Adequado para preferências, sem persistência de negócio |
-| Internacionalização | PT-BR, EN e ES, com 336 chaves em cada idioma | Paridade estrutural validada; conteúdo dinâmico ainda escapa da tradução |
-| PWA | Manifesto, service worker e estratégias de cache | A intenção é boa, mas os caminhos gerados pelo Vite quebram partes do comportamento offline |
-| Qualidade | ESLint 10, Stylelint 17 e nove especificações Cypress | Lint passa; os testes precisam ser alinhados ao Vite e fortalecidos |
-| Entrega | GitHub Actions e GitHub Pages | O fluxo publica a build, mas ainda não bloqueia regressões de qualidade |
+| Internacionalização | PT-BR, EN e ES, com paridade automática de chaves | Conteúdo dinâmico principal é traduzido; metadados do catálogo ainda precisam evoluir |
+| PWA | Manifesto, service worker, ícones, screenshot e pré-cache gerado | Estrutura validada na build; o comportamento offline ainda precisa de E2E dedicado |
+| Qualidade | ESLint 10, Stylelint 17 e nove especificações Cypress | Lint, i18n e build passam; 42 testes E2E passaram no Chromium |
+| Entrega | GitHub Actions e GitHub Pages | A publicação depende de instalação congelada, lint, i18n, build e E2E |
 | Backend | Inexistente | Formulário, disponibilidade, parceiros e acompanhamento não são persistidos |
 | Observabilidade | Erros apenas no console | Não há visibilidade de conversão, falhas ou disponibilidade |
 
@@ -73,23 +93,23 @@ A métrica central deve ser o número de **adoções responsáveis confirmadas p
 
 ## 3. Lacunas que determinam a prioridade
 
-| Prioridade | Lacuna | Consequência |
-| --- | --- | --- |
-| P0 | Migração de Parcel para Vite incompleta | Documentação, servidor local, Cypress, workflow, PWA e ativos discordam entre si |
-| P0 | Formulário simula sucesso e descarta os dados | O usuário pode esperar um contato que nunca acontecerá |
-| P0 | Service worker e manifesto usam caminhos incompatíveis com a saída do Vite | A instalação pode apontar para recursos ausentes e o offline não é confiável |
-| P0 | Indicadores, depoimentos e garantias não apresentam fonte verificável | A comunicação perde credibilidade e cria risco reputacional |
-| P0 | CI publica sem executar lint, i18n ou E2E | Uma build válida pode conter regressões funcionais |
-| P1 | Gatos não têm perfil, disponibilidade, localização ou responsável | O usuário não consegue tomar uma decisão informada |
-| P1 | O gato escolhido não acompanha o usuário até o formulário | A jornada perde contexto no ponto de maior intenção |
-| P1 | CTAs de apoio não executam ação | Apadrinhamento, doação e voluntariado são promessas sem fluxo |
-| P1 | Conteúdo dinâmico permanece parcialmente em português | EN e ES não oferecem uma experiência completa |
-| P1 | Testes verificam sobretudo presença de elementos | Falhas de teclado, links, PWA e integrações podem passar despercebidas |
-| P1 | Política de privacidade é genérica | A coleta real de dados exigiria finalidade, retenção, direitos e contato definidos |
-| P2 | Blog e SEO têm estrutura incompleta | Os cards repetem o mesmo artigo; faltam sitemap, canonical e metadados por página |
-| P2 | Build inclui 110 arquivos de fonte, cerca de 1,7 MB | O custo de transferência supera o necessário para os alfabetos atendidos |
-| P2 | Imagens da galeria dependem do Unsplash | A experiência offline fica incompleta e o produto depende de um terceiro |
-| P2 | Não há telemetria de produto ou erros | Decisões e incidentes dependem de impressões, sem uma linha de base |
+| Prioridade | Lacuna original | Situação atual | Consequência ou próximo passo |
+| --- | --- | --- | --- |
+| P0 | Migração de Parcel para Vite incompleta | Resolvida | Manter os contratos atuais protegidos pela CI. |
+| P0 | Formulário simulava sucesso e descartava os dados | Mitigada | O fluxo está identificado como demonstração e não confirma envio. |
+| P0 | Service worker e manifesto usavam caminhos incompatíveis com a saída do Vite | Estrutura resolvida | Adicionar teste de navegação offline sobre a build publicada. |
+| P0 | Indicadores, depoimentos e garantias não apresentam fonte verificável | Mitigada | O aviso de demonstração evita interpretação enganosa; o conteúdo ainda deve ser substituído ou removido. |
+| P0 | CI publicava sem executar lint, i18n ou E2E | Resolvida | Preservar os gates antes do deploy. |
+| P1 | Gatos não têm perfil, disponibilidade, localização ou responsável | Pendente | O usuário não consegue tomar uma decisão informada. |
+| P1 | O gato escolhido não acompanha o usuário até o formulário | Pendente | A jornada perde contexto no ponto de maior intenção. |
+| P1 | CTAs de apoio não executam ação | Mitigada | O aviso global esclarece o caráter demonstrativo; os fluxos continuam pendentes. |
+| P1 | Conteúdo dinâmico permanece parcialmente em português | Parcial | O tradutor e a cobertura dinâmica foram corrigidos; dados do catálogo ainda precisam de localização. |
+| P1 | Testes verificavam sobretudo presença de elementos | Parcial | Filtros, responsividade, i18n e PWA ganharam asserções; teclado, links e offline ainda precisam de cobertura. |
+| P1 | Política de privacidade é genérica | Pendente antes de coleta real | A coleta exigiria finalidade, retenção, direitos e contato definidos. |
+| P2 | Blog e SEO têm estrutura incompleta | Pendente | Os cards repetem o mesmo artigo; faltam sitemap, canonical e metadados por página. |
+| P2 | Build inclui 110 arquivos de fonte | Pendente | O custo de transferência supera o necessário para os alfabetos atendidos. |
+| P2 | Imagens da galeria dependem do Unsplash | Pendente | A experiência offline fica incompleta e o produto depende de um terceiro. |
+| P2 | Não há telemetria de produto ou erros | Pendente | Decisões e incidentes dependem de impressões, sem uma linha de base. |
 
 ## 4. Arquitetura de destino
 
@@ -139,10 +159,10 @@ As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe 
 
 **Objetivo:** alinhar a comunicação com a capacidade operacional real.
 
-- [ ] Decidir formalmente entre portfólio educacional e plataforma operacional.
+- [x] Definir o estágio atual como portfólio educacional e identificar publicamente o caráter demonstrativo.
 - [ ] Identificar quem receberá contatos, qual será o prazo de resposta e quais regiões serão atendidas.
 - [ ] Validar a origem dos números de impacto, depoimentos, histórias e afirmações sobre saúde dos gatos.
-- [ ] Remover, identificar como demonstração ou contextualizar qualquer informação que não possa ser comprovada.
+- [x] Identificar como demonstração qualquer informação que ainda não possa ser comprovada.
 - [ ] Definir a linha de base das jornadas: visita, abertura da galeria, visualização de gato, início e conclusão de interesse.
 - [ ] Registrar as decisões de arquitetura e operação em documentos curtos no repositório.
 
@@ -160,28 +180,28 @@ As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe 
 
 #### Build e ambiente
 
-- [ ] Concluir a migração para Vite em um commit próprio e remover configurações restantes do Parcel.
-- [ ] Definir uma única porta de desenvolvimento e usá-la no Vite, Cypress, README e guia de contribuição.
-- [ ] Declarar `engines.node` e `packageManager`; alinhar a documentação ao Node aceito por Vite 8 e Cypress 16.
-- [ ] Decidir se Modernizr ainda é necessário; removê-lo ou garantir que o arquivo em `public/` seja publicado.
-- [ ] Corrigir o alerta de externalização de `fs` do pacote de tradução ou substituir a biblioteca por um carregador pequeno e compatível com o navegador.
-- [ ] Atualizar comandos, estrutura de diretórios e troubleshooting da documentação.
+- [x] Concluir a migração para Vite em um commit próprio e remover configurações restantes do Parcel.
+- [x] Definir uma única porta de desenvolvimento e usá-la no Vite, Cypress, README e guia de contribuição.
+- [x] Declarar `engines.node` e `packageManager`; alinhar a documentação ao Node aceito por Vite 8 e Cypress 16.
+- [x] Remover o Modernizr sem uso e suas referências de publicação.
+- [x] Substituir a biblioteca de tradução por um carregador pequeno e compatível com o navegador.
+- [x] Atualizar comandos, estrutura de diretórios e solução de problemas da documentação.
 
 #### PWA e publicação
 
-- [ ] Publicar o service worker na raiz, com escopo explícito e caminhos compatíveis com a base do GitHub Pages.
-- [ ] Manter manifesto, ícones, screenshots e atalhos em caminhos presentes na build final.
-- [ ] Definir claramente o que funciona offline e testar esse contrato.
-- [ ] Revisar `.htaccess`: corrigir a sintaxe e a CSP se o destino for Apache; arquivar ou remover o arquivo se o destino definitivo for GitHub Pages.
-- [ ] Criar uma verificação automática de links locais, recursos do manifesto e registro do service worker na saída de produção.
+- [x] Publicar o service worker na raiz, com escopo explícito e caminhos compatíveis com a base do GitHub Pages.
+- [x] Manter manifesto, ícones, screenshots e atalhos em caminhos presentes na build final.
+- [ ] Testar em navegador o contrato offline já documentado.
+- [x] Remover `.htaccess`, pois o destino atual é o GitHub Pages.
+- [x] Criar uma verificação automática de links locais, recursos do manifesto e conteúdo do service worker na saída de produção.
 
 #### CI e testes
 
-- [ ] Fazer a CI executar `pnpm install --frozen-lockfile`, lint, validação de i18n, build e Cypress headless antes da publicação.
-- [ ] Remover `allowCypressEnv`, opção retirada do Cypress 16, e escolher um navegador suportado para CI.
-- [ ] Separar `test:e2e:open` de `test:e2e:run`; fazer `pnpm test` executar sem interface gráfica.
-- [ ] Corrigir testes dependentes de animação ou visibilidade fora da viewport e evitar asserções permissivas, como aceitar zero cards.
-- [ ] Adicionar testes de links, envio com falha, menu por teclado, troca de idioma após conteúdo dinâmico, manifesto e modo offline.
+- [x] Fazer a CI executar `pnpm install --frozen-lockfile`, lint, validação de i18n, build e Cypress headless antes da publicação.
+- [x] Remover `allowCypressEnv`, opção retirada do Cypress 16, e escolher um navegador suportado para CI.
+- [x] Separar `test:e2e:open` de `test:e2e:run`; fazer `pnpm test` executar sem interface gráfica.
+- [x] Corrigir testes dependentes de animação ou visibilidade fora da viewport e substituir asserções permissivas por resultados esperados.
+- [ ] Adicionar os testes ainda pendentes de links, envio com falha, menu por teclado e modo offline. A troca de idioma em conteúdo dinâmico e o manifesto já possuem cobertura.
 
 **Critérios de saída**
 
@@ -388,7 +408,7 @@ Uma entrega está pronta quando:
 
 Estas respostas devem ser registradas antes da Fase 2, pois alteram arquitetura, custo e responsabilidade:
 
-- O Catlovers será uma operação real ou continuará como projeto de demonstração?
+- O Catlovers continuará como demonstração ou terá uma futura etapa operacional? O estado publicado atual é demonstrativo.
 - Quais organizações fornecerão os gatos e quem confirmará seus dados?
 - Qual região geográfica será atendida no piloto?
 - Quem receberá cada contato e em quanto tempo deverá responder?
@@ -399,11 +419,19 @@ Estas respostas devem ser registradas antes da Fase 2, pois alteram arquitetura,
 
 ## 12. Verificações usadas neste diagnóstico
 
-- `pnpm lint`: aprovado.
-- `node scripts/validate-i18n.js`: aprovado para 336 chaves em cada idioma.
-- `pnpm build`: aprovado com Vite 8.3.0; houve alerta sobre a externalização de `fs` no tradutor.
-- Build de produção: aproximadamente 2,7 MB e 141 arquivos, dos quais 110 são fontes.
-- Cypress 16.1.0: a especificação de acessibilidade passou; no fluxo de adoção, duas verificações passaram e uma falhou durante a captura automática. A execução completa foi interrompida porque o Electron não conseguia gravar vídeo nem captura de tela neste ambiente.
-- Durante o E2E, a API de curiosidades falhou sem acesso à rede, confirmando a necessidade de fallback local.
+### Linha de base original
 
-Esses resultados formam uma linha de base, não uma certificação completa de acessibilidade, segurança, desempenho ou compatibilidade entre navegadores.
+- `pnpm lint` e a validação de 336 chaves por idioma já passavam.
+- A build passava, mas externalizava `fs` por causa do tradutor anterior.
+- O Cypress no Electron falhava ao gerar artefatos neste ambiente e a suíte completa não terminava.
+- A API de curiosidades falhava sem rede, confirmando a necessidade de fallback local.
+
+### Estado após as primeiras prioridades
+
+- `pnpm check`: aprovado com ESLint, Stylelint, i18n e build validada.
+- `pnpm build`: aprovado sem o tradutor incompatível; 13 páginas, manifesto, recursos locais e pré-cache são verificados automaticamente.
+- Cypress 16.1.0 no Chromium: 42 testes aprovados em nove especificações.
+- Teste direcionado da galeria após fortalecer o filtro: cinco testes aprovados.
+- Build local atual: 143 arquivos e aproximadamente 3,3 MB; os 110 arquivos de fonte continuam como oportunidade de otimização.
+
+Esses resultados formam uma linha de base técnica, não uma certificação completa de acessibilidade, segurança, desempenho ou compatibilidade entre navegadores.
