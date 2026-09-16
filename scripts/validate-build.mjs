@@ -45,8 +45,16 @@ for (const requiredFile of [...pages, 'site.webmanifest', 'sw.js']) {
 const manifestPath = path.join(distDir, 'site.webmanifest');
 if (await exists(manifestPath)) {
   const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+  if (manifest.start_url !== './') {
+    errors.push('manifesto: start_url deve ser relativo à pasta publicada.');
+  }
+  if (manifest.scope !== './') {
+    errors.push('manifesto: scope deve ser relativo à pasta publicada.');
+  }
+
   const manifestResources = [
     ...(manifest.icons ?? []).map((icon) => icon.src),
+    ...(manifest.screenshots ?? []).map((screenshot) => screenshot.src),
     ...(manifest.shortcuts ?? []).flatMap((shortcut) => [
       shortcut.url,
       ...(shortcut.icons ?? []).map((icon) => icon.src)
@@ -65,6 +73,17 @@ if (await exists(manifestPath)) {
       if (metadata.width !== expectedSize || metadata.height !== expectedSize || metadata.format !== 'png') {
         errors.push(`manifesto: icon-${expectedSize}.png deve ser um PNG de ${expectedSize}x${expectedSize}.`);
       }
+    }
+  }
+
+  for (const screenshot of manifest.screenshots ?? []) {
+    const screenshotPath = path.join(distDir, screenshot.src.replace(/^\.\//, ''));
+    if (!await exists(screenshotPath)) continue;
+
+    const [expectedWidth, expectedHeight] = screenshot.sizes.split('x').map(Number);
+    const metadata = await sharp(screenshotPath).metadata();
+    if (metadata.width !== expectedWidth || metadata.height !== expectedHeight || metadata.format !== 'png') {
+      errors.push(`manifesto: ${screenshot.src} não corresponde a ${screenshot.sizes} em PNG.`);
     }
   }
 }

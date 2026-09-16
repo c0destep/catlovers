@@ -19,6 +19,15 @@
       "purpose": "any"
     }
   ],
+  "screenshots": [
+    {
+      "src": "screenshot-wide.png",
+      "type": "image/png",
+      "sizes": "1280x618",
+      "form_factor": "wide",
+      "label": "Página inicial do Catlovers"
+    }
+  ],
   "start_url": "./",
   "scope": "./",
   "background_color": "#ffffff",

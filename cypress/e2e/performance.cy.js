@@ -40,6 +40,15 @@ describe('Performance e Carregamento', () => {
         { src: 'icon-192.png', type: 'image/png', sizes: '192x192', purpose: 'any' },
         { src: 'icon-512.png', type: 'image/png', sizes: '512x512', purpose: 'any' }
       ]);
+      expect(body.start_url).to.eq('./');
+      expect(body.scope).to.eq('./');
+      expect(body.screenshots).to.deep.include({
+        src: 'screenshot-wide.png',
+        type: 'image/png',
+        sizes: '1280x618',
+        form_factor: 'wide',
+        label: 'Página inicial do Catlovers'
+      });
     });
   });
 
