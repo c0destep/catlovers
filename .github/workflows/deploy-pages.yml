@@ -48,27 +48,7 @@ jobs:
         run: pnpm build
 
       - name: Run end-to-end tests
-        shell: bash
-        run: |
-          pnpm preview > /tmp/catlovers-vite.log 2>&1 &
-          server_pid=$!
-          trap 'kill "$server_pid"' EXIT
-
-          server_ready=false
-          for attempt in {1..30}; do
-            if curl --fail --silent http://127.0.0.1:1234/ > /dev/null; then
-              server_ready=true
-              break
-            fi
-            sleep 1
-          done
-
-          if [ "$server_ready" != true ]; then
-            cat /tmp/catlovers-vite.log
-            exit 1
-          fi
-
-          pnpm test:e2e:run
+        run: pnpm test:e2e:run
 
       - name: Setup Pages
         if: github.event_name != 'pull_request'

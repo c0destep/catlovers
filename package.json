@@ -25,10 +25,10 @@
     "images": "node scripts/generate-images.mjs",
     "test:e2e": "pnpm test:e2e:run",
     "test:e2e:open": "cypress open",
-    "test:e2e:run": "cypress run --browser chrome",
+    "test:e2e:run": "node scripts/run-e2e.mjs",
     "test:i18n": "node scripts/validate-i18n.js",
     "lint": "eslint js/ && stylelint css/",
-    "test": "pnpm test:i18n && pnpm test:e2e:run",
+    "test": "pnpm test:i18n && pnpm build && pnpm test:e2e:run",
     "check": "pnpm lint && pnpm test:i18n && pnpm build",
     "prepare": "husky"
   },
