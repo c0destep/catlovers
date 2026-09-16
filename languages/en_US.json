@@ -26,6 +26,9 @@
   "accessibility": {
     "skip": "Skip to content"
   },
+  "demo": {
+    "notice": "Demonstration project: animals, figures, and forms are fictional; no request is submitted."
+  },
   "hero": {
     "badge": "Responsible adoption",
     "title": "A safe home changes two lives",
@@ -510,14 +513,14 @@
   },
   "form": {
     "title": "Interest Form",
-    "subtitle": "Fill out carefully. We will contact you soon.",
+    "subtitle": "Use this form to test validation. Data is neither submitted nor stored.",
     "labelName": "Full Name *",
     "labelEmail": "E-mail *",
     "placeholderName": "Your full name",
     "placeholderEmail": "your@email.com",
     "submit": "Send Form",
-    "sending": "Sending...",
-    "success": "Form sent successfully!",
+    "sending": "Validating...",
+    "success": "Demo completed. No data was submitted.",
     "errorRequired": "This field is required.",
     "errorEmail": "Please enter a valid e-mail."
   },

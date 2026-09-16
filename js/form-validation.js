@@ -1,6 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('adoption-form');
   if (!form) return;
+  const submitButton = form.querySelector('button[type="submit"]');
+  const originalSubmitI18n = submitButton.getAttribute('data-i18n') || 'form.submit';
+
+  const resetSubmitState = () => {
+    submitButton.setAttribute('data-i18n', originalSubmitI18n);
+    submitButton.classList.remove('button--success');
+    if (window.catloversTranslator) window.catloversTranslator.translatePageTo(window.catloversTranslator.currentLanguage);
+  };
 
   const validateField = (field) => {
     const errorSpan = document.getElementById(`${field.id}-error`);
@@ -31,9 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return isValid;
   };
 
-  const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     let isFormValid = true;
@@ -46,27 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (isFormValid) {
-      // Simulate form submission
-      const btn = form.querySelector('button');
-      const originalI18n = btn.getAttribute('data-i18n') || 'form.submit';
-
-      btn.setAttribute('data-i18n', 'form.sending');
-      if (window.catloversTranslator) window.catloversTranslator.translatePageTo(window.catloversTranslator.currentLanguage);
-      btn.disabled = true;
-
-      await delay(1500);
-
-      btn.setAttribute('data-i18n', 'form.success');
-      btn.classList.add('button--success');
+      submitButton.setAttribute('data-i18n', 'form.success');
+      submitButton.classList.add('button--success');
       if (window.catloversTranslator) window.catloversTranslator.translatePageTo(window.catloversTranslator.currentLanguage);
       form.reset();
-
-      await delay(3000);
-
-      btn.setAttribute('data-i18n', originalI18n);
-      btn.classList.remove('button--success');
-      if (window.catloversTranslator) window.catloversTranslator.translatePageTo(window.catloversTranslator.currentLanguage);
-      btn.disabled = false;
     } else {
       // Focus on first invalid field for accessibility
       const firstInvalid = form.querySelector('[aria-invalid=\'true\']');
@@ -81,4 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
       validateField(e.target);
     }
   }, true);
+
+  form.addEventListener('input', () => {
+    if (submitButton.getAttribute('data-i18n') === 'form.success') {
+      resetSubmitState();
+    }
+  });
 });

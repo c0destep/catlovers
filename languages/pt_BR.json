@@ -26,6 +26,9 @@
   "accessibility": {
     "skip": "Pular para o conteúdo"
   },
+  "demo": {
+    "notice": "Projeto demonstrativo: animais, números e formulários são fictícios; nenhuma solicitação é enviada."
+  },
   "hero": {
     "badge": "Adoção responsável",
     "title": "Um lar seguro muda duas vidas",
@@ -510,14 +513,14 @@
   },
   "form": {
     "title": "Formulário de Interesse",
-    "subtitle": "Preencha com atenção. Entraremos em contato em breve.",
+    "subtitle": "Use este formulário para testar a validação. Os dados não são enviados nem armazenados.",
     "labelName": "Nome Completo *",
     "labelEmail": "E-mail *",
     "placeholderName": "Seu nome completo",
     "placeholderEmail": "seu@email.com",
     "submit": "Enviar Formulário",
-    "sending": "Enviando...",
-    "success": "Formulário enviado com sucesso!",
+    "sending": "Validando...",
+    "success": "Demonstração concluída. Nenhum dado foi enviado.",
     "errorRequired": "Este campo é obrigatório.",
     "errorEmail": "Por favor, insira um e-mail válido."
   },

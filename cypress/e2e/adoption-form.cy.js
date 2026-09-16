@@ -1,10 +1,14 @@
 describe('Adoção Page', () => {
   beforeEach(() => {
-    // Acessar a página de adoção localmente
-    cy.visit('/adoption.html');
+    cy.visit('/adoption.html', {
+      onBeforeLoad(win) {
+        win.localStorage.setItem('preferred_language', 'pt_BR');
+      }
+    });
   });
 
   it('deve carregar o formulário de adoção corretamente', () => {
+    cy.get('.demo-notice').should('be.visible').and('contain.text', 'Projeto demonstrativo');
     cy.get('h2[data-i18n="form.title"]').scrollIntoView().should('be.visible');
     cy.get('form#adoption-form').should('be.visible');
   });
@@ -20,14 +24,16 @@ describe('Adoção Page', () => {
     cy.get('#email-error').should('not.be.empty');
   });
 
-  it('deve submeter o formulário quando preenchido corretamente', () => {
+  it('deve validar o formulário sem afirmar que os dados foram enviados', () => {
     cy.get('#name').type('Lucas Alves');
     cy.get('#email').type('lucas@example.com');
     
     cy.get('form#adoption-form button').click();
     
-    // Verifica se o texto do botão muda indicando sucesso
     cy.get('form#adoption-form button')
-      .should('have.attr', 'data-i18n', 'form.success');
+      .should('have.attr', 'data-i18n', 'form.success')
+      .and('contain.text', 'Nenhum dado foi enviado');
+    cy.get('#name').should('have.value', '');
+    cy.get('#email').should('have.value', '');
   });
 });

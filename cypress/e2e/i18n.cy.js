@@ -21,6 +21,7 @@ describe('Internacionalização (i18n)', () => {
 
     // Verifica se o título está em inglês
     cy.get('h1').should('contain.text', 'A safe home');
+    cy.get('.demo-notice').should('contain.text', 'Demonstration project');
     cy.get('meta[name="description"]')
       .should('have.attr', 'content')
       .and('contain', 'responsible adoption');
