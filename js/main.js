@@ -283,9 +283,10 @@ if (document.readyState === 'loading') {
 }
 
 // --- Service Worker Registration ---
-if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register(new URL('../sw.js', import.meta.url)).catch((error) => {
+    const serviceWorkerUrl = new URL('sw.js', document.baseURI);
+    navigator.serviceWorker.register(serviceWorkerUrl, { scope: './' }).catch((error) => {
       console.log('ServiceWorker registration failed: ', error);
     });
   });

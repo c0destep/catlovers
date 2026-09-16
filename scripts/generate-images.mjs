@@ -11,6 +11,8 @@ import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
 const IMG_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'img');
+const PROJECT_DIR = path.dirname(IMG_DIR);
+const PUBLIC_DIR = path.join(PROJECT_DIR, 'public');
 
 // `widths: []` gera apenas o arquivo base, no tamanho `maxWidth`.
 const TARGETS = [
@@ -39,6 +41,7 @@ const emit = async (pipeline, source, outName, width) => {
 };
 
 await mkdir(IMG_DIR, { recursive: true });
+await mkdir(PUBLIC_DIR, { recursive: true });
 
 for (const { source, maxWidth, widths } of TARGETS) {
   const sourcePath = path.join(IMG_DIR, source);
@@ -54,4 +57,17 @@ for (const { source, maxWidth, widths } of TARGETS) {
   }
 }
 
-console.log('\nPronto. Lembre-se de commitar os .webp gerados.');
+const iconSource = path.join(PROJECT_DIR, 'icon-512.png');
+for (const size of [192, 512]) {
+  const outName = `icon-${size}.png`;
+  const outPath = path.join(PUBLIC_DIR, outName);
+  await sharp(iconSource)
+    .resize(size, size, { fit: 'cover' })
+    .png({ compressionLevel: 9, effort: 10, palette: true, quality: 90 })
+    .toFile(outPath);
+
+  const { size: bytes } = await stat(outPath);
+  console.log(`  icon-512.png -> public/${outName} (${size}px, ${kb(bytes)})`);
+}
+
+console.log('\nPronto. Lembre-se de commitar as imagens geradas.');

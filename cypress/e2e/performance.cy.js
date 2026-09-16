@@ -33,15 +33,24 @@ describe('Performance e Carregamento', () => {
     cy.get('link[rel="stylesheet"]').should('have.length.at.least', 1);
   });
 
-  it('deve ter service worker registrado', () => {
+  it('deve publicar um manifesto com ícones válidos', () => {
+    cy.request('/site.webmanifest').then(({ body, status }) => {
+      expect(status).to.eq(200);
+      expect(body.icons).to.deep.include.members([
+        { src: 'icon-192.png', type: 'image/png', sizes: '192x192', purpose: 'any' },
+        { src: 'icon-512.png', type: 'image/png', sizes: '512x512', purpose: 'any' }
+      ]);
+    });
+  });
+
+  it('deve registrar o service worker na raiz publicada', () => {
     cy.visit('/');
 
-    cy.window().then((win) => {
-      // Verifica se o service worker está disponível
-      if ('serviceWorker' in navigator) {
-        // O registro é feito no sw.js
-        expect(true).to.be.true;
-      }
+    cy.window().then(async (win) => {
+      expect(win.navigator.serviceWorker).to.exist;
+      const registration = await win.navigator.serviceWorker.ready;
+      expect(new URL(registration.active.scriptURL).pathname).to.match(/\/sw\.js$/);
+      expect(registration.scope).to.eq(`${win.location.origin}/`);
     });
   });
 });

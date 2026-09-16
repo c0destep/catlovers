@@ -19,7 +19,7 @@
     "email": "lucas.alves.capristrano59@gmail.com"
   },
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && node scripts/prepare-pwa.mjs && node scripts/validate-build.mjs",
     "dev": "vite",
     "preview": "vite preview",
     "images": "node scripts/generate-images.mjs",
