@@ -5,7 +5,7 @@ describe('Adoção Page', () => {
   });
 
   it('deve carregar o formulário de adoção corretamente', () => {
-    cy.get('h2[data-i18n="form.title"]').should('be.visible');
+    cy.get('h2[data-i18n="form.title"]').scrollIntoView().should('be.visible');
     cy.get('form#adoption-form').should('be.visible');
   });
 

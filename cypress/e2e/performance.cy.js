@@ -50,7 +50,7 @@ describe('Performance e Carregamento', () => {
       expect(win.navigator.serviceWorker).to.exist;
       const registration = await win.navigator.serviceWorker.ready;
       expect(new URL(registration.active.scriptURL).pathname).to.match(/\/sw\.js$/);
-      expect(registration.scope).to.eq(`${win.location.origin}/`);
+      expect(registration.scope).to.eq(new URL('./', registration.active.scriptURL).href);
     });
   });
 });

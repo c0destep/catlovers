@@ -11,7 +11,7 @@
   "license": "MIT",
   "packageManager": "pnpm@11.26.0",
   "engines": {
-    "node": "^22.12.0 || ^24.0.0",
+    "node": "^22.13.0 || ^24.0.0 || >=26.0.0",
     "pnpm": "^11.0.0"
   },
   "author": {
@@ -23,9 +23,13 @@
     "dev": "vite",
     "preview": "vite preview",
     "images": "node scripts/generate-images.mjs",
-    "test:e2e": "cypress open",
+    "test:e2e": "pnpm test:e2e:run",
+    "test:e2e:open": "cypress open",
+    "test:e2e:run": "cypress run --browser chrome",
+    "test:i18n": "node scripts/validate-i18n.js",
     "lint": "eslint js/ && stylelint css/",
-    "test": "pnpm test:e2e",
+    "test": "pnpm test:i18n && pnpm test:e2e:run",
+    "check": "pnpm lint && pnpm test:i18n && pnpm build",
     "prepare": "husky"
   },
   "dependencies": {
