@@ -9,16 +9,16 @@
 | Posicionamento | Concluído para o estágio atual | O site se identifica como demonstração em todos os idiomas; animais, números, histórias e formulários são apresentados como fictícios. |
 | Formulário | Concluído para demonstração | O fluxo valida e limpa os campos, informa que nenhum dado foi enviado e não simula contato futuro. |
 | Vite | Concluído | A migração multipágina foi consolidada, resíduos do Parcel foram removidos e ambiente, documentação e Cypress usam a porta 1234. |
-| PWA | Parcialmente concluído | Manifesto, ícones, screenshot, escopo, service worker e pré-cache são validados na build; ainda falta um teste de navegação offline no navegador. |
+| PWA | Concluído para o contrato atual | Manifesto, ícones, screenshot, escopo, service worker e pré-cache são validados na build; um navegador isolado confirma a navegação pelo app shell sem rede. |
 | CI | Concluído | Instalação congelada, lint, i18n, build e Cypress bloqueiam a publicação no GitHub Pages. |
 | Internacionalização | Parcialmente concluído | O tradutor incompatível foi substituído e o conteúdo dinâmico possui cobertura; idades e alguns metadados do catálogo ainda estão em português. |
-| Testes | Em evolução | A suíte completa passou com 42 testes em nove especificações; a galeria agora exige resultados concretos após o filtro. |
+| Testes | Em evolução | A suíte completa passou com 42 testes em nove especificações, além da navegação offline; a galeria exige resultados concretos após o filtro. |
 | Documentação | Concluído para a fundação atual | README, guia de contribuição e `humans.txt` descrevem Vite, pnpm, PWA, E2E e as limitações reais. |
 
 ### Próximas prioridades altas
 
 1. Remover ou substituir números, depoimentos e histórias sem origem verificável, mesmo que já estejam identificados como demonstração.
-2. Cobrir o contrato offline sobre a build publicada e testar links locais em navegação real.
+2. Testar links locais em navegação real e impedir destinos quebrados na publicação.
 3. Cobrir menu por teclado e estados de falha dos fluxos que dependem de rede.
 4. Registrar a decisão sobre uma eventual operação real, responsáveis, regiões e prazo de atendimento antes de habilitar qualquer coleta.
 
@@ -64,7 +64,7 @@ A métrica central deve ser o número de **adoções responsáveis confirmadas p
 | Dados | Seis gatos em `cats.json` | Bom protótipo, insuficiente como inventário operacional |
 | Estado no cliente | `localStorage` para idioma e tema; `sessionStorage` para curiosidades | Adequado para preferências, sem persistência de negócio |
 | Internacionalização | PT-BR, EN e ES, com paridade automática de chaves | Conteúdo dinâmico principal é traduzido; metadados do catálogo ainda precisam evoluir |
-| PWA | Manifesto, service worker, ícones, screenshot e pré-cache gerado | Estrutura validada na build; o comportamento offline ainda precisa de E2E dedicado |
+| PWA | Manifesto, service worker, ícones, screenshot e pré-cache gerado | Estrutura validada na build e navegação offline verificada em navegador dedicado |
 | Qualidade | ESLint 10, Stylelint 17 e nove especificações Cypress | Lint, i18n e build passam; 42 testes E2E passaram no Chromium |
 | Entrega | GitHub Actions e GitHub Pages | A publicação depende de instalação congelada, lint, i18n, build e E2E |
 | Backend | Inexistente | Formulário, disponibilidade, parceiros e acompanhamento não são persistidos |
@@ -97,14 +97,14 @@ A métrica central deve ser o número de **adoções responsáveis confirmadas p
 | --- | --- | --- | --- |
 | P0 | Migração de Parcel para Vite incompleta | Resolvida | Manter os contratos atuais protegidos pela CI. |
 | P0 | Formulário simulava sucesso e descartava os dados | Mitigada | O fluxo está identificado como demonstração e não confirma envio. |
-| P0 | Service worker e manifesto usavam caminhos incompatíveis com a saída do Vite | Estrutura resolvida | Adicionar teste de navegação offline sobre a build publicada. |
+| P0 | Service worker e manifesto usavam caminhos incompatíveis com a saída do Vite | Resolvida | Preservar a validação da build e o teste offline no fluxo E2E. |
 | P0 | Indicadores, depoimentos e garantias não apresentam fonte verificável | Mitigada | O aviso de demonstração evita interpretação enganosa; o conteúdo ainda deve ser substituído ou removido. |
 | P0 | CI publicava sem executar lint, i18n ou E2E | Resolvida | Preservar os gates antes do deploy. |
 | P1 | Gatos não têm perfil, disponibilidade, localização ou responsável | Pendente | O usuário não consegue tomar uma decisão informada. |
 | P1 | O gato escolhido não acompanha o usuário até o formulário | Pendente | A jornada perde contexto no ponto de maior intenção. |
 | P1 | CTAs de apoio não executam ação | Mitigada | O aviso global esclarece o caráter demonstrativo; os fluxos continuam pendentes. |
 | P1 | Conteúdo dinâmico permanece parcialmente em português | Parcial | O tradutor e a cobertura dinâmica foram corrigidos; dados do catálogo ainda precisam de localização. |
-| P1 | Testes verificavam sobretudo presença de elementos | Parcial | Filtros, responsividade, i18n e PWA ganharam asserções; teclado, links e offline ainda precisam de cobertura. |
+| P1 | Testes verificavam sobretudo presença de elementos | Parcial | Filtros, responsividade, i18n e PWA ganharam asserções; teclado e links ainda precisam de cobertura. |
 | P1 | Política de privacidade é genérica | Pendente antes de coleta real | A coleta exigiria finalidade, retenção, direitos e contato definidos. |
 | P2 | Blog e SEO têm estrutura incompleta | Pendente | Os cards repetem o mesmo artigo; faltam sitemap, canonical e metadados por página. |
 | P2 | Build inclui 110 arquivos de fonte | Pendente | O custo de transferência supera o necessário para os alfabetos atendidos. |
@@ -191,7 +191,7 @@ As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe 
 
 - [x] Publicar o service worker na raiz, com escopo explícito e caminhos compatíveis com a base do GitHub Pages.
 - [x] Manter manifesto, ícones, screenshots e atalhos em caminhos presentes na build final.
-- [ ] Testar em navegador o contrato offline já documentado.
+- [x] Testar em navegador o contrato offline documentado, com rede desativada sobre a build publicada.
 - [x] Remover `.htaccess`, pois o destino atual é o GitHub Pages.
 - [x] Criar uma verificação automática de links locais, recursos do manifesto e conteúdo do service worker na saída de produção.
 
@@ -201,7 +201,7 @@ As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe 
 - [x] Remover `allowCypressEnv`, opção retirada do Cypress 16, e escolher um navegador suportado para CI.
 - [x] Separar `test:e2e:open` de `test:e2e:run`; fazer `pnpm test` executar sem interface gráfica.
 - [x] Corrigir testes dependentes de animação ou visibilidade fora da viewport e substituir asserções permissivas por resultados esperados.
-- [ ] Adicionar os testes ainda pendentes de links, envio com falha, menu por teclado e modo offline. A troca de idioma em conteúdo dinâmico e o manifesto já possuem cobertura.
+- [ ] Adicionar os testes ainda pendentes de links, envio com falha e menu por teclado. A troca de idioma em conteúdo dinâmico, o manifesto e o modo offline já possuem cobertura.
 
 **Critérios de saída**
 
@@ -431,6 +431,7 @@ Estas respostas devem ser registradas antes da Fase 2, pois alteram arquitetura,
 - `pnpm check`: aprovado com ESLint, Stylelint, i18n e build validada.
 - `pnpm build`: aprovado sem o tradutor incompatível; 13 páginas, manifesto, recursos locais e pré-cache são verificados automaticamente.
 - Cypress 16.1.0 no Chromium: 42 testes aprovados em nove especificações.
+- Chrome DevTools Protocol: app shell carregado em um perfil isolado após desativar a rede do navegador.
 - Teste direcionado da galeria após fortalecer o filtro: cinco testes aprovados.
 - Build local atual: 143 arquivos e aproximadamente 3,3 MB; os 110 arquivos de fonte continuam como oportunidade de otimização.
 

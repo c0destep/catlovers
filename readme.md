@@ -60,7 +60,7 @@ O Vite abre o site em `http://127.0.0.1:1234`. A porta é fixa para manter o amb
 | `pnpm lint` | Executa ESLint e Stylelint. |
 | `pnpm test:i18n` | Confere a consistência dos três catálogos de tradução. |
 | `pnpm test:e2e:open` | Abre a interface do Cypress. |
-| `pnpm test:e2e:run` | Inicia o preview, executa os testes no Chrome e encerra o servidor. |
+| `pnpm test:e2e:run` | Inicia o preview, executa o Cypress e valida a navegação offline em um Chrome ou Chromium isolado. |
 | `pnpm check` | Executa lint, validação de traduções e build. |
 | `pnpm test` | Executa traduções, build e toda a suíte E2E. |
 
@@ -88,7 +88,7 @@ Além de compilar o site, esse comando:
 2. gera a versão do cache e a lista de pré-cache a partir da build;
 3. verifica as 13 páginas, os links para recursos locais, os ícones, a captura de tela e o service worker.
 
-O funcionamento offline cobre o app shell gerado. Conteúdo externo, como imagens do Unsplash e fatos carregados de uma API pública, continua dependendo de conexão.
+O funcionamento offline cobre o app shell gerado e é verificado em um navegador com a rede desativada. Conteúdo externo, como imagens do Unsplash e fatos carregados de uma API pública, continua dependendo de conexão.
 
 ## Estrutura
 

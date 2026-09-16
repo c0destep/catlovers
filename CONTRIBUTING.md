@@ -44,7 +44,7 @@ Esse comando verifica JavaScript, CSS, traduções e a build de produção. Para
 pnpm test:e2e:run
 ```
 
-O comando inicia o preview, aguarda a aplicação, executa o Cypress no Chrome e encerra o servidor. Para validar tudo em sequência, use `pnpm test`.
+O comando inicia o preview, aguarda a aplicação, executa o Cypress e verifica o app shell com a rede do navegador desativada. Ao final, encerra o servidor e o navegador. Para validar tudo em sequência, use `pnpm test`.
 
 ## Convenções
 
