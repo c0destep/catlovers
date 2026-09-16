@@ -13,14 +13,14 @@ describe('Galeria de Gatos', () => {
   });
 
   it('deve ter filtros de busca funcionais', () => {
-    // Verifica se existem filtros
-    cy.get('.filter-group__select').should('exist');
+    cy.get('#filter-age').select('kitten').should('have.value', 'kitten');
 
-    // Seleciona um filtro
-    cy.get('.filter-group__select').first().select(1);
-
-    // Verifica se os cards são filtrados (pode ter menos ou igual)
-    cy.get('.cat-card').should('have.length.at.least', 0);
+    cy.get('.cat-card')
+      .should('have.length', 2)
+      .then(($cards) => {
+        const names = [...$cards].map((card) => card.querySelector('.cat-card__title')?.textContent);
+        expect(names).to.deep.equal(['Nala', 'Luna']);
+      });
   });
 
   it('deve mostrar detalhes do gato ao clicar no card', () => {
