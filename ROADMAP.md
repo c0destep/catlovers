@@ -12,15 +12,15 @@
 | PWA | Concluído para o contrato atual | Manifesto, ícones, screenshot, escopo, service worker e pré-cache são validados na build; um navegador isolado confirma a navegação pelo app shell sem rede. |
 | CI | Concluído | Instalação congelada, lint, i18n, build e Cypress bloqueiam a publicação no GitHub Pages. |
 | Internacionalização | Parcialmente concluído | O tradutor incompatível foi substituído e o conteúdo dinâmico possui cobertura; idades e alguns metadados do catálogo ainda estão em português. |
-| Testes | Em evolução | A suíte completa passou com 42 testes em nove especificações, além da navegação offline; a galeria exige resultados concretos após o filtro. |
+| Testes | Em evolução | A suíte completa passou com 44 testes em nove especificações, além da navegação offline; filtros, teclado, falha externa e fragmentos locais possuem cobertura. |
 | Documentação | Concluído para a fundação atual | README, guia de contribuição e `humans.txt` descrevem Vite, pnpm, PWA, E2E e as limitações reais. |
 
 ### Próximas prioridades altas
 
 1. Remover ou substituir números, depoimentos e histórias sem origem verificável, mesmo que já estejam identificados como demonstração.
-2. Testar links locais em navegação real e impedir destinos quebrados na publicação.
-3. Cobrir menu por teclado e estados de falha dos fluxos que dependem de rede.
-4. Registrar a decisão sobre uma eventual operação real, responsáveis, regiões e prazo de atendimento antes de habilitar qualquer coleta.
+2. Registrar a decisão sobre uma eventual operação real, responsáveis, regiões e prazo de atendimento antes de habilitar qualquer coleta.
+3. Localizar idades e demais metadados do catálogo para concluir a experiência em EN e ES.
+4. Definir o schema operacional dos gatos antes de criar perfis, disponibilidade e integração com parceiros.
 
 ## 1. Direção do produto
 
@@ -104,7 +104,7 @@ A métrica central deve ser o número de **adoções responsáveis confirmadas p
 | P1 | O gato escolhido não acompanha o usuário até o formulário | Pendente | A jornada perde contexto no ponto de maior intenção. |
 | P1 | CTAs de apoio não executam ação | Mitigada | O aviso global esclarece o caráter demonstrativo; os fluxos continuam pendentes. |
 | P1 | Conteúdo dinâmico permanece parcialmente em português | Parcial | O tradutor e a cobertura dinâmica foram corrigidos; dados do catálogo ainda precisam de localização. |
-| P1 | Testes verificavam sobretudo presença de elementos | Parcial | Filtros, responsividade, i18n e PWA ganharam asserções; teclado e links ainda precisam de cobertura. |
+| P1 | Testes verificavam sobretudo presença de elementos | Fortalecida | Filtros, responsividade, i18n, PWA, teclado, links e falha da API externa possuem cobertura; novas integrações exigirão seus próprios cenários. |
 | P1 | Política de privacidade é genérica | Pendente antes de coleta real | A coleta exigiria finalidade, retenção, direitos e contato definidos. |
 | P2 | Blog e SEO têm estrutura incompleta | Pendente | Os cards repetem o mesmo artigo; faltam sitemap, canonical e metadados por página. |
 | P2 | Build inclui 110 arquivos de fonte | Pendente | O custo de transferência supera o necessário para os alfabetos atendidos. |
@@ -201,7 +201,7 @@ As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe 
 - [x] Remover `allowCypressEnv`, opção retirada do Cypress 16, e escolher um navegador suportado para CI.
 - [x] Separar `test:e2e:open` de `test:e2e:run`; fazer `pnpm test` executar sem interface gráfica.
 - [x] Corrigir testes dependentes de animação ou visibilidade fora da viewport e substituir asserções permissivas por resultados esperados.
-- [ ] Adicionar os testes ainda pendentes de links, envio com falha e menu por teclado. A troca de idioma em conteúdo dinâmico, o manifesto e o modo offline já possuem cobertura.
+- [x] Cobrir links e fragmentos locais, falha da API externa, menu por teclado, conteúdo dinâmico, manifesto e modo offline. O formulário demonstrativo não realiza envio de rede.
 
 **Critérios de saída**
 
@@ -258,7 +258,7 @@ As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe 
 
 #### Experiência e acessibilidade
 
-- [ ] Fechar o menu móvel com `Escape`, atualizar seu rótulo e controlar o foco ao abrir e fechar.
+- [x] Fechar o menu móvel com `Escape`, atualizar seu rótulo nos três idiomas e controlar o foco ao abrir e fechar.
 - [ ] Tornar o card de gato acionável por teclado com semântica de link, sem duplicar controles concorrentes.
 - [ ] Permitir limpar os filtros, compartilhar um perfil e retornar à mesma posição da galeria.
 - [ ] Evoluir o quiz com critérios do catálogo, mais de um resultado compatível, justificativa da recomendação e uma regra de desempate explícita.
@@ -286,7 +286,7 @@ As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe 
 - [ ] Importar apenas alfabetos, pesos e formatos de fonte usados; a build atual gera 110 arquivos de fonte, cerca de 1,7 MB.
 - [ ] Definir dimensões ou proporção para todas as imagens e evitar mudanças de layout.
 - [ ] Estabelecer orçamentos de CSS, JavaScript, fontes e imagens no CI.
-- [ ] Tratar a API de curiosidades como melhoria opcional: timeout, fallback traduzido e nenhum erro ruidoso quando estiver indisponível.
+- [x] Tratar a API de curiosidades como melhoria opcional: timeout, estado local na única língua em que o bloco aparece e nenhum erro ruidoso quando estiver indisponível.
 - [ ] Medir LCP, INP, CLS e falhas de recursos nas páginas de maior tráfego.
 
 **Critérios de saída**
@@ -430,8 +430,9 @@ Estas respostas devem ser registradas antes da Fase 2, pois alteram arquitetura,
 
 - `pnpm check`: aprovado com ESLint, Stylelint, i18n e build validada.
 - `pnpm build`: aprovado sem o tradutor incompatível; 13 páginas, manifesto, recursos locais e pré-cache são verificados automaticamente.
-- Cypress 16.1.0 no Chromium: 42 testes aprovados em nove especificações.
+- Cypress 16.1.0 no Chromium: 44 testes aprovados em nove especificações.
 - Chrome DevTools Protocol: app shell carregado em um perfil isolado após desativar a rede do navegador.
+- Validação da build: links para arquivos e fragmentos locais conferidos nas 13 páginas.
 - Teste direcionado da galeria após fortalecer o filtro: cinco testes aprovados.
 - Build local atual: 143 arquivos e aproximadamente 3,3 MB; os 110 arquivos de fonte continuam como oportunidade de otimização.
 
