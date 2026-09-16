@@ -7,7 +7,9 @@
     "quiz": "Quiz",
     "gallery": "Gallery",
     "blog": "Blog",
-    "happyEndings": "Stories"
+    "happyEndings": "Stories",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "footer": {
     "home": "Home",

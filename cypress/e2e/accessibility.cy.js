@@ -1,6 +1,10 @@
 describe('Acessibilidade e Navegação', () => {
   beforeEach(() => {
-    cy.visit('/');
+    cy.visit('/', {
+      onBeforeLoad(win) {
+        win.localStorage.setItem('preferred_language', 'pt_BR');
+      }
+    });
   });
 
   it('deve ter skip link funcional', () => {
@@ -26,5 +30,25 @@ describe('Acessibilidade e Navegação', () => {
     cy.get('.hero__image')
       .should('have.attr', 'alt')
       .and('not.be.empty');
+  });
+
+  it('deve controlar o menu móvel por teclado e restaurar o foco', () => {
+    cy.viewport(375, 667);
+
+    cy.get('.navbar__toggle--button')
+      .focus()
+      .type('{enter}')
+      .should('have.attr', 'aria-expanded', 'true')
+      .and('have.attr', 'aria-label', 'Fechar menu');
+
+    cy.get('.menu__link').first()
+      .should('have.focus')
+      .type('{esc}');
+
+    cy.get('.navbar__toggle--button')
+      .should('have.focus')
+      .and('have.attr', 'aria-expanded', 'false')
+      .and('have.attr', 'aria-label', 'Abrir menu');
+    cy.get('nav').should('not.have.class', 'navbar--open');
   });
 });

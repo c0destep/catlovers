@@ -107,6 +107,28 @@ const closeLanguageDropdown = () => {
 };
 
 /**
+ * Synchronizes the mobile navigation state and optionally moves keyboard focus.
+ * @param {boolean} isOpen - Whether the navigation should be open
+ * @param {{ focusMenu?: boolean, restoreFocus?: boolean }} [focusOptions]
+ */
+const setMobileMenuState = (isOpen, { focusMenu = false, restoreFocus = false } = {}) => {
+  if (!nav || !toggleButton) return;
+
+  nav.classList.toggle('navbar--open', isOpen);
+  toggleButton.setAttribute('aria-expanded', String(isOpen));
+
+  const language = localStorage.getItem(LANG_KEY) || initialLanguage;
+  const labelKey = isOpen ? 'navbar.closeMenu' : 'navbar.openMenu';
+  toggleButton.setAttribute('aria-label', translator.translateForKey(labelKey, language));
+
+  if (focusMenu) {
+    nav.querySelector('.menu__link')?.focus();
+  } else if (restoreFocus) {
+    toggleButton.focus();
+  }
+};
+
+/**
  * Toggles the language dropdown menu open/closed
  */
 const toggleLanguageDropdown = () => {
@@ -165,6 +187,7 @@ languageButtons.forEach((button) => {
       localStorage.setItem(LANG_KEY, targetLanguage);
       setActiveLanguageButton(targetLanguage);
       closeLanguageDropdown();
+      setMobileMenuState(nav?.classList.contains('navbar--open') ?? false);
     }
   });
 });
@@ -185,6 +208,10 @@ document.addEventListener('click', (event) => {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     closeLanguageDropdown();
+    if (nav?.classList.contains('navbar--open')) {
+      event.preventDefault();
+      setMobileMenuState(false, { restoreFocus: true });
+    }
   }
 });
 
@@ -215,9 +242,11 @@ if (backTop) {
 
 if (toggleButton && nav) {
   toggleButton.addEventListener('click', () => {
-    nav.classList.toggle('navbar--open');
-    toggleButton.setAttribute('aria-expanded', nav.classList.contains('navbar--open'));
+    const shouldOpen = !nav.classList.contains('navbar--open');
+    setMobileMenuState(shouldOpen, { focusMenu: shouldOpen });
   });
+
+  setMobileMenuState(false);
 }
 
 /**
