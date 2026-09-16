@@ -69,9 +69,26 @@ const runCypress = () => new Promise((resolve, reject) => {
   });
 });
 
+const runOfflineTest = () => new Promise((resolve, reject) => {
+  const offlineTest = spawn(process.execPath, ['scripts/test-offline.mjs'], {
+    env: process.env,
+    stdio: 'inherit'
+  });
+
+  offlineTest.once('error', reject);
+  offlineTest.once('exit', (code, signal) => {
+    if (signal) {
+      reject(new Error(`Teste offline encerrado pelo sinal ${signal}.`));
+      return;
+    }
+    resolve(code ?? 1);
+  });
+});
+
 try {
   await waitForPreview();
-  process.exitCode = await runCypress();
+  const cypressExitCode = await runCypress();
+  process.exitCode = cypressExitCode === 0 ? await runOfflineTest() : cypressExitCode;
 } catch (error) {
   console.error(error.message);
   process.exitCode = 1;
