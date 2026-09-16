@@ -1,12 +1,12 @@
-@import url('npm:@fontsource/cormorant-garamond/400.css');
-@import url('npm:@fontsource/cormorant-garamond/500.css');
-@import url('npm:@fontsource/cormorant-garamond/600.css');
-@import url('npm:@fontsource/cormorant-garamond/700.css');
-@import url('npm:@fontsource/lora/400.css');
-@import url('npm:@fontsource/lora/500.css');
-@import url('npm:@fontsource/lora/600.css');
-@import url('npm:@fontsource/lora/700.css');
-@import url('npm:@fontsource/lora/400-italic.css');
+@import url('@fontsource/cormorant-garamond/400.css');
+@import url('@fontsource/cormorant-garamond/500.css');
+@import url('@fontsource/cormorant-garamond/600.css');
+@import url('@fontsource/cormorant-garamond/700.css');
+@import url('@fontsource/lora/400.css');
+@import url('@fontsource/lora/500.css');
+@import url('@fontsource/lora/600.css');
+@import url('@fontsource/lora/700.css');
+@import url('@fontsource/lora/400-italic.css');
 
 /* Mobile-first breakpoints:
    --bp-sm: 640px   (smartphones grandes)

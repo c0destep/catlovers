@@ -1,9 +1,9 @@
 <!doctype html>
 <!--suppress JSUnresolvedLibraryURL -->
-<html class="no-js" lang="pt-BR">
+<html lang="pt-BR">
 
 <head>
-  <include src="head-common.html"></include>
+  <include file="includes/head-common.html"></include>
   <title data-i18n="head.home.title">Catlovers - Seu guia completo sobre gatos</title>
   <meta content="Aprenda tudo sobre comportamento, cuidados e adoção responsável de felinos."
         data-i18n="[content]head.home.description"
@@ -20,7 +20,7 @@
 <div aria-hidden="true" class="page-background"></div>
 <a class="skip-link" data-i18n="accessibility.skip" href="#main-content">Pular para o conteúdo</a>
 
-<include src="header.html"></include>
+<include file="includes/header.html"></include>
 
 <main id="main-content">
 
@@ -67,10 +67,10 @@
          <div class="hero__visual">
            <div class="hero__image-wrapper animate-on-scroll" data-animation="fadeInUp">
              <img fetchpriority="high" alt="Gato olhando para a câmera" class="hero__image"
-                  src="img/catlovers.jpg?as=webp"
-                  srcset="img/catlovers.jpg?as=webp&width=400 400w,
-                          img/catlovers.jpg?as=webp&width=800 800w,
-                          img/catlovers.jpg?as=webp&width=1200 1200w"
+                  src="img/catlovers-800.webp"
+                  srcset="img/catlovers-400.webp 400w,
+                          img/catlovers-800.webp 800w,
+                          img/catlovers-1200.webp 1200w"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   width="600" height="400">
              <div class="hero__floating-card hero__floating-card--top">
@@ -479,9 +479,9 @@
 
 </main>
 
-<include src="footer.html"></include>
-<include src="back-to-top.html"></include>
-<include src="scripts.html"></include>
+<include file="includes/footer.html"></include>
+<include file="includes/back-to-top.html"></include>
+<include file="includes/scripts.html"></include>
 
 </body>
 </html>

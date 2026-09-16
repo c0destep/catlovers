@@ -27,7 +27,6 @@
     PostHTML -- HTML preprocessing
     Parcel -- Bundler and build tool
     simple-translator -- Internationalization (i18n)
-    Modernizr -- Feature detection
     Normalize.css -- CSS reset
 
   ## TESTING

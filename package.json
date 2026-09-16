@@ -9,14 +9,20 @@
     "Lovers"
   ],
   "license": "MIT",
+  "packageManager": "pnpm@11.26.0",
+  "engines": {
+    "node": "^22.12.0 || ^24.0.0",
+    "pnpm": "^11.0.0"
+  },
   "author": {
     "name": "Lucas Alves",
     "email": "lucas.alves.capristrano59@gmail.com"
   },
   "scripts": {
-    "build": "parcel build index.html --public-url ./",
-    "dev": "parcel index.html --open",
-    "start": "pnpm run build && pnpm run dev",
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "images": "node scripts/generate-images.mjs",
     "test:e2e": "cypress open",
     "lint": "eslint js/ && stylelint css/",
     "test": "pnpm test:e2e",
@@ -29,22 +35,21 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^8.0.0",
-    "@parcel/packager-raw-url": "^2.16.4",
-    "@parcel/transformer-webmanifest": "^2.16.4",
     "ajv": "^8.20.0",
-    "cypress": "^15.20.1",
-    "eslint": "^10.8.1",
+    "cypress": "^16.1.0",
+    "eslint": "^10.10.0",
     "husky": "^9.1.7",
     "minimatch": "^10.2.6",
     "neostandard": "0.14.0-next",
-    "parcel": "^2.16.4",
-    "postcss": "^8.5.26",
+    "postcss": "^8.5.28",
     "posthtml": "^0.16.7",
     "posthtml-include": "^2.0.1",
     "process": "^0.11.10",
     "sharp": "^0.33.5",
-    "stylelint": "^17.14.1",
-    "stylelint-config-standard": "^40.0.0"
+    "stylelint": "^17.15.0",
+    "stylelint-config-standard": "^40.0.0",
+    "vite": "^8.3.0",
+    "vite-plugin-html-include": "^1.5.2"
   },
   "onlyBuiltDependenciesList": [
     "@firebase/util",
