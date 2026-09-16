@@ -1,69 +1,75 @@
-# Guia de Contribuição
+# Guia de contribuição
 
-Obrigado por seu interesse em contribuir com o projeto **Catlovers**! Este guia fornece instruções diretas para
-configurar seu ambiente e começar a colaborar.
+Obrigado por contribuir com o Catlovers. O projeto usa HTML, CSS e JavaScript sem framework de interface, com foco em fundamentos da web, acessibilidade e manutenção simples.
 
-## ⚠️ Regra Fundamental
+## Ambiente local
 
-**Este projeto é estritamente baseado em tecnologias web fundamentais. Só é permitido o uso de HTML, CSS e JavaScript
-para a publicação do site.** Não utilize frameworks como React, Vue ou Angular.
+Instale:
 
-## 🛠 Tecnologias Utilizadas
-
-- **Gerenciador de Pacotes:** `pnpm`
-- **Bundler:** `Parcel`
-- **Modularização de HTML:** `PostHTML` com `posthtml-include`
-- **Internacionalização (i18n):** `@andreasremdt/simple-translator`
-- **Metodologia CSS:** `BEM` (Block Element Modifier)
-
-## 🚀 Como Começar
-
-### 1. Pré-requisitos
-
-Certifique-se de ter o [Node.js](https://nodejs.org/) e o [pnpm](https://pnpm.io/) instalados em sua máquina.
-
-### 2. Configuração Local
-
-Clone o repositório e instale as dependências:
+- Node.js 24, versão recomendada em `.nvmrc`;
+- pnpm 11;
+- Google Chrome para a execução E2E padrão.
 
 ```bash
-git clone https://github.com/seu-usuario/catlovers.git
+git clone https://github.com/c0destep/catlovers.git
 cd catlovers
-pnpm install
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
-### 3. Desenvolvimento
+O servidor abre `http://127.0.0.1:1234`. A porta é fixa porque o preview e o Cypress usam o mesmo endereço.
 
-Para iniciar o servidor de desenvolvimento com hot-reload:
+## Organização do projeto
+
+- Os arquivos `*.html` da raiz são as entradas do site multipágina.
+- `includes/` contém os fragmentos compartilhados. Um plugin local em `vite.config.mjs` processa as tags `<include>`.
+- `css/` concentra os estilos e tokens visuais.
+- `js/` contém módulos de comportamento, tradução e validação.
+- `languages/` mantém os catálogos `pt_BR`, `en_US` e `es_ES`.
+- `public/` guarda manifesto, service worker e recursos que precisam de URL estável.
+- `scripts/` contém as validações e a preparação da build.
+- `cypress/e2e/` reúne os testes de ponta a ponta.
+
+## Validação
+
+Antes de concluir uma alteração, execute:
 
 ```bash
-pnpm run dev
+pnpm check
 ```
 
-O site abrirá automaticamente em `http://localhost:1234`.
-
-### 4. Build para Produção
-
-Para gerar os arquivos otimizados na pasta `dist/`:
+Esse comando verifica JavaScript, CSS, traduções e a build de produção. Para mudanças no comportamento da interface, execute também:
 
 ```bash
-pnpm run build
+pnpm test:e2e:run
 ```
 
-## 📂 Estrutura do Repositório
+O comando inicia o preview, aguarda a aplicação, executa o Cypress no Chrome e encerra o servidor. Para validar tudo em sequência, use `pnpm test`.
 
-- `index.html`, `about.html`, etc.: Arquivos principais (usam `<include>` do PostHTML).
-- `includes/`: Fragmentos de HTML reutilizáveis (Header, Footer, Head).
-- `css/`: Estilos do projeto (utilize variáveis CSS e metodologia BEM).
-- `js/`: Lógica JavaScript (modular e sem dependências pesadas).
-- `languages/`: Arquivos JSON para as traduções (`pt_BR`, `en_US`, `es_ES`).
+## Convenções
 
-## 📝 Boas Práticas
+- Preserve a arquitetura em HTML, CSS e JavaScript sem framework de interface.
+- Escreva CSS com abordagem mobile first, variáveis existentes e nomes BEM quando isso melhorar a clareza.
+- Mantenha navegação por teclado, foco visível, semântica HTML e atributos ARIA.
+- Atualize os três idiomas quando adicionar ou alterar conteúdo traduzível.
+- Não apresente dados, histórias, animais ou envios fictícios como uma operação real.
+- Inclua testes quando uma mudança de comportamento puder regredir de forma relevante.
+- Não versione credenciais, caches, arquivos da IDE nem artefatos de `dist/`.
 
-- **Dúvidas:** Em caso de dúvida sobre como contribuir ou sobre o funcionamento do projeto, sinta-se à vontade para
-  abrir uma **Issue** no repositório.
-- **Commits:** Siga o padrão de Commits Convencionais (ex: `feat:`, `fix:`, `docs:`). O projeto possui suporte ao
-  `commitizen`.
-- **Acessibilidade:** Mantenha os atributos ARIA e garanta contraste WCAG.
-- **Responsividade:** O design deve ser Mobile-First.
-- **Event Listeners:** Como este projeto não é um Single Page Application (SPA) e todas as navegações recarregam a página, não exigimos o "cleanup" (remoção) de Event Listeners ao longo dos scripts JS. O vazamento de memória não é um risco por design.
+## Commits
+
+Separe alterações sem relação em commits pequenos e revisáveis. Use Conventional Commits:
+
+```text
+feat: adiciona novo recurso
+fix(form): corrige validação do telefone
+docs: atualiza instruções de desenvolvimento
+test: cobre navegação por teclado
+refactor(i18n): simplifica carregamento de catálogos
+```
+
+Depois de cada commit, confira `git status --short` para garantir que nenhuma alteração acidental ficou no diretório de trabalho.
+
+## Pull requests
+
+Explique o problema resolvido, o comportamento final e as verificações executadas. Inclua capturas de tela quando a alteração visual for relevante e mantenha o escopo pequeno o suficiente para uma revisão objetiva.

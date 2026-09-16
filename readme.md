@@ -2,243 +2,127 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/c0destep/catlovers?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/c0destep/catlovers?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/c0destep/catlovers?style=for-the-badge)
-![Website](https://img.shields.io/website?down_color=green&down_message=online&style=for-the-badge&up_color=blue&up_message=online&url=https%3A%2F%2Fc0destep.github.io%2Fcatlovers%2F)
+![Website](https://img.shields.io/website?down_color=green&down_message=offline&style=for-the-badge&up_color=blue&up_message=online&url=https%3A%2F%2Fc0destep.github.io%2Fcatlovers%2F)
 
-<img src="img/catlovers.jpg" alt="cat love" width="800">
+![Página inicial do Catlovers](public/screenshot-wide.png)
 
-> Este projeto tem como objetivo principal educacional, focado em tecnologias web fundamentais, e o incentivo à adoção responsável de gatinhos.
+Catlovers é um projeto educacional sobre adoção responsável de gatos, construído com HTML, CSS e JavaScript. A aplicação publicada funciona como demonstração: animais, histórias, números e formulários são fictícios, e nenhum pedido de adoção ou dado pessoal é enviado.
 
-## 🌟 Diferenciais do Projeto
+## Recursos
 
-- **Tecnologias Fundamentais:** Desenvolvido puramente com HTML, CSS e JavaScript.
-- **Internacionalização (i18n):** Suporte completo para Português, Inglês e Espanhol.
-- **Acessibilidade (a11y):** Segue padrões WCAG, com alto contraste e suporte a leitores de tela.
-- **Design Responsivo:** Adaptado para Mobile e Desktop (Mobile-First).
-- **Estrutura Modular:** Uso de PostHTML para componentes reutilizáveis.
-- **Performance:** Critical CSS, compressão gzip/Brotli, imagens responsivas e content-visibility.
-- **Testes E2E:** Cypress para testes de aceitação.
+- Site multipágina responsivo, com tema claro e escuro.
+- Interface em português, inglês e espanhol.
+- Galeria com filtros, quiz de compatibilidade, blog demonstrativo e formulário local.
+- Recursos de acessibilidade, como navegação por teclado, skip link, regiões `aria-live` e contraste de cores.
+- PWA com manifesto, ícones e cache do app shell.
+- Testes de ponta a ponta com Cypress e validações automatizadas de build e traduções.
 
-### 📋 Checklist de Implementação
+## Tecnologias
 
-O projeto está em constante evolução. Confira o que já foi feito e o que está por vir:
+- HTML5, CSS3 e JavaScript com módulos ES.
+- Vite 8 para desenvolvimento e build multipágina.
+- Plugin local do Vite para compor os fragmentos HTML de `includes/`.
+- Fontsource com Lora e Cormorant Garamond.
+- ESLint 10, Stylelint 17 e Cypress 16.
+- GitHub Actions e GitHub Pages.
 
-- [x] Desenvolver a Landing Page
-- [x] Implementar modo escuro/claro acessível
-- [x] Adicionar suporte multi-idiomas
-- [x] Modularizar o HTML com PostHTML
-- [x] Galeria de gatos com filtros
-- [x] Quiz de match com gatos
-- [x] Critical CSS para performance
-- [x] Compressão HTTP (gzip/Brotli)
-- [x] ARIA live regions para acessibilidade
-- [x] Imagens responsivas com srcset
-- [x] Estados de loading na galeria
-- [x] Content-visibility para renderização
-- [ ] Blog de notícias voltadas aos cuidados e adoção de gatos
-- [ ] API de adoção (em estudo)
+## Requisitos
 
-## 💻 Pré-requisitos
+- Node.js 24 recomendado. O projeto aceita `^22.13.0 || ^24.0.0 || >=26.0.0`.
+- pnpm 11.
+- Google Chrome para a execução E2E padrão.
 
-Antes de começar, verifique se você atendeu aos seguintes requisitos:
+A versão recomendada do Node também está em `.nvmrc`.
 
-* Você instalou a versão mais recente do [Node.js](https://nodejs.org/) (v18 ou superior)
-* Você instalou o [pnpm](https://pnpm.io/) (gerenciador de pacotes)
+## Instalação
 
 ```bash
-# Verificar versões
-node --version
-pnpm --version
-```
-
-## 🚀 Instalando Catlovers
-
-Para instalar o Catlovers, siga estas etapas:
-
-Linux, macOS e Windows:
-
-```bash
-# Clone o repositório
 git clone https://github.com/c0destep/catlovers.git
 cd catlovers
-
-# Instale as dependências
-pnpm install
+pnpm install --frozen-lockfile
 ```
 
-## ☕ Usando Catlovers
-
-Para rodar o projeto em ambiente de desenvolvimento:
+## Desenvolvimento
 
 ```bash
-# Servidor de desenvolvimento com hot reload
-pnpm run dev
+pnpm dev
 ```
 
-O site estará disponível em `http://localhost:1234`
+O Vite abre o site em `http://127.0.0.1:1234`. A porta é fixa para manter o ambiente local e o Cypress alinhados.
 
-Para gerar a build de produção:
+## Comandos
+
+| Comando | Finalidade |
+| --- | --- |
+| `pnpm dev` | Inicia o servidor de desenvolvimento. |
+| `pnpm build` | Gera `dist/`, prepara a PWA e valida páginas e recursos. |
+| `pnpm preview` | Serve a build local na porta 1234. |
+| `pnpm lint` | Executa ESLint e Stylelint. |
+| `pnpm test:i18n` | Confere a consistência dos três catálogos de tradução. |
+| `pnpm test:e2e:open` | Abre a interface do Cypress. |
+| `pnpm test:e2e:run` | Inicia o preview, executa os testes no Chrome e encerra o servidor. |
+| `pnpm check` | Executa lint, validação de traduções e build. |
+| `pnpm test` | Executa traduções, build e toda a suíte E2E. |
+
+Para usar outro navegador instalado:
 
 ```bash
-# Build otimizada para produção
-pnpm run build
-
-# Os arquivos serão gerados na pasta dist/
+CYPRESS_BROWSER=chromium pnpm test:e2e:run
 ```
 
-### 🧪 Executando Testes
+Argumentos adicionais são repassados ao Cypress. Por exemplo:
 
 ```bash
-# Testes E2E com Cypress
-pnpm test:e2e
-
-# Linting de código
-pnpm lint
+pnpm test:e2e:run -- --spec cypress/e2e/performance.cy.js
 ```
 
-## 🔧 Troubleshooting
-
-### Problemas comuns e soluções:
-
-#### 1. Erro ao instalar dependências com pnpm
+## Build e PWA
 
 ```bash
-# Limpe o cache e tente novamente
-pnpm store prune
-rm -rf node_modules
-pnpm install
+pnpm build
 ```
 
-#### 2. Porta 1234 já em uso
+Além de compilar o site, esse comando:
 
-```bash
-# O Parcel usa a porta 1234 por padrão. Mate o processo ou use outra porta:
-pnpm run dev -- --port 3000
-```
+1. publica o manifesto e os recursos estáveis da PWA;
+2. gera a versão do cache e a lista de pré-cache a partir da build;
+3. verifica as 13 páginas, os links para recursos locais, os ícones, a captura de tela e o service worker.
 
-#### 3. Imagens não carregam no servidor de desenvolvimento
+O funcionamento offline cobre o app shell gerado. Conteúdo externo, como imagens do Unsplash e fatos carregados de uma API pública, continua dependendo de conexão.
 
-Verifique se o caminho das imagens está correto. O projeto usa processamento de imagens do Parcel com o parâmetro `?as=webp`.
+## Estrutura
 
-#### 4. Traduções não funcionam
-
-Verifique se os arquivos de idiomas em `languages/` estão presentes e se o `localStorage` não está bloqueado.
-
-#### 5. Modo escuro não persiste
-
-O tema é armazenado no `localStorage`. Limpe o armazenamento do navegador ou use o modo anônimo para testar.
-
-#### 6. Build de produção falha
-
-```bash
-# Limpe a cache do Parcel
-rm -rf .parcel-cache dist
-pnpm run build
-```
-
-## 🏗️ Estrutura do Projeto
-
-```
+```text
 catlovers/
-├── css/
-│   ├── main.css          # Estilos principais
-│   ├── normalize.css     # Normalização de estilos
-│   └── preflight.css     # Preflight (do Parcel)
-├── includes/             # Componentes HTML reutilizáveis
-│   ├── header.html
-│   ├── footer.html
-│   ├── head-common.html
-│   └── scripts.html
-├── js/
-│   ├── main.js           # Lógica principal (i18n, tema)
-│   ├── cats.js           # Galeria e filtros de gatos
-│   ├── quiz.js           # Quiz de match
-│   └── helpers/          # Funções auxiliares
-├── languages/            # Arquivos de tradução
-│   ├── pt_BR.json
-│   ├── en_US.json
-│   └── es_ES.json
-├── scripts/              # Scripts de automação (validate-i18n.js)
-├── img/                  # Imagens e otimizações
-├── cypress/              # Testes E2E
-├── .github/              # Templates de issue e PR
-├── index.html            # Página inicial
-├── cats.html             # Galeria de gatos
-├── quiz.html             # Quiz
-├── adoption.html         # Página de adoção
-├── .htaccess             # Configurações do servidor Apache
-├── package.json          # Dependências e scripts
-├── pnpm-lock.yaml        # Lock file
-├── readme.md             # Este arquivo
+├── css/                 # Estilos globais
+├── cypress/e2e/         # Cenários de ponta a ponta
+├── img/                 # Imagens processadas pelo Vite
+├── includes/            # Fragmentos HTML compartilhados
+├── js/                  # Comportamento, tradução e formulários
+├── languages/           # Catálogos pt_BR, en_US e es_ES
+├── public/              # Manifesto, service worker e recursos estáveis
+├── scripts/             # Automação de build, i18n, imagens e E2E
+├── *.html               # Páginas de entrada
+└── vite.config.mjs      # Build multipágina e composição dos includes
 ```
 
-## 🎨 Metodologia CSS
+## Limitações atuais
 
-O projeto adota uma abordagem híbrida:
-- **BEM (Block Element Modifier)** para classes de componentes
-- **CSS Custom Properties** (variáveis) para tokens de design
-- **Mobile-First** para responsividade
+- Não existe backend nem integração com organizações de adoção.
+- O formulário valida os campos apenas no navegador e não armazena dados.
+- Alguns conteúdos e imagens externas não ficam disponíveis offline.
+- As histórias e métricas apresentadas ainda precisam ser substituídas por conteúdo editorial verificável antes de qualquer uso operacional.
 
-Exemplo:
-```css
-.card { /* block */ }
-.card__title { /* element */ }
-.card--highlight { /* modifier */ }
-```
+As próximas etapas, prioridades e critérios de conclusão estão no [ROADMAP.md](ROADMAP.md).
 
-## 📱 Responsividade
+## Contribuição
 
-O projeto segue breakpoints Mobile-First:
+Leia o [CONTRIBUTING.md](CONTRIBUTING.md) antes de enviar alterações. O projeto usa commits pequenos no padrão Conventional Commits e exige `pnpm check` antes da revisão.
 
-- **Mobile:** < 768px
-- **Tablet:** 768px - 1024px
-- **Desktop:** > 1024px
+## Licença
 
-## ♿ Acessibilidade
+Distribuído sob a licença MIT. Consulte [LICENSE.txt](LICENSE.txt).
 
-- Navegação por teclado totalmente funcional
-- ARIA labels e live regions para conteúdo dinâmico
-- Skip link para pular conteúdo
-- Contraste de cores WCAG AA
-- Suporte a leitores de tela (NVDA, VoiceOver)
+## Autor
 
-## 🤝 Como Contribuir
-
-Contribuições são bem-vindas! Por favor, leia o [CONTRIBUTING.md](CONTRIBUTING.md) para detalhes sobre nosso código de conduta e o processo para enviar pull requests.
-
-1. Faça um Fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Faça commit das mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Faça push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE.txt](LICENSE.txt) para mais detalhes.
-
-## 🙋🏽 Autor
-
-**Lucas Alves**
-- GitHub: [@c0destep](https://github.com/c0destep)
-- Email: lucas.alves.capristrano59@gmail.com
-
-## 🎯 Roadmap Futuro
-
-- [x] Blog com artigos sobre cuidados com gatos
-- [x] PWA com funcionalidade offline completa (Service Worker + pre-cache)
-- [ ] API de adoção integrada
-- [ ] Sistema de cadastro de gatos
-- [ ] Integração com redes sociais
-
-## 📚 Recursos Úteis
-
-- [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/)
-- [MDN Web Docs](https://developer.mozilla.org/)
-- [CSS Tricks](https://css-tricks.com/)
-- [A11Y Project](https://www.a11yproject.com/)
-
----
-
-⭐ **Deixe uma estrela se este projeto foi útil!**
-
-[⬆ Voltar ao topo](#catlovers)
+**Lucas Alves** — [@c0destep](https://github.com/c0destep)
