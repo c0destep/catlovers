@@ -38,7 +38,7 @@ const pages = [
   'terms.html'
 ];
 
-for (const requiredFile of [...pages, 'site.webmanifest', 'sw.js']) {
+for (const requiredFile of [...pages, 'robots.txt', 'sitemap.xml', 'site.webmanifest', 'sw.js']) {
   await requireFile(requiredFile);
 }
 
@@ -125,6 +125,10 @@ for (const page of pages) {
   const pagePath = path.join(distDir, page);
   if (!await exists(pagePath)) continue;
   const html = await readFile(pagePath, 'utf8');
+  const socialImage = html.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:image"/)?.[1];
+  if (socialImage !== 'https://c0destep.github.io/catlovers/screenshot-wide.png') {
+    errors.push(`${page}: og:image deve apontar para a imagem social publicada.`);
+  }
   const references = [...html.matchAll(/(?:href|src)="([^"]+)"/g)].map((match) => match[1]);
   const srcsets = [...html.matchAll(/srcset="([^"]+)"/g)]
     .flatMap((match) => match[1].split(','))
