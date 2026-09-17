@@ -2,11 +2,11 @@
 
 > Diagnóstico iniciado em 16 de setembro de 2026. O retrato original foi atualizado após a execução das primeiras prioridades para distinguir problemas resolvidos de trabalho pendente.
 
-## Andamento da execução — 16 de setembro de 2026
+## Andamento da execução — 17 de setembro de 2026
 
 | Frente | Estado | Evidência |
 | --- | --- | --- |
-| Posicionamento | Concluído para o estágio atual | O site se identifica como demonstração em todos os idiomas; animais, números, histórias e formulários são apresentados como fictícios. |
+| Posicionamento | Concluído para o estágio atual | O site se identifica como demonstração em todos os idiomas; perfis, jornadas e formulários são fictícios, enquanto números de impacto, depoimentos, garantias e alegações de saúde sem fonte foram removidos. |
 | Formulário | Concluído para demonstração | O fluxo valida e limpa os campos, informa que nenhum dado foi enviado e não simula contato futuro. |
 | Vite | Concluído | A migração multipágina foi consolidada, resíduos do Parcel foram removidos e ambiente, documentação e Cypress usam a porta 1234. |
 | PWA | Concluído para o contrato atual | Manifesto, ícones, screenshot, escopo, service worker e pré-cache são validados na build; um navegador isolado confirma a navegação pelo app shell sem rede. |
@@ -17,18 +17,18 @@
 
 ### Próximas prioridades altas
 
-1. Remover ou substituir números, depoimentos e histórias sem origem verificável, mesmo que já estejam identificados como demonstração.
-2. Registrar a decisão sobre uma eventual operação real, responsáveis, regiões e prazo de atendimento antes de habilitar qualquer coleta.
-3. Localizar idades e demais metadados do catálogo para concluir a experiência em EN e ES.
-4. Definir o schema operacional dos gatos antes de criar perfis, disponibilidade e integração com parceiros.
+1. Registrar a decisão sobre uma eventual operação real, responsáveis, regiões e prazo de atendimento antes de habilitar qualquer coleta.
+2. Localizar idades e demais metadados do catálogo para concluir a experiência em EN e ES.
+3. Definir o schema operacional dos gatos antes de criar perfis, disponibilidade e integração com parceiros.
+4. Informar autoria, data de revisão e fontes no conteúdo editorial sobre cuidados e comportamento.
 
 ## 1. Direção do produto
 
 O Catlovers nasceu como um projeto educacional de HTML, CSS e JavaScript e já demonstra uma base front-end cuidadosa: treze páginas, três idiomas, tema claro e escuro, responsividade, recursos de acessibilidade, galeria, quiz, conteúdo educativo e suporte a instalação como PWA.
 
-A comunicação atual, porém, descreve uma operação real de adoção, com animais disponíveis, parceiros, acompanhamento e indicadores de impacto. A implementação ainda funciona como demonstração: os gatos estão em um arquivo estático, o envio do formulário é simulado e os fluxos de apadrinhamento, doação e voluntariado não possuem destino.
+A comunicação atual apresenta o Catlovers como demonstração educacional. Os perfis da galeria e os cenários de adaptação são identificados como fictícios; o formulário informa que não envia dados; e as páginas de adoção e apoio orientam o visitante a confirmar informações com uma organização real. O projeto ainda não possui animais disponíveis, parceiros, atendimento ou fluxos operacionais.
 
-A evolução deve resolver essa diferença antes de ampliar o conjunto de funcionalidades. Existem duas direções válidas:
+Qualquer evolução para uma operação real deve preservar essa transparência e implementar as capacidades prometidas antes de ampliar o conjunto de funcionalidades. Existem duas direções válidas:
 
 1. **Portfólio educacional:** manter o site como demonstração, identificar claramente dados e fluxos fictícios e concentrar o investimento em qualidade técnica.
 2. **Plataforma de adoção:** integrar parceiros reais, receber manifestações de interesse, manter a disponibilidade dos animais e acompanhar cada caso.
@@ -65,19 +65,19 @@ A métrica central deve ser o número de **adoções responsáveis confirmadas p
 | Estado no cliente | `localStorage` para idioma e tema; `sessionStorage` para curiosidades | Adequado para preferências, sem persistência de negócio |
 | Internacionalização | PT-BR, EN e ES, com paridade automática de chaves | Conteúdo dinâmico principal é traduzido; metadados do catálogo ainda precisam evoluir |
 | PWA | Manifesto, service worker, ícones, screenshot e pré-cache gerado | Estrutura validada na build e navegação offline verificada em navegador dedicado |
-| Qualidade | ESLint 10, Stylelint 17 e nove especificações Cypress | Lint, i18n e build passam; 42 testes E2E passaram no Chromium |
+| Qualidade | ESLint 10, Stylelint 17 e nove especificações Cypress | Lint, i18n e build passam; 44 testes E2E passaram no Chromium |
 | Entrega | GitHub Actions e GitHub Pages | A publicação depende de instalação congelada, lint, i18n, build e E2E |
 | Backend | Inexistente | Formulário, disponibilidade, parceiros e acompanhamento não são persistidos |
 | Observabilidade | Erros apenas no console | Não há visibilidade de conversão, falhas ou disponibilidade |
 
 ### Funcionalidades existentes
 
-- Página inicial com proposta, etapas, checklist, depoimentos, perguntas frequentes e chamadas para adoção.
-- Guia de adoção e formulário com validação no navegador.
-- Galeria com filtros por idade, sexo e temperamento.
-- Quiz de compatibilidade com três perfis de resultado.
+- Página inicial com orientação, jornada ilustrativa, checklist, cenários fictícios e perguntas para uma adoção real.
+- Guia demonstrativo de adoção e formulário com validação no navegador, sem envio de dados.
+- Galeria de perfis fictícios com filtros por idade, sexo e temperamento.
+- Simulação de compatibilidade com três perfis de resultado.
 - Blog com três cards e um artigo implementado.
-- Histórias de adoção e página com outras formas de apoio.
+- Cenários educacionais de adaptação e orientações para verificar iniciativas externas de apoio.
 - Tema claro e escuro, troca de idioma, navegação responsiva e preferências persistidas.
 - Skip link, regiões `aria-live`, foco visível e tratamento de movimento reduzido.
 - Imagens responsivas, fontes locais e cache para uso offline.
@@ -96,16 +96,16 @@ A métrica central deve ser o número de **adoções responsáveis confirmadas p
 | Prioridade | Lacuna original | Situação atual | Consequência ou próximo passo |
 | --- | --- | --- | --- |
 | P0 | Migração de Parcel para Vite incompleta | Resolvida | Manter os contratos atuais protegidos pela CI. |
-| P0 | Formulário simulava sucesso e descartava os dados | Mitigada | O fluxo está identificado como demonstração e não confirma envio. |
+| P0 | Formulário simulava sucesso e descartava os dados | Resolvida para demonstração | O fluxo valida os campos, informa que nenhum dado foi enviado e não promete contato futuro. |
 | P0 | Service worker e manifesto usavam caminhos incompatíveis com a saída do Vite | Resolvida | Preservar a validação da build e o teste offline no fluxo E2E. |
-| P0 | Indicadores, depoimentos e garantias não apresentam fonte verificável | Mitigada | O aviso de demonstração evita interpretação enganosa; o conteúdo ainda deve ser substituído ou removido. |
+| P0 | Indicadores, depoimentos e garantias não apresentam fonte verificável | Resolvida para o estágio atual | Números de impacto, depoimentos, garantias, histórias apresentadas como reais e alegações de saúde sem fonte foram removidos ou substituídos por conteúdo demonstrativo verificável. |
 | P0 | CI publicava sem executar lint, i18n ou E2E | Resolvida | Preservar os gates antes do deploy. |
 | P1 | Gatos não têm perfil, disponibilidade, localização ou responsável | Pendente | O usuário não consegue tomar uma decisão informada. |
 | P1 | O gato escolhido não acompanha o usuário até o formulário | Pendente | A jornada perde contexto no ponto de maior intenção. |
-| P1 | CTAs de apoio não executam ação | Mitigada | O aviso global esclarece o caráter demonstrativo; os fluxos continuam pendentes. |
+| P1 | CTAs de apoio não executam ação | Resolvida para demonstração | Os controles sem destino foram removidos; a página orienta a procurar organizações reais. Fluxos operacionais continuam reservados à Fase 4. |
 | P1 | Conteúdo dinâmico permanece parcialmente em português | Parcial | O tradutor e a cobertura dinâmica foram corrigidos; dados do catálogo ainda precisam de localização. |
 | P1 | Testes verificavam sobretudo presença de elementos | Fortalecida | Filtros, responsividade, i18n, PWA, teclado, links e falha da API externa possuem cobertura; novas integrações exigirão seus próprios cenários. |
-| P1 | Política de privacidade é genérica | Pendente antes de coleta real | A coleta exigiria finalidade, retenção, direitos e contato definidos. |
+| P1 | Política de privacidade é genérica | Mitigada para demonstração | A página descreve os dados locais e os serviços externos atuais; qualquer coleta real ainda exigirá finalidade, retenção, direitos e contato definidos. |
 | P2 | Blog e SEO têm estrutura incompleta | Pendente | Os cards repetem o mesmo artigo; faltam sitemap, canonical e metadados por página. |
 | P2 | Build inclui 110 arquivos de fonte | Pendente | O custo de transferência supera o necessário para os alfabetos atendidos. |
 | P2 | Imagens da galeria dependem do Unsplash | Pendente | A experiência offline fica incompleta e o produto depende de um terceiro. |
@@ -161,7 +161,7 @@ As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe 
 
 - [x] Definir o estágio atual como portfólio educacional e identificar publicamente o caráter demonstrativo.
 - [ ] Identificar quem receberá contatos, qual será o prazo de resposta e quais regiões serão atendidas.
-- [ ] Validar a origem dos números de impacto, depoimentos, histórias e afirmações sobre saúde dos gatos.
+- [x] Remover números de impacto, depoimentos, histórias, garantias e alegações de saúde sem origem verificável.
 - [x] Identificar como demonstração qualquer informação que ainda não possa ser comprovada.
 - [ ] Definir a linha de base das jornadas: visita, abertura da galeria, visualização de gato, início e conclusão de interesse.
 - [ ] Registrar as decisões de arquitetura e operação em documentos curtos no repositório.
@@ -415,7 +415,7 @@ Estas respostas devem ser registradas antes da Fase 2, pois alteram arquitetura,
 - Quais dados são indispensáveis para triagem e por quanto tempo serão mantidos?
 - O GitHub Pages continuará como hospedagem ou a API exigirá outro provedor?
 - Quais idiomas possuem revisores e demanda real?
-- Quais indicadores, depoimentos e histórias atuais possuem comprovação e autorização de publicação?
+- Quais fontes, datas de revisão e autorizações serão exigidas antes de publicar futuros indicadores, depoimentos ou histórias?
 
 ## 12. Verificações usadas neste diagnóstico
 
