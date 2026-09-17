@@ -36,7 +36,7 @@
     Prettier -- Code formatting
 
   ## DESIGN
-    Fonts: Lora (body), Cormorant Garamond (display) -- Fontsource
+    Fonts: Atkinson Hyperlegible (body), Cormorant Garamond (display) -- Fontsource
     Color scheme: Custom purple/rose palette with CSS custom properties
     Methodology: BEM (Block Element Modifier)
     Responsive: Mobile-first approach

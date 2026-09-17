@@ -1,12 +1,9 @@
 @import url('@fontsource/cormorant-garamond/400.css');
-@import url('@fontsource/cormorant-garamond/500.css');
 @import url('@fontsource/cormorant-garamond/600.css');
 @import url('@fontsource/cormorant-garamond/700.css');
-@import url('@fontsource/lora/400.css');
-@import url('@fontsource/lora/500.css');
-@import url('@fontsource/lora/600.css');
-@import url('@fontsource/lora/700.css');
-@import url('@fontsource/lora/400-italic.css');
+@import url('@fontsource/atkinson-hyperlegible/400.css');
+@import url('@fontsource/atkinson-hyperlegible/700.css');
+@import url('@fontsource/atkinson-hyperlegible/400-italic.css');
 
 /* Mobile-first breakpoints:
    --bp-sm: 640px   (smartphones grandes)
@@ -31,7 +28,7 @@
   --cat-blob-1: rgb(198 122 95 / 8%);
   --cat-blob-2: rgb(143 166 120 / 8%);
   --cat-blob-3: rgb(198 122 95 / 15%);
-  --cat-font-body: 'Lora', serif;
+  --cat-font-body: 'Atkinson Hyperlegible', sans-serif;
   --cat-font-display: 'Cormorant Garamond', serif;
   --cat-shadow: 0 12px 30px -10px rgb(61 56 54 / 12%);
   --cat-shadow-sm: 0 4px 12px -4px rgb(61 56 54 / 8%);
@@ -1929,6 +1926,7 @@ html {
 
 .cat-card__title {
   margin-bottom: 0.25rem;
+  font-family: var(--cat-font-display);
 }
 
 .cat-card__info {
@@ -1951,6 +1949,7 @@ html {
 
 .article-title {
   margin-bottom: 1rem;
+  font-family: var(--cat-font-display);
   font-size: clamp(2rem, 5vw, 3rem);
 }
 
@@ -1967,6 +1966,7 @@ html {
 .article-content h2 {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
+  font-family: var(--cat-font-display);
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -2012,6 +2012,7 @@ html {
 
 .quiz-step__title {
   margin-bottom: 1.25rem;
+  font-family: var(--cat-font-display);
   font-size: 1.25rem;
   font-weight: 700;
 }
@@ -2237,6 +2238,7 @@ html {
 
 .article-footer-title {
   margin-bottom: 1rem;
+  font-family: var(--cat-font-display);
   font-size: 1.5rem;
 }
 

@@ -22,7 +22,7 @@ Catlovers é um projeto educacional sobre adoção responsável de gatos, constr
 - HTML5, CSS3 e JavaScript com módulos ES.
 - Vite 8 para desenvolvimento e build multipágina.
 - Plugin local do Vite para compor os fragmentos HTML de `includes/`.
-- Fontsource com Lora e Cormorant Garamond.
+- Fontsource com Atkinson Hyperlegible e Cormorant Garamond.
 - ESLint 10, Stylelint 17 e Cypress 16.
 - GitHub Actions e GitHub Pages.
 

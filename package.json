@@ -33,8 +33,8 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@fontsource/cormorant-garamond": "^5.3.0",
-    "@fontsource/lora": "^5.3.0"
+    "@fontsource/atkinson-hyperlegible": "^5.3.0",
+    "@fontsource/cormorant-garamond": "^5.3.0"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^8.0.0",
