@@ -11,12 +11,15 @@ describe('Performance e Carregamento', () => {
     cy.document().its('readyState').should('eq', 'complete');
   });
 
-  it('deve ter critical CSS inlinado', () => {
+  it('deve publicar a folha de estilos versionada', () => {
     cy.visit('/');
 
-    // Verifica se há estilo inlinado no head
-    cy.get('head style').should('exist');
-    cy.get('head style').first().should('contain', ':root');
+    cy.get('head link[rel="stylesheet"]')
+      .should('have.attr', 'href')
+      .and('match', /^\.\/assets\/.+\.css$/)
+      .then((href) => {
+        cy.request(href).its('status').should('eq', 200);
+      });
   });
 
   it('deve ter lazy loading em imagens abaixo da dobra', () => {
