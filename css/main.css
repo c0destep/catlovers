@@ -761,22 +761,22 @@ header {
 .impact-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 0;
+  border-top: 1px solid var(--cat-border);
+  border-bottom: 1px solid var(--cat-border);
 }
 
 .impact-card {
   text-align: center;
-  padding: 2rem 1rem;
-  background: var(--cat-card);
-  border: 1px solid var(--cat-border);
-  border-radius: var(--cat-radius);
-  transition: transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1),
-              box-shadow 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 1.75rem 0.75rem;
 }
 
-.impact-card:hover {
-  transform: translateY(-6px) scale(1.01) rotate(-0.5deg);
-  box-shadow: var(--cat-shadow);
+.impact-card:nth-child(even) {
+  border-left: 1px solid var(--cat-border);
+}
+
+.impact-card:nth-child(n + 3) {
+  border-top: 1px solid var(--cat-border);
 }
 
 .impact-card__number {
@@ -959,6 +959,52 @@ header {
   background: linear-gradient(135deg, rgb(198 122 95 / 20%), rgb(143 166 120 / 20%));
 }
 
+#why .features-grid {
+  gap: 0;
+}
+
+#why .feature-card {
+  padding: 1.75rem 0;
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--cat-border);
+  border-radius: 0;
+  transition: none;
+}
+
+#why .feature-card::before {
+  display: none;
+}
+
+#why .feature-card:hover {
+  transform: none;
+  border-color: var(--cat-border);
+  box-shadow: none;
+}
+
+#why .feature-card--highlight {
+  display: block;
+  grid-column: auto;
+  background: transparent;
+  border-color: var(--cat-border);
+}
+
+#why .feature-card__icon {
+  width: auto;
+  height: auto;
+  justify-content: flex-start;
+  margin-bottom: 1.25rem;
+  background: transparent;
+  border-radius: 0;
+  transition: none;
+}
+
+#why .feature-card:hover .feature-card__icon {
+  transform: none;
+  background: transparent;
+}
+
 .feature-card__title {
   font-family: var(--cat-font-display);
   font-size: 1.3rem;
@@ -992,26 +1038,40 @@ header {
   border: 1px solid rgb(124 58 237 / 12%);
 }
 
+#why .feature-tag {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+#why .feature-tag + .feature-tag::before {
+  content: "·";
+  margin-right: 0.2rem;
+  color: var(--cat-muted);
+}
+
 /* ===== STEPS GRID ===== */
 .steps-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 0;
   counter-reset: step;
 }
 
 .step-card {
   position: relative;
-  padding: 2rem;
-  background: var(--cat-card);
-  border: 1px solid var(--cat-border);
-  border-radius: var(--cat-radius);
-  transition: transform 300ms ease, box-shadow 300ms ease;
+  padding: 0 0 2.25rem 4rem;
 }
 
-.step-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--cat-shadow);
+.step-card:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 3.1rem;
+  bottom: 0.5rem;
+  left: 1.35rem;
+  width: 1px;
+  background: var(--cat-border);
 }
 
 .step-card__number {
@@ -1021,8 +1081,12 @@ header {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--cat-accent), var(--cat-secondary));
-  color: var(--cat-on-accent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  color: var(--cat-accent);
+  border: 1px solid var(--cat-accent);
   font-family: var(--cat-font-display);
   font-size: 1rem;
   font-weight: 700;
@@ -1061,26 +1125,19 @@ header {
 .checklist-duo__cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.75rem;
+  gap: 0 1.5rem;
+  border-top: 1px solid var(--cat-border);
 }
 
 .check-item {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 1.25rem;
-  background: var(--cat-card);
-  border: 1px solid var(--cat-border);
-  border-radius: var(--cat-radius-sm);
+  padding: 1rem 0;
+  background: transparent;
+  border-bottom: 1px solid var(--cat-border);
   font-size: 0.95rem;
   font-weight: 500;
-  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
-}
-
-.check-item:hover {
-  transform: translateX(4px);
-  border-color: var(--cat-accent);
-  box-shadow: var(--cat-shadow-sm);
 }
 
 .check-item__icon {
@@ -1088,10 +1145,11 @@ header {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 2rem;
-  height: 2rem;
+  width: 1.75rem;
+  height: 1.75rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgb(124 58 237 / 10%), rgb(225 29 72 / 10%));
+  background: transparent;
+  border: 1px solid var(--cat-secondary);
   color: var(--cat-accent);
 }
 
@@ -1099,25 +1157,23 @@ header {
 .stories-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
+  gap: 0;
+  border-top: 1px solid var(--cat-border);
+  border-bottom: 1px solid var(--cat-border);
 }
 
 .story-card {
-  padding: 2rem;
-  background: var(--cat-card);
-  border: 1px solid var(--cat-border);
-  border-radius: var(--cat-radius);
-  transition: transform 300ms ease, box-shadow 300ms ease;
-}
-
-.story-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--cat-shadow);
+  padding: 2rem 0;
+  background: transparent;
+  border-bottom: 1px solid var(--cat-border);
 }
 
 .story-card--featured {
-  background: linear-gradient(135deg, rgb(124 58 237 / 4%), rgb(225 29 72 / 4%));
-  border-color: rgb(124 58 237 / 15%);
+  background: transparent;
+}
+
+.story-card:last-child {
+  border-bottom: 0;
 }
 
 .story-card__header {
@@ -1134,7 +1190,7 @@ header {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--cat-accent), var(--cat-secondary));
+  background: var(--cat-accent);
   color: var(--cat-on-accent);
   font-weight: 700;
   font-size: 1rem;
@@ -1730,8 +1786,22 @@ header {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .impact-card:nth-child(n) {
+    border-top: 0;
+    border-left: 0;
+  }
+
+  .impact-card + .impact-card {
+    border-left: 1px solid var(--cat-border);
+  }
+
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  #why .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2.5rem;
   }
 
   .feature-card--highlight {
@@ -1746,8 +1816,16 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  #stories .stories-grid {
+    grid-template-columns: 1fr;
+  }
+
   .story-card--featured {
     grid-column: 1 / -1;
+  }
+
+  #stories .story-card--featured {
+    grid-column: auto;
   }
 
   .checklist-duo__cards {
@@ -1820,24 +1898,55 @@ header {
 
   .steps-grid {
     grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
+    gap: 0;
+    padding-top: 1.5rem;
   }
 
   .step-card {
-    text-align: center;
+    min-width: 0;
+    padding: 2rem 1rem 0;
+    border-top: 1px solid var(--cat-border);
+    text-align: left;
   }
 
   .step-card__number {
-    margin-left: auto;
-    margin-right: auto;
+    top: -1.4rem;
+    left: 1rem;
+    margin: 0;
+    background: var(--cat-bg-alt);
+  }
+
+  .step-card:not(:last-child)::after {
+    display: none;
   }
 
   .stories-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  #stories .stories-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .story-card--featured {
     grid-column: auto;
+  }
+
+  #stories .story-card {
+    padding: 2rem 1.5rem;
+    border-bottom: 0;
+  }
+
+  #stories .story-card:first-child {
+    padding-left: 0;
+  }
+
+  #stories .story-card + .story-card {
+    border-left: 1px solid var(--cat-border);
+  }
+
+  #stories .story-card:last-child {
+    padding-right: 0;
   }
 
   .hero {
