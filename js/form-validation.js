@@ -42,6 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
+    if (submitButton.classList.contains('button--success')) {
+      resetSubmitState();
+    }
+
     let isFormValid = true;
     const inputs = form.querySelectorAll('input[required]');
 

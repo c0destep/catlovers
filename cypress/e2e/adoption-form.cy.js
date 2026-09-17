@@ -32,8 +32,19 @@ describe('Adoção Page', () => {
     
     cy.get('form#adoption-form button')
       .should('have.attr', 'data-i18n', 'form.success')
-      .and('contain.text', 'Nenhum dado foi enviado');
+      .and('have.class', 'button--success');
     cy.get('#name').should('have.value', '');
     cy.get('#email').should('have.value', '');
+  });
+
+  it('deve remover o estado de sucesso ao iniciar uma nova tentativa inválida', () => {
+    cy.get('#name').type('Lucas Alves');
+    cy.get('#email').type('lucas@example.com');
+    cy.get('form#adoption-form button').click().should('have.class', 'button--success');
+
+    cy.get('form#adoption-form button').click()
+      .should('not.have.class', 'button--success')
+      .and('have.attr', 'data-i18n', 'form.submit');
+    cy.get('#name').should('have.attr', 'aria-invalid', 'true');
   });
 });

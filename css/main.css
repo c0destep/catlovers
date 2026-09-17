@@ -1934,10 +1934,14 @@ html {
 }
 
 .quiz-step {
+  min-width: 0;
   margin-bottom: 2.5rem;
+  padding: 0;
+  border: 0;
 }
 
 .quiz-step__title {
+  width: 100%;
   margin-bottom: 1.25rem;
   font-family: var(--cat-font-display);
   font-size: 1.25rem;
@@ -1952,22 +1956,44 @@ html {
   padding: 0.75rem 1rem;
   border-radius: var(--cat-radius-sm);
   background-color: var(--cat-hover);
+  border: 1px solid transparent;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  text-align: left;
+  transition: background-color 160ms ease-out, border-color 160ms ease-out;
 }
 
 .quiz-label:hover {
   background-color: var(--cat-border);
 }
 
+.quiz-label:has(input:checked) {
+  background: linear-gradient(135deg, var(--cat-accent-soft), var(--cat-secondary-soft));
+  border-color: var(--cat-accent-border);
+}
+
+.quiz-label:focus-within {
+  outline: 2px solid var(--cat-accent);
+  outline-offset: 2px;
+}
+
 .quiz-label input {
   width: 1.1rem;
   height: 1.1rem;
+  flex: 0 0 auto;
+  accent-color: var(--cat-accent);
 }
 
 .quiz-form--submitted {
-  opacity: 0.5;
-  pointer-events: none;
+  opacity: 0.55;
+}
+
+.quiz-step__error {
+  display: block;
+  min-height: 1.4rem;
+  margin-top: 0.5rem;
+  color: var(--cat-danger);
+  font-size: 0.875rem;
+  font-weight: 700;
 }
 
 .quiz-result-box {

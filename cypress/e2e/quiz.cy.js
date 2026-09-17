@@ -26,14 +26,23 @@ describe('Quiz de Raça de Gato', () => {
     cy.get('#quiz-form button').click();
 
     // Deve mostrar o resultado
-    cy.get('#quiz-result').should('be.visible');
+    cy.get('#quiz-result').should('be.visible').and('have.focus');
+    cy.get('#quiz-form').should('have.prop', 'inert', true);
   });
 
-  it('deve validar que pelo menos uma resposta foi selecionada', () => {
+  it('deve identificar e focar perguntas sem resposta', () => {
     cy.get('#quiz-form button').click();
 
-    // Pode mostrar erro ou simplesmente não avançar
-    // Verifica se ainda está no formulário ou mostra mensagem
-    cy.get('#quiz-form').should('be.visible');
+    cy.get('#quiz-result').should('not.be.visible');
+    cy.get('.quiz-step[aria-invalid="true"]').should('have.length', 3);
+    cy.get('#step-1').should('have.focus');
+    cy.get('#step-1-error')
+      .should('have.attr', 'data-i18n', 'quiz.errorRequired')
+      .and('not.be.empty');
+  });
+
+  it('deve nomear semanticamente os três grupos de respostas', () => {
+    cy.get('fieldset.quiz-step').should('have.length', 3);
+    cy.get('fieldset.quiz-step legend').should('have.length', 3);
   });
 });

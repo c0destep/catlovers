@@ -22,27 +22,30 @@
       </div>
 
       <div class="quiz-result quiz-container">
-        <form id="quiz-form">
-          <div class="quiz-step" id="step-1">
-            <h3 class="quiz-step__title" data-i18n="quiz.step1">1. Como é o seu lar?</h3>
+        <form id="quiz-form" novalidate>
+          <fieldset aria-describedby="step-1-error" class="quiz-step" id="step-1" tabindex="-1">
+            <legend class="quiz-step__title" data-i18n="quiz.step1">1. Como é o seu lar?</legend>
             <label class="quiz-label"><input type="radio" name="home" value="calm" required> <span data-i18n="quiz.homeCalm">Casa ou apartamento pequeno e tranquilo</span></label>
             <label class="quiz-label"><input type="radio" name="home" value="playful"> <span data-i18n="quiz.homePlayful">Casa com quintal ou espaço grande com muito movimento</span></label>
             <label class="quiz-label"><input type="radio" name="home" value="affectionate"> <span data-i18n="quiz.homeAffectionate">Um ambiente familiar acolhedor, sempre tem alguém</span></label>
-          </div>
+            <span aria-live="polite" class="quiz-step__error" id="step-1-error"></span>
+          </fieldset>
 
-          <div class="quiz-step" id="step-2">
-            <h3 class="quiz-step__title" data-i18n="quiz.step2">2. Quanto tempo livre você tem para brincar?</h3>
+          <fieldset aria-describedby="step-2-error" class="quiz-step" id="step-2" tabindex="-1">
+            <legend class="quiz-step__title" data-i18n="quiz.step2">2. Quanto tempo livre você tem para brincar?</legend>
             <label class="quiz-label"><input type="radio" name="time" value="calm" required> <span data-i18n="quiz.timeCalm">Pouco tempo, busco uma companhia tranquila</span></label>
             <label class="quiz-label"><input type="radio" name="time" value="playful"> <span data-i18n="quiz.timePlayful">Bastante tempo, adoro interagir e brincar</span></label>
             <label class="quiz-label"><input type="radio" name="time" value="affectionate"> <span data-i18n="quiz.timeAffectionate">Tempo moderado, mas gosto de carinho no sofá</span></label>
-          </div>
+            <span aria-live="polite" class="quiz-step__error" id="step-2-error"></span>
+          </fieldset>
 
-          <div class="quiz-step" id="step-3">
-            <h3 class="quiz-step__title" data-i18n="quiz.step3">3. O que você mais valoriza no comportamento de um gato?</h3>
+          <fieldset aria-describedby="step-3-error" class="quiz-step" id="step-3" tabindex="-1">
+            <legend class="quiz-step__title" data-i18n="quiz.step3">3. O que você mais valoriza no comportamento de um gato?</legend>
             <label class="quiz-label"><input type="radio" name="activity" value="calm" required> <span data-i18n="quiz.activityCalm">Independência e tranquilidade, que goste de sossego</span></label>
             <label class="quiz-label"><input type="radio" name="activity" value="playful"> <span data-i18n="quiz.activityPlayful">Energia e curiosidade, sempre pronto para brincar</span></label>
             <label class="quiz-label"><input type="radio" name="activity" value="affectionate"> <span data-i18n="quiz.activityAffectionate">Dengo e proximidade, que me siga pela casa</span></label>
-          </div>
+            <span aria-live="polite" class="quiz-step__error" id="step-3-error"></span>
+          </fieldset>
 
           <button type="submit" class="button button--primary button--full-width" data-i18n="quiz.submit">Ver perfil ilustrativo</button>
         </form>
@@ -50,7 +53,7 @@
         <!-- ARIA Live Region for dynamic result announcements -->
         <div aria-live="polite" aria-atomic="true" class="sr-only" id="quiz-announcer"></div>
 
-        <div id="quiz-result" class="quiz-result-box hidden">
+        <div id="quiz-result" class="quiz-result-box hidden" tabindex="-1">
           <h3 class="quiz-step__title"><span data-i18n="quiz.resultTitle">Perfil de referência:</span> <span id="result-profile" class="quiz-result-highlight"></span></h3>
           <p class="quiz-result-text" data-i18n="quiz.resultSubtitle">Este resultado simplificado demonstra a interface e não é uma recomendação de adoção.</p>
           <a href="cats.html" class="button button--primary" id="result-link" data-i18n="quiz.resultBtn">Filtrar perfis fictícios</a>
