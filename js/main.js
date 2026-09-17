@@ -272,45 +272,6 @@ const globalRejectionHandler = (rejectionEvent) => {
 window.addEventListener('error', globalErrorHandler);
 window.addEventListener('unhandledrejection', globalRejectionHandler);
 
-// --- Scroll Animations with IntersectionObserver ---
-/**
- * Initializes scroll-triggered animations using IntersectionObserver
- */
-const initScrollAnimations = () => {
-  const animatedElements = document.querySelectorAll('.animate-on-scroll');
-
-  if (!('IntersectionObserver' in window) || animatedElements.length === 0) {
-    // Fallback: show all elements immediately if Observer not supported
-    animatedElements.forEach(el => el.classList.add('is-visible'));
-    return;
-  }
-
-  const observerOptions = {
-    root: null, rootMargin: '0px 0px -100px 0px', threshold: 0.1
-  };
-
-  const animationObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        // Optionally unobserve after animation to improve performance
-        animationObserver.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  animatedElements.forEach(el => {
-    animationObserver.observe(el);
-  });
-};
-
-// Initialize scroll animations after DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initScrollAnimations);
-} else {
-  initScrollAnimations();
-}
-
 // --- Service Worker Registration ---
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {
