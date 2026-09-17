@@ -33,11 +33,11 @@ describe('Consistência das páginas secundárias', () => {
 
   it('preserva degraus visuais entre superfícies no tema escuro', () => {
     const visitInDarkMode = (page) => {
-      cy.visit(page, {
-        onBeforeLoad(win) {
-          win.localStorage.setItem('preferred_theme', 'dark');
-        }
+      cy.visit(page);
+      cy.window().then((win) => {
+        win.localStorage.setItem('preferred_theme', 'dark');
       });
+      cy.reload();
       cy.get('html').should('have.attr', 'data-theme', 'dark');
     };
 
