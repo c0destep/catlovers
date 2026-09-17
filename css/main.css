@@ -183,7 +183,7 @@ header {
 
 /* ===== LANGUAGE SWITCH ===== */
 .language-switch {
-  display: inline-flex;
+  display: none;
   gap: 0.35rem;
   padding: 0.3rem;
   border-radius: 999px;
@@ -215,7 +215,7 @@ header {
 }
 
 .language-dropdown {
-  display: none;
+  display: inline-flex;
   position: relative;
   margin-left: 0.5rem;
 }
@@ -1702,31 +1702,6 @@ header {
 }
 
 @media (width >= 768px) {
-  .navbar__nav {
-    display: flex;
-  }
-
-  .navbar--open .menu {
-    flex-direction: row;
-    padding: 0;
-  }
-
-  .navbar__toggle {
-    display: none;
-  }
-
-  .language-switch {
-    display: none;
-  }
-
-  .language-dropdown {
-    display: inline-flex;
-  }
-
-  .theme-toggle__label {
-    display: inline;
-  }
-
   .hero__inner {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -1805,6 +1780,41 @@ header {
 
   .steps {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width >= 1180px) {
+  .navbar {
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+  }
+
+  .navbar__nav {
+    display: flex;
+  }
+
+  .navbar--open .navbar__nav {
+    flex-basis: auto;
+    order: initial;
+  }
+
+  .menu,
+  .navbar--open .menu {
+    flex-flow: row nowrap;
+    gap: 0.35rem;
+    padding: 0;
+  }
+
+  .menu__item {
+    padding-inline: 0.7rem;
+  }
+
+  .navbar__toggle {
+    display: none;
+  }
+
+  .theme-toggle__label {
+    display: inline;
   }
 }
 
