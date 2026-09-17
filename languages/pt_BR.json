@@ -37,41 +37,7 @@
     "subtitle": "Explore uma demonstração educacional sobre adoção responsável, preparação do lar e compatibilidade com a rotina. Nenhum animal ou atendimento real é oferecido por este site.",
     "ctaPrimary": "Explorar galeria",
     "ctaSecondary": "Ver exemplo de jornada",
-    "note": "Use o conteúdo para preparar perguntas antes de procurar uma organização real.",
-    "card": {
-      "title": "3 idiomas",
-      "subtitle": "interface traduzida"
-    },
-    "card2": {
-      "title": "PWA validada",
-      "subtitle": "app shell offline"
-    }
-  },
-  "stats": {
-    "eyebrow": "Projeto",
-    "title": "O que o protótipo já entrega",
-    "items": [
-      {
-        "value": "13",
-        "label": "páginas no protótipo",
-        "detail": "build multipágina"
-      },
-      {
-        "value": "3",
-        "label": "idiomas disponíveis",
-        "detail": "catálogos validados"
-      },
-      {
-        "value": "44",
-        "label": "testes de ponta a ponta",
-        "detail": "executados na CI"
-      },
-      {
-        "value": "PWA",
-        "label": "app shell offline",
-        "detail": "testado em navegador"
-      }
-    ]
+    "note": "Use o conteúdo para preparar perguntas antes de procurar uma organização real."
   },
   "reasons": {
     "eyebrow": "Adoção responsável",

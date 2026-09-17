@@ -667,97 +667,6 @@ header {
   aspect-ratio: 4/5;
 }
 
-.hero__floating-card {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.85rem 1.15rem;
-  background: var(--cat-card);
-  border: 1px solid var(--cat-border);
-  border-radius: var(--cat-radius-sm);
-  box-shadow: var(--cat-shadow-sm);
-  backdrop-filter: blur(12px);
-  font-size: 0.85rem;
-  z-index: 5;
-}
-
-.hero__floating-card strong {
-  display: block;
-  font-size: 0.95rem;
-  color: var(--cat-ink);
-}
-
-.hero__floating-card span {
-  color: var(--cat-muted);
-  font-size: 0.8rem;
-}
-
-.hero__floating-card--top {
-  top: 5%;
-  right: -8%;
-}
-
-.hero__floating-card--bottom {
-  bottom: 8%;
-  left: -10%;
-}
-
-.hero__floating-icon {
-  font-size: 1.5rem;
-}
-
-/* ===== IMPACT NUMBERS ===== */
-.section--impact {
-  padding: 3rem 0;
-}
-
-.impact-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
-  border-top: 1px solid var(--cat-border);
-  border-bottom: 1px solid var(--cat-border);
-}
-
-.impact-card {
-  text-align: center;
-  padding: 1.75rem 0.75rem;
-}
-
-.impact-card:nth-child(even) {
-  border-left: 1px solid var(--cat-border);
-}
-
-.impact-card:nth-child(n + 3) {
-  border-top: 1px solid var(--cat-border);
-}
-
-.impact-card__number {
-  display: block;
-  font-family: var(--cat-font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--cat-accent), var(--cat-secondary));
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1.1;
-  margin-bottom: 0.25rem;
-}
-
-.impact-card__label {
-  display: block;
-  font-weight: 700;
-  font-size: 0.95rem;
-  margin-bottom: 0.15rem;
-}
-
-.impact-card__detail {
-  display: block;
-  color: var(--cat-muted);
-  font-size: 0.82rem;
-}
-
 /* ===== FEATURES GRID ===== */
 .features-grid {
   display: grid;
@@ -1611,19 +1520,6 @@ header {
 
 /* ===== RESPONSIVE ===== */
 @media (width >= 640px) {
-  .impact-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .impact-card:nth-child(n) {
-    border-top: 0;
-    border-left: 0;
-  }
-
-  .impact-card + .impact-card {
-    border-left: 1px solid var(--cat-border);
-  }
-
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }

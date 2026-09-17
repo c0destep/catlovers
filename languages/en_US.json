@@ -37,41 +37,7 @@
     "subtitle": "Explore an educational demonstration about responsible adoption, home preparation, and lifestyle compatibility. This site does not offer real animals or assistance.",
     "ctaPrimary": "Explore gallery",
     "ctaSecondary": "View sample journey",
-    "note": "Use the content to prepare questions before contacting a real organization.",
-    "card": {
-      "title": "3 languages",
-      "subtitle": "translated interface"
-    },
-    "card2": {
-      "title": "Validated PWA",
-      "subtitle": "offline app shell"
-    }
-  },
-  "stats": {
-    "eyebrow": "Project",
-    "title": "What the prototype delivers",
-    "items": [
-      {
-        "value": "13",
-        "label": "pages in the prototype",
-        "detail": "multipage build"
-      },
-      {
-        "value": "3",
-        "label": "available languages",
-        "detail": "validated catalogs"
-      },
-      {
-        "value": "44",
-        "label": "end-to-end tests",
-        "detail": "run in CI"
-      },
-      {
-        "value": "PWA",
-        "label": "offline app shell",
-        "detail": "tested in a browser"
-      }
-    ]
+    "note": "Use the content to prepare questions before contacting a real organization."
   },
   "reasons": {
     "eyebrow": "Responsible adoption",

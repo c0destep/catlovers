@@ -37,41 +37,7 @@
     "subtitle": "Explora una demostración educativa sobre adopción responsable, preparación del hogar y compatibilidad con la rutina. Este sitio no ofrece animales ni atención real.",
     "ctaPrimary": "Explorar galería",
     "ctaSecondary": "Ver recorrido de ejemplo",
-    "note": "Usa el contenido para preparar preguntas antes de contactar a una organización real.",
-    "card": {
-      "title": "3 idiomas",
-      "subtitle": "interfaz traducida"
-    },
-    "card2": {
-      "title": "PWA validada",
-      "subtitle": "app shell sin conexión"
-    }
-  },
-  "stats": {
-    "eyebrow": "Proyecto",
-    "title": "Lo que ofrece el prototipo",
-    "items": [
-      {
-        "value": "13",
-        "label": "páginas del prototipo",
-        "detail": "build multipágina"
-      },
-      {
-        "value": "3",
-        "label": "idiomas disponibles",
-        "detail": "catálogos validados"
-      },
-      {
-        "value": "44",
-        "label": "pruebas de extremo a extremo",
-        "detail": "ejecutadas en CI"
-      },
-      {
-        "value": "PWA",
-        "label": "app shell sin conexión",
-        "detail": "probada en navegador"
-      }
-    ]
+    "note": "Usa el contenido para preparar preguntas antes de contactar a una organización real."
   },
   "reasons": {
     "eyebrow": "Adopción responsable",

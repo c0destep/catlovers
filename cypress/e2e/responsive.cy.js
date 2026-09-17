@@ -47,11 +47,14 @@ describe('Design Responsivo', () => {
     cy.get('.navbar__toggle--button').should('exist');
   });
 
-  it('deve esconder floating cards em telas muito pequenas se necessário', () => {
+  it('deve manter a imagem principal dentro da viewport em telas pequenas', () => {
     cy.viewport(320, 568);
     cy.visit('/');
 
-    // Os floating cards podem estar visíveis mas ajustados
-    cy.get('.hero__floating-card').should('have.length.at.least', 1);
+    cy.get('.hero__visual').should('be.visible');
+    cy.get('.hero__image').then(($image) => {
+      expect($image[0].getBoundingClientRect().right).to.be.at.most(320);
+    });
+    expectNoHorizontalScroll();
   });
 });
