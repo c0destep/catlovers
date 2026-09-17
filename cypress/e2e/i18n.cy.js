@@ -67,5 +67,16 @@ describe('Internacionalização (i18n)', () => {
     cy.get('.cat-card').should('have.length.greaterThan', 0);
     cy.get('.cat-card__info').first().should('contain.text', 'Male');
     cy.get('.cat-card .feature-tag').first().should('contain.text', 'Tuxedo');
+    cy.get('.cat-card__image').first().should('have.attr', 'alt').and('match', /^Photo of /);
+  });
+
+  it('deve traduzir descrições de imagens e metadados', () => {
+    cy.get('[data-language="en_US"]').first().click({ force: true });
+
+    cy.get('.hero__image').should('have.attr', 'alt', 'Cat looking at the camera');
+    cy.visit('/terms.html');
+    cy.get('html').should('have.attr', 'lang', 'en-US');
+    cy.get('meta[name="description"]')
+      .should('have.attr', 'content', 'Read the terms for using the Catlovers demonstration website.');
   });
 });

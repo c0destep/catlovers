@@ -37,7 +37,8 @@
     "subtitle": "Explore an educational demonstration about responsible adoption, home preparation, and lifestyle compatibility. This site does not offer real animals or assistance.",
     "ctaPrimary": "Explore gallery",
     "ctaSecondary": "View sample journey",
-    "note": "Use the content to prepare questions before contacting a real organization."
+    "note": "Use the content to prepare questions before contacting a real organization.",
+    "imageAlt": "Cat looking at the camera"
   },
   "reasons": {
     "eyebrow": "Responsible adoption",
@@ -165,7 +166,8 @@
       "badge": "The project",
       "title": "About Catlovers",
       "subtitle": "An educational prototype for practicing web technologies and organizing information about responsible adoption.",
-      "cta": "Explore demonstration"
+      "cta": "Explore demonstration",
+      "imageAlt": "Cat relaxing at home"
     },
     "sections": {
       "mission": {
@@ -221,7 +223,8 @@
     "hero": {
       "badge": "Informed decision",
       "title": "What responsible adoption involves",
-      "subtitle": "Assess your routine, costs, safety, and long-term commitments before contacting a real organization."
+      "subtitle": "Assess your routine, costs, safety, and long-term commitments before contacting a real organization.",
+      "imageAlt": "Cat lying on a blanket"
     },
     "sections": {
       "eyebrow": "Planning",
@@ -278,7 +281,8 @@
       "badge": "Illustrative journey",
       "title": "Prepare for a responsible adoption",
       "subtitle": "Review questions, care needs, and steps to confirm with the organization responsible for the animal.",
-      "cta": "What to confirm"
+      "cta": "What to confirm",
+      "imageAlt": "Cat looking out the window"
     },
     "sections": {
       "requirements": {
@@ -337,12 +341,12 @@
     "hero": {
       "badge": "Usage Rules",
       "title": "Terms of Use",
-      "subtitle": "Get to know the rules and guidelines for using the Catlovers platform."
+      "subtitle": "Learn the terms for using the Catlovers demonstration website."
     },
     "sections": {
       "content": {
         "title": "Responsibilities",
-        "text": "By accessing the Catlovers website, you agree to be bound by these terms of service and all applicable local laws. Platform content may not be modified or copied for commercial purposes."
+        "text": "By accessing Catlovers, you agree to use this content for informational purposes only and to comply with applicable laws. The profiles, forms, and journeys are demonstrations: they do not represent available animals or replace guidance from organizations or professionals."
       }
     }
   },
@@ -352,6 +356,7 @@
     "subtitle": "The six cards demonstrate filters and translation; they are not available animals.",
     "label": "Gallery of fictional cat profiles",
     "openDemo": "Open demo form",
+    "catImageAlt": "Photo of",
     "filterAge": "Filter by age",
     "filterSex": "Filter by sex",
     "filterTemp": "Filter by temperament",
@@ -441,9 +446,10 @@
     "back": "← Back to Blog",
     "footerTitle": "Did you like this article?",
     "footerSubtitle": "Knowing how to care is the first step of responsible adoption.",
-    "footerBtn": "See kittens for adoption",
+    "footerBtn": "Explore fictional profiles",
     "article": {
       "tag": "Behavior",
+      "imageAlt": "Cat playing on a scratching post",
       "title": "How to introduce a new cat to other pets",
       "meta": "Published on April 20, 2026 • 5 min read",
       "p1": "The arrival of a new feline in the house is always a moment of joy, but it requires a lot of patience and planning, especially if you already have other cats or dogs.",
@@ -534,6 +540,14 @@
     "support": {
       "title": "How to offer support safely - Catlovers",
       "description": "Guidance for verifying real organizations before donating, sponsoring, or volunteering."
+    },
+    "privacy": {
+      "title": "Privacy Policy - Catlovers",
+      "description": "Learn how the Catlovers demonstration website handles data and external services."
+    },
+    "terms": {
+      "title": "Terms of Use - Catlovers",
+      "description": "Read the terms for using the Catlovers demonstration website."
     },
     "error": {
       "title": "Page not found - Catlovers",

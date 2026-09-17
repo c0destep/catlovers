@@ -37,7 +37,8 @@
     "subtitle": "Explora una demostración educativa sobre adopción responsable, preparación del hogar y compatibilidad con la rutina. Este sitio no ofrece animales ni atención real.",
     "ctaPrimary": "Explorar galería",
     "ctaSecondary": "Ver recorrido de ejemplo",
-    "note": "Usa el contenido para preparar preguntas antes de contactar a una organización real."
+    "note": "Usa el contenido para preparar preguntas antes de contactar a una organización real.",
+    "imageAlt": "Gato mirando a la cámara"
   },
   "reasons": {
     "eyebrow": "Adopción responsable",
@@ -165,7 +166,8 @@
       "badge": "El proyecto",
       "title": "Sobre Catlovers",
       "subtitle": "Un prototipo educativo para practicar tecnologías web y organizar información sobre adopción responsable.",
-      "cta": "Explorar demostración"
+      "cta": "Explorar demostración",
+      "imageAlt": "Gato descansando en casa"
     },
     "sections": {
       "mission": {
@@ -221,7 +223,8 @@
     "hero": {
       "badge": "Decisión consciente",
       "title": "Qué implica una adopción responsable",
-      "subtitle": "Evalúa tu rutina, los costos, la seguridad y los compromisos a largo plazo antes de buscar una organización real."
+      "subtitle": "Evalúa tu rutina, los costos, la seguridad y los compromisos a largo plazo antes de buscar una organización real.",
+      "imageAlt": "Gato acostado sobre una manta"
     },
     "sections": {
       "eyebrow": "Planificación",
@@ -278,7 +281,8 @@
       "badge": "Recorrido ilustrativo",
       "title": "Prepárate para una adopción responsable",
       "subtitle": "Revisa las preguntas, los cuidados y las etapas que debes confirmar con la organización responsable del animal.",
-      "cta": "Qué confirmar"
+      "cta": "Qué confirmar",
+      "imageAlt": "Gato mirando por la ventana"
     },
     "sections": {
       "requirements": {
@@ -337,12 +341,12 @@
     "hero": {
       "badge": "Reglas de Uso",
       "title": "Términos de Uso",
-      "subtitle": "Conoce las reglas y pautas para usar la plataforma Catlovers."
+      "subtitle": "Conoce las condiciones de uso del sitio web demostrativo Catlovers."
     },
     "sections": {
       "content": {
         "title": "Responsabilidades",
-        "text": "Al acceder al sitio web de Catlovers, usted acepta estar sujeto a estos términos de servicio y a todas las leyes locales aplicables. El contenido de la plataforma no se puede modificar ni copiar con fines comerciales."
+        "text": "Al acceder a Catlovers, aceptas usar este contenido únicamente con fines informativos y cumplir la legislación aplicable. Los perfiles, formularios y recorridos son demostrativos: no representan animales disponibles ni sustituyen la orientación de organizaciones o profesionales."
       }
     }
   },
@@ -352,6 +356,7 @@
     "subtitle": "Las seis tarjetas demuestran filtros y traducción; no representan animales disponibles.",
     "label": "Galería de perfiles ficticios de gatos",
     "openDemo": "Abrir formulario demo",
+    "catImageAlt": "Foto de",
     "filterAge": "Filtrar por edad",
     "filterSex": "Filtrar por sexo",
     "filterTemp": "Filtrar por temperamento",
@@ -441,9 +446,10 @@
     "back": "← Volver al Blog",
     "footerTitle": "¿Te ha gustado este artículo?",
     "footerSubtitle": "Saber cómo cuidar es el primer paso de la adopción responsable.",
-    "footerBtn": "Ver gatitos para adopción",
+    "footerBtn": "Explorar perfiles ficticios",
     "article": {
       "tag": "Comportamiento",
+      "imageAlt": "Gato jugando en un rascador",
       "title": "Cómo adaptar un nuevo gato con otras mascotas",
       "meta": "Publicado el 20 de Abril de 2026 • Lectura de 5 minutos",
       "p1": "La llegada de un nuevo felino al hogar es siempre un momento de alegría, pero requiere mucha paciencia y planificación, especialmente si ya tienes otros gatos o perros.",
@@ -534,6 +540,14 @@
     "support": {
       "title": "Cómo apoyar de forma segura - Catlovers",
       "description": "Orientaciones para verificar organizaciones reales antes de donar, apadrinar o trabajar como voluntario."
+    },
+    "privacy": {
+      "title": "Política de Privacidad - Catlovers",
+      "description": "Descubre cómo el sitio web demostrativo Catlovers gestiona los datos y los servicios externos."
+    },
+    "terms": {
+      "title": "Términos de Uso - Catlovers",
+      "description": "Consulta las condiciones de uso del sitio web demostrativo Catlovers."
     },
     "error": {
       "title": "Página no encontrada - Catlovers",

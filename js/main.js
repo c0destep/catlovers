@@ -186,6 +186,9 @@ languageButtons.forEach((button) => {
       translationHelper.translatePage(targetLanguage);
       localStorage.setItem(LANG_KEY, targetLanguage);
       setActiveLanguageButton(targetLanguage);
+      document.dispatchEvent(new CustomEvent('catlovers:languagechange', {
+        detail: { language: targetLanguage }
+      }));
       closeLanguageDropdown();
       setMobileMenuState(nav?.classList.contains('navbar--open') ?? false);
     }

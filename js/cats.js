@@ -21,6 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let catsData = [];
 
+  const translateCatImageAlts = (language) => {
+    const imageAltPrefix = window.catloversTranslator?.translateForKey('gallery.catImageAlt', language) || 'Foto de';
+    gallery.querySelectorAll('.cat-card__image').forEach((image) => {
+      image.alt = `${imageAltPrefix} ${image.dataset.catName}`;
+    });
+  };
+
   const renderCats = (cats) => {
     // Clear gallery efficiently
     gallery.textContent = '';
@@ -56,7 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
       // Create image element
       const img = document.createElement('img');
       img.src = cat.image;
-      img.alt = `Foto de ${cat.name}`;
+      const language = localStorage.getItem('preferred_language') || 'pt_BR';
+      const imageAltPrefix = window.catloversTranslator?.translateForKey('gallery.catImageAlt', language) || 'Foto de';
+      img.alt = `${imageAltPrefix} ${cat.name}`;
+      img.dataset.catName = cat.name;
       img.className = 'cat-card__image';
       img.loading = 'lazy';
 
@@ -178,4 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
   filterAge.addEventListener('change', applyFilters);
   filterSex.addEventListener('change', applyFilters);
   filterTemperament.addEventListener('change', applyFilters);
+  document.addEventListener('catlovers:languagechange', (event) => {
+    translateCatImageAlts(event.detail.language);
+  });
 });
