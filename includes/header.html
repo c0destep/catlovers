@@ -34,7 +34,7 @@
           </ul>
         </li>
         <li class="navbar__lang">
-          <div aria-label="Idioma" class="language-switch" role="group">
+          <div aria-label="Idioma" class="language-switch" data-i18n="[aria-label]accessibility.languageGroup" role="group">
             <button aria-pressed="false" class="language-switch__button" data-language="pt_BR" type="button">PT</button>
             <button aria-pressed="false" class="language-switch__button" data-language="en_US" type="button">EN</button>
             <button aria-pressed="false" class="language-switch__button" data-language="es_ES" type="button">ES</button>
@@ -45,6 +45,7 @@
               aria-haspopup="listbox"
               aria-label="Selecionar idioma"
               class="language-dropdown__trigger"
+              data-i18n="[aria-label]accessibility.selectLanguage"
               type="button"
             >
               <svg aria-hidden="true" class="language-dropdown__icon" fill="none" viewBox="0 0 24 24"
@@ -71,7 +72,7 @@
           </div>
         </li>
         <li class="navbar__theme">
-          <button aria-label="Alternar tema" aria-pressed="false" class="theme-toggle" type="button">
+          <button aria-label="Alternar tema" aria-pressed="false" class="theme-toggle" data-i18n="[aria-label]accessibility.toggleTheme" type="button">
             <svg aria-hidden="true" class="theme-toggle__icon theme-toggle__icon--sun" fill="none" viewBox="0 0 24 24"
                  xmlns="http://www.w3.org/2000/svg">
               <circle cx="12" cy="12" fill="none" r="4.5" stroke="currentColor" stroke-width="1.5"></circle>
@@ -92,6 +93,7 @@
             aria-expanded="false"
             aria-label="Abrir menu"
             class="navbar__toggle--button"
+            data-i18n="[aria-label]navbar.openMenu"
             type="button"
           >
             <svg

@@ -82,7 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Create info paragraph
       const infoP = document.createElement('p');
       infoP.className = 'feature-card__text cat-card__info';
-      infoP.innerHTML = `${cat.ageLabel} • <span data-i18n="${sexInfo.i18n}">${sexInfo.label}</span>`;
+      const ageUnitKey = cat.age === 'kitten' ? 'gallery.ageMonths' : 'gallery.ageYears';
+      infoP.innerHTML = `${cat.ageValue} <span data-i18n="${ageUnitKey}">${cat.age === 'kitten' ? 'meses' : 'anos'}</span> • <span data-i18n="${sexInfo.i18n}">${sexInfo.label}</span>`;
 
       // Create tags div
       const tagsDiv = document.createElement('div');

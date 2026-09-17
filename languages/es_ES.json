@@ -3,7 +3,7 @@
     "home": "Inicio",
     "about": "Sobre",
     "benefits": "Beneficios",
-    "adoption": "Adopcion",
+    "adoption": "Adopción",
     "quiz": "Quiz",
     "gallery": "Galería",
     "blog": "Blog",
@@ -15,18 +15,22 @@
     "home": "Inicio",
     "about": "Sobre",
     "benefits": "Beneficios",
-    "adoption": "Adopcion",
+    "adoption": "Adopción",
     "support": "Soporte",
     "help": "Ayuda",
     "contact": "Contacto",
     "legal": "Legal",
-    "privacy": "Politica de Privacidad",
-    "terms": "Terminos de uso",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de uso",
     "social": "Social",
     "copyright": "Derechos de autor 2024 &copy; Catlovers"
   },
   "accessibility": {
-    "skip": "Saltar al contenido"
+    "skip": "Saltar al contenido",
+    "languageGroup": "Idioma",
+    "selectLanguage": "Seleccionar idioma",
+    "toggleTheme": "Cambiar tema",
+    "backToTop": "Volver arriba"
   },
   "demo": {
     "notice": "Proyecto demostrativo: los animales, las cifras y los formularios son ficticios; no se envía ninguna solicitud."
@@ -96,18 +100,18 @@
     ]
   },
   "checklist": {
-    "eyebrow": "Preparacion",
+    "eyebrow": "Preparación",
     "title": "Checklist del nuevo hogar",
-    "subtitle": "Detalles que hacen la diferencia en la adaptacion.",
+    "subtitle": "Detalles que marcan la diferencia en la adaptación.",
     "items": [
-      "Mallas de proteccion en ventanas y balcones.",
+      "Mallas de protección en ventanas y balcones.",
       "Caja de arena en un lugar tranquilo.",
       "Comederos separados del agua.",
       "Cama o espacio seguro para descansar.",
       "Rascadores y juguetes de enriquecimiento.",
-      "Rutina de alimentacion definida.",
-      "Plan de vacunacion y veterinario de confianza.",
-      "Tiempo para interaccion diaria y carino."
+      "Rutina de alimentación definida.",
+      "Plan de vacunación y veterinario de confianza.",
+      "Tiempo para interacción diaria y cariño."
     ]
   },
   "stories": {
@@ -171,13 +175,13 @@
     },
     "sections": {
       "mission": {
-        "eyebrow": "Mision",
-        "title": "Hacer la adopcion segura y consciente",
+        "eyebrow": "Misión",
+        "title": "Hacer que la adopción sea segura y consciente",
         "text": "El proyecto presenta preguntas, cuidados y recorridos de ejemplo que deben confirmarse con una organización real."
       },
       "values": {
         "eyebrow": "Valores",
-        "title": "Lo que guia nuestras decisiones",
+        "title": "Lo que guía nuestras decisiones",
         "items": [
           {
             "title": "Bienestar primero",
@@ -199,7 +203,7 @@
         "text": "La entrega actual es un sitio demostrativo multipágina, accesible, traducido, probado e instalable como PWA."
       },
       "help": {
-        "eyebrow": "Como ayudar",
+        "eyebrow": "Cómo ayudar",
         "title": "Busca iniciativas verificadas",
         "subtitle": "Catlovers no recibe donaciones ni solicitudes. Para colaborar, busca organizaciones reales y verifica a sus responsables.",
         "items": [
@@ -357,6 +361,8 @@
     "label": "Galería de perfiles ficticios de gatos",
     "openDemo": "Abrir formulario demo",
     "catImageAlt": "Foto de",
+    "ageYears": "años",
+    "ageMonths": "meses",
     "filterAge": "Filtrar por edad",
     "filterSex": "Filtrar por sexo",
     "filterTemp": "Filtrar por temperamento",
@@ -373,7 +379,7 @@
     "empty": "No se encontraron gatitos con estos filtros.",
     "colors": {
       "Laranja": "Naranja",
-      "Frajola": "Tuxedo",
+      "Frajola": "Bicolor",
       "Escaminha": "Carey",
       "Tigrado": "Atigrado",
       "Branco": "Blanco",
@@ -393,11 +399,11 @@
     "homeCalm": "Casa o apartamento pequeño y tranquilo",
     "homePlayful": "Casa con patio o espacio grande con mucho movimiento",
     "homeAffectionate": "Un ambiente familiar acogedor, siempre hay alguien",
-    "step2": "2. ¿Cuánto tempo libre tienes para jugar?",
+    "step2": "2. ¿Cuánto tiempo libre tienes para jugar?",
     "timeCalm": "Poco tiempo, busco una compañía tranquila",
     "timePlayful": "Mucho tiempo, me encanta interactuar y jugar",
     "timeAffectionate": "Tiempo moderado, pero me gusta acurrucarme en el sofá",
-    "step3": "3. ¿Qué es lo que más valora en el comportamiento de un gato?",
+    "step3": "3. ¿Qué es lo que más valoras en el comportamiento de un gato?",
     "activityCalm": "Independencia y tranquilidad, que le guste el sosiego",
     "activityPlayful": "Energía y curiosidad, siempre listo para jugar",
     "activityAffectionate": "Cariño y proximidad, que me siga por la casa",
@@ -451,7 +457,7 @@
       "tag": "Comportamiento",
       "imageAlt": "Gato jugando en un rascador",
       "title": "Cómo adaptar un nuevo gato con otras mascotas",
-      "meta": "Publicado el 20 de Abril de 2026 • Lectura de 5 minutos",
+      "meta": "Publicado el 20 de abril de 2026 • Lectura de 5 minutos",
       "p1": "La llegada de un nuevo felino al hogar es siempre un momento de alegría, pero requiere mucha paciencia y planificación, especialmente si ya tienes otros gatos o perros.",
       "h1": "1. Separación Inicial (El Cuarto Seguro)",
       "p2": "Nunca pongas a los animales frente a frente el primer día. Reserva una habitación de la casa solo para el recién llegado. Necesitará su propio arenero, cuencos de agua, comida y lugares para esconderse.",
@@ -488,13 +494,13 @@
     ]
   },
   "form": {
-    "title": "Formulario de Interés",
+    "title": "Formulario de interés",
     "subtitle": "Usa este formulario para probar la validación. Los datos no se envían ni se almacenan.",
-    "labelName": "Nombre Completo *",
+    "labelName": "Nombre completo *",
     "labelEmail": "Correo electrónico *",
     "placeholderName": "Tu nombre completo",
     "placeholderEmail": "tu@email.com",
-    "submit": "Enviar Formulario",
+    "submit": "Enviar formulario",
     "sending": "Validando...",
     "success": "Demostración completada. No se envió ningún dato.",
     "errorRequired": "Este campo es obligatorio.",

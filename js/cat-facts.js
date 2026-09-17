@@ -1,5 +1,6 @@
-document.addEventListener('DOMContentLoaded', async () => {
-  const language = localStorage.getItem('preferred_language') || 'pt_BR';
+const showCatFact = async (language) => {
+  document.querySelector('.cat-fact')?.remove();
+
   // The API only supports English. Hide the fact section for other languages.
   if (language !== 'en_US') return;
 
@@ -45,4 +46,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     factText.textContent = 'The cat fact is unavailable. Try again when you are online.';
     factDiv.dataset.state = 'unavailable';
   }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  showCatFact(localStorage.getItem('preferred_language') || 'pt_BR');
+});
+
+document.addEventListener('catlovers:languagechange', (event) => {
+  showCatFact(event.detail.language);
 });

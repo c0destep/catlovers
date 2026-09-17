@@ -26,7 +26,11 @@
     "copyright": "Copyright 2024 &copy; Catlovers"
   },
   "accessibility": {
-    "skip": "Skip to content"
+    "skip": "Skip to content",
+    "languageGroup": "Language",
+    "selectLanguage": "Select language",
+    "toggleTheme": "Toggle theme",
+    "backToTop": "Back to top"
   },
   "demo": {
     "notice": "Demonstration project: animals, figures, and forms are fictional; no request is submitted."
@@ -357,6 +361,8 @@
     "label": "Gallery of fictional cat profiles",
     "openDemo": "Open demo form",
     "catImageAlt": "Photo of",
+    "ageYears": "years",
+    "ageMonths": "months",
     "filterAge": "Filter by age",
     "filterSex": "Filter by sex",
     "filterTemp": "Filter by temperament",
