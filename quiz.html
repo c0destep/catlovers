@@ -3,8 +3,8 @@
 <html lang="pt-BR">
 <head>
   <include file="includes/head-common.html"></include>
-  <title data-i18n="head.quiz.title">Quiz Match - Catlovers</title>
-  <meta data-i18n="[content]head.quiz.description" content="Faça o nosso teste e descubra qual perfil de gato é o ideal para você." name="description"/>
+  <title data-i18n="head.quiz.title">Simulação de compatibilidade - Catlovers</title>
+  <meta data-i18n="[content]head.quiz.description" content="Explore um resultado ilustrativo de compatibilidade sem recomendações de animais reais." name="description"/>
 </head>
 <body>
 <div aria-hidden="true" class="page-background"></div>
@@ -16,9 +16,9 @@
   <section class="section">
     <div class="container">
       <div class="section__head section__head--center">
-        <span class="section__eyebrow" data-i18n="quiz.eyebrow">Match</span>
-        <h1 class="section__title" data-i18n="quiz.title">Encontre seu Par Perfeito</h1>
-        <p class="section__text" data-i18n="quiz.subtitle">Responda a essas três perguntas rápidas para encontrarmos o gatinho ideal para você.</p>
+        <span class="section__eyebrow" data-i18n="quiz.eyebrow">Simulação</span>
+        <h1 class="section__title" data-i18n="quiz.title">Explore um perfil de compatibilidade</h1>
+        <p class="section__text" data-i18n="quiz.subtitle">Responda a três perguntas para ver um resultado ilustrativo. O quiz não avalia animais reais.</p>
       </div>
 
       <div class="quiz-result quiz-container">
@@ -44,16 +44,16 @@
             <label class="quiz-label"><input type="radio" name="activity" value="affectionate"> <span data-i18n="quiz.activityAffectionate">Dengo e proximidade, que me siga pela casa</span></label>
           </div>
 
-          <button type="submit" class="button button--primary button--full-width" data-i18n="quiz.submit">Descobrir meu Match</button>
+          <button type="submit" class="button button--primary button--full-width" data-i18n="quiz.submit">Ver perfil ilustrativo</button>
         </form>
 
         <!-- ARIA Live Region for dynamic result announcements -->
         <div aria-live="polite" aria-atomic="true" class="sr-only" id="quiz-announcer"></div>
 
         <div id="quiz-result" class="quiz-result-box hidden">
-          <h3 class="quiz-step__title"><span data-i18n="quiz.resultTitle">O perfil ideal para você é:</span> <span id="result-profile" class="quiz-result-highlight"></span></h3>
-          <p class="quiz-result-text" data-i18n="quiz.resultSubtitle">Baseado nas suas respostas, recomendamos gatinhos com esse perfil.</p>
-          <a href="cats.html" class="button button--primary" id="result-link" data-i18n="quiz.resultBtn">Ver gatinhos</a>
+          <h3 class="quiz-step__title"><span data-i18n="quiz.resultTitle">Perfil de referência:</span> <span id="result-profile" class="quiz-result-highlight"></span></h3>
+          <p class="quiz-result-text" data-i18n="quiz.resultSubtitle">Este resultado simplificado demonstra a interface e não é uma recomendação de adoção.</p>
+          <a href="cats.html" class="button button--primary" id="result-link" data-i18n="quiz.resultBtn">Filtrar perfis fictícios</a>
         </div>
       </div>
     </div>

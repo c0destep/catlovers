@@ -2346,12 +2346,6 @@ html {
   font-size: 2rem;
 }
 
-.support-btn {
-  margin-top: 1rem;
-  width: 100%;
-  justify-content: center;
-}
-
 .cta--vertical {
   flex-direction: column;
   text-align: left;

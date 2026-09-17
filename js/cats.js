@@ -102,8 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const button = document.createElement('a');
       button.href = 'adoption.html';
       button.className = 'button button--primary button--full-width';
-      button.dataset.i18n = 'hero.ctaPrimary';
-      button.textContent = 'Quero Adotar';
+      button.dataset.i18n = 'gallery.openDemo';
+      button.textContent = 'Abrir formulário demo';
 
       contentDiv.appendChild(button);
 

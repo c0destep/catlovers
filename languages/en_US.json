@@ -34,97 +34,97 @@
   "hero": {
     "badge": "Responsible adoption",
     "title": "A safe home changes two lives",
-    "subtitle": "Cat adoption with guidance, transparency, and support to ensure a calm start for you and your new friend.",
-    "ctaPrimary": "I want to adopt",
-    "ctaSecondary": "See how it works",
-    "note": "We prioritize responsible adoptions and post-home follow-up.",
+    "subtitle": "Explore an educational demonstration about responsible adoption, home preparation, and lifestyle compatibility. This site does not offer real animals or assistance.",
+    "ctaPrimary": "Explore gallery",
+    "ctaSecondary": "View sample journey",
+    "note": "Use the content to prepare questions before contacting a real organization.",
     "card": {
-      "title": "Cats ready to love",
-      "subtitle": "Rescued, vaccinated, and full of personality."
+      "title": "3 languages",
+      "subtitle": "translated interface"
     },
     "card2": {
-      "title": "92% satisfaction",
-      "subtitle": "with follow-up"
+      "title": "Validated PWA",
+      "subtitle": "offline app shell"
     }
   },
   "stats": {
-    "eyebrow": "Impact",
-    "title": "Real adoptions with follow-up",
+    "eyebrow": "Project",
+    "title": "What the prototype delivers",
     "items": [
       {
-        "value": "120+",
-        "label": "cats adopted in the last year",
-        "detail": "and counting"
+        "value": "13",
+        "label": "pages in the prototype",
+        "detail": "multipage build"
       },
       {
-        "value": "92%",
-        "label": "adoptions with post-home support",
-        "detail": "with follow-up"
+        "value": "3",
+        "label": "available languages",
+        "detail": "validated catalogs"
       },
       {
-        "value": "48h",
-        "label": "average time to meet a cat",
-        "detail": "agile process"
+        "value": "44",
+        "label": "end-to-end tests",
+        "detail": "run in CI"
       },
       {
-        "value": "15",
-        "label": "active local partners",
-        "detail": "across the region"
+        "value": "PWA",
+        "label": "offline app shell",
+        "detail": "tested in a browser"
       }
     ]
   },
   "reasons": {
-    "eyebrow": "Why adopt",
-    "title": "Responsible adoption from start to finish",
-    "subtitle": "Transparency, care, and ongoing support to ensure the best match between cat and family.",
+    "eyebrow": "Responsible adoption",
+    "title": "What to verify before adopting",
+    "subtitle": "For a real adoption, confirm health, compatibility, responsible contacts, and support directly with the organization.",
     "cards": [
       {
-        "title": "Healthy care",
-        "text": "Every cat gets a vet check, vaccines, and care guidance.",
+        "title": "Documented health",
+        "text": "Ask for veterinary, vaccination, neutering, and care records for the real animal.",
         "tags": [
-          "Vaccinated",
-          "Neutered",
-          "Dewormed"
+          "Records",
+          "Vaccines",
+          "Care"
         ]
       },
       {
-        "title": "Match your lifestyle",
-        "text": "We learn about your routine and suggest the right personality."
+        "title": "Compatibility",
+        "text": "Compare your routine and home with the cat’s known energy, temperament, and needs."
       },
       {
-        "title": "Follow-up",
-        "text": "You are not alone: we provide support during adaptation."
+        "title": "Agreed support",
+        "text": "Before adopting, learn who can help during adaptation and which channels are available."
       },
       {
-        "title": "Support network",
-        "text": "We share trusted partners and practical tips for well-being."
+        "title": "Identified contact",
+        "text": "Confirm the organization, responsible person, service area, and contact details before sharing data."
       }
     ]
   },
   "process": {
-    "eyebrow": "Steps",
-    "title": "How adoption works",
-    "subtitle": "A simple, human-centered process.",
+    "eyebrow": "Illustrative journey",
+    "title": "A sample journey in 5 steps",
+    "subtitle": "This flow illustrates steps a real organization may adopt.",
     "steps": [
       {
-        "title": "Initial form",
-        "text": "Tell us about your routine and experience with pets."
+        "title": "Initial information",
+        "text": "Review your routine, home, and experience with animals."
       },
       {
-        "title": "Guided chat",
-        "text": "We discuss the ideal profile and answer questions."
+        "title": "Responsible conversation",
+        "text": "Ask questions directly to the organization responsible for the cat."
       },
       {
         "title": "Meet the cat",
-        "text": "You meet the cat and see if the bond happens."
+        "text": "Meet the animal and assess compatibility without rushing."
       },
       {
-        "title": "Home prep",
-        "text": "Safety, food, and comfort checklist."
+        "title": "Prepare the home",
+        "text": "Plan safety, food, comfort, and veterinary care."
       },
       {
         "title": "Follow-up",
-        "text": "Post-adoption support to ensure a smooth transition."
+        "text": "Agree in advance on how to request guidance during adaptation."
       }
     ]
   },
@@ -144,108 +144,108 @@
     ]
   },
   "stories": {
-    "eyebrow": "Stories",
-    "title": "Families who made room",
-    "subtitle": "Real stories from adopters.",
+    "eyebrow": "Fictional scenarios",
+    "title": "Situations that guide the choice",
+    "subtitle": "Educational examples; these are not user testimonials.",
     "items": [
       {
-        "text": "The guidance helped us choose a calm cat for our small apartment. He is family now.",
-        "meta": "Marina & Bento"
+        "text": "A quiet routine and smaller home may call for a compatible cat and an enriched environment.",
+        "meta": "Scenario: apartment"
       },
       {
-        "text": "We got support during adaptation and follow-up in the first weeks. It was essential.",
-        "meta": "Carlos & Nala"
+        "text": "A shy cat may need a safe space, a predictable routine, and gradual contact during the first weeks.",
+        "meta": "Scenario: adaptation"
       },
       {
-        "text": "Adopting was simple, human, and transparent. Now we have an inseparable duo at home.",
-        "meta": "Julia & Milo"
+        "text": "Living with other animals requires controlled introductions, supervision, and a way to keep them apart.",
+        "meta": "Scenario: other animals"
       }
     ]
   },
   "faq": {
-    "eyebrow": "FAQ",
-    "title": "Frequently asked questions",
-    "subtitle": "Everything you need to know before taking this amazing step.",
+    "eyebrow": "Guidance",
+    "title": "Questions for a real adoption",
+    "subtitle": "Use these answers as a starting point and confirm everything with the responsible organization.",
     "items": [
       {
         "q": "Do I need experience with cats?",
-        "a": "No! We offer full guidance for first-time adopters. You will have all the support you need."
+        "a": "Not necessarily. Check whether the organization offers guidance and whether you can meet the animal’s needs."
       },
       {
         "q": "Can I adopt if I rent?",
-        "a": "Yes, as long as pets are allowed and the home is safe for the cat. We help verify the conditions."
+        "a": "Confirm the property rules, install suitable protection, and check whether the space fits the cat’s profile."
       },
       {
-        "q": "How long does the process take?",
-        "a": "On average 3 to 7 days, depending on the match and availability. Our process is agile and humanized."
+        "q": "How long does a real adoption take?",
+        "a": "Timing varies by organization, screening, and animal. This project does not conduct or estimate real adoption processes."
       },
       {
-        "q": "Are the cats vaccinated and neutered?",
-        "a": "Yes! All of them undergo a complete vet check, including vaccination, neutering, and deworming prior to adoption."
+        "q": "How can I confirm the cat’s health?",
+        "a": "Ask the real responsible party for veterinary records and confirmation of vaccines, neutering, deworming, and special needs."
       }
     ]
   },
   "cta": {
-    "eyebrow": "Responsible adoption",
-    "title": "Ready to meet your new friend?",
-    "subtitle": "Tell us about your routine and we will help you find the ideal cat.",
-    "button": "Start application"
+    "eyebrow": "Educational demonstration",
+    "title": "Explore before seeking a real adoption",
+    "subtitle": "See the demonstration form and questions that can help you prepare. No data will be submitted.",
+    "button": "Open demonstration"
   },
   "theme": {
     "toggle": "Dark mode"
   },
   "about": {
     "hero": {
-      "badge": "Our mission",
-      "title": "About the Catlovers network",
-      "subtitle": "We connect people to responsible adoptions and support every new home with care.",
-      "cta": "I want to adopt"
+      "badge": "The project",
+      "title": "About Catlovers",
+      "subtitle": "An educational prototype for practicing web technologies and organizing information about responsible adoption.",
+      "cta": "Explore demonstration"
     },
     "sections": {
       "mission": {
         "eyebrow": "Mission",
         "title": "Make adoption safe and conscious",
-        "text": "We bridge rescuers, NGOs, and families, with support before and after adoption."
+        "text": "The project presents questions, care guidance, and sample journeys that must be confirmed with a real organization."
       },
       "values": {
         "eyebrow": "Values",
         "title": "What guides our choices",
         "items": [
           {
-            "title": "Real care",
-            "text": "We prioritize well-being, health, and affection at every step."
+            "title": "Well-being first",
+            "text": "The content encourages checking health, safety, and individual needs before adoption."
           },
           {
             "title": "Transparency",
-            "text": "Clear information so you feel confident in the decision."
+            "text": "Fictional data is identified, and no prototype action is presented as real assistance."
           },
           {
             "title": "Responsibility",
-            "text": "We follow up after adoption and offer a support network."
+            "text": "Any future operation must define owners, response times, and data protection before accepting contacts."
           }
         ]
       },
       "impact": {
-        "eyebrow": "Local impact",
-        "title": "A community that supports each other",
-        "text": "We work with rescuers and foster homes to expand the number of cats saved."
+        "eyebrow": "Current scope",
+        "title": "Learning and technical quality",
+        "text": "The current delivery is a demonstrative multipage site that is accessible, translated, tested, and installable as a PWA."
       },
       "help": {
         "eyebrow": "How to help",
-        "title": "Join our network",
-        "subtitle": "Even without adopting, you can transform the lives of many cats.",
+        "title": "Find verified initiatives",
+        "subtitle": "Catlovers does not accept donations or applications. To contribute, find real organizations and verify who is responsible.",
         "items": [
           {
             "title": "Foster home",
-            "text": "Welcome a rescued cat for a few days or weeks until they find a forever family."
+            "text": "Ask a local organization about facilities, timing, costs, and support before offering foster care."
           },
           {
             "title": "Donations and sponsorship",
-            "text": "Help with food, litter, medications, or vet costs for our local partners and rescuers."
+            "text": "Verify identity, use of funds, and accountability before donating or sponsoring."
           },
           {
             "title": "Share",
-            "text": "Giving visibility to cats on social media greatly increases their chances of finding a good home."
+            "text": "Only share current, authorized profiles linked to a verifiable responsible contact."
           }
         ]
       }
@@ -309,29 +309,29 @@
   },
   "adoption": {
     "hero": {
-      "badge": "Responsible adoption",
-      "title": "Complete guide to adopt",
-      "subtitle": "Clear steps, requirements, and tips to ensure a safe and happy home.",
-      "cta": "See requirements"
+      "badge": "Illustrative journey",
+      "title": "Prepare for a responsible adoption",
+      "subtitle": "Review questions, care needs, and steps to confirm with the organization responsible for the animal.",
+      "cta": "What to confirm"
     },
     "sections": {
       "requirements": {
-        "eyebrow": "Requirements",
-        "title": "What we need to move forward",
-        "subtitle": "We ensure the cat has safety, time, and care in the new home.",
+        "eyebrow": "Before proceeding",
+        "title": "What to confirm with the organization",
+        "subtitle": "Each organization defines its own criteria. Ask why each requirement exists and how your data will be used.",
         "items": [
-          "ID document and updated address.",
-          "Protected environment with screens or safe supervision.",
-          "Availability for follow-up visits.",
-          "Commitment to vaccines and veterinary care.",
-          "Daily time for interaction and enrichment.",
-          "Agreement with the responsible adoption terms."
+          "Which documents are requested and why.",
+          "Which safety conditions the home must meet.",
+          "Whether follow-up visits will occur and how they will be arranged.",
+          "Which vaccines and veterinary care are required.",
+          "How much daily time the cat will need for interaction and enrichment.",
+          "Which commitments are included in the responsible adoption agreement."
         ]
       },
       "support": {
-        "eyebrow": "Post-adoption",
-        "title": "Ongoing support",
-        "text": "We guide you on adaptation, feeding, and behavior in the first weeks."
+        "eyebrow": "Guidance",
+        "title": "Support after adoption",
+        "text": "Ask who can provide guidance during adaptation, through which channels, and for how long."
       },
       "tips": {
         "eyebrow": "Care Tips",
@@ -358,12 +358,12 @@
     "hero": {
       "badge": "Transparency",
       "title": "Privacy Policy",
-      "subtitle": "Learn how we protect your data and respect your privacy."
+      "subtitle": "Understand which data stays in the browser and which external services are accessed."
     },
     "sections": {
       "content": {
-        "title": "Our Principles",
-        "text": "Your privacy is important to us. It is Catlovers' policy to respect your privacy regarding any information we may collect from you on our website. We only retain collected information for as long as necessary to provide the service."
+        "title": "Data in the demonstration stage",
+        "text": "Catlovers does not submit or store data entered in the form. Language and theme stay in the browser’s local storage, and a cat fact may stay in the session. Unsplash images, the catfact.ninja API, and GitHub Pages hosting may receive technical request data under their own policies. Before any real collection, this policy must define purpose, retention, rights, and a responsible contact."
       }
     }
   },
@@ -381,9 +381,11 @@
     }
   },
   "gallery": {
-    "eyebrow": "Adoption",
-    "title": "Meet our kittens",
-    "subtitle": "Use the filters to find the cat that best suits you.",
+    "eyebrow": "Demonstration",
+    "title": "Explore fictional profiles",
+    "subtitle": "The six cards demonstrate filters and translation; they are not available animals.",
+    "label": "Gallery of fictional cat profiles",
+    "openDemo": "Open demo form",
     "filterAge": "Filter by age",
     "filterSex": "Filter by sex",
     "filterTemp": "Filter by temperament",
@@ -413,9 +415,9 @@
     "announcerEmpty": "No cats found."
   },
   "quiz": {
-    "eyebrow": "Match",
-    "title": "Find your Perfect Match",
-    "subtitle": "Answer these three quick questions to find your ideal kitten.",
+    "eyebrow": "Simulation",
+    "title": "Explore a compatibility profile",
+    "subtitle": "Answer three questions to see an illustrative result. The quiz does not assess real animals.",
     "step1": "1. What is your home like?",
     "homeCalm": "Small, quiet house or apartment",
     "homePlayful": "House with a yard or large space with a lot of movement",
@@ -428,25 +430,22 @@
     "activityCalm": "Independence and quietness, liking peace and quiet",
     "activityPlayful": "Energy and curiosity, always ready to play",
     "activityAffectionate": "Cuddles and proximity, following me around the house",
-    "submit": "Discover my Match",
-    "resultTitle": "The ideal profile for you is:",
-    "resultSubtitle": "Based on your answers, we recommend cats with this profile.",
-    "resultBtn": "View cats",
-    "announcerResult": "Result: Your ideal profile is"
+    "submit": "View illustrative profile",
+    "resultTitle": "Reference profile:",
+    "resultSubtitle": "This simplified result demonstrates the interface and is not an adoption recommendation.",
+    "resultBtn": "Filter fictional profiles",
+    "announcerResult": "Illustrative result: profile"
   },
   "support": {
-    "eyebrow": "Support",
-    "title": "Other ways to help",
-    "subtitle": "If you cannot adopt right now, there are still many ways to transform a kitten's life.",
-    "sponsor": "Sponsorship",
-    "sponsorText": "Choose a kitten and help with monthly food and veterinary costs until it finds a home.",
-    "sponsorBtn": "Sponsor",
-    "donate": "Donation of Supplies",
-    "donateText": "We accept donations of food (dry and wet), litter, beds, toys, and medications within the expiration date.",
-    "donateBtn": "See collection points",
+    "eyebrow": "Guidance",
+    "title": "How to offer support safely",
+    "subtitle": "Catlovers does not accept donations or applications. Find a real organization and verify who is responsible before contributing.",
+    "sponsor": "Responsible sponsorship",
+    "sponsorText": "Confirm which animal is supported, which expenses are included, how to review the use of funds, and how to end the contribution.",
+    "donate": "Supply donations",
+    "donateText": "Ask which items are needed, check expiration dates and delivery conditions, and request confirmation of receipt.",
     "volunteer": "Volunteering",
-    "volunteerText": "Donate your time! We need help socializing cats, cleaning enclosures, or helping with transport to the vet.",
-    "volunteerBtn": "Be a volunteer"
+    "volunteerText": "Learn about tasks, supervision, schedules, risks, and the organization’s data protection policy before applying."
   },
   "blog": {
     "eyebrow": "Education",
@@ -493,23 +492,25 @@
     }
   },
   "happyEndings": {
-    "eyebrow": "Real stories",
-    "title": "Happy Endings",
-    "subtitle": "Get to know the full stories of cats who got a second chance and transformed their homes.",
-    "rescue": "The Rescue",
-    "today": "Today",
-    "future": "Your story could be here in the future.",
-    "adoptBtn": "I want to adopt",
+    "eyebrow": "Fictional scenarios",
+    "title": "Examples of happy endings",
+    "subtitle": "Educational situations about adaptation; they do not represent real cats, families, or adoptions.",
+    "rescue": "Initial situation",
+    "today": "Adaptation goal",
+    "future": "In a real operation, stories should only be published with authorization and a verifiable source.",
+    "adoptBtn": "Open demonstration",
     "stories": [
       {
-        "meta": "Adopted in 2025",
-        "rescueDesc": "Found in a cardboard box under heavy rain. He was scared, malnourished, and shivering from the cold.",
-        "todayDesc": "Sleeps spread out in the middle of the bed, is the owner of the apartment, and loves getting chicken sachets for breakfast.",
-        "quote": "\"Catlovers' consultancy helped choose a calm cat for our small apartment. Today he is the joy of the house and we can't imagine life without him.\""
+        "name": "Scenario: Bento",
+        "meta": "Fictional example",
+        "rescueDesc": "A frightened cat needs professional assessment, a safe space, and time before any approach.",
+        "todayDesc": "The goal is a predictable routine with safety, environmental enrichment, and respect for the animal’s limits.",
+        "quote": "Point to consider: small homes require protected windows, suitable resources, and compatibility with the cat’s profile."
       },
       {
-        "meta": "Adopted in 2024",
-        "quote": "\"Nala was the shyest cat in the shelter, always hiding. We received a lot of support in adaptation and were followed in the first few weeks. The support made all the difference — with patience, she lost her fear and today she is the first to greet visitors at the door, asking for affection.\""
+        "name": "Scenario: Nala",
+        "meta": "Fictional example",
+        "quote": "Point to consider: shy cats may need hiding places, a stable routine, and gradual contact for several weeks."
       }
     ]
   },
@@ -532,12 +533,12 @@
       "description": "Learn everything about cat behavior, care, and responsible adoption."
     },
     "about": {
-      "title": "About Us - Catlovers",
-      "description": "Learn about Catlovers mission and how we help kittens find happy homes."
+      "title": "About the project - Catlovers",
+      "description": "Learn about the Catlovers educational prototype and its responsible adoption principles."
     },
     "adoption": {
-      "title": "Adoption - Catlovers",
-      "description": "Complete guide to responsible cat adoption, with steps and checklist."
+      "title": "Demonstration adoption guide - Catlovers",
+      "description": "Questions and care guidance to review before contacting a responsible organization."
     },
     "benefits": {
       "title": "Benefits - Catlovers",
@@ -549,23 +550,23 @@
     },
     "cats": {
       "title": "Gallery - Catlovers",
-      "description": "Find the kitten that best matches you in our gallery."
+      "description": "Explore fictional profiles that demonstrate the Catlovers gallery filters and translation."
     },
     "happyEndings": {
-      "title": "Happy Endings - Catlovers",
-      "description": "Emotional stories of adoptions that worked out."
+      "title": "Adaptation scenarios - Catlovers",
+      "description": "Educational, fictional scenarios about responsible cat adaptation."
     },
     "quiz": {
-      "title": "Match Quiz - Catlovers",
-      "description": "Take our test and discover which cat profile is ideal for you."
+      "title": "Compatibility simulation - Catlovers",
+      "description": "Explore an illustrative compatibility result without recommendations for real animals."
     },
     "post": {
       "title": "How to adapt a new cat - Catlovers",
       "description": "Essential tips for introducing a new feline into your home."
     },
     "support": {
-      "title": "How to Help - Catlovers",
-      "description": "Discover how you can help our cause through donations, volunteering, or sponsorship."
+      "title": "How to offer support safely - Catlovers",
+      "description": "Guidance for verifying real organizations before donating, sponsoring, or volunteering."
     },
     "error": {
       "title": "Page not found - Catlovers",

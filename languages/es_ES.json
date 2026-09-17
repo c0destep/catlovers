@@ -32,99 +32,99 @@
     "notice": "Proyecto demostrativo: los animales, las cifras y los formularios son ficticios; no se envía ninguna solicitud."
   },
   "hero": {
-    "badge": "Adopcion responsable",
+    "badge": "Adopción responsable",
     "title": "Un hogar seguro cambia dos vidas",
-    "subtitle": "Adopcion de gatos con orientacion, transparencia y apoyo para garantizar un inicio tranquilo para ti y tu nuevo amigo.",
-    "ctaPrimary": "Quiero adoptar",
-    "ctaSecondary": "Ver como funciona",
-    "note": "Priorizamos adopciones responsables y seguimiento despues del hogar.",
+    "subtitle": "Explora una demostración educativa sobre adopción responsable, preparación del hogar y compatibilidad con la rutina. Este sitio no ofrece animales ni atención real.",
+    "ctaPrimary": "Explorar galería",
+    "ctaSecondary": "Ver recorrido de ejemplo",
+    "note": "Usa el contenido para preparar preguntas antes de contactar a una organización real.",
     "card": {
-      "title": "Gatos listos para amar",
-      "subtitle": "Rescatados, vacunados y llenos de personalidad."
+      "title": "3 idiomas",
+      "subtitle": "interfaz traducida"
     },
     "card2": {
-      "title": "92% satisfacción",
-      "subtitle": "con seguimiento"
+      "title": "PWA validada",
+      "subtitle": "app shell sin conexión"
     }
   },
   "stats": {
-    "eyebrow": "Impacto",
-    "title": "Adopciones reales con seguimiento",
+    "eyebrow": "Proyecto",
+    "title": "Lo que ofrece el prototipo",
     "items": [
       {
-        "value": "120+",
-        "label": "gatos adoptados en el ultimo ano",
-        "detail": "y contando"
+        "value": "13",
+        "label": "páginas del prototipo",
+        "detail": "build multipágina"
       },
       {
-        "value": "92%",
-        "label": "adopciones con apoyo despues del hogar",
-        "detail": "con seguimiento"
+        "value": "3",
+        "label": "idiomas disponibles",
+        "detail": "catálogos validados"
       },
       {
-        "value": "48h",
-        "label": "tiempo promedio para conocer un gato",
-        "detail": "proceso ágil"
+        "value": "44",
+        "label": "pruebas de extremo a extremo",
+        "detail": "ejecutadas en CI"
       },
       {
-        "value": "15",
-        "label": "socios locales activos",
-        "detail": "en toda la región"
+        "value": "PWA",
+        "label": "app shell sin conexión",
+        "detail": "probada en navegador"
       }
     ]
   },
   "reasons": {
-    "eyebrow": "Por que adoptar",
-    "title": "Adopcion responsable de principio a fin",
-    "subtitle": "Transparencia, cuidado y soporte continuo para garantizar el mejor match entre gato y familia.",
+    "eyebrow": "Adopción responsable",
+    "title": "Qué verificar antes de adoptar",
+    "subtitle": "En una adopción real, confirma la salud, la compatibilidad, los responsables y el apoyo directamente con la organización.",
     "cards": [
       {
-        "title": "Salud al dia",
-        "text": "Todos los gatos pasan por evaluacion veterinaria, vacunacion y orientacion de cuidados esenciales.",
+        "title": "Salud documentada",
+        "text": "Solicita registros veterinarios, de vacunación, castración y cuidados del animal real.",
         "tags": [
-          "Vacunado",
-          "Castrado",
-          "Desparasitado"
+          "Registros",
+          "Vacunas",
+          "Cuidados"
         ]
       },
       {
-        "title": "Match con tu estilo",
-        "text": "Entendemos tu rutina e indicamos el gato con la personalidad ideal para ti."
+        "title": "Compatibilidad",
+        "text": "Compara tu rutina y vivienda con la energía, el temperamento y las necesidades conocidas del gato."
       },
       {
-        "title": "Acompanamiento",
-        "text": "No estas solo: ofrecemos soporte en el periodo de adaptacion del nuevo hogar."
+        "title": "Apoyo acordado",
+        "text": "Antes de adoptar, averigua quién podrá orientar la adaptación y qué canales estarán disponibles."
       },
       {
-        "title": "Red de apoyo",
-        "text": "Indicamos profesionales, socios y consejos practicos para el bienestar de tu gato."
+        "title": "Responsable identificado",
+        "text": "Confirma la organización, la persona responsable, la región atendida y los contactos antes de compartir datos."
       }
     ]
   },
   "process": {
-    "eyebrow": "Etapas",
-    "title": "Como funciona la adopcion",
-    "subtitle": "Un paso a paso simple y humano.",
+    "eyebrow": "Recorrido ilustrativo",
+    "title": "Un recorrido de ejemplo en 5 pasos",
+    "subtitle": "Este flujo ilustra etapas que una organización real puede adoptar.",
     "steps": [
       {
-        "title": "Registro inicial",
-        "text": "Cuenta sobre tu rutina y experiencia con animales."
+        "title": "Información inicial",
+        "text": "Revisa tu rutina, vivienda y experiencia con animales."
       },
       {
-        "title": "Conversacion guiada",
-        "text": "Hablamos sobre el perfil ideal y aclaramos dudas."
+        "title": "Conversación responsable",
+        "text": "Aclara tus dudas con la organización responsable del gato."
       },
       {
-        "title": "Encuentro con el gato",
-        "text": "Conoces al gato y ves si el vinculo sucede."
+        "title": "Conocer al gato",
+        "text": "Conoce al animal y observa la compatibilidad sin prisas."
       },
       {
-        "title": "Preparacion del hogar",
-        "text": "Checklist de seguridad, alimentacion y comodidad."
+        "title": "Preparar el hogar",
+        "text": "Organiza la seguridad, alimentación, comodidad y atención veterinaria."
       },
       {
         "title": "Seguimiento",
-        "text": "Soporte post-adopcion para garantizar una adaptacion tranquila."
+        "text": "Acuerda de antemano cómo pedir orientación durante la adaptación."
       }
     ]
   },
@@ -144,108 +144,108 @@
     ]
   },
   "stories": {
-    "eyebrow": "Historias",
-    "title": "Familias que abrieron espacio",
-    "subtitle": "Relatos reales de quienes adoptaron con nosotros.",
+    "eyebrow": "Escenarios ficticios",
+    "title": "Situaciones para orientar la elección",
+    "subtitle": "Ejemplos educativos; no son testimonios de usuarios.",
     "items": [
       {
-        "text": "La orientacion ayudo a elegir un gato tranquilo para nuestro apartamento pequeno. Hoy es parte de la familia.",
-        "meta": "Marina & Bento"
+        "text": "Una rutina tranquila y un espacio menor pueden requerir un gato compatible y un ambiente enriquecido.",
+        "meta": "Escenario: apartamento"
       },
       {
-        "text": "Recibimos apoyo en la adaptacion y acompanamiento en las primeras semanas. Fue esencial.",
-        "meta": "Carlos & Nala"
+        "text": "Un gato tímido puede necesitar un espacio seguro, una rutina predecible y un acercamiento gradual durante las primeras semanas.",
+        "meta": "Escenario: adaptación"
       },
       {
-        "text": "Adoptar fue simple, humano y transparente. Ahora tenemos una dupla inseparable en casa.",
-        "meta": "Julia & Milo"
+        "text": "La convivencia con otros animales requiere presentaciones controladas, supervisión y posibilidad de separación.",
+        "meta": "Escenario: otros animales"
       }
     ]
   },
   "faq": {
-    "eyebrow": "FAQ",
-    "title": "Preguntas frecuentes",
-    "subtitle": "Todo lo que necesitas saber antes de dar este increíble paso.",
+    "eyebrow": "Orientación",
+    "title": "Preguntas para una adopción real",
+    "subtitle": "Usa estas respuestas como punto de partida y confirma todo con la organización responsable.",
     "items": [
       {
-        "q": "Necesito experiencia con gatos?",
-        "a": "¡No! Ofrecemos orientación completa para quienes adoptan por primera vez. Tendrás todo el apoyo necesario."
+        "q": "¿Necesito experiencia con gatos?",
+        "a": "No necesariamente. Verifica si la organización ofrece orientación y si puedes atender las necesidades del animal."
       },
       {
-        "q": "Puedo adoptar si vivo de alquiler?",
-        "a": "Sí, siempre que el inmueble permita animales y sea seguro para el gato. Ayudamos a verificar las condiciones."
+        "q": "¿Puedo adoptar si vivo de alquiler?",
+        "a": "Confirma las reglas del inmueble, instala protecciones adecuadas y comprueba si el espacio se adapta al perfil del gato."
       },
       {
-        "q": "Cuanto tiempo toma el proceso?",
-        "a": "En promedio de 3 a 7 días, dependiendo del match y la disponibilidad. Nuestro proceso es ágil y humanizado."
+        "q": "¿Cuánto tarda una adopción real?",
+        "a": "El plazo varía según la organización, la evaluación y el animal. Este proyecto no realiza ni estima procesos reales."
       },
       {
-        "q": "¿Están los gatos vacunados y castrados?",
-        "a": "¡Sí! Todos pasan por evaluación veterinaria completa, incluyendo vacunación, castración y desparasitación antes de la adopción."
+        "q": "¿Cómo confirmo la salud del gato?",
+        "a": "Solicita al responsable real registros veterinarios y confirmación de vacunas, castración, desparasitación y necesidades especiales."
       }
     ]
   },
   "cta": {
-    "eyebrow": "Adopcion responsable",
-    "title": "Listo para conocer a tu nuevo amigo?",
-    "subtitle": "Cuenta un poco sobre tu rutina y te ayudamos a encontrar el gato ideal.",
-    "button": "Iniciar registro"
+    "eyebrow": "Demostración educativa",
+    "title": "Explora antes de buscar una adopción real",
+    "subtitle": "Conoce el formulario demostrativo y las preguntas que pueden ayudarte a prepararte. No se enviará ningún dato.",
+    "button": "Abrir demostración"
   },
   "theme": {
     "toggle": "Modo oscuro"
   },
   "about": {
     "hero": {
-      "badge": "Nuestra mision",
-      "title": "Sobre la red Catlovers",
-      "subtitle": "Conectamos personas con adopciones responsables y apoyamos cada nuevo hogar con cuidado.",
-      "cta": "Quiero adoptar"
+      "badge": "El proyecto",
+      "title": "Sobre Catlovers",
+      "subtitle": "Un prototipo educativo para practicar tecnologías web y organizar información sobre adopción responsable.",
+      "cta": "Explorar demostración"
     },
     "sections": {
       "mission": {
         "eyebrow": "Mision",
         "title": "Hacer la adopcion segura y consciente",
-        "text": "Actuamos como puente entre protectores, ONGs y familias, con apoyo antes y despues de la adopcion."
+        "text": "El proyecto presenta preguntas, cuidados y recorridos de ejemplo que deben confirmarse con una organización real."
       },
       "values": {
         "eyebrow": "Valores",
         "title": "Lo que guia nuestras decisiones",
         "items": [
           {
-            "title": "Cuidado real",
-            "text": "Priorizamos bienestar, salud y afecto en cada etapa."
+            "title": "Bienestar primero",
+            "text": "El contenido invita a comprobar la salud, la seguridad y las necesidades individuales antes de adoptar."
           },
           {
             "title": "Transparencia",
-            "text": "Informacion clara para que te sientas seguro en la decision."
+            "text": "Los datos ficticios están identificados y ninguna acción del prototipo se presenta como atención real."
           },
           {
             "title": "Responsabilidad",
-            "text": "Acompanamos el post-adopcion y ofrecemos red de apoyo."
+            "text": "Cualquier operación futura debe definir responsables, plazos y protección de datos antes de recibir contactos."
           }
         ]
       },
       "impact": {
-        "eyebrow": "Impacto local",
-        "title": "Una comunidad que se apoya mutuamente",
-        "text": "Trabajamos con rescatadores y hogares de acogida para ampliar el número de gatos salvados."
+        "eyebrow": "Alcance actual",
+        "title": "Aprendizaje y calidad técnica",
+        "text": "La entrega actual es un sitio demostrativo multipágina, accesible, traducido, probado e instalable como PWA."
       },
       "help": {
         "eyebrow": "Como ayudar",
-        "title": "Únete a nuestra red",
-        "subtitle": "Incluso sin adoptar, puedes transformar la vida de muchos gatos.",
+        "title": "Busca iniciativas verificadas",
+        "subtitle": "Catlovers no recibe donaciones ni solicitudes. Para colaborar, busca organizaciones reales y verifica a sus responsables.",
         "items": [
           {
             "title": "Hogar temporal",
-            "text": "Acoge a un gato rescatado por unos días o semanas hasta que encuentre una familia definitiva."
+            "text": "Consulta con una organización local sobre estructura, plazo, costos y apoyo antes de ofrecer acogida."
           },
           {
             "title": "Donaciones y apadrinamiento",
-            "text": "Ayuda con comida, arena, medicamentos o gastos veterinarios de nuestros socios y protectores locales."
+            "text": "Verifica la identidad, el destino de los recursos y la rendición de cuentas antes de donar o apadrinar."
           },
           {
             "title": "Comparte",
-            "text": "Dar visibilidad a los gatos en las redes sociales aumenta enormemente sus posibilidades de encontrar un buen hogar."
+            "text": "Comparte solo perfiles actuales, autorizados y vinculados a un contacto responsable verificable."
           }
         ]
       }
@@ -309,29 +309,29 @@
   },
   "adoption": {
     "hero": {
-      "badge": "Adopcion responsable",
-      "title": "Guia completa para adoptar",
-      "subtitle": "Etapas claras, requisitos y consejos para garantizar un hogar seguro y feliz.",
-      "cta": "Ver requisitos"
+      "badge": "Recorrido ilustrativo",
+      "title": "Prepárate para una adopción responsable",
+      "subtitle": "Revisa las preguntas, los cuidados y las etapas que debes confirmar con la organización responsable del animal.",
+      "cta": "Qué confirmar"
     },
     "sections": {
       "requirements": {
-        "eyebrow": "Requisitos",
-        "title": "Lo que necesitamos para avanzar",
-        "subtitle": "Aseguramos que el gato tenga seguridad, tiempo y cuidado en el nuevo hogar.",
+        "eyebrow": "Antes de continuar",
+        "title": "Qué confirmar con la organización",
+        "subtitle": "Cada organización define sus propios criterios. Pregunta el motivo de cada requisito y cómo se usarán tus datos.",
         "items": [
-          "Documento de identificacion y direccion actualizada.",
-          "Ambiente protegido con mallas o supervision segura.",
-          "Disponibilidad para visitas de seguimiento.",
-          "Compromiso con vacunas y cuidados veterinarios.",
-          "Tiempo diario para interaccion y enriquecimiento.",
-          "Conformidad con el termino de adopcion responsable."
+          "Qué documentos se solicitan y por qué.",
+          "Qué condiciones de seguridad debe cumplir la vivienda.",
+          "Si habrá visitas de seguimiento y cómo se coordinarán.",
+          "Qué vacunas y cuidados veterinarios son necesarios.",
+          "Cuánto tiempo diario necesitará el gato para interacción y enriquecimiento.",
+          "Qué compromisos incluye el acuerdo de adopción responsable."
         ]
       },
       "support": {
-        "eyebrow": "Post-adopcion",
-        "title": "Apoyo continuo",
-        "text": "Orientamos sobre adaptacion, alimentacion y comportamiento en las primeras semanas."
+        "eyebrow": "Orientación",
+        "title": "Apoyo después de la adopción",
+        "text": "Pregunta quién podrá orientar la adaptación, a través de qué canales y durante cuánto tiempo."
       },
       "tips": {
         "eyebrow": "Consejos de Cuidado",
@@ -358,12 +358,12 @@
     "hero": {
       "badge": "Transparencia",
       "title": "Política de Privacidad",
-      "subtitle": "Conozca cómo protegemos sus datos y respetamos su privacidad."
+      "subtitle": "Comprende qué datos permanecen en el navegador y qué servicios externos se utilizan."
     },
     "sections": {
       "content": {
-        "title": "Nuestros Principios",
-        "text": "Su privacidad es importante para nosotros. Es política de Catlovers respetar su privacidad con respecto a cualquier información suya que podamos recopilar en nuestro sitio web. Solo retenemos la información recopilada durante el tiempo necesario para proporcionar el servicio."
+        "title": "Datos en la etapa demostrativa",
+        "text": "Catlovers no envía ni almacena los datos escritos en el formulario. El idioma y el tema permanecen en el almacenamiento local del navegador, y una curiosidad puede permanecer en la sesión. Las imágenes de Unsplash, la API catfact.ninja y el alojamiento de GitHub Pages pueden recibir datos técnicos de la solicitud según sus propias políticas. Antes de cualquier recopilación real, esta política deberá definir finalidad, retención, derechos y un contacto responsable."
       }
     }
   },
@@ -381,9 +381,11 @@
     }
   },
   "gallery": {
-    "eyebrow": "Adopción",
-    "title": "Conoce a nuestros gatitos",
-    "subtitle": "Usa los filtros para encontrar el gato que mejor se adapte a ti.",
+    "eyebrow": "Demostración",
+    "title": "Explora perfiles ficticios",
+    "subtitle": "Las seis tarjetas demuestran filtros y traducción; no representan animales disponibles.",
+    "label": "Galería de perfiles ficticios de gatos",
+    "openDemo": "Abrir formulario demo",
     "filterAge": "Filtrar por edad",
     "filterSex": "Filtrar por sexo",
     "filterTemp": "Filtrar por temperamento",
@@ -413,9 +415,9 @@
     "announcerEmpty": "No se encontraron gatos."
   },
   "quiz": {
-    "eyebrow": "Match",
-    "title": "Encuentra tu Pareja Perfecta",
-    "subtitle": "Responde estas tres preguntas rápidas para encontrar a tu gatito ideal.",
+    "eyebrow": "Simulación",
+    "title": "Explora un perfil de compatibilidad",
+    "subtitle": "Responde tres preguntas para ver un resultado ilustrativo. El quiz no evalúa animales reales.",
     "step1": "1. ¿Cómo es tu hogar?",
     "homeCalm": "Casa o apartamento pequeño y tranquilo",
     "homePlayful": "Casa con patio o espacio grande con mucho movimiento",
@@ -428,25 +430,22 @@
     "activityCalm": "Independencia y tranquilidad, que le guste el sosiego",
     "activityPlayful": "Energía y curiosidad, siempre listo para jugar",
     "activityAffectionate": "Cariño y proximidad, que me siga por la casa",
-    "submit": "Descubrir mi Match",
-    "resultTitle": "El perfil ideal para ti es:",
-    "resultSubtitle": "Basado en tus respuestas, recomendamos gatos con este perfil.",
-    "resultBtn": "Ver gatos",
-    "announcerResult": "Resultado: El perfil ideal para usted es"
+    "submit": "Ver perfil ilustrativo",
+    "resultTitle": "Perfil de referencia:",
+    "resultSubtitle": "Este resultado simplificado demuestra la interfaz y no es una recomendación de adopción.",
+    "resultBtn": "Filtrar perfiles ficticios",
+    "announcerResult": "Resultado ilustrativo: perfil"
   },
   "support": {
-    "eyebrow": "Apoyo",
-    "title": "Otras formas de ayudar",
-    "subtitle": "Si no puedes adoptar en este momento, todavía hay muchas formas de transformar la vida de un gatito.",
-    "sponsor": "Apadrinamiento",
-    "sponsorText": "Elige un gatito y ayuda con los costos mensuales de comida y atención veterinaria hasta que encuentre un hogar.",
-    "sponsorBtn": "Apadrinar",
-    "donate": "Donación de Insumos",
-    "donateText": "Aceptamos donaciones de comida (seca y húmeda), arena sanitaria, camas, juguetes y medicamentos dentro de la fecha de caducidad.",
-    "donateBtn": "Ver puntos de recolección",
+    "eyebrow": "Orientación",
+    "title": "Cómo apoyar de forma segura",
+    "subtitle": "Catlovers no recibe donaciones ni inscripciones. Busca una organización real y verifica a sus responsables antes de contribuir.",
+    "sponsor": "Apadrinamiento responsable",
+    "sponsorText": "Confirma qué animal recibirá apoyo, qué gastos están incluidos, cómo revisar el uso de los recursos y cómo finalizar la contribución.",
+    "donate": "Donación de insumos",
+    "donateText": "Pregunta qué artículos se necesitan, comprueba la caducidad y las condiciones de entrega y solicita confirmación de recepción.",
     "volunteer": "Voluntariado",
-    "volunteerText": "¡Dona tu tiempo! Necesitamos ayuda para socializar a los gatos, limpiar recintos o ayudar con el transporte al veterinario.",
-    "volunteerBtn": "Ser voluntario"
+    "volunteerText": "Conoce las tareas, la supervisión, los horarios, los riesgos y la política de protección de datos de la organización antes de inscribirte."
   },
   "blog": {
     "eyebrow": "Educación",
@@ -493,23 +492,25 @@
     }
   },
   "happyEndings": {
-    "eyebrow": "Historias reales",
-    "title": "Finales Felices",
-    "subtitle": "Conoce las historias completas de gatos que ganaron una segunda oportunidad y transformaron sus hogares.",
-    "rescue": "El Rescate",
-    "today": "Hoy",
-    "future": "Tu historia podría estar aquí en el futuro.",
-    "adoptBtn": "Quiero Adoptar",
+    "eyebrow": "Escenarios ficticios",
+    "title": "Ejemplos de finales felices",
+    "subtitle": "Situaciones educativas sobre adaptación; no representan gatos, familias ni adopciones reales.",
+    "rescue": "Situación inicial",
+    "today": "Objetivo de la adaptación",
+    "future": "En una operación real, las historias solo deben publicarse con autorización y una fuente verificable.",
+    "adoptBtn": "Abrir demostración",
     "stories": [
       {
-        "meta": "Adoptado en 2025",
-        "rescueDesc": "Encontrado en una caja de cartón bajo una fuerte lluvia. Estaba asustado, desnutrido y temblando de frío.",
-        "todayDesc": "Duerme despatarrado en medio de la cama, es el dueño del apartamento y le encanta recibir sobre de pollo para desayunar.",
-        "quote": "\"La consultoría de Catlovers ayudó a elegir un gato tranquilo para nuestro apartamento pequeño. Hoy es la alegría de la casa y no imaginamos la vida sin él.\""
+        "name": "Escenario: Bento",
+        "meta": "Ejemplo ficticio",
+        "rescueDesc": "Un gato asustado necesita evaluación profesional, un espacio seguro y tiempo antes de cualquier acercamiento.",
+        "todayDesc": "El objetivo es una rutina predecible, con seguridad, enriquecimiento ambiental y respeto por los límites del animal.",
+        "quote": "Punto a considerar: las viviendas pequeñas requieren ventanas protegidas, recursos adecuados y compatibilidad con el perfil del gato."
       },
       {
-        "meta": "Adoptada en 2024",
-        "quote": "\"Nala era la gata más tímida del refugio, siempre estaba escondida. Recibimos mucho apoyo en la adaptación y nos acompañaron en las primeras semanas. El soporte marcó la diferencia; con paciencia, perdió el miedo y hoy es la primera en recibir a las visitas en la puerta, pidiendo mimos.\""
+        "name": "Escenario: Nala",
+        "meta": "Ejemplo ficticio",
+        "quote": "Punto a considerar: los gatos tímidos pueden necesitar escondites, una rutina estable y un acercamiento gradual durante varias semanas."
       }
     ]
   },
@@ -532,12 +533,12 @@
       "description": "Aprende todo sobre el comportamiento, el cuidado y la adopción responsable de felinos."
     },
     "about": {
-      "title": "Sobre Nosotros - Catlovers",
-      "description": "Conoce la misión de Catlovers y cómo ayudamos a los gatitos a encontrar hogares felices."
+      "title": "Sobre el proyecto - Catlovers",
+      "description": "Conoce el prototipo educativo Catlovers y sus principios de adopción responsable."
     },
     "adoption": {
-      "title": "Adopción - Catlovers",
-      "description": "Guía completa para la adopción responsable de gatos, con etapas y lista de verificación."
+      "title": "Guía demostrativa de adopción - Catlovers",
+      "description": "Preguntas y cuidados para prepararte antes de buscar una organización responsable."
     },
     "benefits": {
       "title": "Beneficios - Catlovers",
@@ -549,23 +550,23 @@
     },
     "cats": {
       "title": "Galería - Catlovers",
-      "description": "Encuentra el gatito que mejor combine contigo en nuestra galería."
+      "description": "Explora perfiles ficticios que demuestran los filtros y la traducción de la galería Catlovers."
     },
     "happyEndings": {
-      "title": "Finales Felices - Catlovers",
-      "description": "Historias emotivas de adopciones que funcionaron."
+      "title": "Escenarios de adaptación - Catlovers",
+      "description": "Escenarios educativos y ficticios sobre la adaptación responsable de gatos."
     },
     "quiz": {
-      "title": "Quiz Match - Catlovers",
-      "description": "Haz nuestro test y descubre qué perfil de gato es ideal para ti."
+      "title": "Simulación de compatibilidad - Catlovers",
+      "description": "Explora un resultado ilustrativo de compatibilidad sin recomendaciones de animales reales."
     },
     "post": {
       "title": "Cómo adaptar un gato nuevo - Catlovers",
       "description": "Consejos esenciales para introducir un nuevo felino en tu casa."
     },
     "support": {
-      "title": "Cómo Ayudar - Catlovers",
-      "description": "Descubre cómo puedes ayudar a nuestra causa a través de donaciones, voluntariado o apadrinamiento."
+      "title": "Cómo apoyar de forma segura - Catlovers",
+      "description": "Orientaciones para verificar organizaciones reales antes de donar, apadrinar o trabajar como voluntario."
     },
     "error": {
       "title": "Página no encontrada - Catlovers",
