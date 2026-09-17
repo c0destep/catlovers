@@ -57,4 +57,31 @@ describe('Design Responsivo', () => {
     });
     expectNoHorizontalScroll();
   });
+
+  it('deve manter filtros e cards da galeria dentro da viewport em 320px', () => {
+    cy.viewport(320, 568);
+    cy.visit('/cats.html');
+
+    cy.get('.filter-group__select').each(($select) => {
+      expect($select[0].getBoundingClientRect().right).to.be.at.most(296);
+    });
+    cy.get('.cat-card').first().then(($card) => {
+      expect($card[0].getBoundingClientRect().right).to.be.at.most(296);
+    });
+    expectNoHorizontalScroll();
+  });
+
+  it('deve organizar filtros e galeria em colunas previsíveis a partir de 640px', () => {
+    cy.viewport(640, 800);
+    cy.visit('/cats.html');
+
+    cy.get('.filter-group').then(($filters) => {
+      expect($filters[0].getBoundingClientRect().top).to.equal($filters[1].getBoundingClientRect().top);
+      expect($filters[1].getBoundingClientRect().top).to.equal($filters[2].getBoundingClientRect().top);
+    });
+    cy.get('.cat-card').then(($cards) => {
+      expect($cards[0].getBoundingClientRect().top).to.equal($cards[1].getBoundingClientRect().top);
+    });
+    expectNoHorizontalScroll();
+  });
 });

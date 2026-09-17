@@ -570,7 +570,7 @@ header {
 
 /* ===== HERO ===== */
 .hero {
-  padding: 5rem 0 3rem;
+  padding: 3.5rem 0 4rem;
   overflow: visible;
   position: relative;
 }
@@ -592,16 +592,9 @@ header {
 .hero__inner {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 2.25rem;
   align-items: center;
   position: relative;
-}
-
-@media (width >= 1024px) {
-  .hero__inner {
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 2rem;
-  }
 }
 
 .hero__badge-group {
@@ -654,8 +647,8 @@ header {
 .hero__image-wrapper {
   position: relative;
   width: 100%;
-  max-width: 520px;
-  margin-left: auto;
+  max-width: 680px;
+  margin-inline: auto;
 }
 
 .hero__image {
@@ -664,7 +657,7 @@ header {
   border-radius: var(--cat-radius);
   object-fit: cover;
   box-shadow: var(--cat-shadow);
-  aspect-ratio: 4/5;
+  aspect-ratio: 3/2;
 }
 
 /* ===== FEATURES GRID ===== */
@@ -1575,18 +1568,13 @@ header {
 }
 
 @media (width >= 768px) {
-  .hero__inner {
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-  }
-
   .hero__grid {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
   }
 
   .hero {
-    padding: 7rem 0 5rem;
+    padding: 5rem 0;
   }
 
   .checklist-duo {
@@ -1603,6 +1591,16 @@ header {
 }
 
 @media (width >= 1024px) {
+  .hero__inner {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 3rem;
+  }
+
+  .hero__image-wrapper {
+    max-width: 520px;
+    margin-left: auto;
+  }
+
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1759,11 +1757,12 @@ html {
 
 /* Filters Bar */
 .filters-bar {
-  margin-bottom: 2.5rem;
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto 2.5rem;
 }
 
 .filter-group {
@@ -1778,6 +1777,8 @@ html {
 }
 
 .filter-group__select {
+  width: 100%;
+  min-height: 3rem;
   padding: 0.75rem 1rem;
   border-radius: 8px;
   border: 1px solid var(--cat-border);
@@ -1797,7 +1798,18 @@ html {
 .features-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (width >= 640px) {
+  .filters-bar {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: end;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .cat-card {
