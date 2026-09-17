@@ -1997,45 +1997,6 @@ html {
   text-align: center;
 }
 
-/* Story Cards */
-.story-card--featured {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr;
-}
-
-@media (width >= 768px) {
-  .story-card--featured {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-  }
-}
-
-.story-card__rescue-today {
-  display: grid;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-@media (width >= 640px) {
-  .story-card__rescue-today {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.story-section-title {
-  margin-bottom: 0.5rem;
-  color: var(--cat-ink);
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.story-section-text {
-  color: var(--cat-muted);
-  font-size: 0.95rem;
-  margin: 0;
-}
-
 /* Quiz specific */
 .quiz-container {
   max-width: 600px;
@@ -2101,53 +2062,136 @@ html {
   color: var(--cat-muted);
 }
 
-/* Happy Endings / Stories */
-.stories-grid {
-  max-width: 800px;
+/* Happy Endings / Scenarios */
+.scenario-grid {
+  max-width: 1040px;
   margin: 0 auto;
   display: grid;
-  gap: 3rem;
+  gap: 2rem;
+  align-items: center;
 }
 
-.story-card {
+.scenario-card {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 2.5rem;
+}
+
+.scenario-card--featured {
+  padding: clamp(1.5rem, 4vw, 3rem);
   background-color: var(--cat-card);
   border-radius: var(--cat-radius);
   border: 1px solid var(--cat-border);
   box-shadow: var(--cat-shadow-sm);
 }
 
-.story-card__top {
+.scenario-card--compact {
+  padding: 2rem 0;
+  border-top: 1px solid var(--cat-border);
+  border-bottom: 1px solid var(--cat-border);
+}
+
+.scenario-card__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--cat-border);
-  padding-bottom: 1.25rem;
+  gap: 1rem;
 }
 
-.story-card__icon {
+.scenario-card__identity {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.scenario-card__avatar {
+  display: inline-flex;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--cat-accent);
+  color: var(--cat-on-accent);
+  font-weight: 700;
+}
+
+.scenario-card__meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.scenario-card__name {
+  font-family: var(--cat-font-display);
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.scenario-card__label {
+  color: var(--cat-accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.scenario-card__icon {
   font-size: 1.75rem;
 }
 
-.story-card__details {
+.scenario-card__details {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--cat-border);
 }
 
-.story-card__box {
-  background: var(--cat-bg-alt);
-  padding: 1.5rem;
-  border-radius: var(--cat-radius-sm);
-  border: 1px solid var(--cat-border);
+.scenario-card__detail {
+  padding-left: 1rem;
+  border-left: 2px solid var(--cat-secondary);
 }
 
-.story-card__footer {
+.scenario-card__detail-title {
+  margin-bottom: 0.45rem;
+  color: var(--cat-ink);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.scenario-card__detail-text,
+.scenario-card__quote {
+  color: var(--cat-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.scenario-card__quote {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--cat-border);
+  font-style: italic;
+}
+
+.scenario-card--compact .scenario-card__quote {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.scenario-footer {
   text-align: center;
   margin-top: 4rem;
+}
+
+@media (width >= 640px) {
+  .scenario-card__details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 800px) {
+  .scenario-grid {
+    grid-template-columns: minmax(0, 1.5fr) minmax(16rem, 0.75fr);
+    gap: clamp(2.5rem, 5vw, 5rem);
+  }
 }
 
 /* Article Page Enhancements */
