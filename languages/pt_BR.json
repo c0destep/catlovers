@@ -253,55 +253,55 @@
   },
   "benefits": {
     "hero": {
-      "badge": "Benefícios reais",
-      "title": "Vantagens da adoção de gatos",
-      "subtitle": "A adoção transforma sua rotina, melhora o bem-estar dos gatos e fortalece a comunidade."
+      "badge": "Decisão consciente",
+      "title": "O que uma adoção responsável envolve",
+      "subtitle": "Avalie rotina, custos, segurança e compromissos de longo prazo antes de procurar uma organização real."
     },
     "sections": {
-      "eyebrow": "Benefícios",
-      "title": "Ganhos para todos os lados",
+      "eyebrow": "Planejamento",
+      "title": "O que considerar antes de decidir",
       "items": [
         {
-          "title": "Para você",
-          "text": "Companhia, rotina mais leve e uma presença carinhosa no dia a dia."
+          "title": "Sua rotina",
+          "text": "Considere o tempo disponível, o orçamento e as mudanças que os cuidados diários exigirão."
         },
         {
-          "title": "Para o gato",
-          "text": "Um lar seguro, atenção diária e estabilidade emocional."
+          "title": "Necessidades do gato",
+          "text": "Planeje um ambiente protegido, atendimento veterinário e recursos adequados ao perfil do animal."
         },
         {
-          "title": "Para a comunidade",
-          "text": "Menos abandono, mais lares conscientes e redes de apoio."
+          "title": "Organização responsável",
+          "text": "Verifique quem responde pelo gato, quais informações têm registro e como funciona o suporte após a adoção."
         }
       ],
       "list": {
-        "eyebrow": "Destaques",
-        "title": "O que muda com a adoção",
+        "eyebrow": "Preparação",
+        "title": "Antes de adotar",
         "items": [
-          "Reduz o estresse e aumenta a sensação de companhia.",
-          "Estimula responsabilidade e rotina saudável.",
-          "Gatos ajudam a manter a casa mais tranquila e acolhedora.",
-          "Apoia protetores e projetos locais.",
-          "Abre espaço para novos resgates.",
-          "Cria conexões afetivas duradouras."
+          "Confirme se a moradia permite animais e pode receber proteção adequada.",
+          "Planeje despesas recorrentes e uma reserva para atendimento veterinário.",
+          "Avalie o tempo disponível para interação, limpeza e enriquecimento.",
+          "Considere crianças, outros animais e mudanças previsíveis na rotina.",
+          "Verifique a identidade da organização e a origem das informações sobre o gato.",
+          "Entenda os compromissos do termo e o suporte oferecido após a adoção."
         ]
       },
       "facts": {
-        "eyebrow": "Curiosidades",
-        "title": "Você sabia?",
-        "subtitle": "Informações fascinantes sobre nossos amigos felinos.",
+        "eyebrow": "Perguntas úteis",
+        "title": "O que perguntar sobre o gato",
+        "subtitle": "A organização responsável deve confirmar o histórico e as necessidades do animal real.",
         "items": [
           {
-            "title": "Ronronar curativo",
-            "text": "O ronronar dos gatos ocorre em uma frequência (entre 25 e 150 Hertz) que demonstrou melhorar a densidade óssea e promover a cicatrização."
+            "title": "Saúde e histórico",
+            "text": "Peça registros veterinários, informações sobre alimentação e detalhes de qualquer cuidado contínuo."
           },
           {
-            "title": "Comunicação exclusiva",
-            "text": "Gatos adultos raramente miarão uns para os outros. O miado é uma ferramenta de comunicação desenvolvida quase exclusivamente para interagir com os humanos."
+            "title": "Comportamento observado",
+            "text": "Pergunte quais comportamentos foram observados e em quais ambientes, sem tratar o perfil como garantia."
           },
           {
-            "title": "Dorminhocos profissionais",
-            "text": "Os gatos passam cerca de 70% de suas vidas dormindo, o equivalente a cerca de 13 a 16 horas por dia. Isso preserva sua energia de caçadores."
+            "title": "Adaptação",
+            "text": "Confirme como preparar a chegada, apresentar outros animais e pedir orientação se surgirem dificuldades."
           }
         ]
       }
@@ -541,8 +541,8 @@
       "description": "Perguntas e cuidados para se preparar antes de procurar uma organização responsável."
     },
     "benefits": {
-      "title": "Benefícios - Catlovers",
-      "description": "Descubra por que ter um gato faz bem para sua saúde e felicidade."
+      "title": "Decisão responsável - Catlovers",
+      "description": "Avalie rotina, custos, segurança e responsabilidades antes de adotar um gato."
     },
     "blog": {
       "title": "Blog - Catlovers",

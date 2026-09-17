@@ -253,55 +253,55 @@
   },
   "benefits": {
     "hero": {
-      "badge": "Real benefits",
-      "title": "The advantages of cat adoption",
-      "subtitle": "Adoption changes your routine, improves cat well-being, and strengthens the community."
+      "badge": "Informed decision",
+      "title": "What responsible adoption involves",
+      "subtitle": "Assess your routine, costs, safety, and long-term commitments before contacting a real organization."
     },
     "sections": {
-      "eyebrow": "Benefits",
-      "title": "Gains for everyone",
+      "eyebrow": "Planning",
+      "title": "What to consider before deciding",
       "items": [
         {
-          "title": "For you",
-          "text": "Companionship, a lighter routine, and a caring presence every day."
+          "title": "Your routine",
+          "text": "Consider the available time, budget, and changes that daily care will require."
         },
         {
-          "title": "For the cat",
-          "text": "A safe home, daily attention, and emotional stability."
+          "title": "The cat's needs",
+          "text": "Plan for a protected environment, veterinary care, and resources suited to the animal's profile."
         },
         {
-          "title": "For the community",
-          "text": "Less abandonment, more conscious homes, and stronger support networks."
+          "title": "Responsible organization",
+          "text": "Verify who is responsible for the cat, which information is documented, and how post-adoption support works."
         }
       ],
       "list": {
-        "eyebrow": "Highlights",
-        "title": "What changes with adoption",
+        "eyebrow": "Preparation",
+        "title": "Before adopting",
         "items": [
-          "Reduces stress and increases companionship.",
-          "Encourages responsibility and healthier routines.",
-          "Cats help keep the home calm and welcoming.",
-          "Supports rescuers and local projects.",
-          "Opens space for more rescues.",
-          "Creates lasting emotional bonds."
+          "Confirm that the home allows animals and can receive suitable safety protection.",
+          "Plan recurring expenses and an emergency fund for veterinary care.",
+          "Assess the time available for interaction, cleaning, and enrichment.",
+          "Consider children, other animals, and foreseeable changes to the routine.",
+          "Verify the organization's identity and the source of information about the cat.",
+          "Understand the adoption agreement and the support offered after adoption."
         ]
       },
       "facts": {
-        "eyebrow": "Fun Facts",
-        "title": "Did you know?",
-        "subtitle": "Fascinating information about our feline friends.",
+        "eyebrow": "Useful questions",
+        "title": "What to ask about the cat",
+        "subtitle": "The responsible organization should confirm the real animal's history and needs.",
         "items": [
           {
-            "title": "Healing purr",
-            "text": "A cat's purr happens at a frequency (between 25 and 150 Hertz) that has been shown to improve bone density and promote healing."
+            "title": "Health and history",
+            "text": "Ask for veterinary records, feeding information, and details of any ongoing care."
           },
           {
-            "title": "Exclusive communication",
-            "text": "Adult cats rarely meow at each other. Meowing is a communication tool developed almost exclusively to interact with humans."
+            "title": "Observed behavior",
+            "text": "Ask which behaviors were observed and in which environments, without treating the profile as a guarantee."
           },
           {
-            "title": "Professional sleepers",
-            "text": "Cats spend about 70% of their lives sleeping, which equates to about 13 to 16 hours a day. This preserves their hunting energy."
+            "title": "Adaptation",
+            "text": "Confirm how to prepare for arrival, introduce other animals, and request guidance if difficulties arise."
           }
         ]
       }
@@ -541,8 +541,8 @@
       "description": "Questions and care guidance to review before contacting a responsible organization."
     },
     "benefits": {
-      "title": "Benefits - Catlovers",
-      "description": "Discover why having a cat is good for your health and happiness."
+      "title": "Responsible decision - Catlovers",
+      "description": "Assess routine, costs, safety, and responsibilities before adopting a cat."
     },
     "blog": {
       "title": "Blog - Catlovers",

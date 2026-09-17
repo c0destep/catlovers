@@ -253,55 +253,55 @@
   },
   "benefits": {
     "hero": {
-      "badge": "Beneficios reales",
-      "title": "Ventajas de la adopcion de gatos",
-      "subtitle": "La adopcion transforma tu rutina, mejora el bienestar de los gatos y fortalece la comunidad."
+      "badge": "Decisión consciente",
+      "title": "Qué implica una adopción responsable",
+      "subtitle": "Evalúa tu rutina, los costos, la seguridad y los compromisos a largo plazo antes de buscar una organización real."
     },
     "sections": {
-      "eyebrow": "Beneficios",
-      "title": "Ganancias para todos",
+      "eyebrow": "Planificación",
+      "title": "Qué considerar antes de decidir",
       "items": [
         {
-          "title": "Para ti",
-          "text": "Compania, rutina mas ligera y una presencia carinosa en el dia a dia."
+          "title": "Tu rutina",
+          "text": "Considera el tiempo disponible, el presupuesto y los cambios que exigirán los cuidados diarios."
         },
         {
-          "title": "Para el gato",
-          "text": "Un hogar seguro, atencion diaria y estabilidad emocional."
+          "title": "Necesidades del gato",
+          "text": "Planifica un entorno protegido, atención veterinaria y recursos adecuados al perfil del animal."
         },
         {
-          "title": "Para la comunidad",
-          "text": "Menos abandono, mas hogares conscientes y redes de apoyo."
+          "title": "Organización responsable",
+          "text": "Verifica quién responde por el gato, qué información está documentada y cómo funciona el apoyo después de la adopción."
         }
       ],
       "list": {
-        "eyebrow": "Destacados",
-        "title": "Lo que cambia con la adopcion",
+        "eyebrow": "Preparación",
+        "title": "Antes de adoptar",
         "items": [
-          "Reduce el estres e incrementa la sensacion de compania.",
-          "Fomenta responsabilidad y rutina saludable.",
-          "Los gatos ayudan a mantener el hogar tranquilo y acogedor.",
-          "Apoya protectores y proyectos locales.",
-          "Abre espacio para nuevos rescates.",
-          "Crea conexiones afectivas duraderas."
+          "Confirma que la vivienda permita animales y pueda recibir la protección adecuada.",
+          "Planifica los gastos recurrentes y una reserva para atención veterinaria.",
+          "Evalúa el tiempo disponible para interacción, limpieza y enriquecimiento.",
+          "Considera a los niños, otros animales y cambios previsibles en la rutina.",
+          "Verifica la identidad de la organización y el origen de la información sobre el gato.",
+          "Comprende los compromisos del acuerdo y el apoyo ofrecido después de la adopción."
         ]
       },
       "facts": {
-        "eyebrow": "Curiosidades",
-        "title": "¿Sabías que?",
-        "subtitle": "Información fascinante sobre nuestros amigos felinos.",
+        "eyebrow": "Preguntas útiles",
+        "title": "Qué preguntar sobre el gato",
+        "subtitle": "La organización responsable debe confirmar el historial y las necesidades del animal real.",
         "items": [
           {
-            "title": "Ronroneo curativo",
-            "text": "El ronroneo de los gatos se produce a una frecuencia (entre 25 y 150 Hertz) que ha demostrado mejorar la densidad ósea y promover la curación."
+            "title": "Salud e historial",
+            "text": "Solicita registros veterinarios, información sobre alimentación y detalles de cualquier cuidado continuo."
           },
           {
-            "title": "Comunicación exclusiva",
-            "text": "Los gatos adultos rara vez maúllan entre sí. El maullido es una herramienta de comunicación desarrollada casi exclusivamente para interactuar con los humanos."
+            "title": "Comportamiento observado",
+            "text": "Pregunta qué comportamientos se observaron y en qué entornos, sin tratar el perfil como una garantía."
           },
           {
-            "title": "Dormilones profesionales",
-            "text": "Los gatos pasan alrededor del 70% de sus vidas durmiendo, lo que equivale a unas 13 a 16 horas al día. Esto preserva su energía de cazadores."
+            "title": "Adaptación",
+            "text": "Confirma cómo preparar la llegada, presentar a otros animales y pedir orientación si surgen dificultades."
           }
         ]
       }
@@ -541,8 +541,8 @@
       "description": "Preguntas y cuidados para prepararte antes de buscar una organización responsable."
     },
     "benefits": {
-      "title": "Beneficios - Catlovers",
-      "description": "Descubre por qué tener un gato es bueno para tu salud y felicidad."
+      "title": "Decisión responsable - Catlovers",
+      "description": "Evalúa la rutina, los costos, la seguridad y las responsabilidades antes de adoptar un gato."
     },
     "blog": {
       "title": "Blog - Catlovers",
