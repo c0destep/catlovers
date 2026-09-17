@@ -105,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
     form.classList.add('quiz-form--submitted');
     form.inert = true;
     resultDiv.classList.remove('hidden');
-    resultDiv.classList.add('is-visible');
     resultDiv.focus({ preventScroll: true });
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     resultDiv.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'nearest' });

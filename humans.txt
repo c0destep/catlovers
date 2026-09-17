@@ -27,7 +27,7 @@
     Vite -- Multipage bundler and development server
     Local Vite plugin -- Shared HTML includes
     Browser-native translator -- Internationalization (i18n)
-    Normalize.css -- CSS reset
+    Custom preflight -- CSS reset
 
   ## TESTING
     Cypress -- End-to-end testing
