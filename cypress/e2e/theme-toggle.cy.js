@@ -52,3 +52,62 @@ describe('Toggle de Tema (Dark/Light)', () => {
     cy.get('html').should('have.attr', 'data-theme', 'dark');
   });
 });
+
+describe('Toggle de Tema sem localStorage', () => {
+  it('carrega e alterna o tema quando localStorage lança SecurityError', () => {
+    let initialTheme;
+
+    cy.visit('/', {
+      onBeforeLoad(win) {
+        Object.defineProperty(win, 'localStorage', {
+          configurable: true,
+          get() {
+            throw new win.DOMException('The operation is insecure.', 'SecurityError');
+          }
+        });
+      }
+    });
+
+    cy.get('html')
+      .invoke('attr', 'data-theme')
+      .then((theme) => {
+        initialTheme = theme;
+        expect(['light', 'dark']).to.include(initialTheme);
+      });
+
+    cy.get('.theme-toggle')
+      .invoke('attr', 'aria-pressed')
+      .then((ariaPressed) => {
+        expect(ariaPressed).to.equal(initialTheme === 'dark' ? 'true' : 'false');
+      });
+
+    cy.get('.theme-toggle').click();
+
+    cy.get('html')
+      .invoke('attr', 'data-theme')
+      .then((theme) => {
+        const expectedTheme = initialTheme === 'dark' ? 'light' : 'dark';
+        expect(theme).to.equal(expectedTheme);
+        cy.get('.theme-toggle').should('have.attr', 'aria-pressed', expectedTheme === 'dark' ? 'true' : 'false');
+      });
+  });
+});
+
+describe('Toggle de Tema sem matchMedia', () => {
+  it('carrega no tema claro e alterna quando matchMedia não existe', () => {
+    cy.visit('/', {
+      onBeforeLoad(win) {
+        win.localStorage.clear();
+        Object.defineProperty(win, 'matchMedia', {
+          configurable: true,
+          value: undefined
+        });
+      }
+    });
+
+    cy.get('html').should('have.attr', 'data-theme', 'light');
+    cy.get('.theme-toggle').should('have.attr', 'aria-pressed', 'false').click();
+    cy.get('html').should('have.attr', 'data-theme', 'dark');
+    cy.get('.theme-toggle').should('have.attr', 'aria-pressed', 'true');
+  });
+});

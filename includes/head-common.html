@@ -10,7 +10,7 @@
   <meta content="#985238" name="theme-color">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a1816">
 
-  <script>(function(){var l=localStorage.getItem('preferred_language');var map={en_US:'en-US',es_ES:'es-ES',pt_BR:'pt-BR'};if(l&&map[l])document.documentElement.lang=map[l];})();</script>
+  <script>(function(){try{var l=window.localStorage.getItem('preferred_language');var map={en_US:'en-US',es_ES:'es-ES',pt_BR:'pt-BR'};if(l&&map[l])document.documentElement.lang=map[l];}catch{}})();</script>
 
   <link href="%BASE_URL%site.webmanifest" rel="manifest">
   <link href="favicon-16.webp" rel="icon" sizes="16x16" type="image/png"/>

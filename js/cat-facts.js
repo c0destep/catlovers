@@ -49,7 +49,13 @@ const showCatFact = async (language) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  showCatFact(localStorage.getItem('preferred_language') || 'pt_BR');
+  let language = 'pt_BR';
+  try {
+    language = window.localStorage.getItem('preferred_language') || language;
+  } catch {
+    // The fact section keeps its default language when storage is unavailable.
+  }
+  showCatFact(language);
 });
 
 document.addEventListener('catlovers:languagechange', (event) => {

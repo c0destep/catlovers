@@ -11,7 +11,9 @@ import { throttleHelper } from './throttle-helper.js';
 const THEME_KEY = 'preferred_theme';
 const LANG_KEY = 'preferred_language';
 const supportedLanguages = ['pt_BR', 'en_US', 'es_ES'];
-const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+const systemPrefersDark = typeof window.matchMedia === 'function'
+  ? window.matchMedia('(prefers-color-scheme: dark)')
+  : { matches: false };
 
 // --- DOM Elements ---
 const themeToggle = document.querySelector('.theme-toggle');
@@ -26,6 +28,44 @@ const toggleButton = document.querySelector('.navbar__toggle--button');
 // --- Functions ---
 
 /**
+ * Reads a preference without allowing storage restrictions to interrupt the page.
+ * @param { string } key - The localStorage key to read
+ * @returns { string | null } The stored value, or null when storage is unavailable
+ */
+const getStorageItem = (key) => {
+  try {
+    return window.localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+};
+
+/**
+ * Persists a preference when localStorage is available.
+ * @param { string } key - The localStorage key to write
+ * @param { string } value - The value to write
+ */
+const setStorageItem = (key, value) => {
+  try {
+    window.localStorage.setItem(key, value);
+  } catch {
+    // Preferences remain available for the current page when storage is unavailable.
+  }
+};
+
+/**
+ * Removes a preference when localStorage is available.
+ * @param { string } key - The localStorage key to remove
+ */
+const removeStorageItem = (key) => {
+  try {
+    window.localStorage.removeItem(key);
+  } catch {
+    // Storage may be unavailable in privacy-restricted contexts.
+  }
+};
+
+/**
  * Applies the selected theme (light/dark) to the document
  * @param { 'dark' | 'light' } theme - The theme to apply
  * @param { boolean } [persist=true] - Whether to save the preference to localStorage
@@ -35,9 +75,9 @@ const applyTheme = (theme, persist = true) => {
   document.documentElement.dataset.theme = resolvedTheme;
   themeToggle?.setAttribute('aria-pressed', resolvedTheme === 'dark');
   if (persist) {
-    localStorage.setItem(THEME_KEY, resolvedTheme);
+    setStorageItem(THEME_KEY, resolvedTheme);
   } else {
-    localStorage.removeItem(THEME_KEY);
+    removeStorageItem(THEME_KEY);
   }
 };
 
@@ -46,7 +86,7 @@ const applyTheme = (theme, persist = true) => {
  * @returns { 'dark' | 'light' } The resolved theme preference
  */
 const resolveThemePreference = () => {
-  const savedTheme = localStorage.getItem(THEME_KEY);
+  const savedTheme = getStorageItem(THEME_KEY);
   if (savedTheme === 'dark' || savedTheme === 'light') {
     return savedTheme;
   }
@@ -70,7 +110,7 @@ const toHtmlLang = (language) => {
  * @returns { string } The resolved language code
  */
 const resolveLanguage = () => {
-  const preferredLanguage = localStorage.getItem(LANG_KEY);
+  const preferredLanguage = getStorageItem(LANG_KEY);
   if (preferredLanguage && supportedLanguages.includes(preferredLanguage)) {
     return preferredLanguage;
   }
@@ -117,7 +157,7 @@ const setMobileMenuState = (isOpen, { focusMenu = false, restoreFocus = false } 
   nav.classList.toggle('navbar--open', isOpen);
   toggleButton.setAttribute('aria-expanded', String(isOpen));
 
-  const language = localStorage.getItem(LANG_KEY) || initialLanguage;
+  const language = getStorageItem(LANG_KEY) || initialLanguage;
   const labelKey = isOpen ? 'navbar.closeMenu' : 'navbar.openMenu';
   toggleButton.setAttribute('aria-label', translator.translateForKey(labelKey, language));
 
@@ -175,7 +215,7 @@ translationHelper.translatePage(initialLanguage);
 setActiveLanguageButton(initialLanguage);
 
 // 2. Theme
-applyTheme(resolveThemePreference(), Boolean(localStorage.getItem(THEME_KEY)));
+applyTheme(resolveThemePreference(), Boolean(getStorageItem(THEME_KEY)));
 
 // --- Event Listeners ---
 
@@ -184,7 +224,7 @@ languageButtons.forEach((button) => {
     const targetLanguage = button.dataset.language;
     if (targetLanguage) {
       translationHelper.translatePage(targetLanguage);
-      localStorage.setItem(LANG_KEY, targetLanguage);
+      setStorageItem(LANG_KEY, targetLanguage);
       setActiveLanguageButton(targetLanguage);
       document.dispatchEvent(new CustomEvent('catlovers:languagechange', {
         detail: { language: targetLanguage }
@@ -225,11 +265,17 @@ if (themeToggle) {
   });
 }
 
-systemPrefersDark.addEventListener('change', (event) => {
-  if (!localStorage.getItem(THEME_KEY)) {
+const handleSystemThemeChange = (event) => {
+  if (!getStorageItem(THEME_KEY)) {
     applyTheme(event.matches ? 'dark' : 'light', false);
   }
-});
+};
+
+if (typeof systemPrefersDark.addEventListener === 'function') {
+  systemPrefersDark.addEventListener('change', handleSystemThemeChange);
+} else if (typeof systemPrefersDark.addListener === 'function') {
+  systemPrefersDark.addListener(handleSystemThemeChange);
+}
 
 // Throttle scroll event to improve performance
 const throttledHandleScroll = throttleHelper.throttle(handleScroll, 100);
