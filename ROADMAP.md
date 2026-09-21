@@ -17,38 +17,35 @@
 
 ### Próximas prioridades altas
 
-1. Registrar a decisão sobre uma eventual operação real, responsáveis, regiões e prazo de atendimento antes de habilitar qualquer coleta.
-2. Definir o schema operacional dos gatos antes de criar perfis, disponibilidade e integração com parceiros.
-3. Informar autoria, data de revisão e fontes no conteúdo editorial sobre cuidados e comportamento.
-4. Completar canonical e o conjunto de metadados sociais por página antes de ampliar a descoberta orgânica.
+1. Informar autoria, data de revisão e fontes no conteúdo editorial sobre cuidados e comportamento.
+2. Completar `canonical` e o conjunto de metadados sociais por página, com uma estratégia de indexação coerente para os três idiomas.
+3. Fortalecer a demonstração com testes manuais e automatizados de acessibilidade, além de orçamentos de desempenho para os ativos publicados.
+4. Definir a governança editorial de PT-BR, EN e ES e manter a paridade de conteúdo sem prometer uma operação de adoção.
 
 ## 1. Direção do produto
 
 O Catlovers nasceu como um projeto educacional de HTML, CSS e JavaScript e já demonstra uma base front-end cuidadosa: treze páginas, três idiomas, tema claro e escuro, responsividade, recursos de acessibilidade, galeria, quiz, conteúdo educativo e suporte a instalação como PWA.
 
-A comunicação atual apresenta o Catlovers como demonstração educacional. Os perfis da galeria e os cenários de adaptação são identificados como fictícios; o formulário informa que não envia dados; e as páginas de adoção e apoio orientam o visitante a confirmar informações com uma organização real. O projeto ainda não possui animais disponíveis, parceiros, atendimento ou fluxos operacionais.
+A decisão vigente é manter o Catlovers como portfólio educacional e demonstração de front-end. O projeto não representa animais reais, parceiros, atendimento, coleta ou persistência de manifestações de interesse, pagamentos nem promessa de resposta. Os perfis, histórias, números e fluxos publicados devem continuar claramente fictícios ou demonstrativos.
 
-Qualquer evolução para uma operação real deve preservar essa transparência e implementar as capacidades prometidas antes de ampliar o conjunto de funcionalidades. Existem duas direções válidas:
+A comunicação atual já apresenta o Catlovers dessa forma: os perfis da galeria e os cenários de adaptação são identificados como fictícios; o formulário informa que não envia dados; e as páginas de adoção e apoio orientam o visitante a confirmar informações com uma organização real. O projeto não possui animais disponíveis, parceiros, atendimento ou fluxos operacionais.
 
-1. **Portfólio educacional:** manter o site como demonstração, identificar claramente dados e fluxos fictícios e concentrar o investimento em qualidade técnica.
-2. **Plataforma de adoção:** integrar parceiros reais, receber manifestações de interesse, manter a disponibilidade dos animais e acompanhar cada caso.
-
-Este roadmap recomenda a segunda direção, executada em etapas. Caso não exista equipe para responder aos contatos e atualizar os animais, a primeira etapa deve terminar com o reposicionamento transparente como demonstração.
+Uma eventual plataforma de adoção permanece uma trilha futura e condicional, fora do escopo atual. Só deve ser retomada após nova decisão explícita, definição de responsável operacional, regiões atendidas, prazo de resposta (SLA), requisitos de privacidade e hospedagem adequada. Até que essas condições sejam decididas, os itens operacionais das fases posteriores servem apenas como histórico e cenário de planejamento; não são metas atuais nem promessas públicas.
 
 ### Proposta recomendada
 
-O Catlovers deve ajudar uma pessoa a avaliar se pode adotar, encontrar animais compatíveis em parceiros confiáveis e enviar uma manifestação de interesse que receberá resposta dentro de um prazo conhecido. Conteúdo educativo e acompanhamento devem reduzir dúvidas antes e depois da adoção.
+O Catlovers deve oferecer uma demonstração educacional confiável de HTML, CSS e JavaScript, na qual visitantes compreendam o tema da adoção responsável e possam avaliar a qualidade de uma experiência acessível, multilíngue, responsiva, performática e testada. Conteúdo, i18n, SEO, PWA e testes devem receber prioridade enquanto nenhuma operação real estiver autorizada.
 
 ### Públicos prioritários
 
-- Pessoas que consideram a primeira adoção e precisam entender custos, segurança e adaptação.
-- Famílias que procuram um gato compatível com a moradia, a rotina, crianças e outros animais.
-- Protetores e organizações que precisam divulgar animais e organizar interessados.
-- Pessoas que podem contribuir com lar temporário, apadrinhamento, insumos, transporte ou trabalho voluntário.
+- Pessoas que querem aprender sobre adoção responsável por meio de conteúdo educativo, sem interpretar a demonstração como um serviço de adoção.
+- Estudantes e desenvolvedores que usam o projeto para estudar HTML, CSS, JavaScript, acessibilidade, i18n, PWA, SEO e testes E2E.
+- Visitantes que avaliam a clareza, a inclusão e a confiabilidade editorial de uma experiência web multilíngue.
+- Colaboradores e revisores interessados em melhorar conteúdo, tradução e qualidade técnica.
 
 ### Resultado principal
 
-A métrica central deve ser o número de **adoções responsáveis confirmadas por mês**. Enquanto o produto ainda não acompanhar adoções concluídas, deve usar como aproximação o número de **manifestações de interesse válidas, respondidas dentro do prazo**.
+O resultado principal é uma demonstração educacional coerente e verificável: as jornadas publicadas devem ser compreensíveis, acessíveis, responsivas, traduzidas e testadas, sem coletar dados pessoais nem sugerir que exista atendimento de adoção. Como não há operação nem telemetria de negócio no escopo atual, a evidência deve vir de conteúdo revisado, paridade de i18n, metadados SEO, orçamento de desempenho, testes E2E e auditorias manuais.
 
 ## 2. Retrato atual
 
@@ -61,14 +58,14 @@ A métrica central deve ser o número de **adoções responsáveis confirmadas p
 | Build | Vite 8.3.0 com configuração multipágina em `vite.config.mjs` | Migração consolidada e resíduos do Parcel removidos |
 | Dependências | pnpm e Fontsource; tradutor local sem dependência de runtime | Conjunto pequeno e compatível com o navegador |
 | Estilos | BEM, propriedades customizadas, abordagem mobile-first e `prefers-reduced-motion` | Base consistente; `main.css` concentra mais de duas mil linhas |
-| Dados | Seis gatos em `cats.json` | Bom protótipo, insuficiente como inventário operacional |
+| Dados | Seis gatos fictícios em `cats.json` | Suficientes para a demonstração; não constituem um inventário operacional |
 | Estado no cliente | `localStorage` para idioma e tema; `sessionStorage` para curiosidades | Adequado para preferências, sem persistência de negócio |
 | Internacionalização | PT-BR, EN e ES, com paridade automática de chaves | Conteúdo dinâmico principal e metadados exibidos pela galeria são traduzidos; revisão editorial e cobertura de conteúdo ainda precisam evoluir |
 | PWA | Manifesto, service worker, ícones, screenshot e pré-cache gerado | Estrutura validada na build; 76 recursos entram no pré-cache e a navegação offline foi verificada em Chromium |
 | Qualidade | ESLint 10, Stylelint 17 e dez especificações Cypress | Lint, i18n e build passam; 53 testes E2E passaram no Chromium |
 | Entrega | GitHub Actions e GitHub Pages | A publicação depende de instalação congelada, lint, i18n, build e E2E |
-| Backend | Inexistente | Formulário, disponibilidade, parceiros e acompanhamento não são persistidos |
-| Observabilidade | Erros apenas no console | Não há visibilidade de conversão, falhas ou disponibilidade |
+| Backend | Inexistente | Formulário, disponibilidade, parceiros e acompanhamento não são persistidos, conforme o escopo demonstrativo |
+| Observabilidade | Erros apenas no console | Não há telemetria de uso ou de negócio; a próxima evolução deve priorizar evidências de qualidade sem introduzir coleta prematura |
 
 ### Funcionalidades existentes
 
@@ -100,8 +97,8 @@ A métrica central deve ser o número de **adoções responsáveis confirmadas p
 | P0 | Service worker e manifesto usavam caminhos incompatíveis com a saída do Vite | Resolvida | Preservar a validação da build e o teste offline no fluxo E2E. |
 | P0 | Indicadores, depoimentos e garantias não apresentam fonte verificável | Resolvida para o estágio atual | Números de impacto, depoimentos, garantias, histórias apresentadas como reais e alegações de saúde sem fonte foram removidos ou substituídos por conteúdo demonstrativo verificável. |
 | P0 | CI publicava sem executar lint, i18n ou E2E | Resolvida | Preservar os gates antes do deploy. |
-| P1 | Gatos não têm perfil, disponibilidade, localização ou responsável | Pendente | O usuário não consegue tomar uma decisão informada. |
-| P1 | O gato escolhido não acompanha o usuário até o formulário | Pendente | A jornada perde contexto no ponto de maior intenção. |
+| P1 | Gatos não têm perfil operacional, disponibilidade, localização ou responsável | Fora do escopo atual | Os seis perfis são fictícios e servem à demonstração; esses campos só serão necessários em uma futura operação autorizada. |
+| P1 | O gato escolhido não acompanha o usuário até um formulário operacional | Fora do escopo atual | O formulário é demonstrativo e não coleta interesse; uma jornada persistida depende da decisão de reabrir a trilha operacional. |
 | P1 | CTAs de apoio não executam ação | Resolvida para demonstração | Os controles sem destino foram removidos; a página orienta a procurar organizações reais. Fluxos operacionais continuam reservados à Fase 4. |
 | P1 | Conteúdo dinâmico permanece parcialmente em português | Parcial | O tradutor e a cobertura dinâmica foram corrigidos; idades, cores, temperamentos, textos alternativos e estados vazios da galeria possuem localização, enquanto a governança editorial por idioma permanece pendente. |
 | P1 | Testes verificavam sobretudo presença de elementos | Fortalecida | Filtros, responsividade, i18n, PWA, teclado, links e falha da API externa possuem cobertura; novas integrações exigirão seus próprios cenários. |
@@ -109,11 +106,13 @@ A métrica central deve ser o número de **adoções responsáveis confirmadas p
 | P2 | Blog e SEO têm estrutura incompleta | Parcial | `robots.txt`, `sitemap.xml` e `og:image` são publicados e validados; os cards repetem o mesmo artigo, e ainda faltam canonical e o conjunto social por página. |
 | P2 | Build inclui 42 arquivos de fonte | Pendente | O custo de transferência ainda pode ser reduzido selecionando alfabetos, pesos e formatos realmente usados. |
 | P2 | Imagens da galeria dependem do Unsplash | Pendente | A experiência offline fica incompleta e o produto depende de um terceiro. |
-| P2 | Não há telemetria de produto ou erros | Pendente | Decisões e incidentes dependem de impressões, sem uma linha de base. |
+| P2 | Não há telemetria de produto ou erros | Fora do escopo atual | A demonstração deve usar testes e auditorias como evidência; qualquer telemetria futura exigirá decisão de privacidade e finalidade. |
 
-## 4. Arquitetura de destino
+## 4. Arquitetura de uma eventual operação
 
-A interface deve continuar estática e sem framework enquanto essa opção mantiver o produto simples. O primeiro backend pode ser uma API pequena ou um conjunto de funções serverless. A escolha do provedor deve ocorrer apenas depois de confirmar quem operará os contatos, onde o site será hospedado e quais dados precisam ser retidos.
+Esta é uma trilha futura e condicional, fora do escopo atual do portfólio educacional. Só deve ser retomada depois de nova decisão explícita, responsável operacional, regiões atendidas, SLA, requisitos de privacidade e hospedagem definidos. Até lá, o Catlovers permanece estático, sem backend e sem dados reais.
+
+Em uma eventual retomada, a interface poderá continuar estática e sem framework enquanto essa opção mantiver o produto simples. O primeiro backend poderá ser uma API pequena ou um conjunto de funções serverless. A escolha do provedor deverá ocorrer depois de confirmar quem operará os contatos, onde o site será hospedado e quais dados precisarão ser retidos.
 
 ```mermaid
 flowchart LR
@@ -139,7 +138,7 @@ flowchart LR
 - **Caso de adoção:** responsável, etapas, encontro, decisão, data da adoção, acompanhamentos e encerramento.
 - **Apoio:** modalidade, pessoa, parceiro, disponibilidade, valor ou item quando aplicável e estado do contato.
 
-### Princípios técnicos
+### Princípios técnicos da trilha futura
 
 - Manter HTML semântico, CSS e JavaScript modular como tecnologias de publicação.
 - Introduzir backend somente nas fronteiras que exigem dados reais, segredos ou regras de negócio.
@@ -151,26 +150,26 @@ flowchart LR
 
 ## 5. Plano de execução
 
-As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe e a disponibilidade de parceiros definirão as datas.
+As durações abaixo expressam ordem e tamanho relativo. A Fase 1 e a Fase 3 orientam o trabalho atual da demonstração; as fases operacionais posteriores são uma trilha futura e condicional, sem datas vigentes.
 
-### Fase 0 — Decisão e integridade da proposta
+### Fase 0 — Direção demonstrativa e integridade da proposta
 
 **Horizonte sugerido:** uma semana
 
-**Objetivo:** alinhar a comunicação com a capacidade operacional real.
+**Objetivo:** manter a comunicação fiel ao caráter educacional e demonstrativo do projeto.
 
 - [x] Definir o estágio atual como portfólio educacional e identificar publicamente o caráter demonstrativo.
-- [ ] Identificar quem receberá contatos, qual será o prazo de resposta e quais regiões serão atendidas.
+- [x] Registrar que não existem animais reais, parceiros, atendimento, coleta ou persistência de manifestações de interesse, pagamentos nem promessa de resposta.
 - [x] Remover números de impacto, depoimentos, histórias, garantias e alegações de saúde sem origem verificável.
 - [x] Identificar como demonstração qualquer informação que ainda não possa ser comprovada.
-- [ ] Definir a linha de base das jornadas: visita, abertura da galeria, visualização de gato, início e conclusão de interesse.
-- [ ] Registrar as decisões de arquitetura e operação em documentos curtos no repositório.
+- [ ] Definir uma linha de base das jornadas demonstrativas: navegação, galeria, quiz, conteúdo educativo e formulário local sem envio.
+- [ ] Registrar prioridades de acessibilidade, conteúdo, i18n, SEO, desempenho e testes em documentos curtos no repositório.
 
 **Critérios de saída**
 
 - Toda promessa pública corresponde a uma capacidade existente ou está marcada como demonstração.
-- Existe um responsável e um prazo para responder a cada tipo de contato.
-- A equipe escolheu o escopo do MVP e os indicadores que serão medidos.
+- O projeto não sugere coleta, atendimento ou acompanhamento que não existam.
+- A equipe escolheu critérios de qualidade verificáveis para a demonstração.
 
 ### Fase 1 — Fundação confiável
 
@@ -210,11 +209,13 @@ As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe 
 - PWA, ícones, atalhos e navegação offline passam em teste sobre a pasta publicada.
 - README, `CONTRIBUTING.md`, configuração e workflow descrevem a mesma ferramenta e o mesmo ambiente.
 
-### Fase 2 — MVP real de adoção
+### Fase 2 — MVP real de adoção (trilha futura e condicional)
 
 **Horizonte sugerido:** quatro a seis semanas
 
-**Objetivo:** transformar visita e escolha em um contato real, rastreável e seguro.
+**Status:** fora do escopo atual. Só iniciar após nova decisão explícita sobre a operação, responsável operacional, regiões atendidas, SLA, privacidade e hospedagem.
+
+**Objetivo eventual:** transformar visita e escolha em um contato real, rastreável e seguro, caso a trilha operacional seja autorizada.
 
 #### Catálogo
 
@@ -250,11 +251,11 @@ As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe 
 - Falhas da API não produzem confirmação falsa nem perda silenciosa.
 - Dados pessoais possuem finalidade, prazo de retenção, controle de acesso e caminho de exclusão definidos.
 
-### Fase 3 — Confiança, inclusão e descoberta
+### Fase 3 — Confiança, inclusão e descoberta da demonstração
 
 **Horizonte sugerido:** três a cinco semanas
 
-**Objetivo:** tornar as jornadas completas, compreensíveis e encontráveis.
+**Objetivo:** tornar as jornadas demonstrativas completas, compreensíveis, inclusivas e encontráveis.
 
 #### Experiência e acessibilidade
 
@@ -271,7 +272,7 @@ As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe 
 - [x] Localizar, na camada de exibição, idades, cores, temperamentos, textos alternativos e estados vazios da galeria.
 - [ ] Usar valores BCP 47 no atributo `lang` (`pt-BR`, `en-US`, `es-ES`) em todas as atualizações.
 - [ ] Definir quem revisa cada idioma e qual é o processo para publicar conteúdo novo.
-- [ ] Medir o uso de EN e ES para justificar seu custo editorial.
+- [ ] Avaliar a necessidade editorial de EN e ES com revisão de conteúdo e evidências agregadas, sem introduzir telemetria pessoal como requisito.
 
 #### Conteúdo e SEO
 
@@ -293,16 +294,18 @@ As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe 
 
 **Critérios de saída**
 
-- As jornadas de galeria, detalhe e interesse funcionam por teclado e nos três idiomas.
+- As jornadas demonstrativas de galeria, quiz, conteúdo e formulário informativo funcionam por teclado e nos três idiomas.
 - Nenhum conteúdo de saúde ou impacto é publicado sem origem e data de revisão.
 - Links, sitemap, canonical e metadados são validados na build.
 - Os orçamentos de desempenho impedem crescimento acidental dos ativos.
 
-### Fase 4 — Rede de apoio e acompanhamento
+### Fase 4 — Rede de apoio e acompanhamento (trilha futura e condicional)
 
-**Horizonte sugerido:** seis a dez semanas, após validar o MVP
+**Horizonte sugerido:** seis a dez semanas, após validar o MVP futuro e obter nova autorização
 
-**Objetivo:** atender parceiros, outras formas de apoio e o período posterior à adoção.
+**Status:** fora do escopo atual. Só iniciar depois das condições de retomada registradas na Fase 2 e de uma decisão específica sobre pagamentos, parceiros e acompanhamento.
+
+**Objetivo eventual:** atender parceiros, outras formas de apoio e o período posterior à adoção.
 
 - [ ] Criar fluxos funcionais e responsáveis para voluntariado, lar temporário, insumos e apadrinhamento.
 - [ ] Se houver pagamento, usar um provedor especializado e registrar apenas identificadores e estados necessários.
@@ -318,83 +321,76 @@ As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe 
 - Parceiros mantêm o catálogo sem acesso aos dados de outras organizações.
 - A equipe mede tempo de resposta, conclusão de casos, devoluções e participação nos check-ins.
 
-## 6. Primeiros 90 dias
+## 6. Próximo ciclo de qualidade da demonstração
 
-| Período | Entrega | Evidência esperada |
+| Frente | Entrega | Evidência esperada |
 | --- | --- | --- |
-| Dias 1–15 | Decisões da Fase 0 e migração Vite consolidada | Proposta honesta, ambiente reproduzível e documentação alinhada |
-| Dias 16–30 | CI completa, PWA reparada e E2E estável | Publicação bloqueada por qualidade e smoke test sobre `dist/` |
-| Dias 31–45 | Schema de gatos e página de detalhe | Catálogo validado, status e URLs compartilháveis |
-| Dias 46–75 | API de interesse e operação mínima | Envio persistido, confirmação, notificação e gestão de estado |
-| Dias 76–90 | Piloto com poucos parceiros | Casos reais acompanhados, métricas básicas e decisão sobre a próxima fase |
+| Conteúdo | Informar autoria, data de revisão e fontes; criar artigos distintos para os cards atuais | Revisão editorial registrada e ausência de alegações sem origem |
+| Acessibilidade | Testar teclado, leitor de tela, foco, estados dinâmicos e movimento reduzido | Cenários automatizados e checklist manual atualizado |
+| i18n | Revisar PT-BR, EN e ES e manter paridade de conteúdo | Validação de chaves, revisão por idioma e atributo `lang` coerente |
+| SEO | Completar `canonical`, metadados sociais e estratégia de indexação | Metadados e links validados na build |
+| Desempenho e resiliência | Reduzir fontes, estabilizar imagens, definir orçamentos e medir Core Web Vitals | Limites de ativos no CI e evidências de LCP, INP e CLS quando a ferramenta estiver disponível |
+| Testes e PWA | Preservar a suíte E2E, os gates da CI e o contrato offline | `pnpm check`, E2E e navegação offline aprovados sobre a build publicada |
 
-## 7. Métricas
+## 7. Indicadores da demonstração
 
-### Funil de adoção
+O escopo atual não inclui métricas de adoção, conversão, atendimento ou disponibilidade de animais. A qualidade deve ser acompanhada por evidências de build, testes, revisão editorial e auditorias manuais. Qualquer telemetria futura exigirá finalidade, minimização e uma decisão de privacidade antes de ser introduzida.
 
-- Visitas à galeria por origem e dispositivo.
-- Abertura de perfil por visita à galeria.
-- Início e conclusão do formulário por perfil.
-- Solicitações entregues com sucesso e erros por etapa.
-- Tempo até o primeiro contato humano.
-- Conversão de interesse em encontro e de encontro em adoção.
-- Motivos de encerramento e taxa de devolução.
+### Conteúdo e i18n
 
-### Saúde do catálogo
+- Presença de aviso demonstrativo nas jornadas, perfis e formulários publicados.
+- Artigos e orientações com autoria, data de revisão e fontes quando fizerem afirmações sobre saúde ou comportamento.
+- Paridade de chaves e revisão de conteúdo em PT-BR, EN e ES.
+- Estados vazios, textos alternativos e metadados dinâmicos localizados.
 
-- Percentual de animais atualizados nos últimos sete dias.
-- Tempo entre mudança real e atualização pública de status.
-- Contatos recebidos sobre animais indisponíveis.
-- Perfis sem dados essenciais ou sem imagem acessível.
+### Acessibilidade e jornadas
 
-### Qualidade técnica
+- Sucesso da CI, do lint, da validação de i18n, da build e dos testes E2E.
+- Cobertura manual das jornadas por teclado, foco visível, leitor de tela e movimento reduzido.
+- Funcionamento verificável de galeria, quiz, conteúdo educativo e formulário informativo sem envio de dados.
+- Ausência de regressões em estados de carregamento, vazio, erro e nova tentativa quando aplicável.
 
-- Taxa de sucesso da CI e frequência de regressões em produção.
-- Disponibilidade do site e da API.
-- Erros de JavaScript e de API por mil sessões.
-- LCP, INP e CLS por página e dispositivo.
-- Violações de acessibilidade e sucesso das jornadas por teclado.
-- Tamanho de CSS, JavaScript, fontes e imagens na build.
+### SEO, desempenho e resiliência
 
-### Apoio e conteúdo
-
-- Contatos concluídos por modalidade de apoio.
-- Leitura concluída e clique de artigo para perfil ou guia de adoção.
-- Tráfego orgânico por tema.
-- Uso e conversão por idioma.
-- Avaliação de utilidade do quiz e da FAQ.
+- Presença e consistência de `canonical`, metadados sociais, `robots.txt` e `sitemap.xml`.
+- LCP, INP e CLS por página quando uma ferramenta disponível permitir a medição.
+- Tamanho de CSS, JavaScript, fontes e imagens, protegido por orçamentos no CI.
+- Navegação offline do app shell e fallback local quando integrações externas estiverem indisponíveis.
 
 ## 8. Hipóteses que precisam de validação
 
-1. A escolha de um gato específico converte melhor do que um formulário genérico.
-2. Localização, compatibilidade doméstica e disponibilidade pesam mais na escolha do que idade e sexo isolados.
-3. O quiz melhora a descoberta e a qualidade do contato; caso sirva apenas como entretenimento, não deve orientar decisões sensíveis.
-4. Pessoas aceitam um formulário curto quando o prazo e o responsável pelo retorno estão claros.
-5. O acompanhamento pós-adoção reduz dificuldades de adaptação e devoluções.
-6. Existe demanda operacional suficiente para manter fluxos separados de lar temporário, doação, apadrinhamento e voluntariado.
-7. EN e ES recebem uso suficiente para justificar tradução e revisão contínuas.
-8. Instalação e uso offline resolvem um problema relevante para o público; a PWA deve ser mantida somente se esse valor for observado.
+1. O aviso explícito de demonstração evita expectativas de atendimento sem prejudicar a compreensão do conteúdo educativo.
+2. Conteúdo com autoria, data de revisão e fontes aumenta a confiança sem transformar a demonstração em aconselhamento profissional.
+3. O quiz favorece a exploração educativa; seus resultados devem ser apresentados como simulação, nunca como recomendação sensível.
+4. Navegação por teclado, foco visível e suporte a leitor de tela tornam as jornadas compreensíveis para mais visitantes.
+5. Paridade editorial entre PT-BR, EN e ES justifica a presença dos três idiomas e reduz conteúdo incompleto ou contraditório.
+6. Metadados completos e páginas tecnicamente estáveis melhoram a descoberta orgânica sem depender de conteúdo operacional.
+7. A instalação e o uso offline resolvem uma necessidade relevante para o público; a PWA deve ser mantida enquanto houver evidência técnica ou educacional desse valor.
+8. Imagens, fontes e integrações externas podem ser reduzidas ou substituídas sem perder o valor didático da demonstração.
 
-Cada hipótese deve ter uma métrica, um período de observação e uma decisão possível: manter, ajustar ou retirar.
+Cada hipótese deve ter uma evidência testável, um período de revisão e uma decisão possível: manter, ajustar ou retirar. A validação deve evitar coleta de dados pessoais enquanto o projeto permanecer demonstrativo.
 
 ## 9. Riscos e respostas
 
 | Risco | Resposta proposta |
 | --- | --- |
-| Lançar captação sem equipe de atendimento | Definir responsável e SLA antes de habilitar o envio |
-| Catálogo desatualizado | Exigir data de revisão, alertar o parceiro e ocultar registros vencidos |
-| Coletar dados pessoais em excesso | Usar minimização, retenção curta e revisão do formulário |
-| Investir cedo em painel complexo | Começar com poucos parceiros e um fluxo administrativo simples |
-| Manter promessas sem evidência | Criar governança editorial e publicar fonte e data |
+| Visitante interpretar a demonstração como serviço real | Manter avisos claros, perfis fictícios, formulário sem envio e nenhuma promessa de resposta |
+| Publicar conteúdo sem evidência | Criar governança editorial e publicar autoria, fonte e data de revisão |
+| Regressão de acessibilidade | Cobrir teclado, leitor de tela, foco, contraste e movimento reduzido em testes e revisão manual |
+| Traduções divergirem ou ficarem incompletas | Validar chaves, revisar cada idioma e tratar conteúdo novo como mudança editorial |
+| SEO permanecer incompleto | Validar `canonical`, metadados sociais, `robots.txt`, `sitemap.xml` e indexação na build |
+| Ativos crescerem sem controle | Definir orçamentos de CSS, JavaScript, fontes e imagens no CI |
 | Acrescentar framework sem necessidade | Evoluir os módulos atuais e reconsiderar somente diante de complexidade comprovada |
 | Dependência de APIs e imagens externas | Definir timeout, fallback, cache e responsabilidade por cada integração |
-| Analytics ferir privacidade | Preferir eventos agregados, consentimento quando necessário e nenhuma PII |
-| PWA consumir manutenção sem uso | Medir instalação e uso offline antes de ampliar o escopo |
+| Introduzir telemetria sem finalidade clara | Manter os testes como evidência atual e exigir decisão de privacidade antes de coletar eventos |
+| Retomar a operação real sem preparo | Manter as fases operacionais pausadas até existir nova decisão, responsável, regiões, SLA, privacidade e hospedagem |
+| PWA consumir manutenção sem valor demonstrável | Revisar a utilidade do app shell e do uso offline antes de ampliar o escopo |
 
 ## 10. Definição de pronto
 
 Uma entrega está pronta quando:
 
+- respeita o caráter educacional e demonstrativo, sem criar animais reais, parceiros, atendimento, coleta, persistência, pagamentos ou promessa de resposta;
 - possui critérios de aceite ligados a uma jornada ou a um risco concreto;
 - funciona em telas pequenas e grandes, por teclado e com movimento reduzido;
 - cobre PT-BR e, quando fizer parte do escopo publicado, EN e ES;
@@ -403,21 +399,32 @@ Uma entrega está pronta quando:
 - acrescenta testes que protegem o comportamento relevante;
 - passa por lint, validação de i18n, build e testes automatizados;
 - atualiza documentação, política ou conteúdo relacionado;
-- inclui a métrica necessária para verificar o resultado;
+- inclui uma evidência verificável para avaliar o resultado, sem exigir telemetria de negócio;
 - pode ser publicada e revertida com procedimento conhecido.
 
 ## 11. Decisões pendentes
 
-Estas respostas devem ser registradas antes da Fase 2, pois alteram arquitetura, custo e responsabilidade:
+### Qualidade da demonstração
 
-- O Catlovers continuará como demonstração ou terá uma futura etapa operacional? O estado publicado atual é demonstrativo.
-- Quais organizações fornecerão os gatos e quem confirmará seus dados?
-- Qual região geográfica será atendida no piloto?
-- Quem receberá cada contato e em quanto tempo deverá responder?
-- Quais dados são indispensáveis para triagem e por quanto tempo serão mantidos?
-- O GitHub Pages continuará como hospedagem ou a API exigirá outro provedor?
-- Quais idiomas possuem revisores e demanda real?
-- Quais fontes, datas de revisão e autorizações serão exigidas antes de publicar futuros indicadores, depoimentos ou histórias?
+Estas decisões orientam o trabalho atual e não autorizam uma operação de adoção:
+
+- Quem revisará cada idioma e qual será o processo para publicar conteúdo novo?
+- Quais fontes, datas de revisão, autores e autorizações serão exigidos antes de publicar conteúdo sobre saúde, comportamento ou impacto?
+- Qual estratégia de `canonical`, metadados sociais e indexação representará corretamente PT-BR, EN e ES?
+- Quais jornadas terão cobertura manual de teclado, leitor de tela e movimento reduzido, além dos testes automatizados?
+- Quais orçamentos de CSS, JavaScript, fontes e imagens serão adotados no CI?
+- Quais imagens, fontes e integrações externas possuem licença, fallback e responsabilidade editorial claros?
+- A manutenção da PWA e do app shell continuará justificável diante do valor técnico e educacional observado?
+
+### Trilha operacional arquivada
+
+A plataforma real permanece fora do escopo atual e não deve ser iniciada como consequência deste roadmap. Se uma nova decisão autorizar sua retomada, será necessário registrar antes dela:
+
+- responsável operacional e organizações parceiras, com verificação dos dados;
+- regiões atendidas e prazo de resposta (SLA) para cada contato;
+- dados indispensáveis, finalidade, base aplicável, retenção, exclusão, consentimento e canal para exercício de direitos;
+- hospedagem, API, controle de acesso, auditoria, backup e resposta a incidentes;
+- regras para pagamentos, se essa modalidade vier a ser autorizada.
 
 ## 12. Verificações usadas neste diagnóstico
 
