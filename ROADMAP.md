@@ -2,25 +2,25 @@
 
 > Diagnóstico iniciado em 16 de setembro de 2026. O retrato original foi atualizado após a execução das primeiras prioridades para distinguir problemas resolvidos de trabalho pendente.
 
-## Andamento da execução — 17 de setembro de 2026
+## Andamento da execução — 21 de setembro de 2026
 
 | Frente | Estado | Evidência |
 | --- | --- | --- |
 | Posicionamento | Concluído para o estágio atual | O site se identifica como demonstração em todos os idiomas; perfis, jornadas e formulários são fictícios, enquanto números de impacto, depoimentos, garantias e alegações de saúde sem fonte foram removidos. |
 | Formulário | Concluído para demonstração | O fluxo valida e limpa os campos, informa que nenhum dado foi enviado e não simula contato futuro. |
 | Vite | Concluído | A migração multipágina foi consolidada, resíduos do Parcel foram removidos e ambiente, documentação e Cypress usam a porta 1234. |
-| PWA | Concluído para o contrato atual | Manifesto, ícones, screenshot, escopo, service worker e pré-cache são validados na build; um navegador isolado confirma a navegação pelo app shell sem rede. |
+| PWA | Concluído para o contrato atual | Manifesto, ícones, screenshot, escopo, service worker e pré-cache de 76 recursos são validados na build; o Chromium confirma a navegação pelo app shell sem rede. |
 | CI | Concluído | Instalação congelada, lint, i18n, build e Cypress bloqueiam a publicação no GitHub Pages. |
-| Internacionalização | Parcialmente concluído | O tradutor incompatível foi substituído e o conteúdo dinâmico possui cobertura; idades e alguns metadados do catálogo ainda estão em português. |
-| Testes | Em evolução | A suíte completa passou com 44 testes em nove especificações, além da navegação offline; filtros, teclado, falha externa e fragmentos locais possuem cobertura. |
+| Internacionalização | Parcialmente concluído | O tradutor incompatível foi substituído; idades e metadados exibidos pela galeria possuem localização nos três catálogos, mas a governança editorial e a cobertura de conteúdo por idioma ainda precisam evoluir. |
+| Testes | Em evolução | A suíte completa passou com 53 testes em dez especificações, além da navegação offline em Chromium; filtros, teclado, falha externa e fragmentos locais possuem cobertura. |
 | Documentação | Concluído para a fundação atual | README, guia de contribuição e `humans.txt` descrevem Vite, pnpm, PWA, E2E e as limitações reais. |
 
 ### Próximas prioridades altas
 
 1. Registrar a decisão sobre uma eventual operação real, responsáveis, regiões e prazo de atendimento antes de habilitar qualquer coleta.
-2. Localizar idades e demais metadados do catálogo para concluir a experiência em EN e ES.
-3. Definir o schema operacional dos gatos antes de criar perfis, disponibilidade e integração com parceiros.
-4. Informar autoria, data de revisão e fontes no conteúdo editorial sobre cuidados e comportamento.
+2. Definir o schema operacional dos gatos antes de criar perfis, disponibilidade e integração com parceiros.
+3. Informar autoria, data de revisão e fontes no conteúdo editorial sobre cuidados e comportamento.
+4. Completar canonical e o conjunto de metadados sociais por página antes de ampliar a descoberta orgânica.
 
 ## 1. Direção do produto
 
@@ -63,9 +63,9 @@ A métrica central deve ser o número de **adoções responsáveis confirmadas p
 | Estilos | BEM, propriedades customizadas, abordagem mobile-first e `prefers-reduced-motion` | Base consistente; `main.css` concentra mais de duas mil linhas |
 | Dados | Seis gatos em `cats.json` | Bom protótipo, insuficiente como inventário operacional |
 | Estado no cliente | `localStorage` para idioma e tema; `sessionStorage` para curiosidades | Adequado para preferências, sem persistência de negócio |
-| Internacionalização | PT-BR, EN e ES, com paridade automática de chaves | Conteúdo dinâmico principal é traduzido; metadados do catálogo ainda precisam evoluir |
-| PWA | Manifesto, service worker, ícones, screenshot e pré-cache gerado | Estrutura validada na build e navegação offline verificada em navegador dedicado |
-| Qualidade | ESLint 10, Stylelint 17 e nove especificações Cypress | Lint, i18n e build passam; 44 testes E2E passaram no Chromium |
+| Internacionalização | PT-BR, EN e ES, com paridade automática de chaves | Conteúdo dinâmico principal e metadados exibidos pela galeria são traduzidos; revisão editorial e cobertura de conteúdo ainda precisam evoluir |
+| PWA | Manifesto, service worker, ícones, screenshot e pré-cache gerado | Estrutura validada na build; 76 recursos entram no pré-cache e a navegação offline foi verificada em Chromium |
+| Qualidade | ESLint 10, Stylelint 17 e dez especificações Cypress | Lint, i18n e build passam; 53 testes E2E passaram no Chromium |
 | Entrega | GitHub Actions e GitHub Pages | A publicação depende de instalação congelada, lint, i18n, build e E2E |
 | Backend | Inexistente | Formulário, disponibilidade, parceiros e acompanhamento não são persistidos |
 | Observabilidade | Erros apenas no console | Não há visibilidade de conversão, falhas ou disponibilidade |
@@ -103,11 +103,11 @@ A métrica central deve ser o número de **adoções responsáveis confirmadas p
 | P1 | Gatos não têm perfil, disponibilidade, localização ou responsável | Pendente | O usuário não consegue tomar uma decisão informada. |
 | P1 | O gato escolhido não acompanha o usuário até o formulário | Pendente | A jornada perde contexto no ponto de maior intenção. |
 | P1 | CTAs de apoio não executam ação | Resolvida para demonstração | Os controles sem destino foram removidos; a página orienta a procurar organizações reais. Fluxos operacionais continuam reservados à Fase 4. |
-| P1 | Conteúdo dinâmico permanece parcialmente em português | Parcial | O tradutor e a cobertura dinâmica foram corrigidos; dados do catálogo ainda precisam de localização. |
+| P1 | Conteúdo dinâmico permanece parcialmente em português | Parcial | O tradutor e a cobertura dinâmica foram corrigidos; idades, cores, temperamentos, textos alternativos e estados vazios da galeria possuem localização, enquanto a governança editorial por idioma permanece pendente. |
 | P1 | Testes verificavam sobretudo presença de elementos | Fortalecida | Filtros, responsividade, i18n, PWA, teclado, links e falha da API externa possuem cobertura; novas integrações exigirão seus próprios cenários. |
 | P1 | Política de privacidade é genérica | Mitigada para demonstração | A página descreve os dados locais e os serviços externos atuais; qualquer coleta real ainda exigirá finalidade, retenção, direitos e contato definidos. |
-| P2 | Blog e SEO têm estrutura incompleta | Pendente | Os cards repetem o mesmo artigo; faltam sitemap, canonical e metadados por página. |
-| P2 | Build inclui 110 arquivos de fonte | Pendente | O custo de transferência supera o necessário para os alfabetos atendidos. |
+| P2 | Blog e SEO têm estrutura incompleta | Parcial | `robots.txt`, `sitemap.xml` e `og:image` são publicados e validados; os cards repetem o mesmo artigo, e ainda faltam canonical e o conjunto social por página. |
+| P2 | Build inclui 42 arquivos de fonte | Pendente | O custo de transferência ainda pode ser reduzido selecionando alfabetos, pesos e formatos realmente usados. |
 | P2 | Imagens da galeria dependem do Unsplash | Pendente | A experiência offline fica incompleta e o produto depende de um terceiro. |
 | P2 | Não há telemetria de produto ou erros | Pendente | Decisões e incidentes dependem de impressões, sem uma linha de base. |
 
@@ -268,7 +268,7 @@ As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe 
 
 #### Internacionalização
 
-- [ ] Traduzir idades, cores, temperamentos, textos alternativos, estados vazios e curiosidades dinâmicas.
+- [x] Localizar, na camada de exibição, idades, cores, temperamentos, textos alternativos e estados vazios da galeria.
 - [ ] Usar valores BCP 47 no atributo `lang` (`pt-BR`, `en-US`, `es-ES`) em todas as atualizações.
 - [ ] Definir quem revisa cada idioma e qual é o processo para publicar conteúdo novo.
 - [ ] Medir o uso de EN e ES para justificar seu custo editorial.
@@ -277,13 +277,15 @@ As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe 
 
 - [ ] Criar artigos distintos para os três cards atuais e impedir links editoriais duplicados por teste.
 - [ ] Informar autor, data de publicação, data de revisão e fontes em conteúdo sobre saúde e comportamento.
-- [ ] Gerar `sitemap.xml`, adicionar canonical e completar metadados Open Graph por página.
+- [x] Publicar `robots.txt` e gerar `sitemap.xml` na saída final.
+- [x] Publicar `og:image` estável para as páginas geradas.
+- [ ] Adicionar canonical e completar `og:title`, `og:description` e `og:url` por página.
 - [ ] Adicionar dados estruturados apenas para informações reais e mantidas.
 - [ ] Definir uma estratégia de indexação para idiomas; tradução somente no cliente não cria páginas localizadas para busca.
 
 #### Desempenho e resiliência
 
-- [ ] Importar apenas alfabetos, pesos e formatos de fonte usados; a build atual gera 110 arquivos de fonte, cerca de 1,7 MB.
+- [ ] Importar apenas alfabetos, pesos e formatos de fonte usados; a build atual gera 42 arquivos de fonte, cerca de 0,65 MiB.
 - [ ] Definir dimensões ou proporção para todas as imagens e evitar mudanças de layout.
 - [ ] Estabelecer orçamentos de CSS, JavaScript, fontes e imagens no CI.
 - [x] Tratar a API de curiosidades como melhoria opcional: timeout, estado local na única língua em que o bloco aparece e nenhum erro ruidoso quando estiver indisponível.
@@ -430,10 +432,11 @@ Estas respostas devem ser registradas antes da Fase 2, pois alteram arquitetura,
 
 - `pnpm check`: aprovado com ESLint, Stylelint, i18n e build validada.
 - `pnpm build`: aprovado sem o tradutor incompatível; 13 páginas, manifesto, recursos locais e pré-cache são verificados automaticamente.
-- Cypress 16.1.0 no Chromium: 44 testes aprovados em nove especificações.
+- Cypress 16.1.0 no Chromium: 53 testes aprovados em dez especificações.
 - Chrome DevTools Protocol: app shell carregado em um perfil isolado após desativar a rede do navegador.
 - Validação da build: links para arquivos e fragmentos locais conferidos nas 13 páginas.
 - Teste direcionado da galeria após fortalecer o filtro: cinco testes aprovados.
-- Build local atual: 143 arquivos e aproximadamente 3,3 MB; os 110 arquivos de fonte continuam como oportunidade de otimização.
+- Build local atual: 13 páginas, 22 entradas na raiz, 77 arquivos e aproximadamente 1,7 MB; 42 arquivos de fonte somam cerca de 0,65 MiB.
+- O Lighthouse não foi executado porque a ferramenta não está disponível neste ambiente; a auditoria de desempenho permanece pendente, sem caracterizar falha da aplicação.
 
 Esses resultados formam uma linha de base técnica, não uma certificação completa de acessibilidade, segurança, desempenho ou compatibilidade entre navegadores.
