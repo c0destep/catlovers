@@ -1,43 +1,36 @@
 import { spawn } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+import { preview as startPreview } from 'vite';
 
 const previewUrl = 'http://127.0.0.1:1234/';
-const pnpmCommand = process.platform === 'win32' ? 'pnpm.cmd' : 'pnpm';
 const browser = process.env.CYPRESS_BROWSER || 'chrome';
 const forwardedArguments = process.argv.slice(2);
 if (forwardedArguments[0] === '--') forwardedArguments.shift();
-const previewOutput = [];
+const viteConfig = fileURLToPath(new URL('../vite.config.mjs', import.meta.url));
+const signalExitCodes = { SIGINT: 130, SIGTERM: 143 };
+let previewServer;
+let activeProcess;
+let receivedSignal;
 
-const preview = spawn(pnpmCommand, ['preview'], {
-  env: { ...process.env, NO_COLOR: '1' },
-  stdio: ['ignore', 'pipe', 'pipe']
-});
+const handleSignal = (signal) => {
+  if (receivedSignal) return;
 
-for (const stream of [preview.stdout, preview.stderr]) {
-  stream.on('data', (chunk) => {
-    previewOutput.push(chunk.toString());
-  });
-}
+  receivedSignal = signal;
+  process.exitCode = signalExitCodes[signal];
 
-const stopPreview = () => {
-  if (preview.exitCode === null) preview.kill('SIGTERM');
+  if (activeProcess?.exitCode === null) activeProcess.kill(signal);
 };
 
-process.once('SIGINT', () => {
-  stopPreview();
-  process.exitCode = 130;
-});
-process.once('SIGTERM', () => {
-  stopPreview();
-  process.exitCode = 143;
-});
+const onSigint = () => handleSignal('SIGINT');
+const onSigterm = () => handleSignal('SIGTERM');
+process.once('SIGINT', onSigint);
+process.once('SIGTERM', onSigterm);
 
 const wait = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
 
 const waitForPreview = async () => {
   for (let attempt = 0; attempt < 60; attempt++) {
-    if (preview.exitCode !== null) {
-      throw new Error(`O preview encerrou antes de ficar disponível.\n${previewOutput.join('')}`);
-    }
+    if (receivedSignal) throw new Error(`Execução interrompida por ${receivedSignal}.`);
 
     try {
       const response = await fetch(previewUrl);
@@ -49,49 +42,75 @@ const waitForPreview = async () => {
     await wait(500);
   }
 
-  throw new Error(`O preview não respondeu em ${previewUrl}.\n${previewOutput.join('')}`);
+  throw new Error(`O preview não respondeu em ${previewUrl}.`);
 };
 
-const runCypress = () => new Promise((resolve, reject) => {
-  const cypress = spawn(
-    pnpmCommand,
-    ['exec', 'cypress', 'run', '--browser', browser, ...forwardedArguments],
-    { stdio: 'inherit' }
-  );
+const runProcess = (command, arguments_, description) => new Promise((resolve, reject) => {
+  const child = spawn(command, arguments_, { env: process.env, stdio: 'inherit' });
+  activeProcess = child;
 
-  cypress.once('error', reject);
-  cypress.once('exit', (code, signal) => {
+  const clearActiveProcess = () => {
+    if (activeProcess === child) activeProcess = undefined;
+  };
+
+  child.once('error', (error) => {
+    clearActiveProcess();
+    reject(error);
+  });
+  child.once('exit', (code, signal) => {
+    clearActiveProcess();
     if (signal) {
-      reject(new Error(`Cypress encerrado pelo sinal ${signal}.`));
+      reject(new Error(`${description} encerrado pelo sinal ${signal}.`));
       return;
     }
     resolve(code ?? 1);
   });
 });
 
-const runOfflineTest = () => new Promise((resolve, reject) => {
-  const offlineTest = spawn(process.execPath, ['scripts/test-offline.mjs'], {
-    env: process.env,
-    stdio: 'inherit'
-  });
+const runCypress = () => runProcess(
+  process.platform === 'win32' ? 'pnpm.cmd' : 'pnpm',
+  ['exec', 'cypress', 'run', '--browser', browser, ...forwardedArguments],
+  'Cypress'
+);
 
-  offlineTest.once('error', reject);
-  offlineTest.once('exit', (code, signal) => {
-    if (signal) {
-      reject(new Error(`Teste offline encerrado pelo sinal ${signal}.`));
-      return;
-    }
-    resolve(code ?? 1);
-  });
-});
+const runOfflineTest = () => runProcess(
+  process.execPath,
+  ['scripts/test-offline.mjs'],
+  'Teste offline'
+);
 
 try {
+  previewServer = await startPreview({
+    configFile: viteConfig,
+    preview: {
+      host: '127.0.0.1',
+      port: 1234,
+      strictPort: true,
+      open: false
+    }
+  });
+
   await waitForPreview();
+  if (receivedSignal) throw new Error(`Execução interrompida por ${receivedSignal}.`);
+
   const cypressExitCode = await runCypress();
-  process.exitCode = cypressExitCode === 0 ? await runOfflineTest() : cypressExitCode;
+  if (receivedSignal) {
+    throw new Error(`Execução interrompida por ${receivedSignal}.`);
+  } else if (cypressExitCode !== 0) {
+    process.exitCode = cypressExitCode;
+  } else {
+    const offlineExitCode = await runOfflineTest();
+    if (receivedSignal) {
+      throw new Error(`Execução interrompida por ${receivedSignal}.`);
+    }
+    process.exitCode = offlineExitCode;
+  }
 } catch (error) {
-  console.error(error.message);
-  process.exitCode = 1;
+  console.error(error instanceof Error ? error.message : error);
+  if (!receivedSignal) process.exitCode = 1;
 } finally {
-  stopPreview();
+  process.off('SIGINT', onSigint);
+  process.off('SIGTERM', onSigterm);
+  if (activeProcess?.exitCode === null) activeProcess.kill(receivedSignal || 'SIGTERM');
+  if (previewServer) await previewServer.close();
 }
