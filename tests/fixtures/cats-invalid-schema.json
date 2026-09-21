@@ -1,0 +1,13 @@
+[
+  {
+    "id": 7,
+    "name": "",
+    "age": "senior",
+    "ageValue": 0,
+    "sex": "unknown",
+    "temperament": "aggressive",
+    "color": "Azul",
+    "image": "http://example.com/cat.jpg",
+    "unexpected": true
+  }
+]

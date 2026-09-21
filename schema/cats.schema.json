@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://c0destep.github.io/catlovers/schema/cats.schema.json",
+  "title": "Catlovers cat catalogue",
+  "description": "The fictional cat records consumed by the gallery.",
+  "type": "array",
+  "uniqueItems": true,
+  "$comment": "The validator also enforces uniqueness of the id property across records.",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "name",
+      "age",
+      "ageValue",
+      "sex",
+      "temperament",
+      "color",
+      "image"
+    ],
+    "properties": {
+      "id": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "A positive identifier unique within the catalogue."
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S",
+        "description": "The cat's non-empty display name."
+      },
+      "age": {
+        "type": "string",
+        "enum": [
+          "kitten",
+          "adult"
+        ]
+      },
+      "ageValue": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Age in months for kittens and years for adults."
+      },
+      "sex": {
+        "type": "string",
+        "enum": [
+          "male",
+          "female"
+        ]
+      },
+      "temperament": {
+        "type": "string",
+        "enum": [
+          "calm",
+          "playful",
+          "affectionate"
+        ]
+      },
+      "color": {
+        "type": "string",
+        "enum": [
+          "Laranja",
+          "Frajola",
+          "Escaminha",
+          "Tigrado",
+          "Branco",
+          "Preto",
+          "Siamês",
+          "Tricolor"
+        ]
+      },
+      "image": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "^https://",
+        "description": "An HTTPS image URI."
+      }
+    }
+  }
+}

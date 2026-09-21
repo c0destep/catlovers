@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Bento",
+    "age": "adult",
+    "ageValue": 2,
+    "sex": "male",
+    "temperament": "calm",
+    "color": "Frajola",
+    "image": "https://example.com/bento.jpg"
+  },
+  {
+    "id": 1,
+    "name": "Nala",
+    "age": "kitten",
+    "ageValue": 3,
+    "sex": "female",
+    "temperament": "playful",
+    "color": "Tricolor",
+    "image": "https://example.com/nala.jpg"
+  }
+]
