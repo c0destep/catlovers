@@ -218,7 +218,7 @@ As durações abaixo expressam ordem e tamanho relativo. A capacidade da equipe 
 
 #### Catálogo
 
-- [ ] Definir um schema para os gatos e validar todos os registros no build.
+- [x] Definir um schema para os gatos e validar todos os registros no build. O JSON Schema cobre o formato demonstrativo atual; fixtures inválidos cobrem erros de schema e IDs duplicados, e `pnpm check` confirma a validação no build.
 - [ ] Adicionar identificador estável, status, parceiro, localização, saúde, compatibilidades e data de atualização.
 - [ ] Criar uma página individual com URL compartilhável para cada gato.
 - [ ] Exibir claramente os estados `disponível`, `em processo`, `adotado` e `indisponível`.
