@@ -50,6 +50,10 @@ describe('Toggle de Tema (Dark/Light)', () => {
 
     // Verifica se o tema foi mantido
     cy.get('html').should('have.attr', 'data-theme', 'dark');
+    cy.get('html').should('have.css', 'color-scheme', 'dark');
+    cy.get('body')
+      .should('have.css', 'background-color', 'rgb(26, 24, 22)')
+      .and('have.css', 'color', 'rgb(245, 240, 232)');
   });
 });
 

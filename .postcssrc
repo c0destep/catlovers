@@ -7,6 +7,9 @@
         "./js/**/*.js",
         "./includes/**/*.html"
       ],
+      "dynamicAttributes": [
+        "data-theme"
+      ],
       "safelist": [
         "animate-on-scroll",
         "is-visible",
@@ -20,8 +23,7 @@
         "error-page",
         "menu__link--active",
         "html",
-        "body",
-        "dark"
+        "body"
       ]
     }
   }

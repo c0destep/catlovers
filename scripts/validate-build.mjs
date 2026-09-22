@@ -100,6 +100,27 @@ const isLocalReference = (reference) => isLocalLink(reference) && !reference.sta
 
 const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
+const indexPath = path.join(distDir, 'index.html');
+if (await exists(indexPath)) {
+  const indexHtml = await readFile(indexPath, 'utf8');
+  const stylesheetReferences = [...indexHtml.matchAll(/href="([^"]+\.css)"/g)]
+    .map((match) => match[1])
+    .filter(isLocalReference);
+  const stylesheets = await Promise.all(stylesheetReferences.map(async (reference) => {
+    const relativePath = reference.split(/[?#]/)[0].replace(/^\.\//, '');
+    const stylesheetPath = path.join(distDir, relativePath);
+    return await exists(stylesheetPath) ? readFile(stylesheetPath, 'utf8') : '';
+  }));
+  const hasDarkTheme = stylesheets.some((stylesheet) => (
+    /\[data-theme=(?:"dark"|'dark'|dark)\]/.test(stylesheet) &&
+    /--cat-bg:\s*#1a1816/.test(stylesheet)
+  ));
+
+  if (!hasDarkTheme) {
+    errors.push('tema: CSS compilado não contém a paleta escura vinculada a data-theme="dark".');
+  }
+}
+
 const validateFragment = async (sourcePage, reference) => {
   const [pathname, rawFragment] = reference.split('#', 2);
   if (!rawFragment) return;
