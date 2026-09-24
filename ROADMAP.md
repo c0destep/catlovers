@@ -2,7 +2,7 @@
 
 > Diagnóstico iniciado em 16 de setembro de 2026. O retrato original foi atualizado após a execução das primeiras prioridades para distinguir problemas resolvidos de trabalho pendente.
 
-## Andamento da execução — 21 de setembro de 2026
+## Andamento da execução — 24 de setembro de 2026
 
 | Frente | Estado | Evidência |
 | --- | --- | --- |
@@ -10,9 +10,10 @@
 | Formulário | Concluído para demonstração | O fluxo valida e limpa os campos, informa que nenhum dado foi enviado e não simula contato futuro. |
 | Vite | Concluído | A migração multipágina foi consolidada, resíduos do Parcel foram removidos e ambiente, documentação e Cypress usam a porta 1234. |
 | PWA | Concluído para o contrato atual | Manifesto, ícones, screenshot, escopo, service worker e pré-cache de 76 recursos são validados na build; o Chromium confirma a navegação pelo app shell sem rede. |
-| CI | Concluído | Instalação congelada, lint, i18n, build e Cypress bloqueiam a publicação no GitHub Pages. |
-| Internacionalização | Parcialmente concluído | O tradutor incompatível foi substituído; idades e metadados exibidos pela galeria possuem localização nos três catálogos, mas a governança editorial e a cobertura de conteúdo por idioma ainda precisam evoluir. |
-| Testes | Em evolução | A suíte completa passou com 53 testes em dez especificações, além da navegação offline em Chromium; filtros, teclado, falha externa e fragmentos locais possuem cobertura. |
+| CI | Concluído | Instalação congelada, lint, i18n, catálogo, build e Cypress bloqueiam a publicação no GitHub Pages. |
+| Internacionalização | Parcialmente concluído | O tradutor incompatível foi substituído; idades e metadados exibidos pela galeria possuem localização nos três catálogos, e o atributo `lang` usa valores BCP 47. A governança editorial e a cobertura de conteúdo por idioma ainda precisam evoluir. |
+| Tema | Concluído | A troca de tema permanece funcional quando o `localStorage` está indisponível ou o navegador não oferece `matchMedia`; a build preserva e valida a paleta escura, já publicada no GitHub Pages. |
+| Testes | Em evolução | A suíte completa passou com 55 testes em dez especificações, além da navegação offline em Chromium; filtros, teclado, falha externa e fragmentos locais possuem cobertura. |
 | Documentação | Concluído para a fundação atual | README, guia de contribuição e `humans.txt` descrevem Vite, pnpm, PWA, E2E e as limitações reais. |
 
 ### Próximas prioridades altas
@@ -59,11 +60,11 @@ O resultado principal é uma demonstração educacional coerente e verificável:
 | Dependências | pnpm e Fontsource; tradutor local sem dependência de runtime | Conjunto pequeno e compatível com o navegador |
 | Estilos | BEM, propriedades customizadas, abordagem mobile-first e `prefers-reduced-motion` | Base consistente; `main.css` concentra mais de duas mil linhas |
 | Dados | Seis gatos fictícios em `cats.json` | Suficientes para a demonstração; não constituem um inventário operacional |
-| Estado no cliente | `localStorage` para idioma e tema; `sessionStorage` para curiosidades | Adequado para preferências, sem persistência de negócio |
+| Estado no cliente | `localStorage` para idioma e tema; `sessionStorage` para curiosidades | Adequado para preferências, sem persistência de negócio; o tema continua funcional durante a sessão quando o armazenamento local está indisponível |
 | Internacionalização | PT-BR, EN e ES, com paridade automática de chaves | Conteúdo dinâmico principal e metadados exibidos pela galeria são traduzidos; revisão editorial e cobertura de conteúdo ainda precisam evoluir |
 | PWA | Manifesto, service worker, ícones, screenshot e pré-cache gerado | Estrutura validada na build; 76 recursos entram no pré-cache e a navegação offline foi verificada em Chromium |
-| Qualidade | ESLint 10, Stylelint 17 e dez especificações Cypress | Lint, i18n e build passam; 53 testes E2E passaram no Chromium |
-| Entrega | GitHub Actions e GitHub Pages | A publicação depende de instalação congelada, lint, i18n, build e E2E |
+| Qualidade | ESLint 10, Stylelint 17 e dez especificações Cypress | Lint, i18n, catálogo e build passam; 55 testes E2E passaram no Chromium |
+| Entrega | GitHub Actions e GitHub Pages | A publicação depende de instalação congelada, lint, i18n, catálogo, build e E2E |
 | Backend | Inexistente | Formulário, disponibilidade, parceiros e acompanhamento não são persistidos, conforme o escopo demonstrativo |
 | Observabilidade | Erros apenas no console | Não há telemetria de uso ou de negócio; a próxima evolução deve priorizar evidências de qualidade sem introduzir coleta prematura |
 
@@ -75,7 +76,7 @@ O resultado principal é uma demonstração educacional coerente e verificável:
 - Simulação de compatibilidade com três perfis de resultado.
 - Blog com três cards e um artigo implementado.
 - Cenários educacionais de adaptação e orientações para verificar iniciativas externas de apoio.
-- Tema claro e escuro, troca de idioma, navegação responsiva e preferências persistidas.
+- Tema claro e escuro, com preferência persistida quando o armazenamento está disponível; troca de idioma e navegação responsiva.
 - Skip link, regiões `aria-live`, foco visível e tratamento de movimento reduzido.
 - Imagens responsivas, fontes locais e cache para uso offline.
 
@@ -196,7 +197,7 @@ As durações abaixo expressam ordem e tamanho relativo. A Fase 1 e a Fase 3 ori
 
 #### CI e testes
 
-- [x] Fazer a CI executar `pnpm install --frozen-lockfile`, lint, validação de i18n, build e Cypress headless antes da publicação.
+- [x] Fazer a CI executar `pnpm install --frozen-lockfile`, lint, validação de i18n, testes do catálogo, build e Cypress headless antes da publicação.
 - [x] Remover `allowCypressEnv`, opção retirada do Cypress 16, e escolher um navegador suportado para CI.
 - [x] Separar `test:e2e:open` de `test:e2e:run`; fazer `pnpm test` executar sem interface gráfica.
 - [x] Corrigir testes dependentes de animação ou visibilidade fora da viewport e substituir asserções permissivas por resultados esperados.
@@ -270,7 +271,7 @@ As durações abaixo expressam ordem e tamanho relativo. A Fase 1 e a Fase 3 ori
 #### Internacionalização
 
 - [x] Localizar, na camada de exibição, idades, cores, temperamentos, textos alternativos e estados vazios da galeria.
-- [ ] Usar valores BCP 47 no atributo `lang` (`pt-BR`, `en-US`, `es-ES`) em todas as atualizações.
+- [x] Usar valores BCP 47 no atributo `lang` (`pt-BR`, `en-US`, `es-ES`) em todas as atualizações; o mapeamento fica centralizado em `js/main.js` e possui cobertura no Cypress.
 - [ ] Definir quem revisa cada idioma e qual é o processo para publicar conteúdo novo.
 - [ ] Avaliar a necessidade editorial de EN e ES com revisão de conteúdo e evidências agregadas, sem introduzir telemetria pessoal como requisito.
 
@@ -345,7 +346,7 @@ O escopo atual não inclui métricas de adoção, conversão, atendimento ou dis
 
 ### Acessibilidade e jornadas
 
-- Sucesso da CI, do lint, da validação de i18n, da build e dos testes E2E.
+- Sucesso da CI, do lint, das validações de i18n e do catálogo, da build e dos testes E2E.
 - Cobertura manual das jornadas por teclado, foco visível, leitor de tela e movimento reduzido.
 - Funcionamento verificável de galeria, quiz, conteúdo educativo e formulário informativo sem envio de dados.
 - Ausência de regressões em estados de carregamento, vazio, erro e nova tentativa quando aplicável.
@@ -397,7 +398,7 @@ Uma entrega está pronta quando:
 - inclui estados de carregamento, vazio, sucesso, erro e nova tentativa quando aplicável;
 - valida dados no limite adequado e não registra informações pessoais indevidas;
 - acrescenta testes que protegem o comportamento relevante;
-- passa por lint, validação de i18n, build e testes automatizados;
+- passa por lint, validações de i18n e do catálogo, build e testes automatizados;
 - atualiza documentação, política ou conteúdo relacionado;
 - inclui uma evidência verificável para avaliar o resultado, sem exigir telemetria de negócio;
 - pode ser publicada e revertida com procedimento conhecido.
@@ -437,9 +438,10 @@ A plataforma real permanece fora do escopo atual e não deve ser iniciada como c
 
 ### Estado após as primeiras prioridades
 
-- `pnpm check`: aprovado com ESLint, Stylelint, i18n e build validada.
+- `pnpm check`: aprovado com ESLint, Stylelint, i18n, testes do catálogo e build validada.
 - `pnpm build`: aprovado sem o tradutor incompatível; 13 páginas, manifesto, recursos locais e pré-cache são verificados automaticamente.
-- Cypress 16.1.0 no Chromium: 53 testes aprovados em dez especificações.
+- Cypress 16.1.0 no Chromium: 55 testes aprovados em dez especificações.
+- Tema: o toggle continua funcional quando o `localStorage` lança `SecurityError` e quando `matchMedia` não existe; a build preserva a paleta escura publicada.
 - Chrome DevTools Protocol: app shell carregado em um perfil isolado após desativar a rede do navegador.
 - Validação da build: links para arquivos e fragmentos locais conferidos nas 13 páginas.
 - Teste direcionado da galeria após fortalecer o filtro: cinco testes aprovados.

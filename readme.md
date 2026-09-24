@@ -6,16 +6,16 @@
 
 ![Página inicial do Catlovers](public/screenshot-wide.png)
 
-Catlovers é um projeto educacional sobre adoção responsável de gatos, construído com HTML, CSS e JavaScript. A aplicação publicada funciona como demonstração: animais, histórias, números e formulários são fictícios, e nenhum pedido de adoção ou dado pessoal é enviado.
+Catlovers é um projeto educacional sobre adoção responsável de gatos, construído com HTML, CSS e JavaScript. A aplicação publicada funciona como demonstração: os perfis e cenários são fictícios, o formulário não envia pedidos de adoção nem dados pessoais e os exemplos educacionais são identificados como tais.
 
 ## Recursos
 
-- Site multipágina responsivo, com tema claro e escuro.
+- Site multipágina responsivo, com tema claro e escuro, inclusive quando o `localStorage` está indisponível.
 - Interface em português, inglês e espanhol.
 - Galeria com filtros, quiz de compatibilidade, blog demonstrativo e formulário local.
 - Recursos de acessibilidade, como navegação por teclado, skip link, regiões `aria-live` e contraste de cores.
 - PWA com manifesto, ícones e cache do app shell.
-- Testes de ponta a ponta com Cypress e validações automatizadas de build e traduções.
+- Dez especificações de ponta a ponta com 55 testes Cypress, além de validações automatizadas de build, traduções e catálogo.
 
 ## Tecnologias
 
@@ -59,10 +59,11 @@ O Vite abre o site em `http://127.0.0.1:1234`. A porta é fixa para manter o amb
 | `pnpm preview` | Serve a build local na porta 1234. |
 | `pnpm lint` | Executa ESLint e Stylelint. |
 | `pnpm test:i18n` | Confere a consistência dos três catálogos de tradução. |
+| `pnpm test:catalog` | Valida o catálogo e confirma que fixtures com schema inválido ou IDs duplicados são rejeitadas. |
 | `pnpm test:e2e:open` | Abre a interface do Cypress. |
 | `pnpm test:e2e:run` | Inicia o preview, executa o Cypress e valida a navegação offline em um Chrome ou Chromium isolado. |
-| `pnpm check` | Executa lint, validação de traduções e build. |
-| `pnpm test` | Executa traduções, build e toda a suíte E2E. |
+| `pnpm check` | Executa lint, validações de traduções e do catálogo e build. |
+| `pnpm test` | Executa as validações de traduções e do catálogo, a build e toda a suíte E2E. |
 
 Para usar outro navegador instalado:
 
@@ -111,7 +112,7 @@ catlovers/
 - Não existe backend nem integração com organizações de adoção.
 - O formulário valida os campos apenas no navegador e não armazena dados.
 - Alguns conteúdos e imagens externas não ficam disponíveis offline.
-- As histórias e métricas apresentadas ainda precisam ser substituídas por conteúdo editorial verificável antes de qualquer uso operacional.
+- As orientações sobre saúde e comportamento ainda precisam registrar autoria, fontes e datas de revisão.
 
 As próximas etapas, prioridades e critérios de conclusão estão no [ROADMAP.md](ROADMAP.md).
 
