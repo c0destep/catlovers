@@ -433,8 +433,8 @@
     "cards": [
       {
         "tag": "Comportamento",
-        "title": "Como adaptar um novo gato com outros pets",
-        "text": "Dicas essenciais para uma introdução segura e sem estresse entre os animais da casa."
+        "title": "Como apresentar um novo gato aos gatos da casa",
+        "text": "Resumo das orientações da FelineVMA para apresentar um novo gato aos que já vivem na casa."
       },
       {
         "tag": "Gatificação",
@@ -456,18 +456,24 @@
     "article": {
       "tag": "Comportamento",
       "imageAlt": "Gato brincando em um arranhador",
-      "title": "Como adaptar um novo gato com outros pets",
-      "meta": "Publicado em 20 de abril de 2026 • Leitura de 5 minutos",
-      "p1": "A chegada de um novo felino na casa é sempre um momento de alegria, mas exige muita paciência e planejamento, especialmente se você já tem outros gatos ou cães.",
-      "h1": "1. Separação Inicial (O Quarto Seguro)",
-      "p2": "Nunca coloque os animais frente a frente logo no primeiro dia. Reserve um cômodo da casa apenas para o recém-chegado. Ele precisará de sua própria caixa de areia, potes de água, comida e locais para se esconder.",
-      "h2": "2. Troca de Cheiros",
-      "p3": "Antes de se verem, eles devem se cheirar. Passe uma toalha limpa no gato novo e coloque-a perto do comedouro dos animais veteranos, e vice-versa. Assim eles associarão o cheiro do outro a algo positivo (comida).",
-      "h3": "3. Contato Visual Seguro",
-      "p4": "Após alguns dias de tranquilidade, permita que se vejam através de uma fresta na porta ou de uma tela/portão de bebê. Se houver bufadas ou rosnados, feche a porta e tente novamente no dia seguinte.",
-      "quote": "O maior erro dos tutores é apressar a introdução. O tempo dos felinos é muito diferente do nosso.",
-      "h4": "4. Encontro Supervisionado",
-      "p5": "Quando não houver mais reações agressivas pela fresta da porta, deixe-os no mesmo ambiente, sempre com supervisão. Ofereça petiscos para que associem a presença um do outro a momentos bons."
+      "title": "Como apresentar um novo gato aos gatos da casa",
+      "author": "Texto de Lucas Alves",
+      "publishedLabel": "Publicado em",
+      "publishedDate": "20 de abril de 2026",
+      "reviewedLabel": "Última revisão editorial:",
+      "reviewedDate": "24 de setembro de 2026",
+      "p1": "Apresente o novo gato aos gatos da casa gradualmente. O processo pode levar de alguns dias a vários meses e, em alguns casos, ainda mais. Avance somente quando todos estiverem confortáveis com a etapa atual.",
+      "h1": "1. Confirme a saúde e prepare o ambiente",
+      "p2": "Antes de iniciar a apresentação, confirme que todos os gatos passaram por uma avaliação veterinária recente e converse com o veterinário sobre testes para doenças contagiosas do recém-chegado. Caso algum gato residente esteja com a saúde debilitada ou seja idoso e tenha problemas de saúde, peça orientação veterinária antes de receber outro gato. Ofereça a cada gato seu próprio conjunto de recursos e mantenha um item extra de cada tipo. Distribua os recursos em locais acessíveis e visualmente separados. Prepare um cômodo de transição para o recém-chegado, com comida, água, caixa de areia, arranhador, esconderijos e locais altos para descansar. Mantenha os gatos separados quando não estiverem sob supervisão.",
+      "h2": "2. Apresente os cheiros gradualmente",
+      "p3": "Quando o recém-chegado explorar o cômodo com confiança, troque mantas ou brinquedos macios entre os espaços. Depois de alguns dias, se todos aceitarem esses cheiros, passe um tecido macio com o cheiro de um gato pelas bochechas e pelo queixo dos outros. Repita até que todos tolerem essa transferência. Sinais como bufar, rosnar, evitar o objeto, mudar o comportamento habitual ou urinar e defecar fora da caixa podem indicar tensão; aguarde antes de avançar.",
+      "h3": "3. Brinque em lados opostos da porta fechada",
+      "p4": "Se todos tolerarem a transferência de cheiro, ofereça brincadeiras curtas, sem contato visual, em lados opostos de uma porta fechada. Interrompa se algum gato bufar ou rosnar; não o repreenda e aumente a distância entre eles antes de tentar novamente. Quando todos estiverem confortáveis com as etapas anteriores, mantenha os gatos residentes em outro cômodo, com a porta fechada, e deixe o recém-chegado explorar por pouco tempo as áreas comuns. Depois, leve-o de volta ao cômodo de transição e permita que os residentes escolham quando voltar às áreas comuns.",
+      "h4": "4. Passe do contato visual aos encontros supervisionados",
+      "p5": "Quando todos estiverem confortáveis com as etapas anteriores, permita sessões curtas de contato visual por uma barreira segura e transparente. Observe a linguagem corporal e as vocalizações; se algum gato demonstrar desconforto, encerre a sessão e retome uma etapa anterior. Só então faça encontros curtos de proximidade física, sempre supervisionados, em um cômodo amplo. Use guia e peitoral apenas se os gatos já estiverem habituados; uma caixa transportadora parcialmente coberta só deve ser usada se for familiar e bem aceita. Se surgir tensão, interrompa a interação e bloqueie o contato visual com uma barreira, como uma toalha ou um pedaço de papelão. Não pegue os gatos durante um momento tenso. Afaste-os antes de retomar uma etapa anterior. Use brinquedos ou petiscos para reforçar comportamentos tranquilos e aumente o tempo gradualmente, sem forçar a interação.",
+      "sourcesTitle": "Fonte e limite do conteúdo",
+      "source": "Feline Veterinary Medical Association (FelineVMA). Step-by-Step Guide: How to Introduce a New Cat to Other Cats in Your Home (2026, em inglês; PDF).",
+      "sourceNote": "Este resumo educativo não substitui uma avaliação veterinária individual."
     }
   },
   "happyEndings": {
@@ -540,8 +546,8 @@
       "description": "Explore um resultado ilustrativo de compatibilidade sem recomendações de animais reais."
     },
     "post": {
-      "title": "Como adaptar um novo gato - Catlovers",
-      "description": "Dicas essenciais para introduzir um novo felino na sua casa."
+      "title": "Como apresentar um novo gato aos gatos da casa - Catlovers",
+      "description": "Orientações para apresentar gradualmente um novo gato aos gatos que já vivem na casa."
     },
     "support": {
       "title": "Como apoiar com segurança - Catlovers",

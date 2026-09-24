@@ -433,8 +433,8 @@
     "cards": [
       {
         "tag": "Behavior",
-        "title": "How to introduce a new cat to other pets",
-        "text": "Essential tips for a safe and stress-free introduction among household animals."
+        "title": "How to introduce a new cat to resident cats",
+        "text": "An overview of FelineVMA guidance on introducing a new cat to resident cats."
       },
       {
         "tag": "Catification",
@@ -456,18 +456,24 @@
     "article": {
       "tag": "Behavior",
       "imageAlt": "Cat playing on a scratching post",
-      "title": "How to introduce a new cat to other pets",
-      "meta": "Published on April 20, 2026 • 5 min read",
-      "p1": "The arrival of a new feline in the house is always a moment of joy, but it requires a lot of patience and planning, especially if you already have other cats or dogs.",
-      "h1": "1. Initial Separation (The Safe Room)",
-      "p2": "Never put the animals face to face on the first day. Reserve a room in the house just for the newcomer. They will need their own litter box, water bowls, food, and places to hide.",
-      "h2": "2. Scent Swapping",
-      "p3": "Before seeing each other, they should smell each other. Rub a clean towel on the new cat and place it near the food bowls of the resident animals, and vice versa. This way they will associate the other's smell with something positive (food).",
-      "h3": "3. Safe Visual Contact",
-      "p4": "After a few days of peace, allow them to see each other through a crack in the door or a baby gate. If there are hisses or growls, close the door and try again the next day.",
-      "quote": "The biggest mistake owners make is rushing the introduction. Feline time is very different from ours.",
-      "h4": "4. Supervised Meeting",
-      "p5": "When there are no longer aggressive reactions through the crack in the door, let them be in the same environment, always with supervision. Offer treats so they associate each other's presence with good times."
+      "title": "How to introduce a new cat to resident cats",
+      "author": "Written by Lucas Alves",
+      "publishedLabel": "Published on",
+      "publishedDate": "April 20, 2026",
+      "reviewedLabel": "Last editorial review:",
+      "reviewedDate": "September 24, 2026",
+      "p1": "Introduce the new cat to resident cats gradually. The process may take a few days to several months and, in some cases, longer. Move ahead only when every cat is comfortable with the current step.",
+      "h1": "1. Check health and prepare the space",
+      "p2": "Before starting the introduction, make sure every cat has had a recent veterinary check-up and ask the veterinarian about testing the newcomer for common contagious diseases. If a resident cat is in poor health or is a senior with health concerns, seek veterinary advice before bringing in another cat. Provide each cat with a separate set of resources and one extra of each type. Keep resources accessible and visually separated. Prepare a transition room for the newcomer with its own food, water, litter box, scratching surface, hiding places, and elevated resting spots. Keep the cats separated when no one is supervising them.",
+      "h2": "2. Introduce scents gradually",
+      "p3": "Once the newcomer explores the room confidently, swap blankets or soft toys between their spaces. After a few days, if every cat accepts these scents, use a soft cloth carrying one cat's scent to gently rub the others' cheeks and chin. Repeat until every cat tolerates this scent transfer. Signs such as hissing, growling, avoiding the item, acting differently, or eliminating outside the litter box may indicate tension; wait before moving ahead.",
+      "h3": "3. Play on opposite sides of a closed door",
+      "p4": "If every cat tolerates scent transfer, offer short play sessions without visual contact on opposite sides of a closed door. If a cat hisses or growls, stop, increase the distance between the cats, and do not discipline them. Once every cat is comfortable with the earlier steps, keep the resident cats in another room with the door closed while the newcomer briefly explores shared areas. Then return the newcomer to the transition room and let the resident cats choose when to return to those areas.",
+      "h4": "4. Move from visual contact to supervised meetings",
+      "p5": "When every cat is comfortable with the earlier steps, allow short visual sessions through a secure, transparent barrier. Watch their body language and vocalizations; if any cat seems uncomfortable, end the session and return to an earlier step. Only then arrange short, supervised physical-proximity sessions in a large room. Use a harness and leash only if the cats are already comfortable with them; use a partially covered carrier only if it is familiar and has been a positive experience. If tension appears, stop the interaction and block visual contact with a barrier such as a towel or piece of cardboard. Do not pick up the cats during a tense moment. Create distance before returning to an earlier step. Use toys or treats to reward calm behavior and gradually increase the time together without forcing interaction.",
+      "sourcesTitle": "Source and scope",
+      "source": "Feline Veterinary Medical Association (FelineVMA). Step-by-Step Guide: How to Introduce a New Cat to Other Cats in Your Home (2026, PDF).",
+      "sourceNote": "This educational summary does not replace an individual veterinary assessment."
     }
   },
   "happyEndings": {
@@ -540,8 +546,8 @@
       "description": "Explore an illustrative compatibility result without recommendations for real animals."
     },
     "post": {
-      "title": "How to adapt a new cat - Catlovers",
-      "description": "Essential tips for introducing a new feline into your home."
+      "title": "How to introduce a new cat to resident cats - Catlovers",
+      "description": "Guidance for gradually introducing a new cat to the cats already living at home."
     },
     "support": {
       "title": "How to offer support safely - Catlovers",
