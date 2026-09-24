@@ -308,23 +308,27 @@
         "text": "Pregunta quién podrá orientar la adaptación, a través de qué canales y durante cuánto tiempo."
       },
       "tips": {
-        "eyebrow": "Consejos de Cuidado",
-        "title": "Primeros días en casa",
-        "subtitle": "Consejos para ayudar a tu nuevo amigo a sentirse seguro y bienvenido.",
+        "eyebrow": "Consejos de cuidado",
+        "title": "Adaptación a la nueva casa",
+        "subtitle": "Orientaciones generales para preparar la llegada y respetar el ritmo de cada gato.",
         "items": [
           {
-            "title": "Espacio restringido al principio",
-            "text": "Mantén al gato en una habitación tranquila durante unos días, con comida, agua y arenero, para que se acostumbre a los nuevos olores."
+            "title": "Una habitación tranquila para empezar",
+            "text": "Al llegar a una casa nueva, empieza por una habitación tranquila con comida, agua y arenero. Cuando el gato parezca cómodo, permite que explore poco a poco las demás habitaciones."
           },
           {
-            "title": "Los escondites son importantes",
-            "text": "Los gatos se sienten más seguros cuando tienen dónde esconderse. Las cajas de cartón o camas tipo 'cueva' son excelentes para las primeras semanas."
+            "title": "Un lugar seguro para refugiarse",
+            "text": "La FelineVMA recomienda que cada gato tenga un lugar seguro para refugiarse o descansar y pueda entrar y salir por al menos dos lados si se siente amenazado. Entre los ejemplos menciona cajas de cartón, transportines y lugares elevados para descansar."
           },
           {
-            "title": "Paciencia y espacio",
-            "text": "Deja que el gato se acerque a ti. Forzar el cariño o cargarlo en los primeros días puede generar estrés. Siéntate en el suelo y espera a que sienta curiosidad."
+            "title": "Deja que el gato marque el ritmo",
+            "text": "Respeta las preferencias de cada gato y deja que inicie y controle el contacto. No fuerces la interacción; a algunos gatos no les gustan tanto las caricias o que los cojan en brazos."
           }
-        ]
+        ],
+        "sourceMoving": "Fuente: ASPCA — Moving With Your Pet (página en inglés).",
+        "sourceEnvironment": "Fuente: Feline Veterinary Medical Association (FelineVMA), Your Cat’s Environmental Needs: Practical Tips for Cat Caregivers (2026; PDF en inglés).",
+        "scopeTitle": "Alcance del contenido",
+        "sourceNote": "La referencia de la ASPCA trata sobre una mudanza; aquí se presenta como orientación general para la llegada del gato a un nuevo hogar. Estas recomendaciones no sustituyen una evaluación veterinaria individual."
       }
     }
   },

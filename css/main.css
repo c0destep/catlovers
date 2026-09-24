@@ -1288,6 +1288,26 @@ header {
   line-height: 1.65;
 }
 
+.card__source {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.card__source a {
+  color: var(--cat-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.adoption__sources {
+  margin: 2.5rem auto 0;
+}
+
+.adoption__sources .section__text {
+  font-size: 0.95rem;
+}
+
 /* ===== CHECKLIST (sub-pages) ===== */
 .checklist {
   display: flex;

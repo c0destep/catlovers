@@ -309,22 +309,26 @@
       },
       "tips": {
         "eyebrow": "Dicas de cuidados",
-        "title": "Primeiros dias em casa",
-        "subtitle": "Dicas para ajudar seu novo amigo a se sentir seguro e acolhido.",
+        "title": "Adaptação à nova casa",
+        "subtitle": "Orientações gerais para preparar a chegada e respeitar o ritmo de cada gato.",
         "items": [
           {
-            "title": "Espaço restrito no início",
-            "text": "Mantenha o gato em um cômodo tranquilo por alguns dias, com comida, água e caixa de areia, para que ele se acostume com os novos cheiros."
+            "title": "Um cômodo tranquilo no início",
+            "text": "Ao chegar a uma casa nova, comece por um cômodo tranquilo com água, alimento e caixa de areia. Quando o gato parecer confortável, permita que explore outros cômodos aos poucos."
           },
           {
-            "title": "Esconderijos são importantes",
-            "text": "Os gatos se sentem mais seguros quando têm onde se esconder. Caixas de papelão ou caminhas tipo 'toca' são excelentes para as primeiras semanas."
+            "title": "Um lugar seguro para se recolher",
+            "text": "A FelineVMA recomenda que cada gato tenha um lugar seguro para se recolher ou descansar e possa entrar e sair por pelo menos dois lados caso se sinta ameaçado. Entre os exemplos, cita caixas de papelão, caixas de transporte e locais elevados para repouso."
           },
           {
-            "title": "Paciência e espaço",
-            "text": "Deixe o gato vir até você. Forçar carinho ou pegá-lo no colo nos primeiros dias pode gerar estresse. Sente-se no chão e espere que ele sinta curiosidade."
+            "title": "Contato no ritmo do gato",
+            "text": "Respeite as preferências individuais do gato e deixe que ele inicie e controle o contato. Não force a interação; alguns gatos preferem menos carinho ou não gostam de colo."
           }
-        ]
+        ],
+        "sourceMoving": "Fonte: ASPCA — Moving With Your Pet (página em inglês).",
+        "sourceEnvironment": "Fonte: Feline Veterinary Medical Association (FelineVMA), Your Cat’s Environmental Needs: Practical Tips for Cat Caregivers (2026; PDF em inglês).",
+        "scopeTitle": "Limite do conteúdo",
+        "sourceNote": "A referência da ASPCA trata de mudança de endereço; aqui, é apresentada como orientação geral para a chegada a um novo lar. Estas dicas não substituem uma avaliação veterinária individual."
       }
     }
   },

@@ -309,22 +309,26 @@
       },
       "tips": {
         "eyebrow": "Care Tips",
-        "title": "First days at home",
-        "subtitle": "Tips to help your new friend feel safe and welcomed.",
+        "title": "Settling into a new home",
+        "subtitle": "General guidance to prepare for a cat's arrival and respect their pace.",
         "items": [
           {
-            "title": "Restricted space at first",
-            "text": "Keep the cat in a quiet room for a few days, with food, water, and a litter box, so they get used to the new smells."
+            "title": "A quiet room to start",
+            "text": "When a cat arrives in a new home, start with a quiet room that has food, water, and a litter box. Once the cat seems comfortable, gradually let them explore other rooms."
           },
           {
-            "title": "Hiding spots are important",
-            "text": "Cats feel safer when they have somewhere to hide. Cardboard boxes or 'cave' type beds are excellent for the first weeks."
+            "title": "A safe place to retreat",
+            "text": "FelineVMA recommends giving each cat a safe place to retreat or rest, with the ability to enter and exit from at least two sides if threatened. Examples include cardboard boxes, carriers, and elevated perches."
           },
           {
-            "title": "Patience and space",
-            "text": "Let the cat come to you. Forcing affection or picking them up in the first days can cause stress. Sit on the floor and wait for their curiosity."
+            "title": "Let the cat set the pace",
+            "text": "Respect each cat's individual preferences and let them initiate and control contact. Do not force interaction; some cats are less comfortable with petting or being held."
           }
-        ]
+        ],
+        "sourceMoving": "Source: ASPCA — Moving With Your Pet (webpage).",
+        "sourceEnvironment": "Source: Feline Veterinary Medical Association (FelineVMA), Your Cat’s Environmental Needs: Practical Tips for Cat Caregivers (2026; PDF).",
+        "scopeTitle": "Content scope",
+        "sourceNote": "The ASPCA source addresses moving to a new home; it is used here as general guidance for a cat's arrival. These tips do not replace an individual veterinary assessment."
       }
     }
   },

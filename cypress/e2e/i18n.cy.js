@@ -92,4 +92,48 @@ describe('Internacionalização (i18n)', () => {
     cy.get('[data-language="es_ES"]').first().click({ force: true });
     cy.get('.cat-fact').should('not.exist');
   });
+
+  it('deve apresentar orientação de adaptação e fontes nos três idiomas', () => {
+    const locales = [
+      {
+        button: 'pt_BR',
+        html: 'pt-BR',
+        comfort: 'Quando o gato parecer confortável',
+        scope: 'Limite do conteúdo',
+        scopeNote: 'A referência da ASPCA trata de mudança de endereço',
+        sourcePrefix: 'Fonte: ASPCA'
+      },
+      {
+        button: 'en_US',
+        html: 'en-US',
+        comfort: 'Once the cat seems comfortable',
+        scope: 'Content scope',
+        scopeNote: 'The ASPCA source addresses moving to a new home',
+        sourcePrefix: 'Source: ASPCA'
+      },
+      {
+        button: 'es_ES',
+        html: 'es-ES',
+        comfort: 'Cuando el gato parezca cómodo',
+        scope: 'Alcance del contenido',
+        scopeNote: 'La referencia de la ASPCA trata sobre una mudanza',
+        sourcePrefix: 'Fuente: ASPCA'
+      }
+    ];
+
+    cy.visit('/adoption.html');
+
+    locales.forEach((locale) => {
+      cy.get(`[data-language="${locale.button}"]`).first().click({ force: true });
+      cy.get('html').should('have.attr', 'lang', locale.html);
+      cy.get('#tips .card__text').first().should('contain.text', locale.comfort);
+      cy.get('#tips .card__source a').first()
+        .should('have.attr', 'href', 'https://www.aspca.org/pet-care/general-pet-care/moving-your-pet')
+        .and('contain.text', locale.sourcePrefix);
+      cy.get('#tips .card__source a').eq(1)
+        .should('have.attr', 'href', 'https://catvets.com/wp-content/uploads/2026/02/FelineVMA-Environmental-Needs_2026-BW.pdf');
+      cy.get('#tips .adoption__sources h3').should('contain.text', locale.scope);
+      cy.get('#tips .adoption__sources .section__text').should('contain.text', locale.scopeNote);
+    });
+  });
 });
