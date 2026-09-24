@@ -44,6 +44,9 @@ jobs:
       - name: Validate translations
         run: pnpm test:i18n
 
+      - name: Validate catalog
+        run: pnpm test:catalog
+
       - name: Build and validate production files
         run: pnpm build
 
