@@ -1,6 +1,8 @@
 import catsDataJson from '../cats.json';
 
 // Constants for better performance and maintainability
+const IMAGE_ALT_FALLBACK = 'Foto ilustrativa de um gato para o perfil fictício de';
+
 const SEX_LABELS = {
   male: { label: 'Macho', i18n: 'gallery.sexMale' },
   female: { label: 'Fêmea', i18n: 'gallery.sexFemale' }
@@ -22,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let catsData = [];
 
   const translateCatImageAlts = (language) => {
-    const imageAltPrefix = window.catloversTranslator?.translateForKey('gallery.catImageAlt', language) || 'Foto de';
+    const imageAltPrefix = window.catloversTranslator?.translateForKey('gallery.catImageAlt', language) || IMAGE_ALT_FALLBACK;
     gallery.querySelectorAll('.cat-card__image').forEach((image) => {
       image.alt = `${imageAltPrefix} ${image.dataset.catName}`;
     });
@@ -64,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const img = document.createElement('img');
       img.src = cat.image;
       const language = localStorage.getItem('preferred_language') || 'pt_BR';
-      const imageAltPrefix = window.catloversTranslator?.translateForKey('gallery.catImageAlt', language) || 'Foto de';
+      const imageAltPrefix = window.catloversTranslator?.translateForKey('gallery.catImageAlt', language) || IMAGE_ALT_FALLBACK;
       img.alt = `${imageAltPrefix} ${cat.name}`;
       img.dataset.catName = cat.name;
       img.className = 'cat-card__image';

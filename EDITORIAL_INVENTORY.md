@@ -44,7 +44,7 @@ As referências institucionais listadas são fontes de partida. Antes de publica
 ## Conteúdo demonstrativo e achados adjacentes
 
 - `cats.html` informa que os seis perfis são fictícios e indisponíveis; `cats.json` não contém alegações médicas. O quiz se identifica como simulação e diz que não avalia animais reais. Esses dados não precisam de fonte enquanto mantiverem esse enquadramento.
-- `js/cats.js` monta o texto alternativo como “Foto de [nome]”, embora use imagens externas de banco. Revisar junto da transparência dos perfis para que o `alt` descreva a imagem ilustrativa, sem sugerir que ela representa o gato fictício.
+- `js/cats.js` agora monta o texto alternativo como “Foto ilustrativa de um gato para o perfil fictício de [nome]” em PT-BR, com equivalentes em EN e ES. A mesma chave `gallery.catImageAlt` e o fallback PT são usados na renderização inicial e na atualização após `catlovers:languagechange`; a foto externa não é atribuída ao gato nomeado como se fosse um animal real. Trata-se de descrição da interface, sem alegação clínica que exija fonte. Autoria, responsáveis pela revisão de PT-BR, EN e ES e data de revisão editorial permanecem a definir; a correção não conclui a revisão editorial.
 
 ## Próxima execução editorial
 

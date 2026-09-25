@@ -67,7 +67,7 @@ describe('Internacionalização (i18n)', () => {
     cy.get('.cat-card').should('have.length.greaterThan', 0);
     cy.get('.cat-card__info').first().should('contain.text', '2 years • Male');
     cy.get('.cat-card .feature-tag').first().should('contain.text', 'Tuxedo');
-    cy.get('.cat-card__image').first().should('have.attr', 'alt').and('match', /^Photo of /);
+    cy.get('.cat-card__image').first().should('have.attr', 'alt', 'Illustrative cat photo for the fictional profile of Bento');
   });
 
   it('deve traduzir descrições de imagens e metadados', () => {

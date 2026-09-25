@@ -11,10 +11,10 @@
 | Vite | Concluído | A migração multipágina foi consolidada, resíduos do Parcel foram removidos e ambiente, documentação e Cypress usam a porta 1234. |
 | PWA | Concluído para o contrato atual | Manifesto, ícones, screenshot, escopo, service worker e pré-cache gerado são validados na build; o Chromium confirmou a navegação pelo app shell sem rede na última verificação registrada. |
 | CI | Concluído | Instalação congelada, lint, i18n, catálogo, build e Cypress bloqueiam a publicação no GitHub Pages. |
-| Internacionalização | Parcialmente concluído | O tradutor incompatível foi substituído; idades e metadados exibidos pela galeria possuem localização nos três catálogos, e o atributo `lang` usa valores BCP 47. A governança editorial e a cobertura de conteúdo por idioma ainda precisam evoluir. |
+| Internacionalização | Parcialmente concluído | O tradutor incompatível foi substituído; idades, metadados e o texto alternativo das fotos ilustrativas da galeria possuem localização nos três catálogos, e o atributo `lang` usa valores BCP 47. A governança editorial e a cobertura de conteúdo por idioma ainda precisam evoluir. |
 | Conteúdo editorial | Em andamento | O artigo de apresentação entre gatos identifica autoria, publicação e revisão editorial, resume um guia da FelineVMA e está disponível nos três idiomas. O inventário está em `EDITORIAL_INVENTORY.md`; as dicas de adaptação inicial, o checklist ambiental, os cenários fictícios e as perguntas do grupo clínico têm redação ajustada nos três idiomas, com fontes visíveis junto às orientações pertinentes. As perguntas sobre convivência, rotina e moradia foram conferidas como planejamento ilustrativo; o card de necessidades ambientais agora tem fonte visível. Os dois temas adicionais do blog estão identificados como artigos em preparação, com fontes externas explícitas e sem links para o artigo existente. A curiosidade dinâmica sem fonte por afirmação foi removida. Para os grupos inventariados, autoria editorial e responsáveis pela revisão de PT-BR, EN e ES estão a definir; a revisão dos demais grupos continua pendente. |
 | Tema | Concluído | A troca de tema permanece funcional quando o `localStorage` está indisponível ou o navegador não oferece `matchMedia`; a build preserva e valida a paleta escura, já publicada no GitHub Pages. |
-| Testes | Em evolução | A última suíte completa registrada antes desta remoção passou em Chromium, incluindo a navegação offline. As duas expectativas específicas da curiosidade removida saíram da suíte; esta alteração ainda não foi testada. |
+| Testes | Em evolução | A última suíte completa registrada passou em Chromium, incluindo a navegação offline. As duas expectativas específicas da curiosidade removida saíram da suíte; os ajustes editoriais posteriores àquela execução ainda não foram testados. |
 | Documentação | Concluído para a fundação atual | README, guia de contribuição e `humans.txt` descrevem Vite, pnpm, PWA, E2E e as limitações reais. |
 
 ### Próximas prioridades altas
@@ -272,6 +272,7 @@ As durações abaixo expressam ordem e tamanho relativo. A Fase 1 e a Fase 3 ori
 #### Internacionalização
 
 - [x] Localizar, na camada de exibição, idades, cores, temperamentos, textos alternativos e estados vazios da galeria.
+- [x] Esclarecer no texto alternativo da galeria que as fotos são ilustrativas e acompanham perfis fictícios, em PT-BR, EN e ES, na renderização inicial e após troca de idioma. Autoria, revisão por idioma e data editorial seguem a definir.
 - [x] Usar valores BCP 47 no atributo `lang` (`pt-BR`, `en-US`, `es-ES`) em todas as atualizações; o mapeamento fica centralizado em `js/main.js` e possui cobertura no Cypress.
 - [ ] Definir quem revisa cada idioma e qual é o processo para publicar conteúdo novo.
 - [ ] Avaliar a necessidade editorial de EN e ES com revisão de conteúdo e evidências agregadas, sem introduzir telemetria pessoal como requisito.
