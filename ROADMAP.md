@@ -15,6 +15,7 @@
 | Conteúdo editorial | Em andamento | O artigo de apresentação entre gatos exibe autoria, datas e fonte nos três idiomas. Para os demais grupos de `EDITORIAL_INVENTORY.md`, a triagem preparatória de redação, escopo e fontes foi concluída nos três idiomas e fallbacks aplicáveis: alegações pertinentes receberam fontes visíveis, perguntas ilustrativas foram delimitadas e a curiosidade dinâmica sem fonte foi removida. A autoria, os responsáveis pela revisão de PT-BR, EN e ES e as datas desses grupos estão a definir; a revisão editorial formal continua pendente. Os dois temas adicionais do blog ainda não têm artigos próprios. |
 | Tema | Concluído | A troca de tema permanece funcional quando o `localStorage` está indisponível ou o navegador não oferece `matchMedia`; a build preserva e valida a paleta escura, já publicada no GitHub Pages. |
 | Testes | Em evolução | A última suíte completa registrada passou em Chromium, incluindo a navegação offline. As duas expectativas específicas da curiosidade removida saíram da suíte; os ajustes editoriais posteriores àquela execução ainda não foram testados. |
+| Jornadas demonstrativas | Critérios definidos; execução manual pendente | `QUALITY_BASELINE.md` descreve navegação, galeria, quiz, conteúdo educativo, formulário sem envio e registro de evidências. |
 | Documentação | Concluído para a fundação atual | README, guia de contribuição e `humans.txt` descrevem Vite, pnpm, PWA, E2E e as limitações reais. |
 
 ### Próximas prioridades altas
@@ -164,14 +165,14 @@ As durações abaixo expressam ordem e tamanho relativo. A Fase 1 e a Fase 3 ori
 - [x] Registrar que não existem animais reais, parceiros, atendimento, coleta ou persistência de manifestações de interesse, pagamentos nem promessa de resposta.
 - [x] Remover números de impacto, depoimentos, histórias, garantias e alegações de saúde sem origem verificável.
 - [x] Identificar como demonstração qualquer informação que ainda não possa ser comprovada.
-- [ ] Definir uma linha de base das jornadas demonstrativas: navegação, galeria, quiz, conteúdo educativo e formulário local sem envio.
-- [ ] Registrar prioridades de acessibilidade, conteúdo, i18n, SEO, desempenho e testes em documentos curtos no repositório.
+- [x] Definir critérios para a linha de base das jornadas demonstrativas: navegação, galeria, quiz, conteúdo educativo e formulário local sem envio. A execução manual permanece pendente em `QUALITY_BASELINE.md`.
+- [x] Registrar prioridades de acessibilidade, conteúdo, i18n, SEO, desempenho e testes em `QUALITY_BASELINE.md`.
 
 **Critérios de saída**
 
 - Toda promessa pública corresponde a uma capacidade existente ou está marcada como demonstração.
 - O projeto não sugere coleta, atendimento ou acompanhamento que não existam.
-- A equipe escolheu critérios de qualidade verificáveis para a demonstração.
+- Critérios verificáveis de qualidade da demonstração estão definidos e documentados.
 
 ### Fase 1 — Fundação confiável
 
