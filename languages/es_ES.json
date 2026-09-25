@@ -121,19 +121,22 @@
   "stories": {
     "eyebrow": "Escenarios ficticios",
     "title": "Situaciones para orientar la elección",
-    "subtitle": "Ejemplos educativos; no son testimonios de usuarios.",
+    "subtitle": "Ejemplos ficticios de orientación general; no son testimonios ni sustituyen una evaluación veterinaria individual.",
+    "sourceWindows": "Seguridad de las ventanas: ASPCA — High-Rise Syndrome: Lifesaving Tips for Cat Parents (2023, en inglés).",
+    "sourceEnvironment": "Recursos y contacto: FelineVMA — Your Cat’s Environmental Needs (2026, PDF en inglés).",
+    "sourceIntroduction": "Presentación entre gatos: FelineVMA — Step-by-Step Guide: How to Introduce a New Cat to Other Cats in Your Home (2026, PDF en inglés).",
     "items": [
       {
-        "text": "Una rutina tranquila y un espacio menor pueden requerir un gato compatible y un ambiente enriquecido.",
+        "text": "En un apartamento, comprueba la seguridad de las ventanas y ofrece lugares separados y accesibles para el agua, la comida, la caja de arena y el descanso.",
         "meta": "Escenario: apartamento"
       },
       {
-        "text": "Un gato tímido puede necesitar un espacio seguro, una rutina predecible y un acercamiento gradual durante las primeras semanas.",
+        "text": "Un gato que parece receloso puede buscar refugio. Ofrécele un lugar seguro y deja que elija cuándo acercarse.",
         "meta": "Escenario: adaptación"
       },
       {
-        "text": "La convivencia con otros animales requiere presentaciones controladas, supervisión y posibilidad de separación.",
-        "meta": "Escenario: otros animales"
+        "text": "Al recibir un gato nuevo en un hogar con gatos residentes, planifica una presentación gradual, observa sus reacciones y mantén espacios separados disponibles.",
+        "meta": "Escenario: gatos residentes"
       }
     ]
   },
@@ -487,23 +490,25 @@
   "happyEndings": {
     "eyebrow": "Escenarios ficticios",
     "title": "Ejemplos de finales felices",
-    "subtitle": "Situaciones educativas sobre adaptación; no representan gatos, familias ni adopciones reales.",
+    "subtitle": "Escenarios ficticios de orientación general; no representan adopciones reales ni sustituyen una evaluación veterinaria individual.",
     "rescue": "Situación inicial",
     "today": "Objetivo de la adaptación",
     "future": "En una operación real, las historias solo deben publicarse con autorización y una fuente verificable.",
     "adoptBtn": "Abrir demostración",
+    "sourceWindows": "Seguridad de las ventanas: ASPCA — High-Rise Syndrome: Lifesaving Tips for Cat Parents (2023, en inglés).",
+    "sourceEnvironment": "Refugio, recursos y contacto: FelineVMA — Your Cat’s Environmental Needs (2026, PDF en inglés).",
     "stories": [
       {
         "name": "Escenario: Bento",
         "meta": "Ejemplo ficticio",
-        "rescueDesc": "Un gato asustado necesita evaluación profesional, un espacio seguro y tiempo antes de cualquier acercamiento.",
-        "todayDesc": "El objetivo es una rutina predecible, con seguridad, enriquecimiento ambiental y respeto por los límites del animal.",
-        "quote": "Punto a considerar: las viviendas pequeñas requieren ventanas protegidas, recursos adecuados y compatibilidad con el perfil del gato."
+        "rescueDesc": "Un gato asustado puede buscar refugio. Ofrécele un lugar seguro y consulta al veterinario si cambia su comportamiento o muestra signos de malestar.",
+        "todayDesc": "Durante la adaptación, ofrece recursos accesibles, oportunidades de juego y contacto que respete las preferencias del gato.",
+        "quote": "Punto a considerar: evalúa la seguridad de las ventanas y las necesidades del gato sin decidir solo por el tamaño de la vivienda."
       },
       {
         "name": "Escenario: Nala",
         "meta": "Ejemplo ficticio",
-        "quote": "Punto a considerar: los gatos tímidos pueden necesitar escondites, una rutina estable y un acercamiento gradual durante varias semanas."
+        "quote": "Punto a considerar: un gato receloso puede preferir escondites y contacto a su propio ritmo; observa sus reacciones sin fijar un plazo de adaptación."
       }
     ]
   },

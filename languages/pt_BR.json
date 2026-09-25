@@ -121,19 +121,22 @@
   "stories": {
     "eyebrow": "Cenários fictícios",
     "title": "Situações para orientar a escolha",
-    "subtitle": "Exemplos educacionais; não são depoimentos de usuários.",
+    "subtitle": "Exemplos fictícios de orientação geral; não são depoimentos nem substituem uma avaliação veterinária individual.",
+    "sourceWindows": "Segurança das janelas: ASPCA — High-Rise Syndrome: Lifesaving Tips for Cat Parents (2023, em inglês).",
+    "sourceEnvironment": "Recursos e contato: FelineVMA — Your Cat’s Environmental Needs (2026, PDF em inglês).",
+    "sourceIntroduction": "Apresentação entre gatos: FelineVMA — Step-by-Step Guide: How to Introduce a New Cat to Other Cats in Your Home (2026, PDF em inglês).",
     "items": [
       {
-        "text": "Uma rotina tranquila e um espaço menor podem exigir um gato com perfil compatível e um ambiente enriquecido.",
+        "text": "Em um apartamento, verifique a segurança das janelas e ofereça locais separados e acessíveis para água, alimento, caixa de areia e descanso.",
         "meta": "Cenário: apartamento"
       },
       {
-        "text": "Um gato tímido pode precisar de espaço seguro, rotina previsível e aproximação gradual nas primeiras semanas.",
+        "text": "Um gato que se mostra receoso pode buscar refúgio. Ofereça um lugar seguro e deixe que ele escolha quando se aproximar.",
         "meta": "Cenário: adaptação"
       },
       {
-        "text": "A convivência com outros animais pede apresentação controlada, supervisão e possibilidade de separação.",
-        "meta": "Cenário: outros animais"
+        "text": "Ao receber um novo gato em uma casa com gatos residentes, planeje uma apresentação gradual, observe as reações e mantenha a possibilidade de separação.",
+        "meta": "Cenário: gatos residentes"
       }
     ]
   },
@@ -487,23 +490,25 @@
   "happyEndings": {
     "eyebrow": "Cenários fictícios",
     "title": "Exemplos de finais felizes",
-    "subtitle": "Situações educacionais sobre adaptação; não representam gatos, famílias ou adoções reais.",
+    "subtitle": "Cenários fictícios de orientação geral; não representam adoções reais nem substituem uma avaliação veterinária individual.",
     "rescue": "Situação inicial",
     "today": "Objetivo da adaptação",
     "future": "Em uma operação real, histórias só devem ser publicadas com autorização e origem verificável.",
     "adoptBtn": "Abrir demonstração",
+    "sourceWindows": "Segurança das janelas: ASPCA — High-Rise Syndrome: Lifesaving Tips for Cat Parents (2023, em inglês).",
+    "sourceEnvironment": "Refúgio, recursos e contato: FelineVMA — Your Cat’s Environmental Needs (2026, PDF em inglês).",
     "stories": [
       {
         "name": "Cenário: Bento",
         "meta": "Exemplo fictício",
-        "rescueDesc": "Um gato assustado precisa de avaliação profissional, espaço seguro e tempo antes de qualquer aproximação.",
-        "todayDesc": "O objetivo é uma rotina previsível, com segurança, enriquecimento ambiental e respeito aos limites do animal.",
-        "quote": "Ponto de atenção: moradias pequenas exigem proteção nas janelas, recursos adequados e compatibilidade com o perfil do gato."
+        "rescueDesc": "Um gato assustado pode buscar refúgio. Ofereça um lugar seguro e procure orientação veterinária se houver mudança de comportamento ou sinais de sofrimento.",
+        "todayDesc": "Durante a adaptação, ofereça recursos acessíveis, oportunidades de brincar e contato conforme as preferências do gato.",
+        "quote": "Ponto de atenção: avalie a segurança das janelas e as necessidades do gato, sem decidir apenas pelo tamanho da moradia."
       },
       {
         "name": "Cenário: Nala",
         "meta": "Exemplo fictício",
-        "quote": "Ponto de atenção: gatos tímidos podem precisar de esconderijos, rotina estável e aproximação gradual por várias semanas."
+        "quote": "Ponto de atenção: um gato receoso pode preferir esconderijos e contato no próprio ritmo; observe suas reações sem estipular um prazo de adaptação."
       }
     ]
   },

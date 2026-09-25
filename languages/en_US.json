@@ -121,19 +121,22 @@
   "stories": {
     "eyebrow": "Fictional scenarios",
     "title": "Situations that guide the choice",
-    "subtitle": "Educational examples; these are not user testimonials.",
+    "subtitle": "Fictional examples of general guidance; they are not testimonials or a substitute for an individual veterinary assessment.",
+    "sourceWindows": "Window safety: ASPCA — High-Rise Syndrome: Lifesaving Tips for Cat Parents (2023).",
+    "sourceEnvironment": "Resources and contact: FelineVMA — Your Cat’s Environmental Needs (2026, PDF).",
+    "sourceIntroduction": "Introducing cats: FelineVMA — Step-by-Step Guide: How to Introduce a New Cat to Other Cats in Your Home (2026, PDF).",
     "items": [
       {
-        "text": "A quiet routine and smaller home may call for a compatible cat and an enriched environment.",
+        "text": "In an apartment, check window safety and provide separate, accessible places for water, food, the litter box, and rest.",
         "meta": "Scenario: apartment"
       },
       {
-        "text": "A shy cat may need a safe space, a predictable routine, and gradual contact during the first weeks.",
+        "text": "A cat that seems wary may seek shelter. Offer a safe place and let the cat choose when to approach.",
         "meta": "Scenario: adaptation"
       },
       {
-        "text": "Living with other animals requires controlled introductions, supervision, and a way to keep them apart.",
-        "meta": "Scenario: other animals"
+        "text": "When bringing a new cat into a home with resident cats, plan a gradual introduction, watch their reactions, and keep separate spaces available.",
+        "meta": "Scenario: resident cats"
       }
     ]
   },
@@ -487,23 +490,25 @@
   "happyEndings": {
     "eyebrow": "Fictional scenarios",
     "title": "Examples of happy endings",
-    "subtitle": "Educational situations about adaptation; they do not represent real cats, families, or adoptions.",
+    "subtitle": "Fictional scenarios offering general guidance; they do not represent real adoptions or replace an individual veterinary assessment.",
     "rescue": "Initial situation",
     "today": "Adaptation goal",
     "future": "In a real operation, stories should only be published with authorization and a verifiable source.",
     "adoptBtn": "Open demonstration",
+    "sourceWindows": "Window safety: ASPCA — High-Rise Syndrome: Lifesaving Tips for Cat Parents (2023).",
+    "sourceEnvironment": "Safe places, resources, and contact: FelineVMA — Your Cat’s Environmental Needs (2026, PDF).",
     "stories": [
       {
         "name": "Scenario: Bento",
         "meta": "Fictional example",
-        "rescueDesc": "A frightened cat needs professional assessment, a safe space, and time before any approach.",
-        "todayDesc": "The goal is a predictable routine with safety, environmental enrichment, and respect for the animal’s limits.",
-        "quote": "Point to consider: small homes require protected windows, suitable resources, and compatibility with the cat’s profile."
+        "rescueDesc": "A frightened cat may seek shelter. Offer a safe place and seek veterinary advice if behavior changes or the cat shows signs of distress.",
+        "todayDesc": "During adaptation, offer accessible resources, opportunities for play, and contact that respects the cat's preferences.",
+        "quote": "Point to consider: assess window safety and the cat's needs without deciding solely on the size of the home."
       },
       {
         "name": "Scenario: Nala",
         "meta": "Fictional example",
-        "quote": "Point to consider: shy cats may need hiding places, a stable routine, and gradual contact for several weeks."
+        "quote": "Point to consider: a wary cat may prefer hiding places and contact at their own pace; watch their reactions without setting a fixed adaptation period."
       }
     ]
   },
