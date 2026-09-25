@@ -47,16 +47,17 @@
   "reasons": {
     "eyebrow": "Adopción responsable",
     "title": "Qué verificar antes de adoptar",
-    "subtitle": "En una adopción real, confirma la salud, la compatibilidad, los responsables y el apoyo directamente con la organización.",
+    "subtitle": "En una adopción real, pregunta a la organización por el historial de salud, la compatibilidad, los responsables y el apoyo.",
     "cards": [
       {
-        "title": "Salud documentada",
-        "text": "Solicita registros veterinarios, de vacunación, castración y cuidados del animal real.",
+        "title": "Historial de salud",
+        "text": "Pregunta a la organización qué registros de salud y vacunación existen, qué se sabe sobre la castración y qué cuidados deben evaluarse con un veterinario.",
         "tags": [
           "Registros",
           "Vacunas",
           "Cuidados"
-        ]
+        ],
+        "sourceVaccination": "Fuente sobre vacunación: WSAVA — Directrices de 2024 para la vacunación de perros y gatos (PDF en portugués, para veterinarios)."
       },
       {
         "title": "Compatibilidad",
@@ -110,12 +111,13 @@
       "Un lugar seguro donde refugiarse y descansar.",
       "Superficies para rascar y oportunidades de juego.",
       "Alimentación planificada según las necesidades del gato, con orientación veterinaria.",
-      "Plan de vacunación y veterinario de confianza.",
+      "Vacunación: pide el historial a la organización y consulta al veterinario.",
       "Interacción y juego que respeten las preferencias del gato."
     ],
     "sourceWindows": "Ventanas abiertas y balcones: ASPCA — High-Rise Syndrome: Lifesaving Tips for Cat Parents (2023, en inglés).",
     "sourceEnvironment": "Caja de arena, recursos, descanso, juego e interacción: FelineVMA — Your Cat’s Environmental Needs (2026, PDF en inglés).",
     "sourceFeeding": "Plan de alimentación: FelineVMA — Feline Feeding Programs (orientación para cuidadores, en inglés).",
+    "sourceVaccination": "Fuente sobre vacunación: WSAVA — Directrices de 2024 para la vacunación de perros y gatos (PDF en portugués, para veterinarios).",
     "sourceNote": "La ASPCA recomienda mallas firmes en las ventanas abiertas y advierte sobre las caídas desde balcones; la protección debe evaluarse según la vivienda. Las recomendaciones sobre entorno, alimentación e interacción son generales y no sustituyen una evaluación veterinaria individual."
   },
   "stories": {
@@ -158,8 +160,9 @@
         "a": "El plazo varía según la organización, la evaluación y el animal. Este proyecto no realiza ni estima procesos reales."
       },
       {
-        "q": "¿Cómo confirmo la salud del gato?",
-        "a": "Solicita al responsable real registros veterinarios y confirmación de vacunas, castración, desparasitación y necesidades especiales."
+        "q": "¿Cómo puedo conocer el historial de salud del gato?",
+        "a": "Pide a la organización los registros de salud y pregunta qué se sabe sobre vacunación, castración, desparasitación y cuidados continuos. Consulta con un veterinario las necesidades de ese gato.",
+        "sourceVaccination": "Fuente sobre vacunación: WSAVA — Directrices de 2024 para la vacunación de perros y gatos (PDF en portugués, para veterinarios)."
       }
     ]
   },
@@ -269,11 +272,11 @@
       "facts": {
         "eyebrow": "Preguntas útiles",
         "title": "Qué preguntar sobre el gato",
-        "subtitle": "La organización responsable debe confirmar el historial y las necesidades del animal real.",
+        "subtitle": "Pregunta a la organización qué se sabe sobre el historial y las necesidades del animal real.",
         "items": [
           {
             "title": "Salud e historial",
-            "text": "Solicita registros veterinarios, información sobre alimentación y detalles de cualquier cuidado continuo."
+            "text": "Pregunta a la organización qué registros de salud existen, cómo se alimenta el gato y qué cuidados continuos recibe. Lleva las dudas clínicas a un veterinario."
           },
           {
             "title": "Comportamiento observado",
@@ -304,10 +307,11 @@
           "Qué documentos se solicitan y por qué.",
           "Qué condiciones de seguridad debe cumplir la vivienda.",
           "Si habrá visitas de seguimiento y cómo se coordinarán.",
-          "Qué vacunas y cuidados veterinarios son necesarios.",
+          "¿Qué registros de vacunación hay disponibles y qué cuidados deben comentarse con el veterinario?",
           "Cuánto tiempo diario necesitará el gato para interacción y enriquecimiento.",
           "Qué compromisos incluye el acuerdo de adopción responsable."
-        ]
+        ],
+        "sourceVaccination": "Fuente sobre vacunación: WSAVA — Directrices de 2024 para la vacunación de perros y gatos (PDF en portugués, para veterinarios)."
       },
       "support": {
         "eyebrow": "Orientación",

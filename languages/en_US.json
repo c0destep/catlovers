@@ -47,16 +47,17 @@
   "reasons": {
     "eyebrow": "Responsible adoption",
     "title": "What to verify before adopting",
-    "subtitle": "For a real adoption, confirm health, compatibility, responsible contacts, and support directly with the organization.",
+    "subtitle": "For a real adoption, ask the organization about health history, compatibility, responsible contacts, and support.",
     "cards": [
       {
-        "title": "Documented health",
-        "text": "Ask for veterinary, vaccination, neutering, and care records for the real animal.",
+        "title": "Health history",
+        "text": "Ask the organization which health and vaccination records exist, what is known about neutering, and which care needs should be assessed with a veterinarian.",
         "tags": [
           "Records",
           "Vaccines",
           "Care"
-        ]
+        ],
+        "sourceVaccination": "Source on vaccination: WSAVA — 2024 Guidelines for the Vaccination of Dogs and Cats (PDF in Portuguese, for veterinarians)."
       },
       {
         "title": "Compatibility",
@@ -110,12 +111,13 @@
       "A safe place to retreat and rest.",
       "Scratching surfaces and opportunities for play.",
       "Feeding planned around the cat's needs, with veterinary guidance.",
-      "Vaccination plan and trusted vet.",
+      "Vaccination: ask the organization for records and consult a veterinarian.",
       "Interaction and play that respect the cat's preferences."
     ],
     "sourceWindows": "Open windows and balconies: ASPCA — High-Rise Syndrome: Lifesaving Tips for Cat Parents (2023).",
     "sourceEnvironment": "Litter box, resources, rest, play, and interaction: FelineVMA — Your Cat’s Environmental Needs (2026, PDF).",
     "sourceFeeding": "Feeding plan: FelineVMA — Feline Feeding Programs (caregiver guidance).",
+    "sourceVaccination": "Source on vaccination: WSAVA — 2024 Guidelines for the Vaccination of Dogs and Cats (PDF in Portuguese, for veterinarians).",
     "sourceNote": "The ASPCA recommends sturdy screens on open windows and warns about falls from balconies; protection should be assessed for each home. The guidance on environment, feeding, and interaction is general and does not replace an individual veterinary assessment."
   },
   "stories": {
@@ -158,8 +160,9 @@
         "a": "Timing varies by organization, screening, and animal. This project does not conduct or estimate real adoption processes."
       },
       {
-        "q": "How can I confirm the cat’s health?",
-        "a": "Ask the real responsible party for veterinary records and confirmation of vaccines, neutering, deworming, and special needs."
+        "q": "How can I learn about the cat's health history?",
+        "a": "Ask the organization for health records and what is known about vaccination, neutering, deworming, and ongoing care. Discuss this cat's needs with a veterinarian.",
+        "sourceVaccination": "Source on vaccination: WSAVA — 2024 Guidelines for the Vaccination of Dogs and Cats (PDF in Portuguese, for veterinarians)."
       }
     ]
   },
@@ -269,11 +272,11 @@
       "facts": {
         "eyebrow": "Useful questions",
         "title": "What to ask about the cat",
-        "subtitle": "The responsible organization should confirm the real animal's history and needs.",
+        "subtitle": "Ask the organization what is known about the real animal's history and needs.",
         "items": [
           {
             "title": "Health and history",
-            "text": "Ask for veterinary records, feeding information, and details of any ongoing care."
+            "text": "Ask the organization which health records exist, how the cat is fed, and what ongoing care it receives. Take clinical questions to a veterinarian."
           },
           {
             "title": "Observed behavior",
@@ -304,10 +307,11 @@
           "Which documents are requested and why.",
           "Which safety conditions the home must meet.",
           "Whether follow-up visits will occur and how they will be arranged.",
-          "Which vaccines and veterinary care are required.",
+          "Which vaccination records are available, and which care needs should be discussed with the veterinarian?",
           "How much daily time the cat will need for interaction and enrichment.",
           "Which commitments are included in the responsible adoption agreement."
-        ]
+        ],
+        "sourceVaccination": "Source on vaccination: WSAVA — 2024 Guidelines for the Vaccination of Dogs and Cats (PDF in Portuguese, for veterinarians)."
       },
       "support": {
         "eyebrow": "Guidance",
