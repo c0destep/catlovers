@@ -61,7 +61,7 @@
       },
       {
         "title": "Compatibilidade",
-        "text": "Compare sua rotina e moradia com a energia, o temperamento e as necessidades conhecidas do gato."
+        "text": "Pergunte o que se observou sobre o comportamento e as necessidades do gato e avalie sua rotina e moradia com essas informações."
       },
       {
         "title": "Suporte combinado",
@@ -88,7 +88,7 @@
       },
       {
         "title": "Encontro com o gato",
-        "text": "Conheça o animal e observe a compatibilidade com calma."
+        "text": "Conheça o gato e pergunte à organização sobre o comportamento observado."
       },
       {
         "title": "Preparação do lar",
@@ -153,7 +153,7 @@
       },
       {
         "q": "Posso adotar se moro de aluguel?",
-        "a": "Confirme as regras do imóvel, instale proteções adequadas e verifique se o espaço atende ao perfil do gato."
+        "a": "Confirme as regras do imóvel e pergunte à organização quais medidas de segurança e condições do espaço avaliar para este gato."
       },
       {
         "q": "Quanto tempo leva uma adoção real?",
@@ -250,7 +250,8 @@
         },
         {
           "title": "Necessidades do gato",
-          "text": "Planeje um ambiente protegido, atendimento veterinário e recursos adequados ao perfil do animal."
+          "text": "Planeje lugares seguros, recursos ambientais e atendimento veterinário conforme as necessidades do gato.",
+          "sourceEnvironment": "Fonte sobre necessidades ambientais: FelineVMA (PDF em inglês)."
         },
         {
           "title": "Organização responsável",
@@ -308,7 +309,7 @@
           "Quais condições de segurança a moradia deve atender.",
           "Se haverá visitas de acompanhamento e como serão combinadas.",
           "Que registros de vacinação estão disponíveis e quais cuidados devem ser discutidos com o veterinário?",
-          "Quanto tempo diário o gato precisará para interação e enriquecimento.",
+          "Como a organização recomenda planejar interação e brincadeiras para este gato?",
           "Quais compromissos constam no termo de adoção responsável."
         ],
         "sourceVaccination": "Fonte sobre vacinação: WSAVA — Diretrizes de 2024 para a vacinação de cães e gatos (PDF em português, para veterinários)."

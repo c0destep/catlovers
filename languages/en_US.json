@@ -61,7 +61,7 @@
       },
       {
         "title": "Compatibility",
-        "text": "Compare your routine and home with the cat’s known energy, temperament, and needs."
+        "text": "Ask what has been observed about the cat’s behavior and needs, then consider your routine and home in light of that information."
       },
       {
         "title": "Agreed support",
@@ -88,7 +88,7 @@
       },
       {
         "title": "Meet the cat",
-        "text": "Meet the animal and assess compatibility without rushing."
+        "text": "Meet the cat and ask the organization about observed behavior."
       },
       {
         "title": "Prepare the home",
@@ -153,7 +153,7 @@
       },
       {
         "q": "Can I adopt if I rent?",
-        "a": "Confirm the property rules, install suitable protection, and check whether the space fits the cat’s profile."
+        "a": "Confirm the property rules and ask the organization which safety measures and features of the space to consider for this cat."
       },
       {
         "q": "How long does a real adoption take?",
@@ -250,7 +250,8 @@
         },
         {
           "title": "The cat's needs",
-          "text": "Plan for a protected environment, veterinary care, and resources suited to the animal's profile."
+          "text": "Plan safe places, environmental resources, and veterinary care according to the cat's needs.",
+          "sourceEnvironment": "Source on environmental needs: FelineVMA (PDF in English)."
         },
         {
           "title": "Responsible organization",
@@ -262,7 +263,7 @@
         "title": "Before adopting",
         "items": [
           "Confirm that the home allows animals and can receive suitable safety protection.",
-          "Plan recurring expenses and an emergency fund for veterinary care.",
+          "Plan recurring expenses and a reserve for veterinary care.",
           "Assess the time available for interaction, cleaning, and enrichment.",
           "Consider children, other animals, and foreseeable changes to the routine.",
           "Verify the organization's identity and the source of information about the cat.",
@@ -308,7 +309,7 @@
           "Which safety conditions the home must meet.",
           "Whether follow-up visits will occur and how they will be arranged.",
           "Which vaccination records are available, and which care needs should be discussed with the veterinarian?",
-          "How much daily time the cat will need for interaction and enrichment.",
+          "How does the organization recommend planning interaction and play for this cat?",
           "Which commitments are included in the responsible adoption agreement."
         ],
         "sourceVaccination": "Source on vaccination: WSAVA — 2024 Guidelines for the Vaccination of Dogs and Cats (PDF in Portuguese, for veterinarians)."

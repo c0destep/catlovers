@@ -61,7 +61,7 @@
       },
       {
         "title": "Compatibilidad",
-        "text": "Compara tu rutina y vivienda con la energía, el temperamento y las necesidades conocidas del gato."
+        "text": "Pregunta qué se ha observado sobre el comportamiento y las necesidades del gato, y evalúa tu rutina y vivienda con esa información."
       },
       {
         "title": "Apoyo acordado",
@@ -88,7 +88,7 @@
       },
       {
         "title": "Conocer al gato",
-        "text": "Conoce al animal y observa la compatibilidad sin prisas."
+        "text": "Conoce al gato y pregunta a la organización por el comportamiento observado."
       },
       {
         "title": "Preparar el hogar",
@@ -153,7 +153,7 @@
       },
       {
         "q": "¿Puedo adoptar si vivo de alquiler?",
-        "a": "Confirma las reglas del inmueble, instala protecciones adecuadas y comprueba si el espacio se adapta al perfil del gato."
+        "a": "Confirma las reglas del inmueble y pregunta a la organización qué medidas de seguridad y condiciones del espacio conviene evaluar para este gato."
       },
       {
         "q": "¿Cuánto tarda una adopción real?",
@@ -250,7 +250,8 @@
         },
         {
           "title": "Necesidades del gato",
-          "text": "Planifica un entorno protegido, atención veterinaria y recursos adecuados al perfil del animal."
+          "text": "Planifica lugares seguros, recursos ambientales y atención veterinaria según las necesidades del gato.",
+          "sourceEnvironment": "Fuente sobre necesidades ambientales: FelineVMA (PDF en inglés)."
         },
         {
           "title": "Organización responsable",
@@ -308,7 +309,7 @@
           "Qué condiciones de seguridad debe cumplir la vivienda.",
           "Si habrá visitas de seguimiento y cómo se coordinarán.",
           "¿Qué registros de vacunación hay disponibles y qué cuidados deben comentarse con el veterinario?",
-          "Cuánto tiempo diario necesitará el gato para interacción y enriquecimiento.",
+          "¿Cómo recomienda la organización planificar la interacción y los juegos para este gato?",
           "Qué compromisos incluye el acuerdo de adopción responsable."
         ],
         "sourceVaccination": "Fuente sobre vacunación: WSAVA — Directrices de 2024 para la vacunación de perros y gatos (PDF en portugués, para veterinarios)."
