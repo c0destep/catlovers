@@ -443,8 +443,9 @@
   "blog": {
     "eyebrow": "Education",
     "title": "Catlovers Blog",
-    "subtitle": "Everything you need to know to ensure the well-being of your feline friend.",
+    "subtitle": "One published article and two topics in preparation about cat care.",
     "readMore": "Read full article",
+    "inPreparation": "Article in preparation",
     "cards": [
       {
         "tag": "Behavior",
@@ -453,13 +454,15 @@
       },
       {
         "tag": "Catification",
-        "title": "Practical guide to catification",
-        "text": "Learn how to create an enriched environment that stimulates your cat's instincts."
+        "title": "Environment and resources for cats",
+        "text": "Topic in preparation about safe places, separated resources, and play.",
+        "source": "Source in English: FelineVMA (environmental needs)"
       },
       {
         "tag": "Safety",
-        "title": "The importance of protective screens",
-        "text": "Why screening windows and balconies is not an exaggeration, but an absolute necessity."
+        "title": "Window and balcony safety",
+        "text": "Topic in preparation about fall risks at windows and balconies. The ASPCA recommends sturdy screens on open windows.",
+        "source": "Source in English: ASPCA (fall risks)"
       }
     ]
   },

@@ -443,8 +443,9 @@
   "blog": {
     "eyebrow": "Educación",
     "title": "Blog Catlovers",
-    "subtitle": "Todo lo que necesitas saber para garantizar el bienestar de tu amigo felino.",
+    "subtitle": "Un artículo publicado y dos temas en preparación sobre el cuidado de los gatos.",
     "readMore": "Leer artículo completo",
+    "inPreparation": "Artículo en preparación",
     "cards": [
       {
         "tag": "Comportamiento",
@@ -453,13 +454,15 @@
       },
       {
         "tag": "Gatificación",
-        "title": "Guía práctica de gatificación",
-        "text": "Aprende a crear un entorno enriquecido que estimule los instintos de tu gato."
+        "title": "Entorno y recursos para gatos",
+        "text": "Tema en preparación sobre lugares seguros, recursos separados y juegos.",
+        "source": "Fuente en inglés: FelineVMA (necesidades ambientales)"
       },
       {
         "tag": "Seguridad",
-        "title": "La importancia de las mallas protectoras",
-        "text": "Por qué colocar mallas en ventanas y balcones no es una exageración, sino una necesidad absoluta."
+        "title": "Seguridad en ventanas y balcones",
+        "text": "Tema en preparación sobre el riesgo de caídas por ventanas y balcones. La ASPCA recomienda mallas resistentes en las ventanas abiertas.",
+        "source": "Fuente en inglés: ASPCA (riesgo de caídas)"
       }
     ]
   },

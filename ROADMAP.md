@@ -2,7 +2,7 @@
 
 > Diagnóstico iniciado em 16 de setembro de 2026. O retrato original foi atualizado após a execução das primeiras prioridades para distinguir problemas resolvidos de trabalho pendente.
 
-## Andamento da execução — 24 de setembro de 2026
+## Andamento da execução — 25 de setembro de 2026
 
 | Frente | Estado | Evidência |
 | --- | --- | --- |
@@ -12,7 +12,7 @@
 | PWA | Concluído para o contrato atual | Manifesto, ícones, screenshot, escopo, service worker e pré-cache de 76 recursos são validados na build; o Chromium confirma a navegação pelo app shell sem rede. |
 | CI | Concluído | Instalação congelada, lint, i18n, catálogo, build e Cypress bloqueiam a publicação no GitHub Pages. |
 | Internacionalização | Parcialmente concluído | O tradutor incompatível foi substituído; idades e metadados exibidos pela galeria possuem localização nos três catálogos, e o atributo `lang` usa valores BCP 47. A governança editorial e a cobertura de conteúdo por idioma ainda precisam evoluir. |
-| Conteúdo editorial | Em andamento | O artigo de apresentação entre gatos identifica autoria, publicação e revisão editorial, resume um guia da FelineVMA e está disponível nos três idiomas. O inventário está em `EDITORIAL_INVENTORY.md`; as dicas de adaptação inicial, o checklist ambiental, os cenários fictícios e as perguntas do grupo clínico têm redação ajustada nos três idiomas, com fontes visíveis junto às orientações pertinentes. A pergunta sobre convivência com animais da casa agora pede orientação adequada às espécies envolvidas, sem atribuir a gatos orientação para outras espécies. Para os grupos inventariados, autoria editorial e responsáveis pela revisão de PT-BR, EN e ES estão a definir; a revisão dos demais grupos continua pendente. |
+| Conteúdo editorial | Em andamento | O artigo de apresentação entre gatos identifica autoria, publicação e revisão editorial, resume um guia da FelineVMA e está disponível nos três idiomas. O inventário está em `EDITORIAL_INVENTORY.md`; as dicas de adaptação inicial, o checklist ambiental, os cenários fictícios e as perguntas do grupo clínico têm redação ajustada nos três idiomas, com fontes visíveis junto às orientações pertinentes. A pergunta sobre convivência com animais da casa agora pede orientação adequada às espécies envolvidas. Os dois temas adicionais do blog estão identificados como artigos em preparação, com fontes externas explícitas e sem links para o artigo existente. Para os grupos inventariados, autoria editorial e responsáveis pela revisão de PT-BR, EN e ES estão a definir; a revisão dos demais grupos continua pendente. |
 | Tema | Concluído | A troca de tema permanece funcional quando o `localStorage` está indisponível ou o navegador não oferece `matchMedia`; a build preserva e valida a paleta escura, já publicada no GitHub Pages. |
 | Testes | Em evolução | A suíte completa passou com 55 testes em dez especificações, além da navegação offline em Chromium; filtros, teclado, falha externa e fragmentos locais possuem cobertura. |
 | Documentação | Concluído para a fundação atual | README, guia de contribuição e `humans.txt` descrevem Vite, pnpm, PWA, E2E e as limitações reais. |
@@ -105,7 +105,7 @@ O resultado principal é uma demonstração educacional coerente e verificável:
 | P1 | Conteúdo dinâmico permanece parcialmente em português | Parcial | O tradutor e a cobertura dinâmica foram corrigidos; idades, cores, temperamentos, textos alternativos e estados vazios da galeria possuem localização, enquanto a governança editorial por idioma permanece pendente. |
 | P1 | Testes verificavam sobretudo presença de elementos | Fortalecida | Filtros, responsividade, i18n, PWA, teclado, links e falha da API externa possuem cobertura; novas integrações exigirão seus próprios cenários. |
 | P1 | Política de privacidade é genérica | Mitigada para demonstração | A página descreve os dados locais e os serviços externos atuais; qualquer coleta real ainda exigirá finalidade, retenção, direitos e contato definidos. |
-| P2 | Blog e SEO têm estrutura incompleta | Parcial | `robots.txt`, `sitemap.xml` e `og:image` são publicados e validados; os cards repetem o mesmo artigo, e ainda faltam canonical e o conjunto social por página. |
+| P2 | Blog e SEO têm estrutura incompleta | Parcial | `robots.txt`, `sitemap.xml` e `og:image` são publicados e validados; apenas o primeiro card aponta para o artigo existente. Os outros dois indicam temas em preparação e fontes externas. Ainda faltam os artigos próprios, canonical e o conjunto social por página. |
 | P2 | Build inclui 42 arquivos de fonte | Pendente | O custo de transferência ainda pode ser reduzido selecionando alfabetos, pesos e formatos realmente usados. |
 | P2 | Imagens da galeria dependem do Unsplash | Pendente | A experiência offline fica incompleta e o produto depende de um terceiro. |
 | P2 | Não há telemetria de produto ou erros | Fora do escopo atual | A demonstração deve usar testes e auditorias como evidência; qualquer telemetria futura exigirá decisão de privacidade e finalidade. |
@@ -278,7 +278,8 @@ As durações abaixo expressam ordem e tamanho relativo. A Fase 1 e a Fase 3 ori
 
 #### Conteúdo e SEO
 
-- [ ] Criar artigos distintos para os três cards atuais e impedir links editoriais duplicados por teste.
+- [ ] Criar artigos próprios para os dois temas em preparação do blog, com autoria, revisão por idioma, datas e fontes definidas; validar os links editoriais específicos quando as páginas existirem. O primeiro card já aponta para seu artigo próprio.
+- [x] Identificar os dois temas em preparação do blog nos três idiomas, remover os links duplicados para `post.html` e vincular as fontes institucionais junto aos temas, sem apresentá-los como artigos Catlovers publicados. Autoria e revisão editorial seguem a definir.
 - [x] Informar autoria, data de publicação, data de revisão editorial, fonte e limite do conteúdo no artigo sobre apresentação entre gatos, em PT-BR, EN e ES.
 - [x] Inventariar as demais orientações educativas sobre saúde e comportamento e registrar páginas, chaves, riscos editoriais e fontes candidatas em `EDITORIAL_INVENTORY.md`.
 - [x] Ajustar as dicas de adaptação inicial em `adoption.html` nos três idiomas e incluir fontes institucionais junto às orientações correspondentes; a página identifica o conteúdo como orientação geral, sem atribuir revisão veterinária.

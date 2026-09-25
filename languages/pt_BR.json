@@ -443,8 +443,9 @@
   "blog": {
     "eyebrow": "Educação",
     "title": "Blog Catlovers",
-    "subtitle": "Tudo o que você precisa saber para garantir o bem-estar do seu amigo felino.",
+    "subtitle": "Um artigo publicado e dois temas em preparação sobre cuidados com gatos.",
     "readMore": "Ler artigo completo",
+    "inPreparation": "Artigo em preparação",
     "cards": [
       {
         "tag": "Comportamento",
@@ -453,13 +454,15 @@
       },
       {
         "tag": "Gatificação",
-        "title": "Guia prático de gatificação",
-        "text": "Aprenda a criar um ambiente enriquecido que estimula os instintos do seu gato."
+        "title": "Ambiente e recursos para gatos",
+        "text": "Tema em preparação sobre lugares seguros, recursos separados e brincadeiras.",
+        "source": "Fonte em inglês: FelineVMA (necessidades ambientais)"
       },
       {
         "tag": "Segurança",
-        "title": "A importância das telas de proteção",
-        "text": "Por que telar janelas e varandas não é exagero, mas sim uma necessidade absoluta."
+        "title": "Segurança em janelas e varandas",
+        "text": "Tema em preparação sobre riscos de queda por janelas e varandas. A ASPCA recomenda telas firmes nas janelas abertas.",
+        "source": "Fonte em inglês: ASPCA (riscos de queda)"
       }
     ]
   },
