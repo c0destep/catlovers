@@ -89,7 +89,7 @@ Além de compilar o site, esse comando:
 2. gera a versão do cache e a lista de pré-cache a partir da build;
 3. verifica as 13 páginas, os links para recursos locais, os ícones, a captura de tela e o service worker.
 
-O funcionamento offline cobre o app shell gerado e é verificado em um navegador com a rede desativada. Conteúdo externo, como imagens do Unsplash e fatos atualizados por uma API pública, continua dependendo de conexão; a curiosidade exibe um estado local quando a API falha.
+O funcionamento offline cobre o app shell gerado e é verificado em um navegador com a rede desativada. Imagens externas do Unsplash continuam dependendo de conexão.
 
 ## Estrutura
 

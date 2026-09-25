@@ -353,7 +353,7 @@
     "sections": {
       "content": {
         "title": "Data in the demonstration stage",
-        "text": "Catlovers does not submit or store data entered in the form. Language and theme stay in the browser’s local storage, and a cat fact may stay in the session. Unsplash images, the catfact.ninja API, and GitHub Pages hosting may receive technical request data under their own policies. Before any real collection, this policy must define purpose, retention, rights, and a responsible contact."
+        "text": "Catlovers does not submit or store data entered in the form. Language and theme stay in the browser’s local storage. Unsplash images and GitHub Pages hosting may receive technical request data under their own policies. Before any real collection, this policy must define purpose, retention, rights, and a responsible contact."
       }
     }
   },
@@ -552,7 +552,7 @@
     },
     "blog": {
       "title": "Blog - Catlovers",
-      "description": "Tips, curiosities and guides about the world of cats."
+      "description": "An article about introducing cats and topics in preparation about environment and safety."
     },
     "cats": {
       "title": "Gallery - Catlovers",

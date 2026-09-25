@@ -9,12 +9,12 @@
 | Posicionamento | Concluído para o estágio atual | O site se identifica como demonstração em todos os idiomas; perfis, jornadas e formulários são fictícios, enquanto números de impacto, depoimentos, garantias e alegações de saúde sem fonte foram removidos. |
 | Formulário | Concluído para demonstração | O fluxo valida e limpa os campos, informa que nenhum dado foi enviado e não simula contato futuro. |
 | Vite | Concluído | A migração multipágina foi consolidada, resíduos do Parcel foram removidos e ambiente, documentação e Cypress usam a porta 1234. |
-| PWA | Concluído para o contrato atual | Manifesto, ícones, screenshot, escopo, service worker e pré-cache de 76 recursos são validados na build; o Chromium confirma a navegação pelo app shell sem rede. |
+| PWA | Concluído para o contrato atual | Manifesto, ícones, screenshot, escopo, service worker e pré-cache gerado são validados na build; o Chromium confirmou a navegação pelo app shell sem rede na última verificação registrada. |
 | CI | Concluído | Instalação congelada, lint, i18n, catálogo, build e Cypress bloqueiam a publicação no GitHub Pages. |
 | Internacionalização | Parcialmente concluído | O tradutor incompatível foi substituído; idades e metadados exibidos pela galeria possuem localização nos três catálogos, e o atributo `lang` usa valores BCP 47. A governança editorial e a cobertura de conteúdo por idioma ainda precisam evoluir. |
-| Conteúdo editorial | Em andamento | O artigo de apresentação entre gatos identifica autoria, publicação e revisão editorial, resume um guia da FelineVMA e está disponível nos três idiomas. O inventário está em `EDITORIAL_INVENTORY.md`; as dicas de adaptação inicial, o checklist ambiental, os cenários fictícios e as perguntas do grupo clínico têm redação ajustada nos três idiomas, com fontes visíveis junto às orientações pertinentes. As perguntas sobre convivência, rotina e moradia foram conferidas como planejamento ilustrativo; o card de necessidades ambientais agora tem fonte visível. Os dois temas adicionais do blog estão identificados como artigos em preparação, com fontes externas explícitas e sem links para o artigo existente. Para os grupos inventariados, autoria editorial e responsáveis pela revisão de PT-BR, EN e ES estão a definir; a revisão dos demais grupos continua pendente. |
+| Conteúdo editorial | Em andamento | O artigo de apresentação entre gatos identifica autoria, publicação e revisão editorial, resume um guia da FelineVMA e está disponível nos três idiomas. O inventário está em `EDITORIAL_INVENTORY.md`; as dicas de adaptação inicial, o checklist ambiental, os cenários fictícios e as perguntas do grupo clínico têm redação ajustada nos três idiomas, com fontes visíveis junto às orientações pertinentes. As perguntas sobre convivência, rotina e moradia foram conferidas como planejamento ilustrativo; o card de necessidades ambientais agora tem fonte visível. Os dois temas adicionais do blog estão identificados como artigos em preparação, com fontes externas explícitas e sem links para o artigo existente. A curiosidade dinâmica sem fonte por afirmação foi removida. Para os grupos inventariados, autoria editorial e responsáveis pela revisão de PT-BR, EN e ES estão a definir; a revisão dos demais grupos continua pendente. |
 | Tema | Concluído | A troca de tema permanece funcional quando o `localStorage` está indisponível ou o navegador não oferece `matchMedia`; a build preserva e valida a paleta escura, já publicada no GitHub Pages. |
-| Testes | Em evolução | A suíte completa passou com 55 testes em dez especificações, além da navegação offline em Chromium; filtros, teclado, falha externa e fragmentos locais possuem cobertura. |
+| Testes | Em evolução | A última suíte completa registrada antes desta remoção passou em Chromium, incluindo a navegação offline. As duas expectativas específicas da curiosidade removida saíram da suíte; esta alteração ainda não foi testada. |
 | Documentação | Concluído para a fundação atual | README, guia de contribuição e `humans.txt` descrevem Vite, pnpm, PWA, E2E e as limitações reais. |
 
 ### Próximas prioridades altas
@@ -61,10 +61,10 @@ O resultado principal é uma demonstração educacional coerente e verificável:
 | Dependências | pnpm e Fontsource; tradutor local sem dependência de runtime | Conjunto pequeno e compatível com o navegador |
 | Estilos | BEM, propriedades customizadas, abordagem mobile-first e `prefers-reduced-motion` | Base consistente; `main.css` concentra mais de duas mil linhas |
 | Dados | Seis gatos fictícios em `cats.json` | Suficientes para a demonstração; não constituem um inventário operacional |
-| Estado no cliente | `localStorage` para idioma e tema; `sessionStorage` para curiosidades | Adequado para preferências, sem persistência de negócio; o tema continua funcional durante a sessão quando o armazenamento local está indisponível |
+| Estado no cliente | `localStorage` para idioma e tema | Adequado para preferências, sem persistência de negócio; o tema continua funcional durante a sessão quando o armazenamento local está indisponível |
 | Internacionalização | PT-BR, EN e ES, com paridade automática de chaves | Conteúdo dinâmico principal e metadados exibidos pela galeria são traduzidos; revisão editorial e cobertura de conteúdo ainda precisam evoluir |
-| PWA | Manifesto, service worker, ícones, screenshot e pré-cache gerado | Estrutura validada na build; 76 recursos entram no pré-cache e a navegação offline foi verificada em Chromium |
-| Qualidade | ESLint 10, Stylelint 17 e dez especificações Cypress | Lint, i18n, catálogo e build passam; 55 testes E2E passaram no Chromium |
+| PWA | Manifesto, service worker, ícones, screenshot e pré-cache gerado | Estrutura validada na última build registrada; a navegação offline foi verificada em Chromium antes desta remoção |
+| Qualidade | ESLint 10, Stylelint 17 e dez especificações Cypress | Lint, i18n, catálogo e build passaram na última verificação registrada; a última suíte E2E completa anterior a esta remoção passou no Chromium |
 | Entrega | GitHub Actions e GitHub Pages | A publicação depende de instalação congelada, lint, i18n, catálogo, build e E2E |
 | Backend | Inexistente | Formulário, disponibilidade, parceiros e acompanhamento não são persistidos, conforme o escopo demonstrativo |
 | Observabilidade | Erros apenas no console | Não há telemetria de uso ou de negócio; a próxima evolução deve priorizar evidências de qualidade sem introduzir coleta prematura |
@@ -103,7 +103,7 @@ O resultado principal é uma demonstração educacional coerente e verificável:
 | P1 | O gato escolhido não acompanha o usuário até um formulário operacional | Fora do escopo atual | O formulário é demonstrativo e não coleta interesse; uma jornada persistida depende da decisão de reabrir a trilha operacional. |
 | P1 | CTAs de apoio não executam ação | Resolvida para demonstração | Os controles sem destino foram removidos; a página orienta a procurar organizações reais. Fluxos operacionais continuam reservados à Fase 4. |
 | P1 | Conteúdo dinâmico permanece parcialmente em português | Parcial | O tradutor e a cobertura dinâmica foram corrigidos; idades, cores, temperamentos, textos alternativos e estados vazios da galeria possuem localização, enquanto a governança editorial por idioma permanece pendente. |
-| P1 | Testes verificavam sobretudo presença de elementos | Fortalecida | Filtros, responsividade, i18n, PWA, teclado, links e falha da API externa possuem cobertura; novas integrações exigirão seus próprios cenários. |
+| P1 | Testes verificavam sobretudo presença de elementos | Fortalecida | Filtros, responsividade, i18n, PWA, teclado e links possuem cobertura; a expectativa de falha da API de curiosidades foi retirada junto com a funcionalidade. Novas integrações exigirão seus próprios cenários. |
 | P1 | Política de privacidade é genérica | Mitigada para demonstração | A página descreve os dados locais e os serviços externos atuais; qualquer coleta real ainda exigirá finalidade, retenção, direitos e contato definidos. |
 | P2 | Blog e SEO têm estrutura incompleta | Parcial | `robots.txt`, `sitemap.xml` e `og:image` são publicados e validados; apenas o primeiro card aponta para o artigo existente. Os outros dois indicam temas em preparação e fontes externas. Ainda faltam os artigos próprios, canonical e o conjunto social por página. |
 | P2 | Build inclui 42 arquivos de fonte | Pendente | O custo de transferência ainda pode ser reduzido selecionando alfabetos, pesos e formatos realmente usados. |
@@ -202,7 +202,7 @@ As durações abaixo expressam ordem e tamanho relativo. A Fase 1 e a Fase 3 ori
 - [x] Remover `allowCypressEnv`, opção retirada do Cypress 16, e escolher um navegador suportado para CI.
 - [x] Separar `test:e2e:open` de `test:e2e:run`; fazer `pnpm test` executar sem interface gráfica.
 - [x] Corrigir testes dependentes de animação ou visibilidade fora da viewport e substituir asserções permissivas por resultados esperados.
-- [x] Cobrir links e fragmentos locais, falha da API externa, menu por teclado, conteúdo dinâmico, manifesto e modo offline. O formulário demonstrativo não realiza envio de rede.
+- [x] Cobrir links e fragmentos locais, menu por teclado, conteúdo dinâmico, manifesto e modo offline. A cobertura da antiga API de curiosidades foi retirada junto com a funcionalidade; o formulário demonstrativo não realiza envio de rede.
 
 **Critérios de saída**
 
@@ -300,7 +300,7 @@ As durações abaixo expressam ordem e tamanho relativo. A Fase 1 e a Fase 3 ori
 - [ ] Importar apenas alfabetos, pesos e formatos de fonte usados; a build atual gera 42 arquivos de fonte, cerca de 0,65 MiB.
 - [ ] Definir dimensões ou proporção para todas as imagens e evitar mudanças de layout.
 - [ ] Estabelecer orçamentos de CSS, JavaScript, fontes e imagens no CI.
-- [x] Tratar a API de curiosidades como melhoria opcional: timeout, estado local na única língua em que o bloco aparece e nenhum erro ruidoso quando estiver indisponível.
+- [x] Remover a curiosidade dinâmica sem fonte verificável por afirmação e suas referências obsoletas; a estratégia anterior de timeout e fallback deixou de se aplicar.
 - [ ] Medir LCP, INP, CLS e falhas de recursos nas páginas de maior tráfego.
 
 **Critérios de saída**

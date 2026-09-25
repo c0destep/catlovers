@@ -83,16 +83,6 @@ describe('Internacionalização (i18n)', () => {
     cy.get('.page-top').should('have.attr', 'aria-label', 'Back to top');
   });
 
-  it('deve exibir curiosidades somente no idioma suportado pela API', () => {
-    cy.intercept('GET', 'https://catfact.ninja/fact', { fact: 'Cats sleep for many hours.' });
-
-    cy.get('.cat-fact').should('not.exist');
-    cy.get('[data-language="en_US"]').first().click({ force: true });
-    cy.get('.cat-fact').should('contain.text', 'Cats sleep for many hours.');
-    cy.get('[data-language="es_ES"]').first().click({ force: true });
-    cy.get('.cat-fact').should('not.exist');
-  });
-
   it('deve apresentar orientação de adaptação e fontes nos três idiomas', () => {
     const locales = [
       {

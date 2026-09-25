@@ -353,7 +353,7 @@
     "sections": {
       "content": {
         "title": "Datos en la etapa demostrativa",
-        "text": "Catlovers no envía ni almacena los datos escritos en el formulario. El idioma y el tema permanecen en el almacenamiento local del navegador, y una curiosidad puede permanecer en la sesión. Las imágenes de Unsplash, la API catfact.ninja y el alojamiento de GitHub Pages pueden recibir datos técnicos de la solicitud según sus propias políticas. Antes de cualquier recopilación real, esta política deberá definir finalidad, retención, derechos y un contacto responsable."
+        "text": "Catlovers no envía ni almacena los datos escritos en el formulario. El idioma y el tema permanecen en el almacenamiento local del navegador. Las imágenes de Unsplash y el alojamiento de GitHub Pages pueden recibir datos técnicos de la solicitud según sus propias políticas. Antes de cualquier recopilación real, esta política deberá definir finalidad, retención, derechos y un contacto responsable."
       }
     }
   },
@@ -552,7 +552,7 @@
     },
     "blog": {
       "title": "Blog - Catlovers",
-      "description": "Consejos, curiosidades y guías sobre el mundo de los gatos."
+      "description": "Un artículo sobre la presentación entre gatos y temas en preparación sobre el entorno y la seguridad."
     },
     "cats": {
       "title": "Galería - Catlovers",

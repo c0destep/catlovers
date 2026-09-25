@@ -2220,16 +2220,6 @@ html {
 }
 
 /* ==========================================
-   P0 Fix: Cat Fact in Footer
-   ========================================== */
-.cat-fact {
-  margin-top: 1rem;
-  font-size: 0.875rem;
-  color: var(--cat-muted);
-  text-align: center;
-}
-
-/* ==========================================
    P1 Fix: Removed Inline Styles (Blog, Support, Adoption)
    ========================================== */
 .blog-grid {

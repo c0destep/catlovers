@@ -65,19 +65,4 @@ describe('Performance e Carregamento', () => {
       expect(registration.scope).to.eq(new URL('./', registration.active.scriptURL).href);
     });
   });
-
-  it('deve mostrar um estado local quando a API de curiosidades falhar', () => {
-    cy.intercept('GET', 'https://catfact.ninja/fact', { forceNetworkError: true });
-    cy.visit('/', {
-      onBeforeLoad(win) {
-        win.localStorage.setItem('preferred_language', 'en_US');
-        win.sessionStorage.clear();
-      }
-    });
-
-    cy.get('.cat-fact')
-      .should('be.visible')
-      .and('have.attr', 'data-state', 'unavailable')
-      .and('contain.text', 'Try again when you are online');
-  });
 });
