@@ -1308,6 +1308,15 @@ header {
   font-size: 0.95rem;
 }
 
+.checklist__sources {
+  margin-top: 2rem;
+}
+
+.checklist__sources .section__text {
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
 /* ===== CHECKLIST (sub-pages) ===== */
 .checklist {
   display: flex;

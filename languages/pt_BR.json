@@ -104,15 +104,19 @@
     "title": "Checklist do novo lar",
     "subtitle": "Detalhes que fazem a diferença na adaptação.",
     "items": [
-      "Telas de proteção em janelas e varandas.",
-      "Caixa de areia em local tranquilo.",
-      "Comedouros separados da água.",
-      "Caminha ou espaço seguro para descanso.",
-      "Arranhadores e brinquedos de enriquecimento.",
-      "Rotina de alimentação definida.",
+      "Telas firmes nas janelas abertas; proteção adequada nas varandas acessíveis.",
+      "Caixa de areia em local acessível e tranquilo.",
+      "Água e alimento em pontos separados e acessíveis.",
+      "Lugar seguro para se recolher e descansar.",
+      "Arranhadores e oportunidades de brincadeira.",
+      "Alimentação planejada conforme as necessidades do gato, com orientação veterinária.",
       "Plano de vacinação e veterinário de confiança.",
-      "Tempo para interação diária e carinho."
-    ]
+      "Interação e brincadeira conforme as preferências do gato."
+    ],
+    "sourceWindows": "Janelas abertas e varandas: ASPCA — High-Rise Syndrome: Lifesaving Tips for Cat Parents (2023, em inglês).",
+    "sourceEnvironment": "Caixa de areia, recursos, descanso, brincadeira e interação: FelineVMA — Your Cat’s Environmental Needs (2026, PDF em inglês).",
+    "sourceFeeding": "Plano alimentar: FelineVMA — Feline Feeding Programs (orientação para cuidadores, em inglês).",
+    "sourceNote": "A ASPCA recomenda telas firmes nas janelas abertas e alerta para quedas de varandas; a proteção deve ser avaliada conforme o imóvel. As orientações sobre ambiente, alimentação e interação são gerais e não substituem uma avaliação veterinária individual."
   },
   "stories": {
     "eyebrow": "Cenários fictícios",

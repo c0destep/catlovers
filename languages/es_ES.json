@@ -104,15 +104,19 @@
     "title": "Checklist del nuevo hogar",
     "subtitle": "Detalles que marcan la diferencia en la adaptación.",
     "items": [
-      "Mallas de protección en ventanas y balcones.",
-      "Caja de arena en un lugar tranquilo.",
-      "Comederos separados del agua.",
-      "Cama o espacio seguro para descansar.",
-      "Rascadores y juguetes de enriquecimiento.",
-      "Rutina de alimentación definida.",
+      "Mallas firmes en las ventanas abiertas; protección adecuada en los balcones accesibles.",
+      "Caja de arena en un lugar accesible y tranquilo.",
+      "Agua y comida en lugares separados y accesibles.",
+      "Un lugar seguro donde refugiarse y descansar.",
+      "Superficies para rascar y oportunidades de juego.",
+      "Alimentación planificada según las necesidades del gato, con orientación veterinaria.",
       "Plan de vacunación y veterinario de confianza.",
-      "Tiempo para interacción diaria y cariño."
-    ]
+      "Interacción y juego que respeten las preferencias del gato."
+    ],
+    "sourceWindows": "Ventanas abiertas y balcones: ASPCA — High-Rise Syndrome: Lifesaving Tips for Cat Parents (2023, en inglés).",
+    "sourceEnvironment": "Caja de arena, recursos, descanso, juego e interacción: FelineVMA — Your Cat’s Environmental Needs (2026, PDF en inglés).",
+    "sourceFeeding": "Plan de alimentación: FelineVMA — Feline Feeding Programs (orientación para cuidadores, en inglés).",
+    "sourceNote": "La ASPCA recomienda mallas firmes en las ventanas abiertas y advierte sobre las caídas desde balcones; la protección debe evaluarse según la vivienda. Las recomendaciones sobre entorno, alimentación e interacción son generales y no sustituyen una evaluación veterinaria individual."
   },
   "stories": {
     "eyebrow": "Escenarios ficticios",

@@ -12,14 +12,14 @@
 | PWA | Concluído para o contrato atual | Manifesto, ícones, screenshot, escopo, service worker e pré-cache de 76 recursos são validados na build; o Chromium confirma a navegação pelo app shell sem rede. |
 | CI | Concluído | Instalação congelada, lint, i18n, catálogo, build e Cypress bloqueiam a publicação no GitHub Pages. |
 | Internacionalização | Parcialmente concluído | O tradutor incompatível foi substituído; idades e metadados exibidos pela galeria possuem localização nos três catálogos, e o atributo `lang` usa valores BCP 47. A governança editorial e a cobertura de conteúdo por idioma ainda precisam evoluir. |
-| Conteúdo editorial | Em andamento | O artigo de apresentação entre gatos identifica autoria, publicação e revisão editorial, resume um guia da FelineVMA e está disponível nos três idiomas. O inventário está em `EDITORIAL_INVENTORY.md`; as dicas de adaptação inicial agora têm redação ajustada e fontes visíveis nos três idiomas, enquanto a governança editorial e a revisão dos demais grupos continuam pendentes. |
+| Conteúdo editorial | Em andamento | O artigo de apresentação entre gatos identifica autoria, publicação e revisão editorial, resume um guia da FelineVMA e está disponível nos três idiomas. O inventário está em `EDITORIAL_INVENTORY.md`; as dicas de adaptação inicial e o checklist ambiental têm redação ajustada e fontes visíveis nos três idiomas, enquanto a governança editorial e a revisão dos demais grupos continuam pendentes. |
 | Tema | Concluído | A troca de tema permanece funcional quando o `localStorage` está indisponível ou o navegador não oferece `matchMedia`; a build preserva e valida a paleta escura, já publicada no GitHub Pages. |
 | Testes | Em evolução | A suíte completa passou com 55 testes em dez especificações, além da navegação offline em Chromium; filtros, teclado, falha externa e fragmentos locais possuem cobertura. |
 | Documentação | Concluído para a fundação atual | README, guia de contribuição e `humans.txt` descrevem Vite, pnpm, PWA, E2E e as limitações reais. |
 
 ### Próximas prioridades altas
 
-1. Concluir autoria, revisão editorial e fontes para o conteúdo sobre cuidados e comportamento. O artigo de apresentação entre gatos já foi revisado; as dicas de adaptação inicial foram ajustadas e referenciadas, e a revisão dos demais grupos e a governança editorial continuam pendentes em `EDITORIAL_INVENTORY.md`.
+1. Concluir autoria, revisão editorial e fontes para o conteúdo sobre cuidados e comportamento. O artigo de apresentação entre gatos já foi revisado; as dicas de adaptação inicial e o checklist ambiental foram ajustados e referenciados, e a revisão dos demais grupos e a governança editorial continuam pendentes em `EDITORIAL_INVENTORY.md`.
 2. Completar `canonical` e o conjunto de metadados sociais por página, com uma estratégia de indexação coerente para os três idiomas.
 3. Fortalecer a demonstração com testes manuais e automatizados de acessibilidade, além de orçamentos de desempenho para os ativos publicados.
 4. Definir a governança editorial de PT-BR, EN e ES e manter a paridade de conteúdo sem prometer uma operação de adoção.
@@ -282,6 +282,7 @@ As durações abaixo expressam ordem e tamanho relativo. A Fase 1 e a Fase 3 ori
 - [x] Informar autoria, data de publicação, data de revisão editorial, fonte e limite do conteúdo no artigo sobre apresentação entre gatos, em PT-BR, EN e ES.
 - [x] Inventariar as demais orientações educativas sobre saúde e comportamento e registrar páginas, chaves, riscos editoriais e fontes candidatas em `EDITORIAL_INVENTORY.md`.
 - [x] Ajustar as dicas de adaptação inicial em `adoption.html` nos três idiomas e incluir fontes institucionais junto às orientações correspondentes; a página identifica o conteúdo como orientação geral, sem atribuir revisão veterinária.
+- [x] Ajustar o checklist ambiental em `index.html` e `adoption.html` nos três idiomas e incluir fontes conferidas junto às orientações; autoria, revisão por idioma e data de revisão editorial continuam pendentes.
 - [ ] Revisar e corrigir os demais grupos inventariados; definir autoria editorial, revisão por idioma e datas de revisão, incluir fontes junto às alegações pertinentes e só então considerá-los revisados.
 - [x] Publicar `robots.txt` e gerar `sitemap.xml` na saída final.
 - [x] Publicar `og:image` estável para as páginas geradas.

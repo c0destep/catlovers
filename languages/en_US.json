@@ -104,15 +104,19 @@
     "title": "New home checklist",
     "subtitle": "Details that make adaptation easier.",
     "items": [
-      "Protective screens on windows and balconies.",
-      "Litter box in a quiet spot.",
-      "Food bowls away from the water.",
-      "A bed or safe resting space.",
-      "Scratchers and enrichment toys.",
-      "Consistent feeding routine.",
+      "Sturdy screens on open windows; suitable protection for accessible balconies.",
+      "Litter box in an accessible, quiet spot.",
+      "Food and water in separate, accessible locations.",
+      "A safe place to retreat and rest.",
+      "Scratching surfaces and opportunities for play.",
+      "Feeding planned around the cat's needs, with veterinary guidance.",
       "Vaccination plan and trusted vet.",
-      "Daily time for interaction and affection."
-    ]
+      "Interaction and play that respect the cat's preferences."
+    ],
+    "sourceWindows": "Open windows and balconies: ASPCA — High-Rise Syndrome: Lifesaving Tips for Cat Parents (2023).",
+    "sourceEnvironment": "Litter box, resources, rest, play, and interaction: FelineVMA — Your Cat’s Environmental Needs (2026, PDF).",
+    "sourceFeeding": "Feeding plan: FelineVMA — Feline Feeding Programs (caregiver guidance).",
+    "sourceNote": "The ASPCA recommends sturdy screens on open windows and warns about falls from balconies; protection should be assessed for each home. The guidance on environment, feeding, and interaction is general and does not replace an individual veterinary assessment."
   },
   "stories": {
     "eyebrow": "Fictional scenarios",
