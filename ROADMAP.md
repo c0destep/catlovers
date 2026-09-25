@@ -12,17 +12,17 @@
 | PWA | Concluído para o contrato atual | Manifesto, ícones, screenshot, escopo, service worker e pré-cache gerado são validados na build; o Chromium confirmou a navegação pelo app shell sem rede na última verificação registrada. |
 | CI | Concluído | Instalação congelada, lint, i18n, catálogo, build e Cypress bloqueiam a publicação no GitHub Pages. |
 | Internacionalização | Parcialmente concluído | O tradutor incompatível foi substituído; idades, metadados e o texto alternativo das fotos ilustrativas da galeria possuem localização nos três catálogos, e o atributo `lang` usa valores BCP 47. A governança editorial e a cobertura de conteúdo por idioma ainda precisam evoluir. |
-| Conteúdo editorial | Em andamento | O artigo de apresentação entre gatos identifica autoria, publicação e revisão editorial, resume um guia da FelineVMA e está disponível nos três idiomas. O inventário está em `EDITORIAL_INVENTORY.md`; as dicas de adaptação inicial, o checklist ambiental, os cenários fictícios e as perguntas do grupo clínico têm redação ajustada nos três idiomas, com fontes visíveis junto às orientações pertinentes. As perguntas sobre convivência, rotina e moradia foram conferidas como planejamento ilustrativo; o card de necessidades ambientais agora tem fonte visível. Os dois temas adicionais do blog estão identificados como artigos em preparação, com fontes externas explícitas e sem links para o artigo existente. A curiosidade dinâmica sem fonte por afirmação foi removida. Para os grupos inventariados, autoria editorial e responsáveis pela revisão de PT-BR, EN e ES estão a definir; a revisão dos demais grupos continua pendente. |
+| Conteúdo editorial | Em andamento | O artigo de apresentação entre gatos exibe autoria, datas e fonte nos três idiomas. Para os demais grupos de `EDITORIAL_INVENTORY.md`, a triagem preparatória de redação, escopo e fontes foi concluída nos três idiomas e fallbacks aplicáveis: alegações pertinentes receberam fontes visíveis, perguntas ilustrativas foram delimitadas e a curiosidade dinâmica sem fonte foi removida. A autoria, os responsáveis pela revisão de PT-BR, EN e ES e as datas desses grupos estão a definir; a revisão editorial formal continua pendente. Os dois temas adicionais do blog ainda não têm artigos próprios. |
 | Tema | Concluído | A troca de tema permanece funcional quando o `localStorage` está indisponível ou o navegador não oferece `matchMedia`; a build preserva e valida a paleta escura, já publicada no GitHub Pages. |
 | Testes | Em evolução | A última suíte completa registrada passou em Chromium, incluindo a navegação offline. As duas expectativas específicas da curiosidade removida saíram da suíte; os ajustes editoriais posteriores àquela execução ainda não foram testados. |
 | Documentação | Concluído para a fundação atual | README, guia de contribuição e `humans.txt` descrevem Vite, pnpm, PWA, E2E e as limitações reais. |
 
 ### Próximas prioridades altas
 
-1. Concluir autoria, revisão editorial e fontes para o conteúdo sobre cuidados e comportamento. O artigo de apresentação entre gatos já foi revisado; as dicas de adaptação inicial, o checklist ambiental e os cenários fictícios foram ajustados e referenciados. As perguntas do grupo clínico foram reformuladas; a WSAVA é citada apenas para vacinação. Para os grupos inventariados, autoria e responsáveis por PT-BR, EN e ES estão a definir; a revisão dos demais grupos continua pendente em `EDITORIAL_INVENTORY.md`.
+1. Definir autoria e responsáveis pela revisão de PT-BR, EN e ES; depois conduzir e datar a revisão editorial formal dos grupos já triados em `EDITORIAL_INVENTORY.md`. As fontes visíveis e os limites de uso foram conferidos na preparação, mas isso não constitui validação veterinária. A WSAVA é citada apenas para vacinação.
 2. Completar `canonical` e o conjunto de metadados sociais por página, com uma estratégia de indexação coerente para os três idiomas.
 3. Fortalecer a demonstração com testes manuais e automatizados de acessibilidade, além de orçamentos de desempenho para os ativos publicados.
-4. Definir a governança editorial de PT-BR, EN e ES e manter a paridade de conteúdo sem prometer uma operação de adoção.
+4. Preparar artigos próprios para os dois temas em preparação do blog após definir autoria, revisão por idioma e datas editoriais, mantendo a paridade de conteúdo sem prometer uma operação de adoção.
 
 ## 1. Direção do produto
 
@@ -289,7 +289,8 @@ As durações abaixo expressam ordem e tamanho relativo. A Fase 1 e a Fase 3 ori
 - [x] Reformular as perguntas do grupo clínico em `index.html`, `adoption.html` e `benefits.html` nos três idiomas; vincular a WSAVA somente às menções sobre vacinação e manter decisões sobre o animal com o veterinário. Autoria, revisão por idioma e data editorial seguem a definir.
 - [x] Retirar de `benefits.sections.facts.items.2` a sugestão de um procedimento único para apresentar animais de espécies diferentes; manter `process.steps` como etapas ilustrativas sobre rotina e adoção, sem protocolo entre espécies. A revisão editorial por idioma segue a definir.
 - [x] Auditar o grupo amplo de planejamento e perguntas nos três idiomas e fallbacks: alinhar “reserva” em EN, evitar compatibilidade presumida e tempo diário fixo, e vincular a FelineVMA ao card de necessidades ambientais. Autoria, revisão por idioma e data editorial seguem a definir.
-- [ ] Revisar e corrigir os demais grupos inventariados; definir autoria editorial, revisão por idioma e datas de revisão, incluir fontes junto às alegações pertinentes e só então considerá-los revisados.
+- [x] Concluir a triagem preparatória dos grupos inventariados nos três idiomas e fallbacks aplicáveis: ajustar redação e escopo, conferir e vincular fontes pertinentes ou remover conteúdo sem fonte verificável. Isso não conclui a revisão editorial formal.
+- [ ] Definir autoria, responsáveis pela revisão de PT-BR, EN e ES e datas; conduzir a revisão editorial formal dos grupos triados antes de marcá-los como revisados.
 - [x] Publicar `robots.txt` e gerar `sitemap.xml` na saída final.
 - [x] Publicar `og:image` estável para as páginas geradas.
 - [ ] Adicionar canonical e completar `og:title`, `og:description` e `og:url` por página.
@@ -337,7 +338,7 @@ As durações abaixo expressam ordem e tamanho relativo. A Fase 1 e a Fase 3 ori
 
 | Frente | Entrega | Evidência esperada |
 | --- | --- | --- |
-| Conteúdo | Revisar e documentar fontes das orientações educativas; criar artigos distintos para os cards atuais | Autoria, datas e fontes visíveis no artigo revisado; demais alegações com origem verificável; links editoriais específicos |
+| Conteúdo | Concluir a revisão editorial formal dos grupos já triados e criar artigos próprios para os dois temas em preparação | Autoria e responsáveis por idioma definidos, datas registradas, fontes conferidas no contexto final e links para artigos próprios |
 | Acessibilidade | Testar teclado, leitor de tela, foco, estados dinâmicos e movimento reduzido | Cenários automatizados e checklist manual atualizado |
 | i18n | Revisar PT-BR, EN e ES e manter paridade de conteúdo | Validação de chaves, revisão por idioma e atributo `lang` coerente |
 | SEO | Completar `canonical`, metadados sociais e estratégia de indexação | Metadados e links validados na build |

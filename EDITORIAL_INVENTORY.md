@@ -1,20 +1,20 @@
 # Inventário editorial: saúde, comportamento e adaptação
 
-Levantamento dos conteúdos publicados em 24 de setembro de 2026, como parte da Fase 3 do roadmap.
+Levantamento iniciado em 24 de setembro de 2026 e atualizado em 25 de setembro de 2026, como parte da Fase 3 do roadmap.
 
 ## Escopo e critério
 
 O inventário cobre orientações factuais sobre saúde, comportamento, segurança e adaptação. As chaves abaixo estão nos catálogos `languages/pt_BR.json`, `languages/en_US.json` e `languages/es_ES.json`; várias também têm texto de fallback no HTML indicado. Antes de atualizar uma orientação, comparar as três versões e manter o fallback em sincronia.
 
-Este documento localiza alegações e fontes possíveis; a inclusão de uma referência aqui não significa que o texto publicado já tenha sido revisado. Uma orientação só deve ser marcada como revisada depois de conferir a fonte específica, ajustar a linguagem ao que ela sustenta e registrar a responsabilidade editorial e a data da revisão. Não publicar protocolos clínicos genéricos: vacinação, testes, vermifugação, castração e cuidados contínuos dependem do animal, do contexto e de orientação veterinária apropriada.
+Este documento registra as alegações mapeadas, as fontes conferidas e as decisões preparatórias de redação ou remoção. A inclusão de uma referência aqui não significa que o texto publicado tenha concluído a revisão editorial formal. Uma orientação só deve ser marcada como revisada depois de conferir a fonte no contexto final e registrar a responsabilidade editorial e a data da revisão. Não publicar protocolos clínicos genéricos: vacinação, testes, vermifugação, castração e cuidados contínuos dependem do animal, do contexto e de orientação veterinária apropriada.
 
 O `includes/head-common.html` aplica `meta name="author"` com o valor `Lucas Alves` às páginas. Esse metadado global não identifica um revisor veterinário nem substitui uma atribuição visível junto ao conteúdo. Só `post.html` exibe uma atribuição editorial, além das datas de publicação e revisão; o primeiro card do blog informa que resume orientações da FelineVMA, mas não identifica autor nem data de revisão. Ao revisar páginas informativas, definir um padrão de responsabilidade editorial e registrar a última revisão; usar data de publicação quando o conteúdo for publicado como artigo. Não inventar autoria ou qualificação profissional.
 
 Para os grupos deste inventário, a autoria editorial e os responsáveis pela revisão de PT-BR, EN e ES estão **a definir**. As correções de redação e a conferência das fontes registradas abaixo não encerram a revisão editorial nem representam validação veterinária profissional.
 
-## Conteúdo a revisar
+## Conteúdo inventariado e triagem preparatória
 
-| Conteúdo | O que exige revisão | Fontes candidatas | Decisão editorial |
+| Conteúdo | Estado do texto e riscos tratados | Fontes examinadas | Decisão e pendências |
 | --- | --- | --- | --- |
 | `adoption.sections.tips.items.0` (`adoption.html`, “Um cômodo tranquilo no início”) | Redação ajustada em 24 de setembro de 2026: o prazo fixo e a alegação de que o isolamento ajuda a acostumar o gato aos cheiros foram removidos. A orientação agora sugere começar em um cômodo com água, alimento e caixa de areia e ampliar o acesso quando o gato parecer confortável. | [Mudar de casa com um animal — ASPCA](https://www.aspca.org/pet-care/general-pet-care/moving-your-pet). | A ASPCA recomenda esse início gradual no contexto de mudança para uma casa nova; o texto não apresenta a dica como protocolo universal de adoção. Fonte visível no card. A revisão profissional, autoria e data de revisão editorial ainda precisam ser definidas. |
 | `adoption.sections.tips.items.1–2` (`adoption.html`, local seguro e contato) | Redação ajustada em 24 de setembro de 2026: o texto atribui à FelineVMA as recomendações sobre um lugar seguro, com acesso por mais de um lado caso o gato se sinta ameaçado, e o respeito às preferências individuais de contato. Foram removidos o prazo de “primeiras semanas”, o superlativo “excelentes” e a afirmação causal categórica sobre estresse. | [Guia de necessidades ambientais — FelineVMA, 2026 (PDF)](https://catvets.com/wp-content/uploads/2026/02/FelineVMA-Environmental-Needs_2026-BW.pdf). | Os cards agora têm link direto para a fonte e a página identifica o conteúdo como orientação geral, não avaliação veterinária individual. Autoria e data de revisão editorial ainda precisam ser definidas. |
@@ -48,7 +48,6 @@ As referências institucionais listadas são fontes de partida. Antes de publica
 
 ## Próxima execução editorial
 
-1. Revisar as chaves dos grupos ainda pendentes nas três línguas e no texto de fallback; corrigir prazos fixos, absolutos e generalizações, sem expandir o escopo para uma operação real de adoção. O checklist ambiental, os cenários, as perguntas do grupo clínico, a pergunta sobre convivência com animais da casa, os cards do blog e o grupo amplo de planejamento e perguntas já tiveram a redação ajustada e o alcance das fontes conferido, mas ainda dependem da governança editorial descrita abaixo.
-2. Definir quem responde pela autoria e revisão de conteúdo em cada idioma. Atualmente, autoria e responsáveis por PT-BR, EN e ES estão a definir. Manter separados autor de texto, tradutor/revisor linguístico e revisor veterinário quando houver participação dessas funções; não atribuir credenciais que não foram confirmadas.
-3. Adicionar fonte junto à alegação apoiada e registrar a data de revisão editorial. Aplicar datas de publicação a artigos novos ou substancialmente publicados, segundo uma convenção editorial definida.
-4. Definir autoria, responsáveis pela revisão de PT-BR, EN e ES e datas editoriais antes de criar os dois artigos ainda pendentes para os temas do blog. Depois, vincular cada card à sua página própria e validar links e textos nos três catálogos.
+1. Definir quem responde pela autoria e revisão de conteúdo em cada idioma. Atualmente, autoria e responsáveis por PT-BR, EN e ES estão a definir. Manter separados autor de texto, tradutor/revisor linguístico e revisor veterinário quando houver participação dessas funções; não atribuir credenciais que não foram confirmadas.
+2. Conduzir a revisão editorial formal dos grupos já triados nos três idiomas e fallbacks aplicáveis. Confirmar que cada fonte visível sustenta a alegação no contexto final, registrar os responsáveis e a data de revisão; solicitar revisão profissional quando cabível. As correções preparatórias não equivalem a validação veterinária.
+3. Criar os dois artigos ainda pendentes do blog depois de definir autoria, revisão por idioma e datas de publicação e revisão. Vincular cada card à sua página própria e validar links e textos nos três catálogos.
