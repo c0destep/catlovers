@@ -14,7 +14,7 @@
 | Internacionalização | Parcialmente concluído | O tradutor incompatível foi substituído; idades, metadados e o texto alternativo das fotos ilustrativas da galeria possuem localização nos três catálogos, e o atributo `lang` usa valores BCP 47. A governança editorial e a cobertura de conteúdo por idioma ainda precisam evoluir. |
 | Conteúdo editorial | Em andamento | O artigo de apresentação entre gatos exibe autoria, datas e fonte nos três idiomas. Para os demais grupos de `EDITORIAL_INVENTORY.md`, a triagem preparatória de redação, escopo e fontes foi concluída nos três idiomas e fallbacks aplicáveis: alegações pertinentes receberam fontes visíveis, perguntas ilustrativas foram delimitadas e a curiosidade dinâmica sem fonte foi removida. A autoria, os responsáveis pela revisão de PT-BR, EN e ES e as datas desses grupos estão a definir; a revisão editorial formal continua pendente. Os dois temas adicionais do blog ainda não têm artigos próprios. |
 | Tema | Concluído | A troca de tema permanece funcional quando o `localStorage` está indisponível ou o navegador não oferece `matchMedia`; a build preserva e valida a paleta escura, já publicada no GitHub Pages. |
-| Testes | Em evolução | A última suíte completa registrada passou em Chromium, incluindo a navegação offline. As duas expectativas específicas da curiosidade removida saíram da suíte; os ajustes editoriais posteriores àquela execução ainda não foram testados. |
+| Testes | Verificados nesta atualização | `pnpm check` passou; Cypress 16.1.0 em Chromium passou em 54/54 testes nas dez especificações, e a navegação offline foi validada. |
 | Jornadas demonstrativas | Critérios definidos; execução manual pendente | `QUALITY_BASELINE.md` descreve navegação, galeria, quiz, conteúdo educativo, formulário sem envio e registro de evidências. |
 | Documentação | Concluído para a fundação atual | README, guia de contribuição e `humans.txt` descrevem Vite, pnpm, PWA, E2E e as limitações reais. |
 
@@ -441,6 +441,12 @@ A plataforma real permanece fora do escopo atual e não deve ser iniciada como c
 - regras para pagamentos, se essa modalidade vier a ser autorizada.
 
 ## 12. Verificações usadas neste diagnóstico
+
+### Atualização de 25 de setembro de 2026
+
+- `pnpm check`: lint, validação de i18n, catálogo e build aprovados; a build validada contém 13 páginas e 22 entradas na raiz.
+- `CYPRESS_BROWSER=chromium pnpm test:e2e:run`: 54/54 testes aprovados em dez especificações; a verificação do app shell offline também passou.
+- Essas verificações cobrem esta atualização editorial e técnica. A execução manual das jornadas em `QUALITY_BASELINE.md` e auditorias adicionais de acessibilidade continuam pendentes.
 
 ### Linha de base original
 
