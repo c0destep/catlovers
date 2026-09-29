@@ -2,7 +2,7 @@
 
 > Diagnóstico iniciado em 16 de setembro de 2026. O retrato original foi atualizado após a execução das primeiras prioridades para distinguir problemas resolvidos de trabalho pendente.
 
-## Andamento da execução — 25 de setembro de 2026
+## Andamento da execução — 29 de setembro de 2026
 
 | Frente | Estado | Evidência |
 | --- | --- | --- |
@@ -12,18 +12,18 @@
 | PWA | Concluído para o contrato atual | Manifesto, ícones, screenshot, escopo, service worker e pré-cache gerado são validados na build; o Chromium confirmou a navegação pelo app shell sem rede na última verificação registrada. |
 | CI | Concluído | Instalação congelada, lint, i18n, catálogo, build e Cypress bloqueiam a publicação no GitHub Pages. |
 | Internacionalização | Parcialmente concluído | O tradutor incompatível foi substituído; idades, metadados e o texto alternativo das fotos ilustrativas da galeria possuem localização nos três catálogos, e o atributo `lang` usa valores BCP 47. A governança editorial e a cobertura de conteúdo por idioma ainda precisam evoluir. |
+| SEO técnico | Concluído para o estágio atual | As 13 páginas têm `canonical`, `og:title`, `og:description`, `og:url` e diretiva de robôs próprios, validados na build. Como EN e ES existem somente no cliente, PT-BR permanece como o único conteúdo HTML canônico e não são publicados `hreflang` nem URLs localizadas fictícias. Uma estratégia de indexação por idioma dependerá da criação futura de páginas localizadas reais. |
 | Conteúdo editorial | Em andamento | O artigo de apresentação entre gatos exibe autoria, datas e fonte nos três idiomas. Para os demais grupos de `EDITORIAL_INVENTORY.md`, a triagem preparatória de redação, escopo e fontes foi concluída nos três idiomas e fallbacks aplicáveis: alegações pertinentes receberam fontes visíveis, perguntas ilustrativas foram delimitadas e a curiosidade dinâmica sem fonte foi removida. A autoria, os responsáveis pela revisão de PT-BR, EN e ES e as datas desses grupos estão a definir; a revisão editorial formal continua pendente. Os dois temas adicionais do blog ainda não têm artigos próprios. |
 | Tema | Concluído | A troca de tema permanece funcional quando o `localStorage` está indisponível ou o navegador não oferece `matchMedia`; a build preserva e valida a paleta escura, já publicada no GitHub Pages. |
-| Testes | Verificados nesta atualização | `pnpm check` passou; Cypress 16.1.0 em Chromium passou em 54/54 testes nas dez especificações, e a navegação offline foi validada. |
+| Testes | Verificações registradas | `pnpm check` passou em 29 de setembro de 2026. Na última execução integral do navegador, em 25 de setembro de 2026, o Cypress 16.1.0 em Chromium passou em 54/54 testes nas dez especificações, e a navegação offline foi validada. |
 | Jornadas demonstrativas | Critérios definidos; execução manual pendente | `QUALITY_BASELINE.md` descreve navegação, galeria, quiz, conteúdo educativo, formulário sem envio e registro de evidências. |
 | Documentação | Concluído para a fundação atual | README, guia de contribuição e `humans.txt` descrevem Vite, pnpm, PWA, E2E e as limitações reais. |
 
 ### Próximas prioridades altas
 
 1. Definir autoria e responsáveis pela revisão de PT-BR, EN e ES; depois conduzir e datar a revisão editorial formal dos grupos já triados em `EDITORIAL_INVENTORY.md`. As fontes visíveis e os limites de uso foram conferidos na preparação, mas isso não constitui validação veterinária. A WSAVA é citada apenas para vacinação.
-2. Completar `canonical` e o conjunto de metadados sociais por página, com uma estratégia de indexação coerente para os três idiomas.
-3. Fortalecer a demonstração com testes manuais e automatizados de acessibilidade, além de orçamentos de desempenho para os ativos publicados.
-4. Preparar artigos próprios para os dois temas em preparação do blog após definir autoria, revisão por idioma e datas editoriais, mantendo a paridade de conteúdo sem prometer uma operação de adoção.
+2. Fortalecer a demonstração com testes manuais e automatizados de acessibilidade, além de orçamentos de desempenho para os ativos publicados.
+3. Preparar artigos próprios para os dois temas em preparação do blog após definir autoria, revisão por idioma e datas editoriais, mantendo a paridade de conteúdo sem prometer uma operação de adoção.
 
 ## 1. Direção do produto
 
@@ -106,7 +106,7 @@ O resultado principal é uma demonstração educacional coerente e verificável:
 | P1 | Conteúdo dinâmico permanece parcialmente em português | Parcial | O tradutor e a cobertura dinâmica foram corrigidos; idades, cores, temperamentos, textos alternativos e estados vazios da galeria possuem localização, enquanto a governança editorial por idioma permanece pendente. |
 | P1 | Testes verificavam sobretudo presença de elementos | Fortalecida | Filtros, responsividade, i18n, PWA, teclado e links possuem cobertura; a expectativa de falha da API de curiosidades foi retirada junto com a funcionalidade. Novas integrações exigirão seus próprios cenários. |
 | P1 | Política de privacidade é genérica | Mitigada para demonstração | A página descreve os dados locais e os serviços externos atuais; qualquer coleta real ainda exigirá finalidade, retenção, direitos e contato definidos. |
-| P2 | Blog e SEO têm estrutura incompleta | Parcial | `robots.txt`, `sitemap.xml` e `og:image` são publicados e validados; apenas o primeiro card aponta para o artigo existente. Os outros dois indicam temas em preparação e fontes externas. Ainda faltam os artigos próprios, canonical e o conjunto social por página. |
+| P2 | Blog e SEO têm estrutura incompleta | Parcial | `robots.txt`, `sitemap.xml`, `og:image`, `canonical` e os metadados sociais específicos das 13 páginas são publicados e validados. Apenas o primeiro card aponta para o artigo existente; os outros dois indicam temas em preparação e fontes externas, pois ainda faltam os artigos próprios. |
 | P2 | Build inclui 42 arquivos de fonte | Pendente | O custo de transferência ainda pode ser reduzido selecionando alfabetos, pesos e formatos realmente usados. |
 | P2 | Imagens da galeria dependem do Unsplash | Pendente | A experiência offline fica incompleta e o produto depende de um terceiro. |
 | P2 | Não há telemetria de produto ou erros | Fora do escopo atual | A demonstração deve usar testes e auditorias como evidência; qualquer telemetria futura exigirá decisão de privacidade e finalidade. |
@@ -294,9 +294,10 @@ As durações abaixo expressam ordem e tamanho relativo. A Fase 1 e a Fase 3 ori
 - [ ] Definir autoria, responsáveis pela revisão de PT-BR, EN e ES e datas; conduzir a revisão editorial formal dos grupos triados antes de marcá-los como revisados.
 - [x] Publicar `robots.txt` e gerar `sitemap.xml` na saída final.
 - [x] Publicar `og:image` estável para as páginas geradas.
-- [ ] Adicionar canonical e completar `og:title`, `og:description` e `og:url` por página.
+- [x] Adicionar `canonical` e completar `og:title`, `og:description` e `og:url` nas 13 páginas; validar presença única, conteúdo específico e URL publicada esperada na build.
 - [ ] Adicionar dados estruturados apenas para informações reais e mantidas.
-- [ ] Definir uma estratégia de indexação para idiomas; tradução somente no cliente não cria páginas localizadas para busca.
+- [x] Definir a indexação do estágio atual: manter PT-BR como conteúdo HTML canônico, sem `hreflang` nem URLs fictícias para EN e ES, que existem somente no cliente.
+- [ ] Planejar URLs e documentos HTML localizados reais antes de adotar `hreflang` ou considerar EN e ES indexáveis de forma independente.
 
 #### Desempenho e resiliência
 
@@ -342,7 +343,7 @@ As durações abaixo expressam ordem e tamanho relativo. A Fase 1 e a Fase 3 ori
 | Conteúdo | Concluir a revisão editorial formal dos grupos já triados e criar artigos próprios para os dois temas em preparação | Autoria e responsáveis por idioma definidos, datas registradas, fontes conferidas no contexto final e links para artigos próprios |
 | Acessibilidade | Testar teclado, leitor de tela, foco, estados dinâmicos e movimento reduzido | Cenários automatizados e checklist manual atualizado |
 | i18n | Revisar PT-BR, EN e ES e manter paridade de conteúdo | Validação de chaves, revisão por idioma e atributo `lang` coerente |
-| SEO | Completar `canonical`, metadados sociais e estratégia de indexação | Metadados e links validados na build |
+| SEO | Preservar o contrato atual de PT-BR canônico e planejar páginas localizadas reais antes de indexar EN e ES separadamente | `canonical`, metadados sociais, diretivas de robôs e ausência de `hreflang` validados na build |
 | Desempenho e resiliência | Reduzir fontes, estabilizar imagens, definir orçamentos e medir Core Web Vitals | Limites de ativos no CI e evidências de LCP, INP e CLS quando a ferramenta estiver disponível |
 | Testes e PWA | Preservar a suíte E2E, os gates da CI e o contrato offline | `pnpm check`, E2E e navegação offline aprovados sobre a build publicada |
 
@@ -424,7 +425,7 @@ Estas decisões orientam o trabalho atual e não autorizam uma operação de ado
 
 - Quem revisará cada idioma e qual será o processo para publicar conteúdo novo?
 - Quais fontes, datas de revisão, autores e autorizações serão exigidos antes de publicar conteúdo sobre saúde, comportamento ou impacto?
-- Qual estratégia de `canonical`, metadados sociais e indexação representará corretamente PT-BR, EN e ES?
+- Quais URLs e documentos HTML localizados serão adotados se EN e ES passarem a ter indexação independente no futuro?
 - Quais jornadas terão cobertura manual de teclado, leitor de tela e movimento reduzido, além dos testes automatizados?
 - Quais orçamentos de CSS, JavaScript, fontes e imagens serão adotados no CI?
 - Quais imagens, fontes e integrações externas possuem licença, fallback e responsabilidade editorial claros?
