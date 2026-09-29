@@ -15,7 +15,7 @@
 | SEO técnico | Concluído para o estágio atual | As 13 páginas têm `canonical`, `og:title`, `og:description`, `og:url` e diretiva de robôs próprios, validados na build. Como EN e ES existem somente no cliente, PT-BR permanece como o único conteúdo HTML canônico e não são publicados `hreflang` nem URLs localizadas fictícias. Uma estratégia de indexação por idioma dependerá da criação futura de páginas localizadas reais. |
 | Conteúdo editorial | Em andamento | O artigo de apresentação entre gatos exibe autoria, datas e fonte nos três idiomas. Para os demais grupos de `EDITORIAL_INVENTORY.md`, a triagem preparatória de redação, escopo e fontes foi concluída nos três idiomas e fallbacks aplicáveis: alegações pertinentes receberam fontes visíveis, perguntas ilustrativas foram delimitadas e a curiosidade dinâmica sem fonte foi removida. A autoria, os responsáveis pela revisão de PT-BR, EN e ES e as datas desses grupos estão a definir; a revisão editorial formal continua pendente. Os dois temas adicionais do blog ainda não têm artigos próprios. |
 | Tema | Concluído | A troca de tema permanece funcional quando o `localStorage` está indisponível ou o navegador não oferece `matchMedia`; a build preserva e valida a paleta escura, já publicada no GitHub Pages. |
-| Testes | Verificações registradas | `pnpm check` passou em 29 de setembro de 2026. Na última execução integral do navegador, em 25 de setembro de 2026, o Cypress 16.1.0 em Chromium passou em 54/54 testes nas dez especificações, e a navegação offline foi validada. |
+| Testes | Verificações registradas | `pnpm check` e a execução integral passaram em 29 de setembro de 2026. O Cypress 16.1.0 em Chromium aprovou 56/56 testes nas dez especificações, e a navegação offline foi validada. |
 | Jornadas demonstrativas | Critérios definidos; execução manual pendente | `QUALITY_BASELINE.md` descreve navegação, galeria, quiz, conteúdo educativo, formulário sem envio e registro de evidências. |
 | Documentação | Concluído para a fundação atual | README, guia de contribuição e `humans.txt` descrevem Vite, pnpm, PWA, E2E e as limitações reais. |
 
@@ -263,7 +263,7 @@ As durações abaixo expressam ordem e tamanho relativo. A Fase 1 e a Fase 3 ori
 #### Experiência e acessibilidade
 
 - [x] Fechar o menu móvel com `Escape`, atualizar seu rótulo nos três idiomas e controlar o foco ao abrir e fechar.
-- [ ] Tornar o card de gato acionável por teclado com semântica de link, sem duplicar controles concorrentes.
+- [x] Tornar o card de gato acionável por teclado com um único link nativo, área clicável ampliada, foco visível e sem controles concorrentes.
 - [ ] Permitir limpar os filtros, compartilhar um perfil e retornar à mesma posição da galeria.
 - [ ] Evoluir o quiz com critérios do catálogo, mais de um resultado compatível, justificativa da recomendação e uma regra de desempate explícita.
 - [ ] Anunciar envio, erros, filtros e resultado do quiz de forma adequada a tecnologias assistivas.

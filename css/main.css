@@ -1775,6 +1775,11 @@ html {
   flex-direction: column;
 }
 
+.cat-card:has(.cat-card__link:focus-visible) {
+  outline: 3px solid var(--cat-accent);
+  outline-offset: 4px;
+}
+
 .cat-card__image {
   width: 100%;
   height: 240px;
@@ -1804,6 +1809,18 @@ html {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+}
+
+.cat-card__link {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: inherit;
+  text-decoration: none;
+}
+
+.cat-card__link:focus-visible {
+  outline: none;
 }
 
 /* Article / Post Content */

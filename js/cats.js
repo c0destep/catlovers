@@ -54,10 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = document.createElement('article');
       card.className = 'feature-card cat-card';
       card.setAttribute('role', 'listitem');
-      card.style.cursor = 'pointer';
-      card.addEventListener('click', () => {
-        window.location.href = 'adoption.html';
-      });
+
+      const link = document.createElement('a');
+      link.href = 'adoption.html';
+      link.className = 'cat-card__link';
 
       const sexInfo = SEX_LABELS[cat.sex] || SEX_LABELS.female; // fallback
       const tempInfo = TEMPERAMENT_LABELS[cat.temperament] || TEMPERAMENT_LABELS.calm; // fallback
@@ -111,18 +111,19 @@ document.addEventListener('DOMContentLoaded', () => {
       contentDiv.appendChild(infoP);
       contentDiv.appendChild(tagsDiv);
 
-      // Create button
-      const button = document.createElement('a');
-      button.href = 'adoption.html';
-      button.className = 'button button--primary button--full-width';
-      button.dataset.i18n = 'gallery.openDemo';
-      button.textContent = 'Abrir formulário demo';
+      // Keep the call to action visual without introducing another control.
+      const callToAction = document.createElement('span');
+      callToAction.className = 'button button--primary button--full-width cat-card__cta';
+      callToAction.dataset.i18n = 'gallery.openDemo';
+      callToAction.textContent = 'Abrir formulário demo';
 
-      contentDiv.appendChild(button);
+      contentDiv.appendChild(callToAction);
 
-      // Assemble card
-      card.appendChild(img);
-      card.appendChild(contentDiv);
+      // The single native link wraps the card contents, so its hit area remains
+      // stable during every pointer state and no synthetic click is required.
+      link.appendChild(img);
+      link.appendChild(contentDiv);
+      card.appendChild(link);
 
       fragment.appendChild(card);
     });
